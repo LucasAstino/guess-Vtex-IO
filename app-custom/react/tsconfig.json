@@ -1,0 +1,23 @@
+{
+  "extends": "@vtex/tsconfig",
+  "compilerOptions": {
+    "jsx": "react",
+    "noEmitOnError": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "DOM"
+    ],
+    "module": "esnext",
+    "target": "es2017",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./typings/*.d.ts",
+    "./**/*.tsx",
+    "./**/*.ts" ],
+  "types": [
+    "googlemaps"
+  ]
+}
