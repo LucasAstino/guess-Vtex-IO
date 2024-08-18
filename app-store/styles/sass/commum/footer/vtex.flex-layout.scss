@@ -1,0 +1,39 @@
+.flexRow {
+  &--footer__wrapper {
+    background: #eee;
+    padding: 70px 10px;
+    .flexRowContent {
+      @extend %maxcontainer;
+      justify-content: space-between;
+      padding: 0;
+      .flexCol {
+        &--footer__menu-col {
+          width: fit-content;
+        }
+        &--footer__newsletter {
+          max-width: 410px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  &--footer__social{
+    max-width: 354px;
+    .flexRowContent{
+        justify-content: space-between;
+    }
+  }
+
+  &--footer__adress{
+    padding: 27px 0px;
+    @extend %maxcontainer;
+
+    .flexRowContent{
+        align-items: center;
+    }
+  }
+
+  &--footer__copyright{
+    background-color: #000;
+  }
+}

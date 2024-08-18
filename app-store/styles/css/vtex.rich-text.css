@@ -1,90 +1,58 @@
-.container--deals {
-  color: #ffffff;
-  text-align: center;
-  justify-content: center;
-}
-
-.container--shelfTitle {
-  color: #727273;
-  justify-content: center;
-  text-align: center;
-}
-
-.headingLevel2--shelfTitle {
-  font-weight: 200;
-}
-
-.container--deals .paragraph {
-  margin: 0;
-}
-
-.container--link {
-  justify-content: center;
-}
-
-.container--question {
-  justify-content: center;
-}
-
-.container--question .paragraph {
-  text-align: center;
-  max-width: 540px;
-  margin: 0 16px;
-  padding-top: 120px;
-  color: #03034E;
-}
-
-.container--question .strong {
-  font-size: 32px;
-  line-height: 2rem;
-  font-weight: 700;
-}
-
-.container--link .paragraph {
-  text-align: center;
-  max-width: 540px;
-  padding-top: 36px;
-  padding-bottom: 84px;
-  color: #03034E;
-}
-
-.container--link .strong {
-  font-size: 16px;
-  font-weight: 700;
+.container--newsletter__title .paragraph {
+  font-family: "Futura PT";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
-
-.container--link .link {
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 300;
-  color: #03034E;
+.container--newsletter__title .paragraph:first-child {
+  font-family: Futura PT;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #db2828;
+  text-transform: uppercase;
 }
-
-.container--title {
-  color: #03034E;
-  font-size: 28px;
-  font-weight: 700;
+.container--newsletter__policy-privacy .paragraph {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #000;
+  margin: 15px 0 0;
+  letter-spacing: initial;
 }
-
-@media only screen and (min-width: 640px) {
-  .container--question .strong {
-    font-size: 40px;
-    line-height: 3rem;
-  }
-
-  .container--about {
-    max-width: 85%;
-  }
-
-  .container--title {
-    color: #03034E;
-    font-size: 40px;
-    font-weight: 700;
-    max-width: 60%;
-  }
-
-  .container--title .paragraph {
-    line-height: 1.3em;
-  }
+.container--newsletter__policy-privacy .paragraph .link {
+  font-weight: 600;
+  color: #444;
+}
+.container--adress .paragraph {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #b5b5b5;
+  margin-bottom: 0;
+}
+.container--footer__copyright {
+  justify-content: center;
+}
+.container--footer__copyright .paragraph {
+  padding: 10px;
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin: 0;
 }

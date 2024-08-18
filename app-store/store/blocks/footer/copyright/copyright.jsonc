@@ -1,0 +1,15 @@
+{
+    "flex-layout.row#footer__copyright": {
+        "children": ["rich-text#footer__copyright"],
+        "props": {
+          "blockClass": "footer__copyright"
+        }
+      },
+      "rich-text#footer__copyright": {
+        "title": "copyright",
+        "props": {
+          "text": "Guess Brasil © 2021 | TODOS OS DIREITOS RESERVADOS",
+          "blockClass": "footer__copyright"
+        }
+      }
+}

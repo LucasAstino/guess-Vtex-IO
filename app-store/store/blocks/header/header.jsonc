@@ -9,7 +9,8 @@
     "children": [
       "flex-layout.row#1-desktop",
       "flex-layout.row#3-desktop",
-      "sticky-layout#4-desktop"
+      "sticky-layout#4-desktop",
+      "Helmet"
     ]
   },
 

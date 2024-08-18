@@ -1,0 +1,38 @@
+{
+    "flex-layout.col#footer__newsletter": {
+        "props": {
+            "blockClass":"footer__newsletter"
+        },
+        "children": ["rich-text#newsletter__title","newsletter-form#footer","rich-text#newsletter__policy-privacy"]
+    },
+    "rich-text#newsletter__title": {
+        "title": "titulo newsletter",
+        "props": {
+            "blockClass":"newsletter__title",
+            "text": "Get on the list\n\nEm compras **acima de R$ 300 ganhe R$ 50 na Guess List**.Válido para a primeira compra."
+        }
+    },
+    "rich-text#newsletter__policy-privacy": {
+        "title": "titulo newsletter",
+        "props": {
+            "blockClass":"newsletter__policy-privacy",
+            "text": "A GUESS se preocupa com o uso de seus dados pessoais. Ao fornecer seus dados você concorda com a nossa [Política de Privacidade](/institucional/politica-de-privacidade)"
+        }
+    },
+  "newsletter-form#footer": {
+    "title": "Newsletter",
+    "children": [
+      "newsletter-input-email",
+      "newsletter-submit",
+      "newsletter-checkbox-confirmation"
+    //   "SuccessState",
+    //   "LoadingState",
+    //   "ErrorState"
+    ]
+  }
+//    "SuccessState":{
+
+//    },
+//    "LoadingState":{},
+//    "ErrorState":{}
+}

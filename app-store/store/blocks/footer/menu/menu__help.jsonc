@@ -1,0 +1,92 @@
+{
+  "flex-layout.col#footer__menu-help": {
+    "title": "Menu footer help",
+    "props": {
+      "blockClass":"footer__menu-col"
+    },
+    "children": ["disclosure-layout#footer__menu-help"]
+  },
+  "disclosure-layout#footer__menu-help": {
+    "children": [
+      "disclosure-trigger#footer__menu-help",
+      "disclosure-content#footer__menu-help"
+    ],
+    "props": {
+      "animated": true,
+      "initialVisibility": "hidden"
+    }
+  },
+  "disclosure-trigger#footer__menu-help": {
+    "children": ["rich-text#footer__menu-help"],
+    "props": {
+      "blockClass": "footer__menu-trigger"
+    }
+  },
+  "disclosure-content#footer__menu-help": {
+    "children": ["vtex.menu@2.x:menu#footer__menu-help"],
+    "props": {
+      "blockClass": "footer__menu-content"
+    }
+  },
+  "rich-text#footer__menu-help": {
+    "title": "Título do menu help no Rodapé",
+    "props": {
+      "text": "Precisando de ajuda?",
+      "blockClass": "footer__column--title"
+    }
+  },
+  "vtex.menu@2.x:menu#footer__menu-help": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["footer__help","menu__footer"],
+      "items": [
+        {
+          "id": "Central-de-Ajuda",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://o167017-6bc.octadesk.com/kb",
+            "noFollow": false,
+            "tagTitle": "Central de Ajuda",
+            "text": "Central de Ajuda"
+          }
+        },
+        {
+          "id": "Fale-Conosco",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/fale-conosco",
+            "noFollow": false,
+            "tagTitle": "Fale Conosco",
+            "text": "Fale Conosco"
+          }
+        }
+      ]
+    }
+  }
+
+  // "vtex.menu@2.x:menu#footer__menu-assistance": {
+  //   "props": {
+  //     "orientation": "vertical"
+  //   },
+  //   "children": [
+  //     "menu-item#smartphones",
+  //     "menu-item#videogames",
+  //     "menu-item#tvs"
+  //   ]
+  // },
+
+  // "vtex.menu@2.x:menu#footer__menu-help": {
+  //   "props": {
+  //     "orientation": "vertical"
+  //   },
+  //   "children": [
+  //     "menu-item#bags",
+  //     "menu-item#backpacks",
+  //     "menu-item#necessaire"
+  //   ]
+  // }
+}

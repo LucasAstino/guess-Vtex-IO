@@ -1,0 +1,70 @@
+{
+    "flex-layout.row#footer__adress": {
+    "children": ["rich-text#adress","flex-layout.row#footer__social"],
+    "props": {
+      "blockClass": "footer__adress"
+    }
+  },
+ "rich-text#adress": {
+    "title": "Endereço footer",
+    "props": {
+        "blockClass":"adress",
+        "text": "Guess Brasil ©\nAvenida Magalhães de Castro 4.800 – São Paulo\nCNPJ: 178095240003-92 | INSCRIÇÃO ESTADUAL: 623157268119"
+    }
+ },
+ "flex-layout.row#footer__social": {
+    "title": "Redes sociais",
+    "props": {
+        "blockClass": "footer__social"
+    },
+    "children": ["image#icon__facebook","image#icon__instagram","image#icon__twitter","image#icon__youtube","image#icon__pinterest","image#icon__spotify"]
+ },
+ "image#icon__facebook": {
+    "title": "facebook",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/facebook.svg"
+     
+   }
+ },
+ "image#icon__instagram": {
+    "title": "instagram",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/instagram.svg"
+     
+   }
+ },
+ "image#icon__twitter": {
+    "title": "twitter",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/twitter.svg"
+     
+   }
+ },
+ "image#icon__youtube": {
+    "title": "youtube",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/youtube.svg"
+     
+   }
+ },
+ "image#icon__pinterest": {
+    "title": "pinterest",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/pinterest.svg"
+     
+   }
+ },
+ "image#icon__spotify": {
+    "title": "spotify",
+   "props": {
+    "blockClass":"icon__footer-social",
+     "src": "assets/icons/footer/spotify.svg"
+     
+   }
+ }
+}

@@ -1,0 +1,106 @@
+{
+  "flex-layout.col#footer__menu-institucional": {
+    "title": "Menu footer institucional",
+    "props": {
+      "blockClass": "footer__menu-col"
+    },
+    "children": ["disclosure-layout#footer__menu-institucional"]
+  },
+  "disclosure-layout#footer__menu-institucional": {
+    "children": [
+      "disclosure-trigger#footer__menu-institucional",
+      "disclosure-content#footer__menu-institucional"
+    ],
+    "props": {
+      "animated": true,
+      "initialVisibility": "hidden"
+    }
+  },
+  "disclosure-trigger#footer__menu-institucional": {
+    "children": ["rich-text#footer__menu-institucional"],
+    "props": {
+      "blockClass": "footer__menu-trigger"
+    }
+  },
+  "disclosure-content#footer__menu-institucional": {
+    "children": ["vtex.menu@2.x:menu#footer__menu-institucional"],
+    "props": {
+      "blockClass": "footer__menu-content"
+    }
+  },
+  "rich-text#footer__menu-institucional": {
+    "title": "Título do menu institucional no Rodapé",
+    "props": {
+      "text": "Institucional",
+      "blockClass": "footer__column--title"
+    }
+  },
+  "vtex.menu@2.x:menu#footer__menu-institucional": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["footer__institucional", "menu__footer"],
+      "items": [
+        {
+          "id": "Quem-Somos",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/institucional/nossa-historia",
+            "noFollow": false,
+            "tagTitle": "Quem Somos",
+            "text": "Quem Somos"
+          }
+        },
+        {
+          "id": "Politica-de-Privacidade-e-Cookies",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/politicas-de-privacidade-e-cookies",
+            "noFollow": false,
+            "tagTitle": "Política de Privacidade e Cookies",
+            "text": "Política de Privacidade e Cookies"
+          }
+        },
+        {
+          "id": "Termos-e-Condicoes-de-Uso",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/institucional/termos-e-condicoes-de-uso",
+            "noFollow": false,
+            "tagTitle": "Termos e Condições de Uso",
+            "text": "Termos e Condições de Uso"
+          }
+        },
+        {
+          "id": "Encontre-uma-loja",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/onde-encontrar",
+            "noFollow": false,
+            "tagTitle": "Encontre uma loja",
+            "text": "Encontre uma loja"
+          }
+        },
+        {
+          "id": "Seja-um-Revendedor",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/sejaumrevendedor",
+            "noFollow": false,
+            "tagTitle": "Seja um Revendedor",
+            "text": "Seja um Revendedor"
+          }
+        }
+      ]
+    }
+  }
+}

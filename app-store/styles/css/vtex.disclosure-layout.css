@@ -1,0 +1,16 @@
+.trigger--footer__menu-trigger {
+  all: unset;
+}
+.trigger--footer__menu-trigger :global(.vtex-rich-text-0-x-paragraph--footer__column--title) {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+@media (min-width: 1025px) {
+  .content--footer__menu-content {
+    display: block !important;
+  }
+}

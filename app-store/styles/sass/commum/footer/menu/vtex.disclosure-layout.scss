@@ -1,0 +1,17 @@
+.trigger--footer__menu-trigger{
+    all: unset;
+
+    :global(.vtex-rich-text-0-x-paragraph--footer__column--title){
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #000;
+    }
+}
+
+.content--footer__menu-content{
+    @include desktop{
+        display: block !important;
+    }
+}

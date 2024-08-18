@@ -1,0 +1,118 @@
+{
+  "flex-layout.col#footer__menu-assistance": {
+    "title": "Menu footer assistencia",
+    "props": {
+      "blockClass":"footer__menu-col"
+    },
+    "children": ["disclosure-layout#footer__menu-assistance"]
+  },
+  "disclosure-layout#footer__menu-assistance": {
+    "children": [
+      "disclosure-trigger#footer__menu-assistance",
+      "disclosure-content#footer__menu-assistance"
+    ],
+    "props": {
+      "animated": true,
+      "initialVisibility": "hidden"
+    }
+  },
+  "disclosure-trigger#footer__menu-assistance": {
+    "children": ["rich-text#footer__menu-assistance"],
+    "props": {
+      "blockClass": "footer__menu-trigger"
+    }
+  },
+  "disclosure-content#footer__menu-assistance": {
+    "children": ["vtex.menu@2.x:menu#footer__menu-assistance"],
+    "props": {
+      "blockClass": "footer__menu-content"
+    }
+  },
+  "rich-text#footer__menu-assistance": {
+    "title": "Título do menu assistance no Rodapé",
+    "props": {
+      "text": "Assistência",
+      "blockClass": "footer__column--title"
+    }
+  },
+  "vtex.menu@2.x:menu#footer__menu-assistance": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["footer__assistance","menu__footer"],
+      "items": [
+        {
+          "id": "Duvidas-Frequentes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/duvidas/duvidas-frequentes",
+            "noFollow": false,
+            "tagTitle": "Dúvidas Frequentes",
+            "text": "Dúvidas Frequentes"
+          }
+        },
+        {
+          "id": "Tabela-de-Medidas-Femininos",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/duvidas/tabela-de-medidas-femininos",
+            "noFollow": false,
+            "tagTitle": "Tabela de Medidas Femininos",
+            "text": "Tabela de Medidas Femininos"
+          }
+        },
+        {
+          "id": "Tabela-de-Medidas-Masculinas",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/duvidas/tabela-de-medidas-masculinas",
+            "noFollow": false,
+            "tagTitle": "Tabela de Medidas Masculinas",
+            "text": "Tabela de Medidas Masculinas"
+          }
+        },
+        {
+          "id": "Solicitar-Troca-e-Devolucoes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://guessbrasil.troquefacil.com.br/",
+            "noFollow": false,
+            "tagTitle": "Solicitar Troca e Devoluções",
+            "text": "Solicitar Troca e Devoluções"
+          }
+        },
+        {
+          "id": "Politica-de-Trocas-e-Devolucoes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/institucional/trocas-e-devolucoes",
+            "noFollow": false,
+            "tagTitle": "Política de Trocas e Devoluções",
+            "text": "Política de Trocas e Devoluções"
+          }
+        },
+        {
+          "id": "Cashback",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/cashback",
+            "noFollow": false,
+            "tagTitle": "Cashback",
+            "text": "Cashback"
+          }
+        }
+      ]
+    }
+  }
+}

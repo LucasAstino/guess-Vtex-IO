@@ -1,0 +1,71 @@
+.container {
+  &--newsletter__title {
+    .paragraph {
+      font-family: "Futura PT";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-align: left;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+
+      &:first-child {
+        font-family: Futura PT;
+        font-size: 18px;
+        font-weight: 650;
+        line-height: 21px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #db2828;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &--newsletter__policy-privacy {
+    .paragraph {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      color: #000;
+      margin: 15px 0 0;
+      letter-spacing: initial;
+
+      .link {
+        font-weight: 600;
+        color: #444;
+      }
+    }
+  }
+
+  &--adress {
+    .paragraph {
+      margin: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+      color: #b5b5b5;
+      margin-bottom: 0;
+    }
+  }
+
+  &--footer__copyright{
+    justify-content: center;
+    .paragraph{
+        padding: 10px;
+        font-family: Futura PT;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        margin: 0;
+    }
+  }
+}

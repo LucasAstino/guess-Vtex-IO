@@ -3,6 +3,7 @@
   "name": "fg-store",
   "version": "0.0.3",
   "builders": {
+    "assets": "0.x",
     "styles": "2.x",
     "store": "0.x",
     "sitemap": "0.x",
@@ -62,7 +63,8 @@
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
-    "guessbr.agenciafg-custom": "0.x"
+    "guessbr.agenciafg-custom": "0.x",
+    "vtex.store-newsletter": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
