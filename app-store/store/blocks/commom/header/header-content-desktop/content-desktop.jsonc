@@ -10,7 +10,8 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "mega-menu#desktop",
+      "mega-menu",
+       "mega-menu-trigger-btn",
       "flex-layout.col#spacer",
       "search-bar",
       "locale-switcher",
@@ -27,9 +28,15 @@
       "height": "44"
     }
   },
-  "mega-menu#desktop": {
+  "mega-menu": {
     "props": {
-      "openOnly": "horizontal"
+      "openOnly": "horizontal",
+      "orientation":"horizontal"
+    }
+  },
+  "mega-menu-trigger-btn": {
+    "props": {
+      "Drawer": "drawer"
     }
   }
 }
