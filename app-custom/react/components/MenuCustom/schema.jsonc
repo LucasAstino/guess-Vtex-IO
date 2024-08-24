@@ -1,0 +1,84 @@
+// {
+//     "menu-custom": {
+//       "component": "MenuCustom",
+//       "schema": {
+//         "title": "Menu Customizado",
+//         "description": "Um menu customizado com links dinâmicos e banners nos submenus",
+//         "type": "object",
+//         "properties": {
+//           "menuLinks": {
+//             "type": "array",
+//             "title": "Links do Menu",
+//             "items": {
+//               "type": "object",
+//               "properties": {
+//                 "text": {
+//                   "type": "string",
+//                   "title": "Texto do Link",
+//                   "default": "Link"
+//                 },
+//                 "url": {
+//                   "type": "string",
+//                   "title": "URL do Link",
+//                   "default": "#"
+//                 },
+//                 "hasSubmenu": {
+//                   "type": "boolean",
+//                   "title": "Este link possui um submenu?",
+//                   "default": false
+//                 },
+//                 "submenuLinks": {
+//                   "type": "array",
+//                   "title": "Links do Submenu",
+//                   "items": {
+//                     "type": "object",
+//                     "properties": {
+//                       "text": {
+//                         "type": "string",
+//                         "title": "Texto do Link",
+//                         "default": "Submenu Link"
+//                       },
+//                       "url": {
+//                         "type": "string",
+//                         "title": "URL do Link",
+//                         "default": "#"
+//                       }
+//                     }
+//                   },
+//                   "titleField": "text",
+//                   "hidden": false,
+//                   "default": []
+//                 },
+//                 "bannerImage": {
+//                   "type": "string",
+//                   "title": "URL da Imagem do Banner",
+//                   "widget": {
+//                     "ui:widget": "image-uploader"
+//                   },
+//                   "default": ""
+//                 },
+//                 "bannerLink": {
+//                   "type": "string",
+//                   "title": "URL do Link do Banner",
+//                   "default": "#"
+//                 }
+//               }
+//             },
+//             "minItems": 1,
+//             "addItemText": "Adicionar novo link",
+//             "deleteItemText": "Remover link",
+//             "titleField": "text"
+//           },
+//           "linkColor": {
+//             "type": "string",
+//             "title": "Cor dos Links",
+//             "default": "#000000",
+//             "widget": {
+//               "ui:widget": "color"
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+  
