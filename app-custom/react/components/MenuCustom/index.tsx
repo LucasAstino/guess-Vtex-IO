@@ -13,6 +13,7 @@ type SubmenuLink = {
 type Banner = {
   bannerImage: string;
   bannerLink: string;
+  bannerText: string;
 };
 
 type MenuLink = {
@@ -21,7 +22,7 @@ type MenuLink = {
   url: string;
   hasSubmenu: boolean;
   submenuLinks?: SubmenuLink[];
-  banner: Banner;
+  banners?: Banner[];
   linkColor?: string;
 };
 
@@ -38,6 +39,8 @@ const CSS_HANDLES = [
   "submenuContainer",
   "submenuItem",
   "bannerContainer",
+  "bannerLink",
+  "bannerText",
   "bannerImage",
   "submenuToggleIcon",
   "activeMenuItem",
@@ -46,8 +49,10 @@ const CSS_HANDLES = [
   "level-",
 ] as const;
 
-export const MenuCustom = (props: Props) => {
+export const AstinoMenu = (props: Props) => {
   const { menuLinks } = props;
+  console.log("menuLinks props:", menuLinks); // Verifique os dados recebidos
+
   const [openSubmenus, setOpenSubmenus] = useState<string[]>([]);
   const { handles } = useCssHandles(CSS_HANDLES);
 
@@ -76,6 +81,7 @@ export const MenuCustom = (props: Props) => {
       >
         {submenuLinks.map((submenuLink, subIndex) => {
           const currentPath = `${parentIndexPath}-${subIndex}`;
+          console.log("Rendering submenu link:", submenuLink.text); // Verifique o texto dos links de submenu
 
           return (
             <li
@@ -119,7 +125,7 @@ export const MenuCustom = (props: Props) => {
                       className={`${handles.submenuToggleIcon} ${
                         openSubmenus.includes(currentPath) ? "active" : ""
                       }`}
-                    ></span>
+                    />
                   )}
                 </p>
               ) : (
@@ -149,6 +155,8 @@ export const MenuCustom = (props: Props) => {
       <ul className={handles.wrapper}>
         {menuLinks.map((link, index) => {
           const indexPath = `${index}`;
+          console.log("Rendering main menu link:", link.text); // Verifique o texto dos links principais
+          console.log("Link banners:", link.banners); // Verifique se os banners estão presentes
 
           return (
             <li
@@ -184,7 +192,7 @@ export const MenuCustom = (props: Props) => {
                       className={`${handles.submenuToggleIcon} ${
                         openSubmenus.includes(indexPath) ? "active" : ""
                       }`}
-                    ></span>
+                    />
                   )}
                 </p>
               ) : (
@@ -206,21 +214,37 @@ export const MenuCustom = (props: Props) => {
                   aria-label={`${link.text} submenu`}
                   style={{
                     display: openSubmenus.includes(indexPath) ? "flex" : "none",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
+                    // flexDirection: "column",
                   }}
                 >
-                  <div>{renderSubmenu(link.submenuLinks, 0, indexPath)}</div>
-                  {link.banner && (
+                  {renderSubmenu(link.submenuLinks, 1, indexPath)}
+
+                  {console.log("antes do render o banner", link)}
+                  {link.banners && link.banners.length > 0 && (
                     <div className={handles.bannerContainer}>
-                      <a href={link.banner.bannerLink || "#"}>
-                        <img
-                          src={link.banner.bannerImage} // Verifique aqui se o valor está presente
-                          alt={`${link.text} banner`}
-                          className={handles.bannerImage}
-                          loading="lazy"
-                        />
-                      </a>
+                      {link.banners.map((banner, bannerIndex) => {
+                        console.log("Rendering banner:", banner.bannerImage); // Verifique a URL da imagem do banner
+
+                        return (
+                          <a
+                            className={handles.bannerLink}
+                            key={bannerIndex}
+                            href={banner.bannerLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src={banner.bannerImage}
+                              alt={`Banner ${bannerIndex + 1}`}
+                              className={handles.bannerImage}
+                            />
+
+                            {banner.bannerText && (
+                              <span className={handles.bannerText}>{banner.bannerText}</span>
+                            )}
+                          </a>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -233,7 +257,7 @@ export const MenuCustom = (props: Props) => {
   );
 };
 
-MenuCustom.schema = {
+AstinoMenu.schema = {
   title: "Menu Customizado",
   description: "Um menu customizado com links dinâmicos e banners nos submenus",
   type: "object",
@@ -269,6 +293,10 @@ MenuCustom.schema = {
             items: {
               type: "object",
               properties: {
+                __editorItemTitle: {
+                  type: "string",
+                  title: "Título no Editor",
+                },
                 text: {
                   type: "string",
                   title: "Texto do Link",
@@ -306,22 +334,30 @@ MenuCustom.schema = {
               },
             },
           },
-          banner: {
-            type: "object",
-            title: "Banner",
-            properties: {
-              bannerImage: {
-                type: "string",
-                title: "URL da Imagem do Banner",
-                widget: {
-                  "ui:widget": "image-uploader",
+          banners: {
+            type: "array",
+            title: "Banners",
+            items: {
+              type: "object",
+              properties: {
+                bannerImage: {
+                  type: "string",
+                  title: "URL da Imagem do Banner",
+                  widget: {
+                    "ui:widget": "image-uploader",
+                  },
+                  default: "",
                 },
-                default: "",
-              },
-              bannerLink: {
-                type: "string",
-                title: "URL do Link do Banner",
-                default: "#",
+                bannerLink: {
+                  type: "string",
+                  title: "URL do Link do Banner",
+                  default: "#",
+                },
+                bannerText: {
+                  type: "string",
+                  title: "Texto do banner",
+                  default: "",
+                },
               },
             },
           },

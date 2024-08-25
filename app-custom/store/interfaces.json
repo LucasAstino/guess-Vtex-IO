@@ -2,7 +2,7 @@
   "Helmet":{
     "component":"Helmet"
   },
-  "MenuCustom":{
-    "component":"MenuCustom"
+  "AstinoMenu":{
+    "component":"AstinoMenu"
   }
 }
