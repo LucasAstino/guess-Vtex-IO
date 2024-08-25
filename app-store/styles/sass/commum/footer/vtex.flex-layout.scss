@@ -2,38 +2,81 @@
   &--footer__wrapper {
     background: #eee;
     padding: 70px 10px;
+    @include mobile {
+      padding: 0;
+      background: white;
+      :global(.vtex-store-components-3-x-container) {
+        padding: 0;
+      }
+    }
     .flexRowContent {
       @extend %maxcontainer;
+      display: flex;
       justify-content: space-between;
       padding: 0;
+      @include tablet {
+        flex-wrap: wrap;
+      }
+      @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+      }
       .flexCol {
         &--footer__menu-col {
           width: fit-content;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        @include mobile {
+          &--institucional {
+            padding: 5px 20px;
+            order: 1;
+          }
+          &--assistance {
+            padding: 5px 20px;
+            order: 2;
+          }
+          &--help {
+            padding: 5px 20px;
+            order: 3;
+          }
         }
         &--footer__newsletter {
-          max-width: 410px;
-          padding-left: 20px;
+          @include desktop {
+            max-width: 410px;
+          }
+          @include tablet {
+            margin-top: 20px;
+          }
+
+          @include mobile {
+            padding: 26px 20px 20px;
+            background-color: #eee;
+          }
         }
       }
     }
   }
-  &--footer__social{
+  &--footer__social {
     max-width: 354px;
-    .flexRowContent{
-        justify-content: space-between;
+    .flexRowContent {
+      justify-content: space-between;
     }
   }
 
-  &--footer__adress{
+  &--footer__adress {
     padding: 27px 0px;
     @extend %maxcontainer;
 
-    .flexRowContent{
-        align-items: center;
+    .flexRowContent {
+      display: flex;
+      align-items: center;
     }
   }
 
-  &--footer__copyright{
+  &--footer__copyright {
     background-color: #000;
   }
 }

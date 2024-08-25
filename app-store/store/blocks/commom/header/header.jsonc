@@ -73,9 +73,7 @@
 
   "menu#drawer": {
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
+      "AstinoMenu"
     ],
     "props": {
       "orientation": "vertical"

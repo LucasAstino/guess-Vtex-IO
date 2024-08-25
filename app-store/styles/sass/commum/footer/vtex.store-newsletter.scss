@@ -1,0 +1,71 @@
+.newsletterForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  .emailInputContainer {
+    width: calc(100% - 110px);
+    @include desktop {
+      max-width: 300px;
+    }
+    // @include mobile{
+    //     width: 60%;
+    // }
+
+    &::before {
+      content: "E-mail:";
+      display: block;
+      font-size: 0.97em;
+      margin-top: 9px;
+      margin-bottom: 5px;
+    }
+
+    :global(.vtex-input-prefix__group) {
+      all: unset;
+    }
+    :global(.vtex-styleguide-9-x-input) {
+      height: 40px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      text-align: left;
+      color: #565d61;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+  .formSubmitContainer {
+    max-width: 110px;
+    :global(.vtex-button) {
+      width: 100%;
+      background-color: #1b1c1d;
+      color: #ffffff;
+      border: 0;
+      height: 40px;
+      font-family: Futura PT;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-align: center;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+  }
+
+  .confirmationCheckboxContainer {
+    margin-top: 20px;
+
+    :global(.vtex-checkbox__inner-container) {
+      border-color: black;
+      background-color: black;
+    }
+    :global(.vtex-checkbox__label) {
+      font-family: "Futura PT";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      color: #000;
+    }
+  }
+}

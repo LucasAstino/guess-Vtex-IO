@@ -13,20 +13,77 @@
   display: contents;
 }
 
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
 .flexRow--footer__wrapper {
   background: #eee;
   padding: 70px 10px;
 }
+@media (max-width: 768px) {
+  .flexRow--footer__wrapper {
+    padding: 0;
+    background: white;
+  }
+  .flexRow--footer__wrapper :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
 .flexRow--footer__wrapper .flexRowContent {
+  display: flex;
   justify-content: space-between;
   padding: 0;
+}
+@media (max-width: 1025px) {
+  .flexRow--footer__wrapper .flexRowContent {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .flexRow--footer__wrapper .flexRowContent {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 .flexRow--footer__wrapper .flexRowContent .flexCol--footer__menu-col {
   width: fit-content;
 }
-.flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
-  max-width: 410px;
-  padding-left: 20px;
+@media (max-width: 768px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__menu-col {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--institucional {
+    padding: 5px 20px;
+    order: 1;
+  }
+  .flexRow--footer__wrapper .flexRowContent .flexCol--assistance {
+    padding: 5px 20px;
+    order: 2;
+  }
+  .flexRow--footer__wrapper .flexRowContent .flexCol--help {
+    padding: 5px 20px;
+    order: 3;
+  }
+}
+@media (min-width: 1025px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
+    max-width: 410px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .flexRow--footer__wrapper .flexRowContent .flexCol--footer__newsletter {
+    padding: 26px 20px 20px;
+    background-color: #eee;
+  }
 }
 .flexRow--footer__social {
   max-width: 354px;
@@ -38,6 +95,7 @@
   padding: 27px 0px;
 }
 .flexRow--footer__adress .flexRowContent {
+  display: flex;
   align-items: center;
 }
 .flexRow--footer__copyright {

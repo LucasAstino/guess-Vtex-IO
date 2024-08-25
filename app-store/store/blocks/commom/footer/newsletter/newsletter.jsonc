@@ -25,14 +25,24 @@
       "newsletter-input-email",
       "newsletter-submit",
       "newsletter-checkbox-confirmation"
-    //   "SuccessState",
-    //   "LoadingState",
-    //   "ErrorState"
     ]
-  }
-//    "SuccessState":{
+  },
+"newsletter-input-email":{
+    "props": {
+        "placeholderText":""
+    }
+},
+ "newsletter-submit":{
+    "props": {
+        "submitButtonLabel":"cadastrar"
+    }
+ },
 
-//    },
-//    "LoadingState":{},
-//    "ErrorState":{}
+  "newsletter-checkbox-confirmation":{
+    "props":{
+        "checkboxLabel":"Desejo receber ofertas e informativos por e-mail"
+    }
+  }
+
+
 }

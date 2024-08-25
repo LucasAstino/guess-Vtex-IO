@@ -2,7 +2,7 @@
   "flex-layout.col#footer__menu-help": {
     "title": "Menu footer help",
     "props": {
-      "blockClass":"footer__menu-col"
+      "blockClass":["footer__menu-col","help"]
     },
     "children": ["disclosure-layout#footer__menu-help"]
   },

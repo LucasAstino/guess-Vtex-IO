@@ -25,8 +25,9 @@
 
   "footer-layout.mobile": {
     "children": [
-      // "flex-layout.row#1-footer-mobile",
-      // "flex-layout.row#2-footer-mobile"
+      "flex-layout.row#footer__wrapper",
+      "flex-layout.row#footer__adress",
+      "flex-layout.row#footer__copyright"
     ]
   }
 }

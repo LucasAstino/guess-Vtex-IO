@@ -1,5 +1,5 @@
 .container--newsletter__title .paragraph {
-  font-family: "Futura PT";
+  font-family: " Futura PT medium";
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 .container--newsletter__title .paragraph:first-child {
-  font-family: Futura PT;
+  font-family: "Futura-PT-medium";
   font-size: 18px;
   font-weight: 650;
   line-height: 21px;
@@ -31,6 +31,11 @@
   font-weight: 600;
   color: #444;
 }
+@media (max-width: 768px) {
+  .container--adress {
+    display: none;
+  }
+}
 .container--adress .paragraph {
   margin: 0;
   font-style: normal;
@@ -46,7 +51,7 @@
 }
 .container--footer__copyright .paragraph {
   padding: 10px;
-  font-family: Futura PT;
+  font-family: Futura PT medium;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;

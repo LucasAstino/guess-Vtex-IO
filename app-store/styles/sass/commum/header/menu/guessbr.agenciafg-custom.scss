@@ -1,0 +1,79 @@
+.menuContainer {
+  .wrapper {
+    .menuItem {
+      .submenuContainer {
+        align-items: stretch;
+        padding: 20px;
+        .submenuWrapper {
+          &.level-1 {
+            width: 50%;
+          }
+
+          .submenuItem {
+            width: 30%;
+            max-width: 250px;
+            .menuLink {
+              color: #000;
+              text-transform: capitalize;
+              font-family: "FUTURA PT";
+              font-size: 18px;
+              font-weight: 500;
+              letter-spacing: 0.05em;
+              padding: 0;
+            }
+          }
+          .level-2 {
+            .submenuItem {
+              width: 100%;
+
+              .menuLink {
+                font-family: "FUTURA PT";
+                font-size: 14px;
+                font-weight: 400;
+                padding: 0;
+                letter-spacing: 0.05em;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+
+        .bannerContainer {
+          .bannerLink {
+            display: block;
+            padding-left: 100px;
+            border-left: 1px solid #e5e5e5;
+            font-size: 22px;
+            font-family: Orpheus;
+            color: #000;
+            letter-spacing: 0.05em;
+            margin-top: 5px;
+            text-decoration: none;
+
+            .bannerText {
+              &::after {
+                content: "";
+                font-size: 22px;
+                font-family: Orpheus;
+                color: #000;
+                letter-spacing: 0.05em;
+                margin-top: 5px;
+                margin-left: 10px;
+                display: inline-block;
+                width: 55px;
+                height: 10px;
+                background-image: url(assets/icons/header/big-arrow.png); /* URL do ícone desejado */
+                background-repeat: no-repeat;
+              }
+            }
+
+            .bannerImage {
+              display: block;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
