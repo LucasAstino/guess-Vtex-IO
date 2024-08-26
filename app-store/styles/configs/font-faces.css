@@ -1,21 +1,7 @@
 @font-face {
-    font-family: 'Futura-PT-medium';
-    font-display: swap;
-    font-style: normal;
-    src: url('assets/fonts/FuturaPT-Medium.ttf') format('ttf');
-    font-weight: 400;
-  }
-@font-face {
-    font-family: 'Futura-PT-medium';
-    font-display: swap;
-    font-style: normal;
-    src: url('assets/fonts/FuturaPT-Medium.woff') format('woff');
-    font-weight: 400;
-  }
-@font-face {
-    font-family: 'Futura-PT-medium';
-    font-display: swap;
-    font-style: normal;
-    src: url('assets/fonts/FuturaPT-Medium.woff2') format('woff2');
-    font-weight: 400;
-  }
+  font-family: 'Futura-PT-medium';
+  src: url('assets/fonts/FuturaPT-Medium.woff2') format('woff2'),
+       url('assets/fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
