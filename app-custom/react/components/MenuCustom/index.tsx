@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { useCssHandles } from "vtex.css-handles";
-import {
-  menuContainer,
-  menuItem,
-  menuLink,
-  SubmenuToggleIcon,
-  SubmenuContainer,
-  SubmenuItem,
-  Wrapper,
-  SubmenuWrapper,
-  BannerContainer,
-  BannerImage,
-  BannerLink,
-  BannerText
-} from './MenuStyles';
+// import {
+//   menuContainer,
+//   menuItem,
+//   menuLink,
+//   SubmenuToggleIcon,
+//   SubmenuContainer,
+//   SubmenuItem,
+//   Wrapper,
+//   SubmenuWrapper,
+//   BannerContainer,
+//   BannerImage,
+//   BannerLink,
+//   BannerText
+// } from './MenuStyles';
 
 type SubmenuLink = {
   text: string;
