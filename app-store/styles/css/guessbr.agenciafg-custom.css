@@ -1,19 +1,50 @@
 @charset "UTF-8";
+@media (min-width: 1025px) {
+  .menuContainer {
+    margin-right: auto;
+    margin-left: inherit;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start !important;
+  }
+}
+.menuContainer .wrapper {
+  margin: 0;
+  height: 100%;
+}
+.menuContainer .wrapper .menuItem {
+  display: flex;
+  align-items: center;
+}
+.menuContainer .wrapper .menuItem .menuLink {
+  font-family: "Futura";
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  padding: 0;
+}
 .menuContainer .wrapper .menuItem .submenuContainer {
   align-items: stretch;
   padding: 20px;
+  top: 78px;
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper.level-1 {
-  width: 50%;
+  width: 40%;
+}
+.menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper.level-1 .menuLink {
+  margin-bottom: 10px;
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .submenuItem {
-  width: 30%;
+  width: 100%;
   max-width: 250px;
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .submenuItem .menuLink {
   color: #000;
   text-transform: capitalize;
-  font-family: "FUTURA PT";
+  font-family: "Futura";
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -23,7 +54,7 @@
   width: 100%;
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .level-2 .submenuItem .menuLink {
-  font-family: "FUTURA PT";
+  font-family: "Futura";
   font-size: 14px;
   font-weight: 400;
   padding: 0;

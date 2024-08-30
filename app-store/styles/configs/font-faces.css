@@ -1,7 +1,14 @@
 @font-face {
-  font-family: 'Futura-PT-medium';
-  src: url('assets/fonts/FuturaPT-Medium.woff2') format('woff2'),
-       url('assets/fonts/FuturaPT-Medium.woff') format('woff');
+  font-family: 'Futura';
+  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
+  src: url('assets/fonts/FuturaPT-Medium.woff2');
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
+  src: url('assets/fonts/FuturaPT-Light.woff2');
+  font-weight: 300;
   font-style: normal;
 }

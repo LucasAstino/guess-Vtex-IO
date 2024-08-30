@@ -41,7 +41,7 @@
       color: #ffffff;
       border: 0;
       height: 40px;
-      font-family: Futura PT;
+      font-family: 'Futura';
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 2px;
@@ -56,11 +56,11 @@
     margin-top: 20px;
 
     :global(.vtex-checkbox__inner-container) {
-      border-color: black;
-      background-color: black;
+      border:1px solid black;
+
     }
     :global(.vtex-checkbox__label) {
-      font-family: "Futura PT";
+      font-family: "Futura";
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;

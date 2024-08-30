@@ -1,193 +1,25 @@
 {
   "flex-layout.row#header__content-desktop": {
     "props": {
-      "blockClass": "main-header",
-      "horizontalAlign": "center",
-      "verticalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
+      "blockClass": "main-header"
+      // "horizontalAlign": "center",
+      // "verticalAlign": "center",
+      // "preventHorizontalStretch": true,
+      // "preventVerticalStretch": true,
+      // "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
-      "AstinoMenu",
-      "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      "logo#desktop",
+      "AstinoMenu#main",
+      "flex-layout.row#headers__icons"
     ]
   },
 
-  "AstinoMenu": {
+  "flex-layout.row#headers__icons": {
     "props": {
-      "menuLinks": [
-        {
-          "text": "Feminino",
-          "url": "/feminino",
-          "hasSubmenu": true,
-          "submenuLinks": [
-            {
-              "text": "Roupas",
-              "url": "/feminino/Roupas",
-              "hasSubmenu": true,
-              "submenuLinks": [
-                {
-                  "text": "Ver tudo",
-                  "url": "/feminino/Roupas"
-                },
-                {
-                  "text": "New Arrivals",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Blusas",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Calças",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Calças Jeans",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Camisas",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Camisetas",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Casacos e Jaquetas",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Macaquinhos e Macacões",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Moletons",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Saias",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Shorts e Bermudas",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Tricots e Sueteres",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Vestidos",
-                  "url": "/feminino/roupas/new-arrivals"
-                },
-                {
-                  "text": "Sale",
-                  "url": "/feminino/roupas/new-arrivals"
-                }
-              ]
-            },
-            {
-              "text": "Acessórios",
-              "url": "/feminino/roupas",
-              "hasSubmenu": true,
-              "submenuLinks": [
-                { "text": "Ver tudo", "url": "/feminino/roupas/camisetas" },
-                { "text": "New Arrivals", "url": "/feminino/roupas/camisetas" },
-                { "text": "Bonés", "url": "/feminino/roupas/camisetas" },
-                { "text": "Carteiras", "url": "/feminino/roupas/camisetas" },
-                { "text": "Óculos", "url": "/feminino/roupas/camisetas" },
-                { "text": "Relógios", "url": "/feminino/roupas/camisetas" },
-                { "text": "Sale", "url": "/feminino/roupas/camisetas" }
-              ]
-            },
-            {
-              "text": "Estilos",
-              "url": "/feminino/roupas",
-              "hasSubmenu": true,
-              "submenuLinks": [
-                { "text": "The Logo Shop", "url": "/feminino/roupas/camisetas" },
-                { "text": "Denim Fit", "url": "/feminino/roupas/camisetas" },
-                { "text": "Casual", "url": "/feminino/roupas/camisetas" },
-                { "text": "Trabalho", "url": "/feminino/roupas/camisetas" },
-                { "text": "Night & Life", "url": "/feminino/roupas/camisetas" },
-                { "text": "Conforto", "url": "/feminino/roupas/camisetas" },
-                { "text": "Dia a dia", "url": "/feminino/roupas/camisetas" },
-                { "text": "Moda Básica", "url": "/feminino/roupas/camisetas" }
-              ]
-            }
-          ],
-          "banners": [
-            {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-feminino-2",
-              "bannerText":"Ver todos os produtos"
-            }
-          ],
-          "linkColor": "#000000"
-        },
-        {
-          "text": "Masculino",
-          "url": "/masculino",
-          "hasSubmenu": true,
-          "submenuLinks": [
-            { "text": "Roupas", "url": "/masculino/roupas" },
-            { "text": "Calçados", "url": "/masculino/calcados" },
-            { "text": "Acessórios", "url": "/masculino/acessorios" }
-          ],
-          "banners": [
-            {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-masculino2",
-              "bannerText": "agora vai"
-            }
-          ]
-        },
-        {
-          "text": "Infantil",
-          "url": "/infantil",
-          "hasSubmenu": true,
-          "submenuLinks": [
-            { "text": "Roupas", "url": "/infantil/roupas" },
-            { "text": "Calçados", "url": "/infantil/calcados" },
-            { "text": "Brinquedos", "url": "/infantil/brinquedos" }
-          ],
-          "banners": [
-            {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
-            }
-          ]
-        },
-        {
-          "text": "Acessórios",
-          "url": "/acessorios",
-          "hasSubmenu": true,
-          "submenuLinks": [
-            { "text": "Bolsas", "url": "/acessorios/bolsas" },
-            { "text": "Relógios", "url": "/acessorios/relogios" },
-            { "text": "Óculos", "url": "/acessorios/oculos" }
-          ],
-          "banners": [
-            {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-acessorios"
-            }
-          ]
-        },
-        {
-          "text": "Ofertas",
-          "url": "/ofertas",
-          "hasSubmenu": false
-        }
-      ]
-    }
+      "blockClass": "headers__icons"
+    },
+    "children": ["search-bar", "locale-switcher", "login", "minicart.v2"]
   },
 
   "logo#desktop": {
@@ -196,7 +28,8 @@
       "href": "/",
       "url": "assets/logo/new-logo-guess-small.png",
       "width": "117",
-      "height": "44"
+      "height": "44",
+      "blockClass": "logo__desktop"
     }
   }
 }

@@ -33,18 +33,12 @@
   //   },
   //   "children": ["flex-layout.row#4-desktop"]
   // },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#desktop"]
-  },
-  "flex-layout.col#category-menu": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["vtex.menu@2.x:menu#category-menu"]
-  },
+  // "flex-layout.col#category-menu": {
+  //   "props": {
+  //     "verticalAlign": "middle"
+  //   },
+  //   "children": ["vtex.menu@2.x:menu#category-menu"]
+  // },
  
   "header-layout.mobile": {
     "children": ["sticky-layout#1-mobile"]
@@ -73,7 +67,7 @@
 
   "menu#drawer": {
     "children": [
-      "AstinoMenu"
+      "AstinoMenu#main"
     ],
     "props": {
       "orientation": "vertical"

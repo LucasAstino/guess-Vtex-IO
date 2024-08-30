@@ -1,5 +1,5 @@
 .container--newsletter__title .paragraph {
-  font-family: " Futura PT medium";
+  font-family: "Futura";
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 .container--newsletter__title .paragraph:first-child {
-  font-family: "Futura-PT-medium";
+  font-family: "Futura";
   font-size: 18px;
   font-weight: 650;
   line-height: 21px;
@@ -51,7 +51,7 @@
 }
 .container--footer__copyright .paragraph {
   padding: 10px;
-  font-family: Futura PT medium;
+  font-family: "Futura";
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
