@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.menuContainer {
+  z-index: 99;
+}
 @media (min-width: 1025px) {
   .menuContainer {
     margin-right: auto;

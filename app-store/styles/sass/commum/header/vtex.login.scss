@@ -1,0 +1,21 @@
+.container{
+    width: fit-content !important;
+    :global(.vtex-button){
+        width: 52px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        &::before{
+            content: "";
+            background: url(assets/icons/header/icon-user.svg) no-repeat;
+            background-size: 100%;
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+        }
+    }
+    :global(.vtex-button__label){
+        display: none;
+    }
+}

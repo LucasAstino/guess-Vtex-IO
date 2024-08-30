@@ -2,11 +2,6 @@
   "flex-layout.row#header__content-desktop": {
     "props": {
       "blockClass": "main-header"
-      // "horizontalAlign": "center",
-      // "verticalAlign": "center",
-      // "preventHorizontalStretch": true,
-      // "preventVerticalStretch": true,
-      // "fullWidth": true
     },
     "children": [
       "logo#desktop",
@@ -19,7 +14,21 @@
     "props": {
       "blockClass": "headers__icons"
     },
-    "children": ["search-bar", "locale-switcher", "login", "minicart.v2"]
+    "children": ["search-bar#header", "image#find__stores", "login", "minicart.v2"]
+  },
+
+  "search-bar#header": {
+    "props": {
+      "placeholder": "O que você procura?"
+    }
+  },
+
+  "image#find__stores": {
+    "title": "Buscar Lojas",
+    "props": {
+      "src": "assets/icons/header/icon-map.svg",
+      "blockClass":"find__stores"
+    }
   },
 
   "logo#desktop": {

@@ -1,10 +1,64 @@
-.logoLink--logo__desktop{
-    width: fit-content !important;
-    display: flex;
-    height: fit-content;
+.logoLink--logo__desktop {
+  width: fit-content !important;
+  display: flex;
+  height: fit-content;
 
-    .logoContainer{
-        padding: 0 30px 0 10px;
-        height: auto;
+  .logoContainer {
+    padding: 0 30px 0 10px;
+    height: auto;
+  }
+}
+
+.searchBarContainer {
+    width: fit-content !important;
+  :global(.vtex-input-prefix__group) {
+    transition: all 0.3s ease-in-out;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 0;
+    padding-bottom: 4px;
+    :global(.vtex-input__suffix) {
+      padding: 0;
+    }
+    :global(.vtex-styleguide-9-x-input) {
+      font-family: "Century";
+      width: 0;
+      padding: 0;
+      transition: all 0.3s ease-in-out;
+      font-size: 14px;
+    }
+
+    &:hover {
+      border-bottom: 1px solid black;
+      :global(.vtex-styleguide-9-x-input) {
+        font-family: "Century";
+        width: 190px;
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .searchBarIcon {
+    padding: 0;
+    width: 52px;
+    &::before {
+      content: "";
+      background: url(assets/icons/header/icon-search.svg) no-repeat;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      display: block;
+      margin: auto;
+    }
+    .searchIcon {
+      display: none;
+    }
+  }
+}
+
+.imageElement {
+    &--find__stores{
+        padding: 0 16px;
     }
 }

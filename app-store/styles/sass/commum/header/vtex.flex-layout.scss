@@ -1,6 +1,6 @@
 .flexRow {
   &--main-header {
-    .flexRowContent {
+    .flexRowContent--main-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -10,6 +10,8 @@
   }
 
   &--headers__icons{
-    width: fit-content !important;
+    .flexRowContent{
+      justify-content: end;
+    }
   }
 }

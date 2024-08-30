@@ -1,0 +1,29 @@
+.minicartWrapperContainer {
+  width: fit-content !important;
+  .openIconContainer {
+    padding: 0;
+  }
+  .minicartIconContainer {
+    &::before {
+      content: "";
+      background: url(assets/icons/header/icon-bag.svg) no-repeat;
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+
+  .minicartQuantityBadge{
+    font-family: Century;
+    top: 100%;
+    font-style: italic;
+    right: 0;
+    background-color: transparent;
+    color: black;
+  }
+
+  .cartIcon {
+    display: none;
+  }
+}

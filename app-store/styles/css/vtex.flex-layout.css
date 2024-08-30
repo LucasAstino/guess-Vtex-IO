@@ -102,13 +102,13 @@
   background-color: #000;
 }
 
-.flexRow--main-header .flexRowContent {
+.flexRow--main-header .flexRowContent--main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   height: 78px;
 }
-.flexRow--headers__icons {
-  width: fit-content !important;
+.flexRow--headers__icons .flexRowContent {
+  justify-content: end;
 }

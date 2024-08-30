@@ -12,3 +12,10 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Century';
+  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
+  src: url('assets/fonts/CenturyGothic.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
