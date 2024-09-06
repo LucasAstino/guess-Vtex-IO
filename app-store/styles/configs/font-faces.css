@@ -1,21 +1,44 @@
 @font-face {
   font-family: 'Futura';
-  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
   src: url('assets/fonts/FuturaPT-Medium.woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Futura';
-  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
   src: url('assets/fonts/FuturaPT-Light.woff2');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Century';
-  /* src: url('https://i5b2auzol4.map.azionedge.net/Custom/Content/Themes/Tema/CSS/Fontes/FuturaPT-Medium.woff2'); */
   src: url('assets/fonts/CenturyGothic.woff2');
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Orpheus';
+  src: url('assets/fonts/Orpheus-Pro-Italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Orpheus';
+  src: url('assets/fonts/Orpheus-Pro.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), 
+       url('https://fonts.gstatic.com/s/opensans/v34/mem8YaGs126MiZpBA-U1UpcaXcl0Aw.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), 
+       url('https://fonts.gstatic.com/s/opensans/v34/mem5YaGs126MiZpBA-UN_r8-V0hQCek3CziPkQ.ttf') format('truetype');
 }

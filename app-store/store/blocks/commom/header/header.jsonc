@@ -10,7 +10,8 @@
       "flex-layout.row#1-desktop",
       "flex-layout.row#header__content-desktop",
       // "sticky-layout#4-desktop",
-      "Helmet"
+      "Helmet",
+      "PopupForm"
     ]
   },
 
@@ -41,7 +42,7 @@
   // },
  
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
+    "children": ["sticky-layout#1-mobile","Helmet","PopupForm"]
   },
   "sticky-layout#1-mobile": {
     "children": ["flex-layout.row#1-mobile"]

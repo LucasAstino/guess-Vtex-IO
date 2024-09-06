@@ -253,9 +253,9 @@
           "component": "ListSummary",
           "itemsPerRow": 1
         }
-      ],
-      "ListSummary": "product-summary.shelf#listLayout",
-      "GridSummary": "product-summary.shelf"
+      ]
+      // "ListSummary": "product-summary.shelf#listLayout",
+      // "GridSummary": "product-summary.shelf"
     }
   },
   "gallery-layout-switcher": {

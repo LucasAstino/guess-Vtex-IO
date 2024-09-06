@@ -1,0 +1,10 @@
+.container{
+    &--first__shelf-title{
+        display: flex;
+        justify-content: center;
+        color:#655B43;
+        .heading--first__shelf-title{
+            font-size: 64px;
+        }
+    }
+}

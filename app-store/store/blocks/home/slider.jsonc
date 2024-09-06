@@ -1,0 +1,32 @@
+{
+  "list-context.image-list#slider__home": {
+    "children": ["slider-layout#slider__home"],
+    "props": {
+      "preload": true,
+      "height": "auto",
+      "images": [
+        {
+          "image": "assets/images/home/fullBanner.jpg",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#slider__home": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "carousel"
+    }
+  }
+}

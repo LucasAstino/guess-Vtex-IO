@@ -1,0 +1,53 @@
+{
+  "rich-text#category__list": {
+    "title": "Titulo da seção de categorias",
+    "props": {
+      "text": "## Lorem Ipsum Dolor Sit",
+      "blockClass": "category__list-title"
+    }
+  },
+  "flex-layout.row#category__list-1": {
+    "title": "primeira linha de categoria",
+    "props": {
+        "blockClass": "category__list"
+    },
+    "children": ["flex-layout.col#category__list-1","flex-layout.col#category__list-2","flex-layout.col#category__list-3"]
+  },
+  "flex-layout.row#category__list-2": {
+    "title": "segunda linha de categoria",
+    "props": {
+        "blockClass": "category__list"
+    },
+    "children": ["flex-layout.col#category__list-1","flex-layout.col#category__list-2","flex-layout.col#category__list-3"]
+  },
+  "flex-layout.col#category__list-1": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": [ "image#category__list","rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-2": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": [ "image#category__list","rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-3": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": [ "image#category__list","rich-text#category__list-link"]
+  },
+  "image#category__list": {
+    "props": {
+      "src": "assets/images/home/categoryList.jpg"
+      
+    }
+  },
+  "rich-text#category__list-link": {
+    "props": {
+        "text": "Categoria",
+        "blockClass":"category__list-link"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "rich-text#first__shelf-title": {
+    "props": {
+      "text": "## Lorem Ipsum Dolor Sit",
+      "blockClass": "first__shelf-title"
+    }
+  },
+  "flex-layout.row#first__shelf": {
+    "children": ["list-context.product-list#first__shelf"]
+  },
+  "slider-layout#first-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "list-context.product-list#first__shelf": {
+    "blocks": [ "product-summary.shelf#home"],
+    "children": ["slider-layout#first-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  }
+}

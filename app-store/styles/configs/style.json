@@ -253,21 +253,21 @@
         "measure": [30, 34, 20],
         "styles": {
           "heading-1": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Orpheus, arial, sans-serif",
             "fontWeight": "700",
             "fontSize": "3rem",
             "textTransform": "initial",
             "letterSpacing": "0"
           },
           "heading-2": {
-            "fontFamily": "Futura, sans-serif",
+            "fontFamily": "Orpheus, sans-serif",
             "fontWeight": "700",
             "fontSize": "2.25rem",
             "textTransform": "initial",
             "letterSpacing": "0"
           },
           "heading-3": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Orpheus, arial, sans-serif",
             "fontWeight": "700",
             "fontSize": "1.75rem",
             "textTransform": "initial",
@@ -295,42 +295,42 @@
             "letterSpacing": "0"
           },
           "body": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "normal",
             "fontSize": "1rem",
             "textTransform": "initial",
             "letterSpacing": "0"
           },
           "small": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "normal",
             "fontSize": "0.875rem",
             "textTransform": "initial",
             "letterSpacing": "0"
           },
           "mini": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "normal",
             "fontSize": "0.75rem",
             "textTransform": "initial",
             "letterSpacing": "0"
           },
           "action": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "500",
             "fontSize": "1rem",
             "textTransform": "uppercase",
             "letterSpacing": "0"
           },
           "action--small": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "500",
             "fontSize": "0.875rem",
             "textTransform": "uppercase",
             "letterSpacing": "0"
           },
           "action--large": {
-            "fontFamily": "Futura, arial, sans-serif",
+            "fontFamily": "Futura, arial, sans-serif,Open Sans",
             "fontWeight": "500",
             "fontSize": "1.25rem",
             "textTransform": "uppercase",

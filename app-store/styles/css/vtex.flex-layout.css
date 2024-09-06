@@ -1,3 +1,14 @@
+.flexRow--category__list {
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1024px) {
+  .flexRow--category__list {
+    width: calc(100% - 30px);
+  }
+}
+
 .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1098px;
@@ -111,4 +122,11 @@
 }
 .flexRow--headers__icons .flexRowContent {
   justify-content: end;
+}
+
+.flexRow--category__list {
+  margin-bottom: 50px;
+}
+.flexRow--category__list .flexRowContent--category__list {
+  gap: 8px;
 }

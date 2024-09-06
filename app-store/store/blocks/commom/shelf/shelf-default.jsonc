@@ -1,0 +1,108 @@
+{
+  // "product-summary.shelf#category": {
+  //   "title": "Resumo do produto na prateleira da categoria",
+  //   "props": {
+  //     "blockClass": "category"
+  //   },
+  //   "children": [
+  //     "stack-layout#prodsum__category",
+  //     "product-summary-name#category",
+  //     // "flex-layout.col#productRating",
+  //     // "product-summary-space",
+  //     "product-list-price",
+  //     "flex-layout.row#shelf__category-price",
+  //     "add-to-cart-button"
+  //   ]
+  // },
+  // "stack-layout#prodsum__category": {
+  //   "title": "Layout empilhado da prateleira da categoria",
+  //   "props": {
+  //     "blockClass": "prodsum__category"
+  //   },
+  //   "children": [
+  //     "product-summary-image#shelf__category"
+  //     // "flex-layout.row#flags"
+  //   ]
+  // },
+  // "flex-layout.row#flags": {
+  //   "title": "Bandeiras de promoção",
+  //   "props": {
+  //     "blockClass": "flags"
+  //   },
+  //   "children": [
+  //     "product-price-savings#flag__price-savings",
+  //     "vtex.product-highlights@2.x:product-highlights#collection"
+  //     // "fg-UltimosPares"
+  //   ]
+  // },
+  // "product-price-savings#flag__price-savings": {
+  //   "title": "Economia de preço",
+  //   "props": {
+  //     // "markers": ["discount"],
+  //     "blockClass": "flag__price-savings",
+  //     "message": "{savingsPercentage} Off"
+  //   }
+  // },
+  "vtex.product-highlights@2.x:product-highlights#collection": {
+    "title": "Destaques do produto",
+    "props": {
+      "type": "collection",
+      "blockClass": "highlights"
+    },
+    "children": ["product-highlight-wrapper"]
+  },
+  // "product-summary-name#category": {
+  //   "title": "Nome do produto na categoria",
+  //   "props": {
+  //     "blockClass": "category"
+  //   }
+  // },
+  // "product-summary-image#shelf__category": {
+  //   "title": "Imagem do produto na prateleira da categoria",
+  //   "props": {
+  //     "showBadge": false,
+  //     "aspectRatio": "1:1",
+  //     // "height": 390,
+  //     // "maxHeight": 400,
+  //     // "width":{
+  //     //   "mobile": "400"
+  //     // },
+  //     "hoverImage": {
+  //       "criteria": "label",
+  //       "label": "fotoVira"
+  //     }
+  //   }
+  // },
+  // "flex-layout.row#shelf__category-price": {
+  //   "title": "Preço na prateleira da categoria",
+  //   "props": {
+  //     "blockClass": "shelf__category-price"
+  //   },
+  //   "children": [
+  //     "product-selling-price#shelf__category",
+  //     "product-installments#shelf__category"
+  //   ]
+  // },
+  // "product-installments#shelf__category": {
+  //   "title": "Parcelamento na prateleira da categoria",
+  //   "props": {
+  //     "markers": ["from"],
+  //     "message": "{installmentsNumber}x de {installmentValue}",
+  //     "blockClass": "shelf__category"
+  //   }
+  // },
+  "product-list-price": {
+    "title": "Preço de lista do produto",
+    "props": {
+      "message": "DE: {listPriceValue}",
+      "blockClass": "product-list-price__category"
+    }
+  }
+  // "product-selling-price#shelf__category": {
+  //   "title": "Preço de venda do produto",
+  //   "props": {
+  //     "message": "Por: {sellingPriceValue}",
+  //     "blockClass": "shelf__category"
+  //   }
+  // }
+}
