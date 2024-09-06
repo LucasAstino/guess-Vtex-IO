@@ -4,5 +4,8 @@
   },
   "AstinoMenu":{
     "component":"AstinoMenu"
+  },
+  "PopupForm":{
+    "component":"PopupForm"
   }
 }

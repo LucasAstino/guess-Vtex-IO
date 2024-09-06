@@ -1,0 +1,330 @@
+
+.modal_overlay {
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+.modal_container {
+    background: url(/arquivos/background-solo.png);
+    border-radius: 10px;
+    display: flex;
+    height: 100%;
+    max-height: 430px;
+    max-width: 360px;
+    position: relative;
+    width: 100%;
+    z-index: 99999999;
+}
+
+.modal_close__mobile {
+    display: none;
+}
+
+.modal_close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    top: 5px;
+    padding: 0;
+}
+
+.modal__left,
+.modal__right {
+    height: 100%;
+}
+
+.modal__right {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.modal__head {
+    align-items: center;
+    display: flex;
+    padding: 25px 20px;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.87);
+}
+
+.modal__head button {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.popup__formTitle {
+    margin-top: 5px;
+    font-family: Century ;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+.popup__formTitle span {
+    color: #db2828
+}
+
+.popup__formGreetings {
+    font-family: Futura;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 20px 30px 0;
+    letter-spacing: 1px;
+}
+
+.popup__formText {
+    display: block;
+    font-family: Futura;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.popup__formText strong {
+    font-weight: 800;
+}
+
+.label{
+    width: 90%;
+    margin: auto;
+    font-family: Futura;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+}
+
+.modal__formWrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputFullWidth {
+    background: transparent;
+    border: 1px solid #EEEEEE;
+    text-align: left;
+    font-size: 12px;
+    height: 40px;
+    padding: 7px 17px;
+    width: 90%;
+}
+
+.check{
+    display: block;
+    width: 14px;
+    border-radius: 0;
+    height: 14px;
+    background: #fff;
+    border: 1px solid #000;
+    width: 18px;
+    height: 18px;
+}
+
+.optinWrapp {
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: Futura;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.institutionalUrl {
+    color: #5e5e5e;
+    text-decoration: none;
+}
+
+.sendButton,
+.returnToSiteBtn {
+    width: 90%;
+    color: white;
+    border-radius: 0;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    padding: 6px 23px;
+    background: #000;
+    text-transform: uppercase;
+    font-family: "Century";
+    font-size: 0.875rem;
+    margin-bottom: 15px;
+}
+
+.policy{
+    display: block;
+    width: 90%;
+    margin: auto;
+    font-family: Futura;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 1.2em;
+}
+
+.policyLink{
+    display: block;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #444;
+}
+
+.returnToSiteBtn {
+    margin: 15px 0px
+}
+
+.modal__successWrapp {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.modal_container_bgWhite {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    height: 100%;
+    max-height: 485px;
+    max-width: 415px;
+    position: relative;
+    width: 100%;
+}
+
+.coupon__container {
+    padding: 10px;
+    text-align: center;
+}
+
+.success__message,
+.couponTextTitle {
+    font-size: 19px;
+}
+
+.modal__line {
+    background: #e5b590;
+    height: 1px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.couponCode {
+    background-image: linear-gradient(-180deg, transparent 50%, #f8eade 50%);
+}
+
+.couponSubText {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .modal_container {
+        display: block;
+    }
+
+    .modal_container,
+    .modal_container_bgWhite {
+        background: #fff;
+        width: 95%;
+    }
+
+    .modal__left {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-position-y: -35px;
+        background-size: cover;
+        background-size: 100%;
+        background-position: center;
+        background-position-y: -40px;
+        height: 168px;
+        width: 100%;
+    }
+
+    .modal__right {
+        height: 80%;
+        width: 100%;
+    }
+
+    .modal_close {
+        display: none;
+    }
+
+    .modal_close__mobile {
+        background: transparent;
+        border: none;
+        color: #242424;
+        display: block;
+        outline: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .modal_close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        top: 10px;
+    }
+
+    .popup__formText {
+        margin: -15px auto 15px auto;
+    }
+
+    .popup__formGreetings {
+        font-size: 6rem;
+    }
+
+    .inputCalendar {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .popup__formGreetings {
+        font-size: 5rem;
+    }
+
+    .sendButton,
+    .returnToSiteBtn {
+        width: 90%;
+    }
+
+}
