@@ -30,31 +30,7 @@ const PopupForm = () => {
   }, [ email, optin, success]);
 
 
-  // const maskDateInput = (e: any) => {
-  //   const inputValue = e?.target?.value;
 
-  //   const numericValue = inputValue.replace(/\D/g, '');
-
-  //   if (numericValue.length <= 2) {
-  //     e.target.value = numericValue;
-  //   } else if (numericValue.length <= 4) {
-  //     e.target.value = `${numericValue.slice(0, 2)}/${numericValue.slice(2)}`;
-  //   } else {
-  //     e.target.value = `${numericValue.slice(0, 2)}/${numericValue.slice(2, 4)}/${numericValue.slice(4, 8)}`;
-  //   }
-
-  //   const newValue = e.target.value
-
-  //   const arr = newValue.split("/"), day = arr[0], month = arr[1], year = arr[2], time = "00:00:00"
-  //   const newBirthday = new Date(`${year}-${month}-${day}T${time}`)
-
-  //   if (newBirthday.toString() !== "Invalid Date") {
-  //     const birthDayString = newBirthday.toString().split(" GTM")[0]
-  //     const birthDayFinalDate = new Date(birthDayString)
-
-  //     setBirthday(birthDayFinalDate)
-  //   }
-  // }
 
   const closeModal = () => {
     setShowModal(false);
