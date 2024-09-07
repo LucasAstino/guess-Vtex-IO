@@ -46,7 +46,7 @@
   },
   "rich-text#category__list-link": {
     "props": {
-        "text": "Categoria",
+        "text": "[Categoria](#)",
         "blockClass":"category__list-link"
     }
   }

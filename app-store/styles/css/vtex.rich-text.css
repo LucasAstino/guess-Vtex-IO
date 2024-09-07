@@ -82,6 +82,9 @@
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
+.container--category__list-link .paragraph--category__list-link .link {
+  text-decoration: none;
+}
 
 .container--first__shelf-title {
   display: flex;
