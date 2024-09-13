@@ -5,6 +5,9 @@
   "AstinoMenu":{
     "component":"AstinoMenu"
   },
+  "PrivacyPolicy":{
+    "component":"PrivacyPolicy"
+  },
   "PopupForm":{
     "component":"PopupForm"
   }

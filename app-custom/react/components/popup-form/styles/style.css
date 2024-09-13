@@ -47,7 +47,6 @@
 
 .modal__right {
     background-color: #fff;
-    border-radius: 10px;
     position: absolute;
     right: 0;
 }
@@ -249,82 +248,18 @@
 }
 
 @media screen and (max-width: 768px) {
-    .modal_container {
-        display: block;
-    }
 
     .modal_container,
     .modal_container_bgWhite {
         background: #fff;
-        width: 95%;
-    }
-
-    .modal__left {
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 10px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background-position-y: -35px;
-        background-size: cover;
-        background-size: 100%;
-        background-position: center;
-        background-position-y: -40px;
-        height: 168px;
-        width: 100%;
-    }
-
-    .modal__right {
-        height: 80%;
-        width: 100%;
-    }
-
-    .modal_close {
-        display: none;
-    }
-
-    .modal_close__mobile {
-        background: transparent;
-        border: none;
-        color: #242424;
-        display: block;
-        outline: none;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        font-weight: bold;
-        font-size: 23px;
-    }
-
-    .modal_close {
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        top: 10px;
-    }
-
-    .popup__formText {
-        margin: -15px auto 15px auto;
-    }
-
-    .popup__formGreetings {
-        font-size: 6rem;
-    }
-
-    .inputCalendar {
-        -webkit-appearance: none;
-        appearance: none;
+        width: 90%;
     }
 
 }
 
-@media screen and (max-width: 350px) {
-    .popup__formGreetings {
-        font-size: 5rem;
-    }
-
-    .sendButton,
-    .returnToSiteBtn {
-        width: 90%;
+@media screen and (max-width: 375px) {
+    .sendButton{
+        margin-bottom: 0;
     }
 
 }
