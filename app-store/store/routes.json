@@ -5,6 +5,15 @@
   "store.custom#faq": {
     "path": "/faq"
   },
+  "store.custom#privacy_policy": {
+    "path": "/politicas-de-privacidade-e-cookies"
+  },
+  "store.custom#terms": {
+    "path": "/institucional/termos-e-condicoes-de-uso"
+  },
+  "store.custom#dealer": {
+    "path": "/sejaumrevendedor"
+  },
   "store.custom#contact-us": {
     "path": "/contact-us"
   }

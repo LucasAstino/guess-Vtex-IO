@@ -1,0 +1,49 @@
+{
+    "store.custom#dealer": {
+    "children": [ "flex-layout.row#dealer__container"]
+  },
+  "flex-layout.row#dealer__container": {
+    "props": {
+        "blockClass": "dealer__container"
+    },
+    "children": [ "flex-layout.col#dealer","image#dealer"]
+  },
+  "flex-layout.col#dealer": {
+    "props": {
+        "blockClass":"dealer"
+    },
+    "children": ["rich-text#dealer","flex-layout.row#dealer__buttons"]
+  },
+  "image#dealer": {
+    "props": {
+      "src": "assets/images/dealer/dealer.webp",
+      "blockClass":"dealer"
+      
+    }
+  },
+  "rich-text#dealer": {
+    "props": {
+        "blockClass":"dealer",
+        "text": "# Seja um revendedor \n## A GUESS é um símbolo icônico para lifestyle jovem, sexy e aventureiro! \nFaça parte desse sonho e junte-se à marca com estilo de vida verdadeiramente global com uma variedade completa de denim, vestuário e acessórios oferecidos em 90 países ao redor do mundo."
+    }
+
+  },
+  "flex-layout.row#dealer__buttons": {
+    "props": {
+        "blockClass": "dealer__buttons"
+    },
+    "children": [ "rich-text#dealer__button-dealer","rich-text#dealer__button-update"]
+  },
+  "rich-text#dealer__button-dealer": {
+    "props": {
+        "blockClass":"dealer__button",
+        "text": "[QUERO SER UM REVENDEDOR](https://www.brandshub.com.br/novo-cadastro?utm_source=lpguess&utm_medium=emkt_guess&utm_campaign=novos_buyers_guess&utm_id=lpguess)"
+    }
+  },
+  "rich-text#dealer__button-update": {
+    "props": {
+        "blockClass":"dealer__button",
+        "text": "[ATUALIZAR DOCUMENTAÇÃO](https://www.brandshub.com.br/login?utm_source=lp_guess&utm_medium=lp_guess&utm_campaign=login&utm_id=lp_guess)"
+    }
+  }
+}

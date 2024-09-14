@@ -6,7 +6,8 @@
     "children": [
       "flex-layout.row#footer__wrapper",
       "flex-layout.row#footer__adress",
-      "flex-layout.row#footer__copyright"
+      "flex-layout.row#footer__copyright",
+      "backToTop"
       
     ]
   },
@@ -28,7 +29,8 @@
     "children": [
       "flex-layout.row#footer__wrapper",
       "flex-layout.row#footer__adress",
-      "flex-layout.row#footer__copyright"
+      "flex-layout.row#footer__copyright",
+      "backToTop"
     ]
   }
 }

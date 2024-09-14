@@ -1,0 +1,19 @@
+{
+    "store.custom#terms":{
+        "blocks": [ "flex-layout.row#terms"]
+    },
+    "flex-layout.row#terms": {
+        "title": "Conteúdo",
+        "children": [ "rich-text#terms"],
+        "props": {
+            "blockClass": "terms"
+        }
+    },
+    "rich-text#terms": {
+        "title": "texto",
+        "props": {
+            "text": "",
+            "blockClass":"terms"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.flexRow {
+  &--dealer__container {
+    max-width: 1086px;
+    margin: 80px auto 100px;
+    @include tablet {
+      padding: 0 10px;
+      margin-bottom: 0;
+    }
+    .flexRowContent--dealer__container {
+      align-items: center;
+      :global(.vtex-store-components-3-x-imageElement--dealer) {
+        @include mobile {
+          display: block;
+          margin: 10px auto;
+        }
+      }
+    }
+
+    .flexCol--dealer {
+      padding: 40px 49px;
+      border: 1px solid #0c0c0c;
+      @include desktop {
+        border-right: 0;
+      }
+      @include mobile {
+        width: 90%;
+        padding: 20px 30px;
+        margin: auto;
+      }
+    }
+  }
+
+  &--dealer__buttons{
+    .flexRowContent--dealer__buttons{
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+  }
+}

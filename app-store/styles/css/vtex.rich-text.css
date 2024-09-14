@@ -1,3 +1,37 @@
+.container--category__list-title {
+  display: flex;
+  justify-content: center;
+}
+.container--category__list-title .heading--category__list-title {
+  font-size: 64px;
+  color: #655b43;
+}
+.container--category__list-link {
+  display: flex;
+  justify-content: center;
+}
+.container--category__list-link .paragraph--category__list-link {
+  width: 184px;
+  font-family: "Open Sans";
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.container--category__list-link .paragraph--category__list-link .link {
+  text-decoration: none;
+  color: black;
+}
+
+.container--first__shelf-title {
+  display: flex;
+  justify-content: center;
+  color: #655B43;
+}
+.container--first__shelf-title .heading--first__shelf-title {
+  font-size: 64px;
+}
+
 .container--newsletter__title .paragraph {
   font-family: "Futura";
   font-size: 14px;
@@ -62,35 +96,151 @@
   margin: 0;
 }
 
-.container--category__list-title {
-  display: flex;
+.container--about-us-title {
   justify-content: center;
 }
-.container--category__list-title .heading--category__list-title {
-  font-size: 64px;
-  color: #655b43;
-}
-.container--category__list-link {
-  display: flex;
-  justify-content: center;
-}
-.container--category__list-link .paragraph--category__list-link {
-  width: 184px;
-  font-family: "Open Sans";
-  font-size: 24px;
+.container--about-us-title .heading {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  -webkit-tap-highlight-color: transparent;
+  text-transform: uppercase;
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  margin: 0;
+  margin-top: 30px;
+  font-size: 34px;
 }
-.container--category__list-link .paragraph--category__list-link .link {
-  text-decoration: none;
+.container--about-us__secund .heading {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+}
+.container--about-us__secund .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin: 0 0 1em;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container--about-us__secund .paragraph {
+    text-align: justify;
+  }
+}
+.container--about-us__section {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+@media (min-width: 1025px) {
+  .container--about-us__section {
+    margin: 0 0 1em;
+  }
+}
+@media (max-width: 768px) {
+  .container--about-us__section .paragraph {
+    text-align: justify;
+    margin-bottom: 0;
+  }
+}
+.container--about-us__last-paragraph .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin: 0 0 1em;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container--about-us__last-paragraph .paragraph {
+    margin: 1rem 0;
+    text-align: justify;
+  }
 }
 
-.container--first__shelf-title {
-  display: flex;
-  justify-content: center;
-  color: #655B43;
+.container--dealer .heading {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
-.container--first__shelf-title .heading--first__shelf-title {
-  font-size: 64px;
+.container--dealer .headingLevel1 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+.container--dealer .headingLevel2 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.container--dealer .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 25px;
+  display: block;
+}
+.container--dealer__button .wrapper--dealer__button {
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  .container--dealer__button .wrapper--dealer__button {
+    max-width: 278px;
+  }
+}
+.container--dealer__button .paragraph .link {
+  font-family: Century;
+  color: white;
+  text-decoration: none;
+  background: #0c0c0c;
+  text-transform: uppercase;
+  padding: 12px 27px;
+  font-weight: 400;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.container--terms .heading-level-1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--terms .heading-level-2 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .heading-level-3 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  text-transform: uppercase;
+}
+.container--terms .headingLevel4 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .paragraph {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin: 2rem 0;
 }

@@ -1,0 +1,7 @@
+{
+    "name": "guessbr-store",
+    "version": "1.0.0",
+    "scripts": {
+      "alink": "cd app-store && vtex link && cd app-custom && vtex link"
+    }
+  }

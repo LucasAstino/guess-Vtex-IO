@@ -1,0 +1,11 @@
+{
+  "store.custom#privacy_policy": {
+    "children": ["flex-layout.row#privacy_policy"]
+  },
+  "flex-layout.row#privacy_policy": {
+    "props": {
+      "blockClass": "privacy_policy"
+    },
+    "children": ["PrivacyPolicy"]
+  }
+}

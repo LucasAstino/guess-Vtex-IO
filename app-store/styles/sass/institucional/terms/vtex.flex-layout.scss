@@ -1,0 +1,7 @@
+.flexRow{
+    &--terms{
+        .flexRowContent--terms{
+            @extend %maxcontainer;
+        }
+    }
+}

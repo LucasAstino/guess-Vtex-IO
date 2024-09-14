@@ -1,0 +1,47 @@
+.flexRow {
+  &--about-us__container {
+    .flexRowContent--about-us__container {
+      display: block;
+      @include desktop {
+        padding: 0 15px;
+      }
+    }
+    @extend %maxcontainer;
+  }
+  &--about-us__section {
+    .flexRowContent--about-us__section {
+      align-items: center;
+      gap: 1rem;
+      margin-top: 30px;
+      @include desktop {
+        margin-bottom: 50px;
+      }
+      &-02 {
+        @include mobile {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    :global(.vtex-store-components-3-x-imageElement--about-us__section) {
+      @include desktop {
+        width: 50%;
+      }
+    }
+  }
+  &--about-us__last-section {
+    margin-bottom: 40px;
+    :global(.vtex-store-components-3-x-imageElement) {
+      width: 45%;
+
+      margin-bottom: 30px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      @include mobile{
+        width: 100%;
+      }
+    }
+  }
+}

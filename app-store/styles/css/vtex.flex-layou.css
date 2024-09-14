@@ -1,0 +1,14 @@
+.flexRow--terms .flexRowContent--terms {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1024px) {
+  .flexRow--terms .flexRowContent--terms {
+    width: calc(100% - 30px);
+  }
+}
+
+.flexRow--terms .flexRowContent--terms {
+  background-color: red;
+}

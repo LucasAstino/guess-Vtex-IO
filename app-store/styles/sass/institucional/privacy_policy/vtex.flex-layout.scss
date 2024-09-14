@@ -1,0 +1,13 @@
+.flexRow{
+    &--privacy_policy{
+        .flexRowContent--privacy_policy{
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+            flex-direction: column;
+            @include mobile{
+                padding: 0 10px;
+            }
+        }
+    }
+}

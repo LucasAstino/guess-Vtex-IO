@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
-  max-width: 1098px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -129,4 +129,103 @@
 }
 .flexRow--category__list .flexRowContent--category__list {
   gap: 8px;
+}
+
+.flexRow--about-us__container .flexRowContent--about-us__container {
+  display: block;
+}
+@media (min-width: 1025px) {
+  .flexRow--about-us__container .flexRowContent--about-us__container {
+    padding: 0 15px;
+  }
+}
+.flexRow--about-us__section .flexRowContent--about-us__section {
+  align-items: center;
+  gap: 1rem;
+  margin-top: 30px;
+}
+@media (min-width: 1025px) {
+  .flexRow--about-us__section .flexRowContent--about-us__section {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .flexRow--about-us__section .flexRowContent--about-us__section-02 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1025px) {
+  .flexRow--about-us__section :global(.vtex-store-components-3-x-imageElement--about-us__section) {
+    width: 50%;
+  }
+}
+.flexRow--about-us__last-section {
+  margin-bottom: 40px;
+}
+.flexRow--about-us__last-section :global(.vtex-store-components-3-x-imageElement) {
+  width: 45%;
+  margin-bottom: 30px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .flexRow--about-us__last-section :global(.vtex-store-components-3-x-imageElement) {
+    width: 100%;
+  }
+}
+
+.flexRow--dealer__container {
+  max-width: 1086px;
+  margin: 80px auto 100px;
+}
+@media (max-width: 1025px) {
+  .flexRow--dealer__container {
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+}
+.flexRow--dealer__container .flexRowContent--dealer__container {
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .flexRow--dealer__container .flexRowContent--dealer__container :global(.vtex-store-components-3-x-imageElement--dealer) {
+    display: block;
+    margin: 10px auto;
+  }
+}
+.flexRow--dealer__container .flexCol--dealer {
+  padding: 40px 49px;
+  border: 1px solid #0c0c0c;
+}
+@media (min-width: 1025px) {
+  .flexRow--dealer__container .flexCol--dealer {
+    border-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .flexRow--dealer__container .flexCol--dealer {
+    width: 90%;
+    padding: 20px 30px;
+    margin: auto;
+  }
+}
+@media (max-width: 1025px) {
+  .flexRow--dealer__buttons .flexRowContent--dealer__buttons {
+    flex-direction: column;
+  }
+}
+
+.flexRow--privacy_policy .flexRowContent--privacy_policy {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .flexRow--privacy_policy .flexRowContent--privacy_policy {
+    padding: 0 10px;
+  }
 }

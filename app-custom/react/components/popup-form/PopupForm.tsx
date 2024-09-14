@@ -11,7 +11,7 @@ const PopupForm = () => {
   //@ts-ignore
   const inputRef = useRef(null);
 
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   // const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -25,7 +25,7 @@ const PopupForm = () => {
   useEffect(() => {
     const isFirstVisit = localStorage.getItem('firstVisit') === null;
 
-    (isFirstVisit) ? (setShowModal(true), localStorage.setItem('firstVisit', 'true')) : null
+    (isFirstVisit) ? (setShowModal(true), localStorage.setItem('firstVisit', 'false')) : null
 
   }, [ email, optin, success]);
 

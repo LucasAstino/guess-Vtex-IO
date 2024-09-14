@@ -14,9 +14,10 @@
     &::before {
       content: "E-mail:";
       display: block;
-      font-size: 0.97em;
+      font-size: 14px;
       margin-top: 9px;
       margin-bottom: 5px;
+      letter-spacing: 0.18em;
     }
 
     :global(.vtex-input-prefix__group) {

@@ -1,0 +1,56 @@
+.container {
+  &--dealer {
+    .heading {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .headingLevel1 {
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #0c0c0c;
+    }
+    .headingLevel2 {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+      color: #000000;
+    }
+    .paragraph {
+      font-family: Century;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+
+  &--dealer__button {
+    .wrapper--dealer__button {
+      @include desktop {
+        max-width: 278px;
+      }
+      width: 100%;
+    }
+    .paragraph {
+      .link {
+        font-family: Century;
+        color: white;
+        text-decoration: none;
+        background: #0c0c0c;
+        text-transform: uppercase;
+        padding: 12px 27px;
+        font-weight: 400;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}

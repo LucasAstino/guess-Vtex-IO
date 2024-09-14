@@ -14,9 +14,10 @@
 .newsletterForm .emailInputContainer::before {
   content: "E-mail:";
   display: block;
-  font-size: 0.97em;
+  font-size: 14px;
   margin-top: 9px;
   margin-bottom: 5px;
+  letter-spacing: 0.18em;
 }
 .newsletterForm .emailInputContainer :global(.vtex-input-prefix__group) {
   all: unset;

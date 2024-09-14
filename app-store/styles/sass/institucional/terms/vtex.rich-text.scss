@@ -1,0 +1,38 @@
+.container {
+  &--terms {
+    .heading-level-1 {
+      font-family: "Futura", sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+
+    .heading-level-2 {
+      font-family: Century;
+      color: rgba(0, 0, 0, 0.87) !important;
+      font-size: 14px;
+      line-height: 1.4285em;
+    }
+
+    .heading-level-3{
+        font-family: Century;
+        color: rgba(0, 0, 0, 0.87) !important;
+        font-size: 14px;
+        line-height: 1.4285em;
+        text-transform: uppercase;
+    }
+    .headingLevel4{
+        font-family: Century;
+        color: rgba(0, 0, 0, 0.87) !important;
+        font-size: 14px;
+        line-height: 1.4285em;
+    }
+    .paragraph{
+        font-family: Century;
+        color: rgba(0, 0, 0, 0.87) !important;
+        font-size: 14px;
+        line-height: 1.4285em;
+        margin: 2rem 0;
+    }
+  }
+}

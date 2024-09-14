@@ -1,0 +1,134 @@
+{
+  "store.custom#about-us": {
+    "blocks": ["flex-layout.row#about-us__container"]
+  },
+  "flex-layout.row#about-us__container": {
+    "props": {
+      "blockClass": ["about-us__container"]
+    },
+    "children": [
+      "responsive-layout.desktop",
+      "responsive-layout.mobile",
+      "rich-text#about-us-title",
+      "rich-text#about-us__secund",
+      "flex-layout.row##about-us__section",
+      "flex-layout.row##about-us__section-02",
+      "flex-layout.row##about-us__section-03",
+      "rich-text#about-us__last-paragraph",
+      "flex-layout.row#about-us__last-section"
+    ]
+  },
+  "responsive-layout.desktop": {
+    "children": ["image#banner__about-us--desktop"]
+  },
+  "responsive-layout.mobile": {
+    "children": ["image#banner__about-us--mobile"]
+  },
+  "image#banner__about-us--desktop": {
+    "props": {
+      "src": "assets/images/about-us/Banner_quem-somos_desk.jpg"
+    }
+  },
+  "image#banner__about-us--mobile": {
+    "props": {
+      "src": "assets/images/about-us/quem-somos-Blonde-Model.jpg"
+    }
+  },
+  "rich-text#about-us-title": {
+    "props": {
+      "text": "# A HISTÓRIA DE UMA MARCA ICÔNICA",
+      "blockClass": "about-us-title"
+    }
+  },
+  "rich-text#about-us__secund": {
+    "props": {
+      "blockClass": "about-us__secund",
+      "text": "## TUDO COMEÇA EM 1981\nSe você deseja criar a marca de moda ideal, escolha combinar o lendário glamour de Hollywood com uma pitada de elegância francesa. Foi assim que os irmãos Marciano fizeram há pouco mais de 40 anos quando fundaram a GUESS. Desde então, a GUESS foi de pioneira em denim para uma marca de estilo de vida global, fundamentada por uma publicidade sexy e espirituosa que se tornou icônica. Hoje, a GUESS tem mais de 1.500 lojas de varejo em todo o mundo e oferece coleções para homens e mulheres, bem como uma ampla gama de acessórios que vão desde óculos e relógios até carteiras e bolsas altamente cobiçadas."
+    }
+  },
+  "flex-layout.row##about-us__section": {
+    "props": {
+      "blockClass": "about-us__section"
+    },
+    "children": ["image#about-us__section", "rich-text#about-us__section"]
+  },
+  "image#about-us__section": {
+    "props": {
+      "blockClass": "about-us__section",
+      "src": "assets/images/about-us/quem-somos-Maurice-e-Paul.jpg"
+    }
+  },
+  "rich-text#about-us__section": {
+    "props": {
+      "blockClass": "about-us__section",
+      "text": "A história começou em 1981. Apaixonados por Los Angeles, os quatro irmãos Marciano, do sul da França, decidiram fazer de LA seu lar. O nome da marca foi sugerido por um slogan publicitário que eles viam todos os dias no caminho para o escritório: “Guess what’s in our new Big Mac?” A palavra ‘Guess’ ficou gravada em suas mentes e logo se tornou o nome da sede da marca, localizada na via Olympic Boulevard, mesma rua do outdoor que os inspirou."
+    }
+  },
+  "flex-layout.row##about-us__section-02": {
+    "props": {
+      "blockClass": ["about-us__section", "about-us__section-02"]
+    },
+    "children": ["rich-text#about-us__section-02", "image#about-us__section-02"]
+  },
+  "image#about-us__section-02": {
+    "props": {
+      "blockClass": "about-us__section",
+      "src": "assets/images/about-us/quem-somos-Blonde-Model.jpg"
+    }
+  },
+  "rich-text#about-us__section-02": {
+    "props": {
+      "blockClass": "about-us__section",
+      "text": "Apaixonados pelos Estados Unidos, os irmãos escolheram um ícone norte-americano para seu produto inovador: um jeans justo, desbotado e com três zíperes no tornozelo que foi apelidado de Marilyn Jean. Desafiando o fato de que a lavagem com pedra era rara no mercado dos Estados Unidos – e o potencial ceticismo sobre franceses criarem um produto tão simbolicamente americano – eles enviaram um par de jeans e uma nota manuscrita para lojas de departamento selecionadas. A Bloomingdales adorou os jeans e encomendou 24 pares. O estilo único e de corte sexy esgotou em poucas horas."
+    }
+  },
+  "flex-layout.row##about-us__section-03": {
+    "props": {
+      "blockClass": "about-us__section"
+    },
+    "children": ["image#about-us__section-03", "rich-text#about-us__section-03"]
+  },
+  "image#about-us__section-03": {
+    "props": {
+      "blockClass": "about-us__section",
+      "src": "assets/images/about-us/quem-somos-Paul-Marciano.jpg"
+    }
+  },
+  "rich-text#about-us__section-03": {
+    "props": {
+      "blockClass": "about-us__section",
+      "text": "Em seu primeiro ano nos Estados Unidos, a GUESS chegou a todas as grandes lojas de departamentos do país, incluindo Bergdorf Goodman, Bonwit Teller, Neiman Marcus e Saks Fifth Avenue. Numa época em que o jeans era um item básico do guarda-roupa norte-americano, a GUESS recuperou o denim para a moda, oferecendo uma ampla gama de cortes e lavagens inovadoras, com uma atitude elegante que talvez apenas os franceses pudessem alcançar.\n\nE, é claro, havia a publicidade. Foi inteiramente uma criação do irmão mais novo de Marciano, Paul: com o mundo glamoroso de GUESS tão claramente fixado em sua mente, ele não precisava de uma agência. As campanhas capturariam o fascínio da Hollywood clássica, mas apresentariam mulheres jovens totalmente contemporâneas que definiriam o espírito provocativo da marca. A primeira “Guess Girl” foi uma modelo francesa, Estelle Lefebure. Na sequência, vieram nomes como: Claudia Schiffer, Carré Otis, Eva Herzigova, Laetitia Casta, Naomi Campbell, Anna Nicole Smith, Paris Hilton… E uma certa Carla Bruni, com apenas 16 anos na época."
+    }
+  },
+  "rich-text#about-us__last-paragraph": {
+    "props": {
+      "blockClass": "about-us__last-paragraph",
+      "text": "Quanto aos fotógrafos, eles vão desde nomes consagrados como Ellen Von Unwerth até a estudante Daniela Federici, que foi encontrada em uma universidade de cinema por Paul Marciano em 1992 e convidada para filmar Anna Nicole Smith. Fotógrafos como Wayne Maser, Herb Ritts, Dewey Nicks, Raphael Mazzucco e Pablo Alfaro também contribuíram para mais de três décadas mágicas de imagens da marca. Seja em preto e branco ou em cores, o estilo de publicidade da GUESS é instantaneamente reconhecível - pessoas sedutoras em cenários inspiradores, insinuando uma história que os espectadores podem aplicar para si mesmos."
+    }
+  },
+  "flex-layout.row#about-us__last-section": {
+    "props": {
+      "blockClass": "about-us__last-section"
+    },
+    "children": [
+      "image#about-us__last-section",
+      "image#about-us__last-section-02"
+    ]
+  },
+  "image#about-us__last-section": {
+    "props": {
+      "src": "assets/images/about-us/quem-somos-Line-Gost.jpg",
+      "experimentalSetExplicitDimensions": true,
+      "width": "500",
+      "height": "660"
+    }
+  },
+  "image#about-us__last-section-02": {
+    "props": {
+      "src": "assets/images/about-us/quem-somos-Jennifer-Lopez.jpg",
+      "experimentalSetExplicitDimensions": true,
+      "width": "500",
+      "height": "660"
+    }
+  }
+}
