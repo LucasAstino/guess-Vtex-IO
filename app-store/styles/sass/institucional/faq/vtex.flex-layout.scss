@@ -1,0 +1,8 @@
+.flexRow{
+    &--faq{
+        .flexRowContent--faq{
+            @extend %maxcontainer;
+            margin:100px auto;
+        }
+    }
+}

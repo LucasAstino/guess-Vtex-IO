@@ -62,15 +62,6 @@
   margin: 0;
 }
 
-.container--first__shelf-title {
-  display: flex;
-  justify-content: center;
-  color: #655B43;
-}
-.container--first__shelf-title .heading--first__shelf-title {
-  font-size: 64px;
-}
-
 .container--category__list-title {
   display: flex;
   justify-content: center;
@@ -94,6 +85,15 @@
 .container--category__list-link .paragraph--category__list-link .link {
   text-decoration: none;
   color: black;
+}
+
+.container--first__shelf-title {
+  display: flex;
+  justify-content: center;
+  color: #655B43;
+}
+.container--first__shelf-title .heading--first__shelf-title {
+  font-size: 64px;
 }
 
 .container--about-us-title {
@@ -210,6 +210,22 @@
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+}
+
+.container--faq .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.container--faq .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--faq .link {
+  color: black;
+  text-decoration: none;
 }
 
 .container--terms .heading-level-1 {

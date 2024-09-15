@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -26,6 +26,17 @@
 
 :global(.vtex-store-components-3-x-container) {
   padding: 0;
+}
+
+.flexRow--main-header .flexRowContent--main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 78px;
+}
+.flexRow--headers__icons .flexRowContent {
+  justify-content: end;
 }
 
 .flexRow--footer__wrapper {
@@ -113,24 +124,6 @@
   background-color: #000;
 }
 
-.flexRow--main-header .flexRowContent--main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  height: 78px;
-}
-.flexRow--headers__icons .flexRowContent {
-  justify-content: end;
-}
-
-.flexRow--category__list {
-  margin-bottom: 50px;
-}
-.flexRow--category__list .flexRowContent--category__list {
-  gap: 8px;
-}
-
 .flexRow--about-us__container .flexRowContent--about-us__container {
   display: block;
 }
@@ -175,6 +168,10 @@
   .flexRow--about-us__last-section :global(.vtex-store-components-3-x-imageElement) {
     width: 100%;
   }
+}
+
+.flexRow--faq .flexRowContent--faq {
+  margin: 100px auto;
 }
 
 .flexRow--dealer__container {
@@ -228,4 +225,11 @@
   .flexRow--privacy_policy .flexRowContent--privacy_policy {
     padding: 0 10px;
   }
+}
+
+.flexRow--category__list {
+  margin-bottom: 50px;
+}
+.flexRow--category__list .flexRowContent--category__list {
+  gap: 8px;
 }
