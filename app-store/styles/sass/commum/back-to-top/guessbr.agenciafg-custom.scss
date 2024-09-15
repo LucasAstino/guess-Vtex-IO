@@ -1,0 +1,57 @@
+.backToTop {
+    width: 60px;
+    height: 60px;
+    background: #eeeeee;
+    border: 0.5px solid #b5b5b5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex; // Inicialmente visível
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden; // Inicialmente invisível
+    transition: opacity 1s ease, visibility 1s ease;
+    z-index: 999;
+  
+    &::before {
+      content: "";
+      background: url(assets/icons/back-to-top/arrow-top.svg);
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-size: 100%;
+    }
+  
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      animation: fadeIn 1s forwards;
+    }
+  
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      animation: fadeOut 1s forwards;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

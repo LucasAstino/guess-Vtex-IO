@@ -11,7 +11,8 @@
       "flex-layout.row#header__content-desktop",
       // "sticky-layout#4-desktop",
       "Helmet",
-      "PopupForm"
+      "PopupForm",
+      "BackToTop"
     ]
   },
 

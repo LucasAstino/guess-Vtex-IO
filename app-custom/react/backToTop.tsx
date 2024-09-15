@@ -1,2 +1,2 @@
-import { backToTop } from "./components/backToTop/indes";
-export default backToTop
+import { BackToTop } from "./components/backToTop/index";
+export default BackToTop

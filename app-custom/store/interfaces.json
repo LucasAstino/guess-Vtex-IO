@@ -8,8 +8,8 @@
   "PrivacyPolicy":{
     "component":"PrivacyPolicy"
   },
-  "backToTop":{
-    "component":"backToTop"
+  "BackToTop":{
+    "component":"BackToTop"
   },
   "PopupForm":{
     "component":"PopupForm"

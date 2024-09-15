@@ -31,10 +31,10 @@
 
   &--dealer__button {
     .wrapper--dealer__button {
+      width: 100%;
       @include desktop {
         max-width: 278px;
       }
-      width: 100%;
     }
     .paragraph {
       .link {
