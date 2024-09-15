@@ -1,0 +1,8 @@
+.flexRow{
+    &--exchange_and_returns{
+        .flexRowContent--exchange_and_returns{
+            @extend %maxcontainer;
+            margin: 50px auto;
+        }
+    }
+}

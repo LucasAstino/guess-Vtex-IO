@@ -1,0 +1,19 @@
+{
+    "store.custom#exchange_and_returns": {
+        "blocks": [ "flex-layout.row#exchange_and_returns"]
+    },
+    "flex-layout.row#exchange_and_returns": {
+        "title": "Conteúdo",
+        "props": {
+            "blockClass": "exchange_and_returns"
+        },
+        "children": ["rich-text#exchange_and_returns"]
+    },
+    "rich-text#exchange_and_returns": {
+        "title": "Texto",
+        "props": {
+            "blockClass":"exchange_and_returns",
+            "text": ""
+        }
+    }
+}

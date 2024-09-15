@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -26,17 +26,6 @@
 
 :global(.vtex-store-components-3-x-container) {
   padding: 0;
-}
-
-.flexRow--main-header .flexRowContent--main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  height: 78px;
-}
-.flexRow--headers__icons .flexRowContent {
-  justify-content: end;
 }
 
 .flexRow--footer__wrapper {
@@ -124,6 +113,24 @@
   background-color: #000;
 }
 
+.flexRow--main-header .flexRowContent--main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 78px;
+}
+.flexRow--headers__icons .flexRowContent {
+  justify-content: end;
+}
+
+.flexRow--category__list {
+  margin-bottom: 50px;
+}
+.flexRow--category__list .flexRowContent--category__list {
+  gap: 8px;
+}
+
 .flexRow--about-us__container .flexRowContent--about-us__container {
   display: block;
 }
@@ -170,10 +177,6 @@
   }
 }
 
-.flexRow--faq .flexRowContent--faq {
-  margin: 100px auto;
-}
-
 .flexRow--dealer__container {
   max-width: 1086px;
   margin: 80px auto 100px;
@@ -215,6 +218,14 @@
   }
 }
 
+.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
+  margin: 50px auto;
+}
+
+.flexRow--faq .flexRowContent--faq {
+  margin: 100px auto;
+}
+
 .flexRow--privacy_policy .flexRowContent--privacy_policy {
   max-width: 1280px;
   margin: 0 auto;
@@ -225,11 +236,4 @@
   .flexRow--privacy_policy .flexRowContent--privacy_policy {
     padding: 0 10px;
   }
-}
-
-.flexRow--category__list {
-  margin-bottom: 50px;
-}
-.flexRow--category__list .flexRowContent--category__list {
-  gap: 8px;
 }

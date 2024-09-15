@@ -2,9 +2,6 @@
   "store.custom#about-us": {
     "path": "institucional/nossa-historia"
   },
-  "store.custom#faq": {
-    "path": "/faq"
-  },
   "store.custom#privacy_policy": {
     "path": "/politicas-de-privacidade-e-cookies"
   },
@@ -16,6 +13,9 @@
   },
   "store.custom#faq": {
     "path": "/institucional/duvidas-frequentes"
+  },
+  "store.custom#exchange_and_returns": {
+    "path": "/institucional/trocas-e-devolucoes"
   },
   "store.custom#contact-us": {
     "path": "/contact-us"
