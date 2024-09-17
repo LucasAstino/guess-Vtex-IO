@@ -1,6 +1,9 @@
 {
   "product-summary.shelf#home": {
     "title": "Resumo do produto na prateleira",
+    "props": {
+      "blockClas":"lambee"
+    },
     "children": [
       "stack-layout#prodsum",
       "product-specification-badges",
@@ -26,8 +29,8 @@
     "title": "Imagem do produto na prateleira",
     "props": {
       "showBadge": false,
-      "aspectRatio": "1:1",
-      "maxHeight": 380
+      // "aspectRatio": "1:1",
+      "maxHeight": 677
     }
   },
   "product-highlight-wrapper": {
@@ -54,7 +57,7 @@
       "blockClass": "selling-price-savings"
     },
     "children": [
-      "product-selling-price#shelf"
+      "product-list-price#summary","product-selling-price#shelf"
     ]
   },
   "product-installments#summary": {

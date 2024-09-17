@@ -1,0 +1,98 @@
+{
+    "flex-layout.row#cashback__section-two": {
+        "title": "Segunda sessão",
+        "props": {
+            "blockClass": "cashback__section-two"
+        },
+        "children": [
+             "flex-layout.col#cashback__HowItWorks-col--01",
+             "flex-layout.col#cashback__HowItWorks-col--02",
+             "flex-layout.col#cashback__HowItWorks-col--03"
+        ]
+    },
+    "flex-layout.col#cashback__HowItWorks-col--01": {
+        "children": [
+            "rich-text#cashback__HowItWorks-title"
+        ]
+    },
+    "flex-layout.col#cashback__HowItWorks-col--02": {
+        "children": [
+             "image#cashback__HowItWorks-01",
+             "rich-text#cashback__HowItWorks-paragraph-01",
+             "image#cashback__HowItWorks-02",
+             "rich-text#cashback__HowItWorks-paragraph-02"
+        ]
+    },
+    "flex-layout.col#cashback__HowItWorks-col--03": {
+        "children": [
+             "image#cashback__HowItWorks-03",
+             "rich-text#cashback__HowItWorks-paragraph-03",
+             "image#cashback__HowItWorks-04",
+            "rich-text#cashback__HowItWorks-paragraph-04"
+        ]
+    },
+    "rich-text#cashback__HowItWorks-title": {
+        "title": "titulo da segunda sessão",
+        "props": {
+            "text": "COMO FUNCIONA?",
+            "blockClass":"cashback__HowItWorks-title"
+        }
+    },
+    "rich-text#cashback__HowItWorks-paragraph-01": {
+        "title": "primeiro parágrafo",
+        "props": {
+            "blockClass":"cashback__HowItWorks-paragraph",
+            "text": "## Acumule créditos a cada compra\nA cada compra, 15% do valor (sem frete) é acumulado como bônus. Fique atento às regras"
+        }
+    },
+    "rich-text#cashback__HowItWorks-paragraph-02": {
+        "title": "primeiro parágrafo",
+        "props": {
+            "blockClass":"cashback__HowItWorks-paragraph",
+            "text": "## Quanto desconto recebo?\n\nO desconto máximo equivale a 30% da compra. Ou seja, para utilizar seu bônus, sua compra deve custar 3 vezes o valor do cupom.\n\nEx: se você tem R$100 acumulado, deve fazer uma compra de, pelo menos, R$300. Caso sua compra não atinja o valor mínimo, o desconto não será aplicado no carrinho.\n\nA utilização do valor parcial do bônus é permitida somente nas lojas físicas. O uso parcial do bônus não é válido para compras online."
+        }
+    },
+    "rich-text#cashback__HowItWorks-paragraph-03": {
+        "title": "primeiro parágrafo",
+        "props": {
+            "blockClass":"cashback__HowItWorks-paragraph",
+            "text": "## Não deixe passar\nO crédito é gerado **3 dias após a entrega do pedido** e é válido por **90 dias para compras online** ou **30 dias** para compras nas **lojas físicas**. Fique atento para não perder seu desconto."
+        }
+    },
+    "rich-text#cashback__HowItWorks-paragraph-04": {
+        "title": "primeiro parágrafo",
+        "props": {
+            "blockClass":"cashback__HowItWorks-paragraph",
+            "text": "## Para usar, basta gerar o seu cupom\n\nCom seu número de telefone, você consulta seu saldo aqui e gera seu cupom [aqui](https://www.crmbonus.com/consulta-saldo/MTI2NzU=). O cupom deve ser inserido no carrinho da sua próxima compra e não é cumulativo com outros cupons.\n\nImportante: se você for utilizar seu bônus nas lojas físicas, não gere o cupom. Seu desconto será aplicado no caixa da loja. Basta informar o número de telefone."
+        }
+    },
+    "image#cashback__HowItWorks-01": {
+      "props": {
+        "src": "assets/icons/cashback/icon1.png",
+        "blockClass":"cashback__HowItWorks"
+        
+      }
+    },
+    "image#cashback__HowItWorks-02": {
+      "props": {
+       "src": "assets/icons/cashback/icon3.png",
+       "blockClass":"cashback__HowItWorks"
+        
+      }
+    },
+    "image#cashback__HowItWorks-03": {
+      "props": {
+      "src": "assets/icons/cashback/icon2.png",
+      "blockClass":"cashback__HowItWorks"
+        
+      }
+    },
+    "image#cashback__HowItWorks-04": {
+      "props": {
+        "src": "assets/icons/cashback/icon4.png",
+        "blockClass":"cashback__HowItWorks"
+        
+      }
+    }
+
+}

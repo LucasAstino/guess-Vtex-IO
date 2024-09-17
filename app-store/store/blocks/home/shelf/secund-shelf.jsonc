@@ -1,0 +1,33 @@
+{
+    "rich-text#secund__shelf-title": {
+      "props": {
+        "text": "## Lorem Ipsum Dolor Sit",
+        "blockClass": ["secund__shelf-title","home_title"]
+      }
+    },
+    "flex-layout.row#secund__shelf": {
+      "children": ["list-context.product-list#secund__shelf"]
+    },
+    "slider-layout#secund-products": {
+      "props": {
+        "itemsPerPage": {
+          "desktop": 4,
+          "tablet": 3,
+          "phone": 1
+        },
+        "showPaginationDots": "never",
+        "infinite": true,
+        "fullWidth": false,
+        "blockClass": "shelf"
+      }
+    },
+    "list-context.product-list#secund__shelf": {
+      "blocks": [ "product-summary.shelf#home"],
+      "children": ["slider-layout#secund-products"],
+      "props": {
+        "orderBy": "OrderByTopSaleDESC",
+        "hideUnavailableItems": true
+      }
+    }
+  }
+  

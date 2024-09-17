@@ -1,0 +1,74 @@
+.flexRow {
+  &--cashback__container {
+    .flexRowContent--cashback__container {
+      flex-direction: column;
+      max-width: 1366px;
+      margin: auto;
+    }
+  }
+  &--cashback__section-one {
+    .flexRowContent--cashback__section-one {
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    .flexCol--cashback__section-one-left {
+      max-height: 491px;
+      position: relative;
+      background-color: black;
+      :global(.vtex-store-components-3-x-imageElement--cashback__section-one) {
+        width: inherit;
+        filter: grayscale(40%) brightness(50%);
+        @include mobile {
+          width: 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+
+    .flexCol--cashback__section-one-right {
+      background-color: black;
+      height: auto;
+      .flexColChild--cashback__section-one-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &--cashback__section-two {
+    margin: 80px auto 0;
+    max-width: 1086px;
+    .flexCol {
+      width: auto;
+      margin: 0 30px;
+    }
+  }
+
+  &--cashback__section-three {
+    margin-bottom: 40px;
+    .flexRowContent {
+      @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    .flexCol--cashback__section-three-right {
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      .flexColChild {
+        height: auto !important;
+      }
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+    :global(.vtex-store-components-3-x-imageElement) {
+      display: block;
+      margin: auto;
+    }
+  }
+}

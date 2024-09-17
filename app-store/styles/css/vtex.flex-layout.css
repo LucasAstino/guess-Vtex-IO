@@ -124,11 +124,46 @@
   justify-content: end;
 }
 
+.flexRow--selling-price-savings .flexRowContent {
+  gap: 5px;
+}
+
 .flexRow--category__list {
   margin-bottom: 50px;
 }
 .flexRow--category__list .flexRowContent--category__list {
   gap: 8px;
+}
+
+.flexRow--grid_product-home {
+  margin-bottom: 40px;
+}
+.flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
+  width: 60%;
+  height: auto;
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
+  padding: 0;
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf), .flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings) {
+  display: none;
+}
+
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
+  margin: 0;
+  max-width: 100% !important;
+  border-radius: 0;
+}
+
+.flexRow--last__shelf {
+  margin: 20px auto 60px;
 }
 
 .flexRow--about-us__container .flexRowContent--about-us__container {
@@ -175,6 +210,76 @@
   .flexRow--about-us__last-section :global(.vtex-store-components-3-x-imageElement) {
     width: 100%;
   }
+}
+
+.flexRow--cashback__container .flexRowContent--cashback__container {
+  flex-direction: column;
+  max-width: 1366px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .flexRow--cashback__section-one .flexRowContent--cashback__section-one {
+    flex-direction: column;
+  }
+}
+.flexRow--cashback__section-one .flexCol--cashback__section-one-left {
+  max-height: 491px;
+  position: relative;
+  background-color: black;
+}
+.flexRow--cashback__section-one .flexCol--cashback__section-one-left :global(.vtex-store-components-3-x-imageElement--cashback__section-one) {
+  width: inherit;
+  filter: grayscale(40%) brightness(50%);
+}
+@media (max-width: 768px) {
+  .flexRow--cashback__section-one .flexCol--cashback__section-one-left :global(.vtex-store-components-3-x-imageElement--cashback__section-one) {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+.flexRow--cashback__section-one .flexCol--cashback__section-one-right {
+  background-color: black;
+  height: auto;
+}
+.flexRow--cashback__section-one .flexCol--cashback__section-one-right .flexColChild--cashback__section-one-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexRow--cashback__section-two {
+  margin: 80px auto 0;
+  max-width: 1086px;
+}
+.flexRow--cashback__section-two .flexCol {
+  width: auto;
+  margin: 0 30px;
+}
+.flexRow--cashback__section-three {
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .flexRow--cashback__section-three .flexRowContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.flexRow--cashback__section-three .flexCol--cashback__section-three-right {
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.flexRow--cashback__section-three .flexCol--cashback__section-three-right .flexColChild {
+  height: auto !important;
+}
+@media (max-width: 768px) {
+  .flexRow--cashback__section-three .flexCol--cashback__section-three-right {
+    margin-bottom: 40px;
+  }
+}
+.flexRow--cashback__section-three :global(.vtex-store-components-3-x-imageElement) {
+  display: block;
+  margin: auto;
 }
 
 .flexRow--dealer__container {

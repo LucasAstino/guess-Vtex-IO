@@ -1,0 +1,135 @@
+.container {
+  &--cashback__section-one-left {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    translate: -50% -50%;
+    color: white;
+    text-align: center;
+    width: 450px;
+    @include mobile{
+      width: 370px;
+    }
+    .heading {
+      margin: 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid white;
+      @include mobile{
+        font-size: 40px;
+      }
+    }
+
+    .paragraph{
+      font-family: Century;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+  &--cashback__section-one-right {
+    @include mobile{
+      padding: 10px 0;
+    }
+    .paragraph {
+      font-family: Century;
+      text-align: center;
+      font-weight: 100;
+      color: #8f8f8f;
+      font-size: 14px;
+
+      .link {
+        color: white;
+        width: 300px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1em 2em;
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #ee3a43;
+        border-radius: 2px;
+        margin: auto;
+        margin-top: 1.2em;
+        line-height: 1em;
+      }
+      &:first-child {
+        color: white;
+        font-weight: bold;
+        .link {
+          font-weight: 400;
+          background-color: #ee3a43;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  &--cashback__HowItWorks-title {
+    justify-content: end;
+    @include mobile{
+      justify-content: center;
+    }
+    .paragraph {
+      font-size: 36px;
+      font-family: Orpheus Pro;
+      line-height: normal;
+      margin: 0;
+      @include desktop {
+        width: 202px;
+      }
+      @include mobile{
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &--cashback__HowItWorks-paragraph {
+    margin-bottom: 40px;
+    .heading {
+      font-family: Century;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .paragraph {
+      font-family: Century;
+      font-size: 16px;
+
+      .link {
+        color: #3f3f40;
+      }
+    }
+    @include mobile{
+      border-bottom: 1px solid #DADADA;
+      padding-bottom: 25px;
+    }
+  }
+
+  &--cashback__section-three-button {
+    
+    .paragraph {
+      margin: 0;
+
+
+      .link--cashback__section-three-button {
+        text-align: center;
+        display: inline-block;
+        font-family: "Century";
+        color: black;
+        text-decoration: none;
+        width: 330px;
+        text-transform: uppercase;
+        margin: 10px 0;
+        letter-spacing: 2px;
+        font-size: 15px;
+        padding: 1em 2em;
+        line-height: 1em;
+        border: 1px solid #0c0c0c;
+
+        &-one{
+          color: white;
+          background-color: black;
+        }
+      }
+    }
+  }
+}

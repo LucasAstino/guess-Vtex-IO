@@ -17,6 +17,9 @@
   "store.custom#exchange_and_returns": {
     "path": "/institucional/trocas-e-devolucoes"
   },
+  "store.custom#cashback": {
+    "path": "/cashback"
+  },
   "store.custom#contact-us": {
     "path": "/contact-us"
   }

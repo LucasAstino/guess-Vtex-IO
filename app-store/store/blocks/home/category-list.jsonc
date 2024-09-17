@@ -3,7 +3,7 @@
     "title": "Titulo da seção de categorias",
     "props": {
       "text": "## Lorem Ipsum Dolor Sit",
-      "blockClass": "category__list-title"
+      "blockClass": ["category__list-title","home_title"]
     }
   },
   "flex-layout.row#category__list-1": {

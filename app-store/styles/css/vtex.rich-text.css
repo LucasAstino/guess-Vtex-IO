@@ -1,3 +1,13 @@
+.container--home_title {
+  display: flex;
+  justify-content: center;
+  color: #655B43;
+}
+.container--home_title .heading--home_title {
+  font-size: 64px;
+  color: #655b43;
+}
+
 .container--newsletter__title .paragraph {
   font-family: "Futura";
   font-size: 14px;
@@ -87,15 +97,6 @@
   color: black;
 }
 
-.container--first__shelf-title {
-  display: flex;
-  justify-content: center;
-  color: #655B43;
-}
-.container--first__shelf-title .heading--first__shelf-title {
-  font-size: 64px;
-}
-
 .container--about-us-title {
   justify-content: center;
 }
@@ -160,6 +161,140 @@
     margin: 1rem 0;
     text-align: justify;
   }
+}
+
+.container--cashback__section-one-left {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  translate: -50% -50%;
+  color: white;
+  text-align: center;
+  width: 450px;
+}
+@media (max-width: 768px) {
+  .container--cashback__section-one-left {
+    width: 370px;
+  }
+}
+.container--cashback__section-one-left .heading {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 768px) {
+  .container--cashback__section-one-left .heading {
+    font-size: 40px;
+  }
+}
+.container--cashback__section-one-left .paragraph {
+  font-family: Century;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .container--cashback__section-one-right {
+    padding: 10px 0;
+  }
+}
+.container--cashback__section-one-right .paragraph {
+  font-family: Century;
+  text-align: center;
+  font-weight: 100;
+  color: #8f8f8f;
+  font-size: 14px;
+}
+.container--cashback__section-one-right .paragraph .link {
+  color: white;
+  width: 300px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 2em;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ee3a43;
+  border-radius: 2px;
+  margin: auto;
+  margin-top: 1.2em;
+  line-height: 1em;
+}
+.container--cashback__section-one-right .paragraph:first-child {
+  color: white;
+  font-weight: bold;
+}
+.container--cashback__section-one-right .paragraph:first-child .link {
+  font-weight: 400;
+  background-color: #ee3a43;
+  border: 0;
+}
+.container--cashback__HowItWorks-title {
+  justify-content: end;
+}
+@media (max-width: 768px) {
+  .container--cashback__HowItWorks-title {
+    justify-content: center;
+  }
+}
+.container--cashback__HowItWorks-title .paragraph {
+  font-size: 36px;
+  font-family: Orpheus Pro;
+  line-height: normal;
+  margin: 0;
+}
+@media (min-width: 1025px) {
+  .container--cashback__HowItWorks-title .paragraph {
+    width: 202px;
+  }
+}
+@media (max-width: 768px) {
+  .container--cashback__HowItWorks-title .paragraph {
+    margin-bottom: 50px;
+  }
+}
+.container--cashback__HowItWorks-paragraph {
+  margin-bottom: 40px;
+}
+.container--cashback__HowItWorks-paragraph .heading {
+  font-family: Century;
+  font-size: 18px;
+  font-weight: bold;
+}
+.container--cashback__HowItWorks-paragraph .paragraph {
+  font-family: Century;
+  font-size: 16px;
+}
+.container--cashback__HowItWorks-paragraph .paragraph .link {
+  color: #3f3f40;
+}
+@media (max-width: 768px) {
+  .container--cashback__HowItWorks-paragraph {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 25px;
+  }
+}
+.container--cashback__section-three-button .paragraph {
+  margin: 0;
+}
+.container--cashback__section-three-button .paragraph .link--cashback__section-three-button {
+  text-align: center;
+  display: inline-block;
+  font-family: "Century";
+  color: black;
+  text-decoration: none;
+  width: 330px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  font-size: 15px;
+  padding: 1em 2em;
+  line-height: 1em;
+  border: 1px solid #0c0c0c;
+}
+.container--cashback__section-three-button .paragraph .link--cashback__section-three-button-one {
+  color: white;
+  background-color: black;
 }
 
 .container--dealer .heading {

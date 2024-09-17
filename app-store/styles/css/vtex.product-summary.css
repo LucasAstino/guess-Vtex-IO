@@ -1,5 +1,6 @@
 .nameContainer--shelf {
   justify-content: start;
+  padding: 0;
 }
 .nameContainer--shelf .productBrand--shelf {
   font-size: 14px;

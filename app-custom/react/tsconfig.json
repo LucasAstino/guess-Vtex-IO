@@ -16,7 +16,7 @@
   "include": [
     "./typings/*.d.ts",
     "./**/*.tsx",
-    "./**/*.ts" ],
+    "./**/*.ts", "components/privacy_policy/PrivacyPolicy-part-1.jsx", "components/privacy_policy/lazy2.jsx", "PrivacyPolicy.jsx", "components/privacy_policy/index.jsx" ],
   "types": [
     "googlemaps"
   ]
