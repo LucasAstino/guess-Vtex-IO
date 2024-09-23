@@ -1,0 +1,226 @@
+.wd_browsing_pointofsale {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 90%;
+    margin: 10px auto;
+    @media(max-width: 768px){
+        width: 100%;
+    }
+}
+
+.wd_browsing_pointofsale .browsing {
+    border: 1px solid #dfdfdf;
+    background-color: #eee;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.wd_browsing_pointofsale .browsing label {
+    font-size: 12pt;
+    padding: 4px 0;
+    display: block;
+    margin-top: 9px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: Century;
+}
+
+.wd_browsing_pointofsale .browsing .input_wrapper {
+    width: 100%;
+    margin-left: auto;
+    float: right;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.wd_browsing_pointofsale .browsing .input_wrapper input {
+    width: calc(100% - 120px);
+    height: 42px;
+    margin: 0;
+    padding: 6px 12px;
+    font-weight: 400;
+    background-color: #fff;
+    background-image: none;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    color: rgba(0, 0, 0, 0.87);
+    display: block;
+    font-size: 1em;
+    font-family: Century;
+    float: left;
+    @media(max-width: 768px){
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.wd_browsing_pointofsale .browsing .input_wrapper .btn_submit {
+    width: 120px;
+    float: left;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #1b1c1d;
+    color: #fff;
+    font-family: "Century";
+    font-size: 0.875rem;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: center;
+    outline: 0;
+    border: none;
+    border-bottom: none;
+    border-bottom-color: #3d3e3f;
+}
+
+.wd_browsing_pointofsale .browsing .input_wrapper .find_location {
+    display: none;
+}
+
+.wd_browsing_pointofsale .list ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.wd_browsing_pointofsale .list {
+    width: 30%;
+    float: left;
+    background: #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    max-height: 583px;
+    overflow-y: auto;
+}
+
+.wd_browsing_pointofsale .list .pointofsale {
+    background: #eaeaea;
+    margin: 6px;
+    position: relative;
+    font-size: 14px;
+    padding: 6px 14% 6px 6px;
+}
+
+.wd_browsing_pointofsale .list .pointofsale.selected {
+    background: rgba(162, 162, 162, .64);
+}
+
+.wd_browsing_pointofsale .list .pointofsale .name {
+    font-weight: 700;
+    font-family: "Century";
+}
+
+.wd_browsing_pointofsale .list .pointofsale p {
+    font-family: "Century";
+}
+
+.wd_browsing_pointofsale .list .pointofsale .go_to_map {
+    font-size: 25px;
+    position: absolute;
+    right: 9px;
+    top: 34%;
+    font-weight: 700;
+    text-decoration: none;
+    color: #444;
+    font-size: 30px;
+}
+
+.wd_browsing_pointofsale .map {
+    width: 70%;
+    float: left;
+    z-index: 1;
+    @media(max-width: 768px){
+        margin-top: 10px;
+    }
+}
+
+.map .pointofsale_map {
+    width: 100%;
+    height: 584px !important;
+}
+
+.wd_browsing_pointofsale:before {
+    content: "Encontre uma loja";
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000;
+    user-select: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal_content {
+    background-color: white;
+    position: relative;
+    padding: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.modal_content p {
+    font-family: Century;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    background: black;
+    width: 30px;
+    height: 30px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .wd_browsing_pointofsale .list,
+    .wd_browsing_pointofsale .map {
+        width: 100%;
+    }
+
+    .wd_browsing_pointofsale:before {
+        font-size: 24px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .wd_browsing_pointofsale .browsing .input_wrapper {
+        width: 100%;
+    }
+}

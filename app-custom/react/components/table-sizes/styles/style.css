@@ -1,0 +1,49 @@
+#tabelaFeminino {
+    width: 500px;
+    margin: 10px auto;
+    font-family: Arial, sans-serif;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    @media(max-width:768px){
+        width: 100%;
+    }
+}
+
+#tabelaFeminino th,
+#tabelaFeminino td {
+    font-family: Century;
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    width: 10%;
+    @media(max-width:375px){
+        padding: 10px 0;;
+    }
+}
+
+#tabelaFeminino th {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#tabelaFeminino td {
+    font-size: 14px;
+    @media(max-width:425px){
+        font-size: 10px;
+    }
+}
+
+#tabelaFeminino tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tabelaFeminino tr:hover {
+    background-color: #f1f1f1;
+}
+
+.paragraph{
+    font-family: Century;
+    text-align: end;
+}

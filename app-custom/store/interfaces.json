@@ -11,6 +11,15 @@
   "BackToTop":{
     "component":"BackToTop"
   },
+  "GoogleMap":{
+    "component":"Map"
+  },
+  "TableFeminine":{
+    "component":"TableFeminine"
+  },
+  "TableMasculine":{
+    "component":"TableMasculine"
+  },
   "PopupForm":{
     "component":"PopupForm"
   }
