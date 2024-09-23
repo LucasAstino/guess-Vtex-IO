@@ -57,13 +57,19 @@
       "blockClass": "selling-price-savings"
     },
     "children": [
-      "product-list-price#summary","product-selling-price#shelf"
+      "product-list-price#summary","product-selling-price#shelf","product-price-savings#shelf"
     ]
   },
   "product-installments#summary": {
     "title": "Parcelamento do produto",
     "props": {
-      "message": "{installmentsNumber} de {installmentValue}",
+      "message": "ou {installmentsNumber}x sem juros de {installmentValue} no cartão de crédito",
+      "blockClass": "shelf"
+    }
+  },
+  "product-price-savings#shelf":{
+    "props": {
+      "message": "({savingsPercentage} Off)",
       "blockClass": "shelf"
     }
   },

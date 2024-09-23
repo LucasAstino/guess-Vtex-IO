@@ -20,6 +20,15 @@
   "store.custom#cashback": {
     "path": "/cashback"
   },
+  "store.custom#cashback-regulation": {
+    "path": "/cashback-regulamento"
+  },
+  "store.custom#table-sizes": {
+    "path": "institucional/tabela-de-medidas-femininos"
+  },
+  "store.custom#where-to-find": {
+    "path": "institucional/onde-encontrar"
+  },
   "store.custom#contact-us": {
     "path": "/contact-us"
   }

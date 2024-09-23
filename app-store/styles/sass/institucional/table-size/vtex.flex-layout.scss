@@ -1,0 +1,51 @@
+.flexRow {
+  &--table__sizes-container {
+    .flexRowContent--table__sizes-container {
+      position: relative;
+      @extend %maxcontainer;
+      padding: 0 15px;
+      display: flex;
+      @include mobile{
+        padding: 0;
+      }
+    }
+  }
+
+  &--table__sizes-feminine {
+    .flexRowContent--table__sizes-feminine {
+      justify-content: space-evenly !important;
+      align-items: center !important;
+      .flexCol {
+        width: auto;
+        .flexColChild {
+          display: contents;
+
+          :global(.vtex-store-components-3-x-imageElement) {
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+  &--table__sizes-masculine {
+    .flexRowContent--table__sizes-masculine {
+      justify-content: center;
+    }
+  }
+  &--table__sizes-feminine--tables {
+    margin-top: 40px;
+    .flexRowContent {
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+  &--table__sizes-masculine--tables {
+    margin-top: 40px;
+    .flexRowContent {
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+}

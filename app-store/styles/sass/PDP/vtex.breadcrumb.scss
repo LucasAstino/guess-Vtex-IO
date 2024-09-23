@@ -1,0 +1,27 @@
+.container {
+  max-width: 1366px;
+  margin: auto;
+  .termArrow,.arrow{
+    &::before{
+        content: "/";
+        color: black;
+    }
+  }
+  .caretIcon{
+    display: none;
+  }
+  .homeLink{
+    &::before{
+        content: "Home";
+    }
+    .homeIcon{
+        display: none;
+    }
+  }
+  .link{
+    color: black;
+  }
+  .term{
+    color:#666666 ;
+  }
+}

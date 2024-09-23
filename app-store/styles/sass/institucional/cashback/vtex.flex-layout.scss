@@ -71,4 +71,34 @@
       margin: auto;
     }
   }
+
+  &--cashback__regulation {
+    .flexRowContent {
+      max-width: 1366px;
+      margin: auto;
+      flex-direction: column;
+     
+
+      :global(.vtex-store-components-3-x-imageElement--cashback__regulation-banner){
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+
+      .flexCol--cashback__regulation {
+        max-width: 842px;
+        margin: 0 auto;
+        margin-top: 80px;
+        @include mobile{
+          width: 90%;
+          margin-top: 60px;
+        }
+
+        :global(.vtex-store-components-3-x-imageElement){
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
 }

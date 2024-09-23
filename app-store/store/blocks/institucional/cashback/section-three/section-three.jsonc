@@ -45,7 +45,7 @@
       "title": "Texto da imagem",
       "props": {
         "blockClass": ["cashback__section-three-button","cashback__section-three-button-one"],
-        "text": "[Confira o Regulamento](https://www.guessbrasil.com.br/cashback-regulamento)"
+        "text": "[Confira o Regulamento](/cashback-regulamento)"
       }
     },
     "rich-text#cashback__section-three-button-two": {

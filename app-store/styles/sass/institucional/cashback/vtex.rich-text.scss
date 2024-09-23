@@ -7,26 +7,26 @@
     color: white;
     text-align: center;
     width: 450px;
-    @include mobile{
+    @include mobile {
       width: 370px;
     }
     .heading {
       margin: 20px 0;
       padding-bottom: 20px;
       border-bottom: 1px solid white;
-      @include mobile{
+      @include mobile {
         font-size: 40px;
       }
     }
 
-    .paragraph{
+    .paragraph {
       font-family: Century;
       font-weight: 300;
       font-size: 14px;
     }
   }
   &--cashback__section-one-right {
-    @include mobile{
+    @include mobile {
       padding: 10px 0;
     }
     .paragraph {
@@ -66,7 +66,7 @@
 
   &--cashback__HowItWorks-title {
     justify-content: end;
-    @include mobile{
+    @include mobile {
       justify-content: center;
     }
     .paragraph {
@@ -77,7 +77,7 @@
       @include desktop {
         width: 202px;
       }
-      @include mobile{
+      @include mobile {
         margin-bottom: 50px;
       }
     }
@@ -98,17 +98,15 @@
         color: #3f3f40;
       }
     }
-    @include mobile{
-      border-bottom: 1px solid #DADADA;
+    @include mobile {
+      border-bottom: 1px solid #dadada;
       padding-bottom: 25px;
     }
   }
 
   &--cashback__section-three-button {
-    
     .paragraph {
       margin: 0;
-
 
       .link--cashback__section-three-button {
         text-align: center;
@@ -125,11 +123,96 @@
         line-height: 1em;
         border: 1px solid #0c0c0c;
 
-        &-one{
+        &-one {
           color: white;
           background-color: black;
         }
       }
+    }
+  }
+
+  &--cashback__regulation {
+    .wrapper--cashback__regulation {
+      .heading {
+        font-family: Futura;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        color: #000000;
+        padding-left: 10px;
+        margin-bottom: 0;
+      }
+
+      .headingLevel1 {
+        font-family: Futura;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #0c0c0c;
+        padding: 0;
+        @include mobile{
+          margin-bottom: 1.5em;
+        }
+      }
+
+      .paragraph {
+        margin-top: 0;
+        font-family: Century;
+        padding-left: 10px;
+        margin-bottom: 25px;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        color: #000000;
+        display: block;
+      }
+
+      :global(.vtex_span) {
+        font-family: Century;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+    }
+    .list--cashback__regulation {
+      .listItem--cashback__regulation {
+        font-family: Century;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        margin: 14px 0;
+      }
+    }
+    .strong {
+      font-family: Century;
+      font-style: normal;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+    }
+  }
+  &--cashback__regulation-button {
+    .wrapper{
+      width: 100%;
+    }
+    .link {
+      text-decoration: none;
+      display: block;
+      background: #0c0c0c;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 12px 27px;
+      max-width: 330px;
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+      margin-left: 10px;
     }
   }
 }

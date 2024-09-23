@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#product__review": {
+    "title": "Reviews do produto",
+    "props": {
+      "blockClass": "product__review"
+    },
+    "children": ["product-rating-inline", "modal-trigger#product__review"]
+  },
+
+  "modal-trigger#product__review": {
+    "props": {
+      "blockClass": "product__review"
+    },
+    "children": ["rich-text#product__review", "modal-layout#product__review"]
+  },
+  "rich-text#product__review": {
+    "props": {
+      "blockClass": "product__review",
+      "text": "Avalie agora"
+    }
+  },
+  "modal-layout#product__review": {
+    "children": []
+  }
+}

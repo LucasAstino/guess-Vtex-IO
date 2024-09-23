@@ -1,3 +1,31 @@
+.trigger--product__description-pdp {
+  all: unset;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trigger--product__description-pdp::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  top: 40%;
+  right: 23px;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.trigger--product__description-pdp--visible::after {
+  transform: rotate(44deg);
+}
+
+.content--product__description-pdp :global(.vtex-store-components-3-x-productDescriptionContainer) :global(.vtex-store-components-3-x-productDescriptionText) {
+  white-space: pre-wrap;
+  color: black;
+}
+
 .trigger--footer__menu-trigger {
   all: unset;
 }

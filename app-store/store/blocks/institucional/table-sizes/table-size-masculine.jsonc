@@ -1,0 +1,68 @@
+{
+    "rich-text#table__sizes-title--masculine": {
+        "title": "Título feminino",
+        "props": {
+            "blockClass":"table__sizes-title",
+            "text": "# Tabela de Medidas Masculino"
+        }
+    },
+  "flex-layout.row#table__sizes-masculine--tables": {
+    "title": "tabelas de medidas",
+    "props": {
+        "blockClass": "table__sizes-masculine--tables"
+    },
+    "children": ["TableMasculine", "image#table__sizes-masculine--tables"]
+  },
+  "image#table__sizes-masculine--tables": {
+    "props": {
+      "src": "assets/images/table-size/masculine/desktopmasc-silhueta.png"
+    }
+  },
+
+  "flex-layout.row#table__sizes-masculine": {
+    "title": "imagens femininas",
+    "props": {
+      "blockClass": "table__sizes-masculine"
+    },
+    "children": [
+       "image#table__sizes-masculine-01",
+       "image#table__sizes-masculine-02",
+       "image#table__sizes-masculine-03",
+       "image#table__sizes-masculine-04"
+    ]
+  },
+  "rich-text#table__sizes-masculine--title": {
+    "title": "titulo das imagens de medidas",
+    "props": {
+      "blockClass": "table__sizes-subtitle",
+      "text": "## Modelagens Jeans"
+    }
+  },
+  "image#table__sizes-masculine-01": {
+    "props": {
+      "src": "assets/images/table-size/masculine/icon-skinny.jpg"
+    }
+  },
+  "image#table__sizes-masculine-02": {
+    "props": {
+      "src": "assets/images/table-size/masculine/icon-slim-stranght.jpg"
+    }
+  },
+  "image#table__sizes-masculine-03": {
+    "props": {
+      "src": "assets/images/table-size/masculine/icon-slim-tappered.jpg"
+    }
+  },
+  "image#table__sizes-masculine-04": {
+    "props": {
+      "src": "assets/images/table-size/masculine/icon-jogger.jpg"
+    }
+  },
+  "rich-text#table__sizes-masculine--text": {
+    "title": "Texto feminino",
+    "props": {
+      "blockClass": "table__sizes-text",
+      "text": "### Saiba como ler a tabela de medidas masculina e shop now na Guess Brasil\nA tabela de medidas masculina da Guess Brasil foi pensada em detalhes para tornar suas compras on-line certeiras. Dessa forma, é possível garantir peças exclusivas com o ajuste perfeito ao seu corpo.\n\nA seguir, você confere detalhes de como tirar as medidas da maneira correta para acertar no tamanho das roupas masculinas. Navegue pela loja e monte looks repletos de atitude! Shop now!\n### Como saber meu tamanho de roupa masculina?\nComprar roupas pela internet é parte da rotina de mulheres e homens modernos, afinal, é totalmente prático e confortável. Porém, é comum que surjam dúvidas a respeito de como acertar no tamanho.\n\nPara evitar equívocos, é essencial atentar-se à tabela de tamanhos de roupas masculinas. Nela, estão descritas as indicações de medidas (em centímetros) de diversas partes do corpo que correspondem às classificações em P, M, G, EX e GGG ou, entre 36 e 50.\n\nDependendo da peça, utilize a fita métrica para medir regiões como tórax, busto, cintura e quadril. Depois, basta comparar com as informações contidas na tabela de medidas masculina e selecionar o tamanho ideal.\n### Como escolher as medidas certas de uma calça jeans masculina?\nQuando pensamos no tamanho da calça jeans masculina, é preciso atenção. Afinal, são inúmeras modelagens e caimentos. Portanto, além de conferir a tabela de medidas calça masculina, vale considerar algumas especificidades de cada versão.\n\nA calça skinny, por exemplo, é caracterizada por ser bem ajustada ao corpo. Sendo assim, opte pelo tamanho que garanta seu conforto. Já a calça jeans jogger tem a proposta comfy, ou seja, o ideal é que fique mais larga mesmo!\n\nEntão, fique de olho nas informações e, se necessário, pegue um número menor para evitar que fique caindo! Via de regra, uma forma de acertar na compra é tirar as medidas de roupas masculinas de peças que você já tem em casa.\n### Shop now on Guess Brasil! \nCom essas dicas da tabela de medidas masculina, comprar roupas e acessórios exclusivos e autênticos fica mais fácil. Navegue pela Guess Brasil e garanta modelos com o caimento perfeito para o seu corpo.\n\nDestaque-se pelo bom gosto e sofisticação! Aproveite ótimas condições de pagamento e entrega em todo o território nacional. Shop now!"
+    }
+  }
+}

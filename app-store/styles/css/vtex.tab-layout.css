@@ -1,0 +1,40 @@
+.container--table__sizes {
+  margin-top: 100px;
+}
+.container--table__sizes .listContainer--table__sizes .listItem {
+  border-bottom: 2px solid #e2e2e2;
+  padding: 0;
+  margin: 0;
+}
+.container--table__sizes .listContainer--table__sizes .listItem:first-child :global(.vtex-button__label) {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+@media (max-width: 425px) {
+  .container--table__sizes .listContainer--table__sizes .listItem:first-child :global(.vtex-button__label) {
+    padding-right: 1rem;
+  }
+}
+.container--table__sizes .listContainer--table__sizes .listItem :global(.vtex-button) {
+  background-color: transparent;
+  border: none;
+}
+.container--table__sizes .listContainer--table__sizes .listItem :global(.vtex-button__label) {
+  font-family: Century;
+  padding-left: 2rem;
+  padding-right: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: black;
+}
+@media (max-width: 425px) {
+  .container--table__sizes .listContainer--table__sizes .listItem :global(.vtex-button__label) {
+    padding-left: 1rem;
+  }
+}
+.container--table__sizes .listContainer--table__sizes .listItemActive {
+  border-bottom: 2px solid #000;
+}
+.container .contentItem--table__sizes-masculine {
+  margin-top: 40px;
+}

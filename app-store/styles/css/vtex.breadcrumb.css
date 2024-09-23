@@ -1,0 +1,23 @@
+.container {
+  max-width: 1366px;
+  margin: auto;
+}
+.container .termArrow::before, .container .arrow::before {
+  content: "/";
+  color: black;
+}
+.container .caretIcon {
+  display: none;
+}
+.container .homeLink::before {
+  content: "Home";
+}
+.container .homeLink .homeIcon {
+  display: none;
+}
+.container .link {
+  color: black;
+}
+.container .term {
+  color: #666666;
+}

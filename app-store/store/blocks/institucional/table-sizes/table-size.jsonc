@@ -1,0 +1,73 @@
+{
+  "store.custom#table-sizes": {
+    "children": ["flex-layout.row#table__sizes-container"]
+  },
+  "flex-layout.row#table__sizes-container": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "table__sizes-container"
+    },
+    "children": ["tab-layout#table__sizes"]
+  },
+  "tab-layout#table__sizes": {
+    "children": ["tab-list#table__sizes", "tab-content#table__sizes"],
+    "props": {
+      "blockClass": "table__sizes",
+      "defaultActiveTabId": "table__sizes-feminine"
+    }
+  },
+  "tab-list#table__sizes": {
+    "props": {
+      "blockClass":"table__sizes"
+    },
+    "children": [
+      "tab-list.item#table__sizes-feminine",
+      "tab-list.item#table__sizes-masculine"
+    ]
+  },
+  "tab-list.item#table__sizes-feminine": {
+    "props": {
+      "tabId": "table__sizes-feminine",
+      "label": "feminino",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#table__sizes-masculine": {
+    "props": {
+      "tabId": "table__sizes-masculine",
+      "label": "masculino"
+    }
+  },
+  "tab-content#table__sizes": {
+    "children": [
+      "tab-content.item#table__sizes-feminine",
+      "tab-content.item#table__sizes-masculine"
+    ]
+  },
+  "tab-content.item#table__sizes-feminine": {
+    "children": [
+      "rich-text#table__sizes-title--feminine",
+      "flex-layout.row#table__sizes-feminine--tables",
+      "rich-text#table__sizes-feminine--title",
+      "flex-layout.row#table__sizes-feminine",
+      "rich-text#table__sizes-feminine--text"
+    ],
+    "props": {
+      "blockClass":"table__sizes-feminine",
+      "tabId": "table__sizes-feminine"
+    }
+  },
+  "tab-content.item#table__sizes-masculine": {
+    "children": [
+      "rich-text#table__sizes-title--masculine",
+      "flex-layout.row#table__sizes-masculine--tables",
+      "rich-text#table__sizes-masculine--title",
+      "flex-layout.row#table__sizes-masculine",
+      "rich-text#table__sizes-masculine--text"
+    ],
+    "props": {
+      "blockClass":"table__sizes-masculine",
+      "tabId": "table__sizes-masculine"
+    }
+  }
+}

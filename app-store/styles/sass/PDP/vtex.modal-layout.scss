@@ -1,0 +1,7 @@
+.triggerContainer{
+    &--product__review{
+        :global(.vtex-rich-text-0-x-paragraph--product__review){
+            margin: 0;
+        }
+    }
+}

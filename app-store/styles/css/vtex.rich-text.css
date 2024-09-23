@@ -8,6 +8,27 @@
   color: #655b43;
 }
 
+.container--promotion__delivery {
+  justify-content: center;
+  border: 1px solid black;
+  width: 80%;
+  margin: 20px auto 0;
+}
+.container--promotion__delivery .wrapper .paragraph {
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.container--promotion__delivery .wrapper :first-child {
+  background-color: white;
+  width: fit-content;
+  display: block;
+  margin: -12px auto 0;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
 .container--newsletter__title .paragraph {
   font-family: "Futura";
   font-size: 14px;
@@ -270,7 +291,7 @@
 }
 @media (max-width: 768px) {
   .container--cashback__HowItWorks-paragraph {
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid #dadada;
     padding-bottom: 25px;
   }
 }
@@ -295,6 +316,81 @@
 .container--cashback__section-three-button .paragraph .link--cashback__section-three-button-one {
   color: white;
   background-color: black;
+}
+.container--cashback__regulation .wrapper--cashback__regulation .heading {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.container--cashback__regulation .wrapper--cashback__regulation .headingLevel1 {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c0c0c;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .container--cashback__regulation .wrapper--cashback__regulation .headingLevel1 {
+    margin-bottom: 1.5em;
+  }
+}
+.container--cashback__regulation .wrapper--cashback__regulation .paragraph {
+  margin-top: 0;
+  font-family: Century;
+  padding-left: 10px;
+  margin-bottom: 25px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  display: block;
+}
+.container--cashback__regulation .wrapper--cashback__regulation :global(.vtex_span) {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.container--cashback__regulation .list--cashback__regulation .listItem--cashback__regulation {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  margin: 14px 0;
+}
+.container--cashback__regulation .strong {
+  font-family: Century;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+}
+.container--cashback__regulation-button .wrapper {
+  width: 100%;
+}
+.container--cashback__regulation-button .link {
+  text-decoration: none;
+  display: block;
+  background: #0c0c0c;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 27px;
+  max-width: 330px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
 }
 
 .container--dealer .heading {
@@ -394,6 +490,44 @@
 .container--faq .link {
   color: black;
   text-decoration: none;
+}
+
+.container--table__sizes-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  translate: -50%;
+}
+.container--table__sizes-title .heading {
+  font-family: "Futura";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0;
+  text-wrap: nowrap;
+}
+.container--table__sizes-subtitle {
+  justify-content: center;
+}
+.container--table__sizes-subtitle .heading {
+  font-family: "Futura";
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 2rem auto;
+}
+.container--table__sizes-text {
+  margin: 40px 0;
+}
+.container--table__sizes-text .heading {
+  font-family: "Futura";
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--table__sizes-text .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
 }
 
 .container--terms .heading-level-1 {

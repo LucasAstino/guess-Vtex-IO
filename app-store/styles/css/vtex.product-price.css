@@ -1,11 +1,35 @@
+.listPriceValue--product__price-pdp {
+  text-decoration: none;
+}
+
+.currencyContainer--product__price-pdp {
+  font-size: 12px;
+  color: #71767F;
+  text-decoration: line-through;
+}
+
 .sellingPrice--shelf {
   display: flex;
   justify-content: start;
+  width: fit-content !important;
 }
 .sellingPrice--shelf .currencyContainer--shelf {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+}
+
+.savings--shelf {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: black;
+}
+
+.installments--shelf {
+  width: fit-content !important;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .listPrice--shelf {

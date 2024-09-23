@@ -1,0 +1,39 @@
+.container {
+  &--table__sizes-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    translate: -50%;
+    .heading {
+      font-family: "Futura";
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 0;
+      text-wrap: nowrap;
+    }
+  }
+  &--table__sizes-subtitle {
+    justify-content: center;
+    .heading {
+      font-family: "Futura";
+      font-size: 22px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 2rem auto;
+    }
+  }
+  &--table__sizes-text {
+    margin: 40px 0;
+    .heading {
+      font-family: "Futura";
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    .paragraph {
+      font-family: Century;
+      font-size: 14px;
+      line-height: 1.4285em;
+    }
+  }
+}

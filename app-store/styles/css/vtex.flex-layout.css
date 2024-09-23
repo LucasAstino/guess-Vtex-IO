@@ -9,15 +9,85 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
+}
+
+.flexRow--product-main {
+  max-width: 1366px;
+  margin: auto;
+}
+.flexRow--product-main .flexCol--product__col-left {
+  width: 60%;
+  margin-right: 50px;
+}
+.flexRow--product-main .flexCol--product__col-left :global(.vtex-store-components-3-x-content--product-image-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.flexRow--product-main .flexCol--product__col-left :global(.vtex-store-components-3-x-content--product-image-grid) :global(.vtex-store-components-3-x-productImageTag--product-image-grid--main) {
+  max-height: 690px !important;
+}
+.flexRow--product-main .flexCol--product__right-col {
+  width: 40%;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input__label) {
+  font-size: 0;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input__label)::before {
+  content: "Simule frete e prazo de entrega";
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  padding-left: 10px;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input-prefix__group) {
+  position: relative;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input-prefix__group)::before {
+  content: "Insira seu CEP"; /* Texto do "placeholder" */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999; /* Cor semelhante ao placeholder */
+  font-size: 16px;
+  pointer-events: none;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-address-form__postalCode-forgottenURL) :first-child {
+  text-decoration: underline;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-address-form__postalCode-forgottenURL) :global(.vtex__icon-external-link) {
+  display: none;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__field-focused) :global(.vtex-input-prefix__group)::before {
+  content: "";
+}
+.flexRow--product__name-pdp :global(.vtex-store-components-3-x-productNameContainer--quickview) {
+  font-size: 20px;
+}
+.flexRow--product__review {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.flexRow--product__review .flexRowContent {
+  gap: 10px;
+}
+.flexRow--product__review :global(.vtex-reviews-and-ratings-3-x-inlineContainer) {
+  width: fit-content;
+}
+.flexRow--product__price-pdp {
+  margin-top: 5px;
+}
+.flexRow--product__price-pdp .flexRowContent--product__price-pdp {
+  gap: 5px;
 }
 
 .flexRow .stretchChildrenWidth {
@@ -26,6 +96,17 @@
 
 :global(.vtex-store-components-3-x-container) {
   padding: 0;
+}
+
+.flexRow--main-header .flexRowContent--main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 78px;
+}
+.flexRow--headers__icons .flexRowContent {
+  justify-content: end;
 }
 
 .flexRow--footer__wrapper {
@@ -113,17 +194,6 @@
   background-color: #000;
 }
 
-.flexRow--main-header .flexRowContent--main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  height: 78px;
-}
-.flexRow--headers__icons .flexRowContent {
-  justify-content: end;
-}
-
 .flexRow--selling-price-savings .flexRowContent {
   gap: 5px;
 }
@@ -137,6 +207,8 @@
 
 .flexRow--grid_product-home {
   margin-bottom: 40px;
+  max-width: 1800px;
+  margin: auto;
 }
 .flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
   width: 60%;
@@ -145,7 +217,9 @@
 .flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
   padding: 0;
 }
-.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf), .flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings) {
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf),
+.flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
+.flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
   display: none;
 }
 
@@ -155,6 +229,9 @@
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
   padding: 0;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageContainer) {
+  display: flex;
 }
 .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
   margin: 0;
@@ -281,6 +358,31 @@
   display: block;
   margin: auto;
 }
+.flexRow--cashback__regulation .flexRowContent {
+  max-width: 1366px;
+  margin: auto;
+  flex-direction: column;
+}
+.flexRow--cashback__regulation .flexRowContent :global(.vtex-store-components-3-x-imageElement--cashback__regulation-banner) {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+.flexRow--cashback__regulation .flexRowContent .flexCol--cashback__regulation {
+  max-width: 842px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .flexRow--cashback__regulation .flexRowContent .flexCol--cashback__regulation {
+    width: 90%;
+    margin-top: 60px;
+  }
+}
+.flexRow--cashback__regulation .flexRowContent .flexCol--cashback__regulation :global(.vtex-store-components-3-x-imageElement) {
+  display: block;
+  margin: auto;
+}
 
 .flexRow--dealer__container {
   max-width: 1086px;
@@ -340,5 +442,48 @@
 @media (max-width: 768px) {
   .flexRow--privacy_policy .flexRowContent--privacy_policy {
     padding: 0 10px;
+  }
+}
+
+.flexRow--table__sizes-container .flexRowContent--table__sizes-container {
+  position: relative;
+  padding: 0 15px;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .flexRow--table__sizes-container .flexRowContent--table__sizes-container {
+    padding: 0;
+  }
+}
+.flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine {
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
+.flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine .flexCol {
+  width: auto;
+}
+.flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine .flexCol .flexColChild {
+  display: contents;
+}
+.flexRow--table__sizes-feminine .flexRowContent--table__sizes-feminine .flexCol .flexColChild :global(.vtex-store-components-3-x-imageElement) {
+  width: max-content;
+}
+.flexRow--table__sizes-masculine .flexRowContent--table__sizes-masculine {
+  justify-content: center;
+}
+.flexRow--table__sizes-feminine--tables {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .flexRow--table__sizes-feminine--tables .flexRowContent {
+    flex-direction: column;
+  }
+}
+.flexRow--table__sizes-masculine--tables {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .flexRow--table__sizes-masculine--tables .flexRowContent {
+    flex-direction: column;
   }
 }

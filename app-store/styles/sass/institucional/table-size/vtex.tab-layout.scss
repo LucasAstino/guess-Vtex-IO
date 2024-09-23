@@ -1,0 +1,43 @@
+.container {
+  &--table__sizes {
+    margin-top: 100px;
+    .listContainer--table__sizes {
+      .listItem {
+        border-bottom: 2px solid #e2e2e2;
+        padding: 0;
+        margin: 0;
+        &:first-child {
+          :global(.vtex-button__label) {
+            padding-left: 0;
+            padding-right: 2rem;
+            @media(max-width:425px){
+              padding-right: 1rem;
+            }
+          }
+        }
+
+        :global(.vtex-button) {
+          background-color: transparent;
+          border: none;
+        }
+        :global(.vtex-button__label) {
+          font-family: Century;
+          padding-left: 2rem;
+          padding-right: 0;
+          font-size: 1.5rem;
+          line-height: 2rem;
+          color: black;
+          @media(max-width:425px){
+            padding-left: 1rem;
+          }
+        }
+      }
+      .listItemActive {
+        border-bottom: 2px solid #000;
+      }
+    }
+  }
+  .contentItem--table__sizes-masculine {
+    margin-top: 40px;
+  }
+}

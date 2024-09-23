@@ -1,0 +1,85 @@
+{
+  "store.custom#cashback-regulation": {
+    "blocks": ["flex-layout.row#cashback__regulation"]
+  },
+  "flex-layout.row#cashback__regulation": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "cashback__regulation"
+    },
+    "children": [
+      "responsive-layout.desktop#cashback__regulation",
+      "responsive-layout.mobile#cashback__regulation",
+      "flex-layout.col#cashback__regulation"
+    ]
+  },
+  "responsive-layout.desktop#cashback__regulation": {
+    "children": ["image#cashback__regulation-banner"]
+  },
+  "responsive-layout.mobile#cashback__regulation": {
+    "children": ["image#cashback__regulation-banner--mobile"]
+  },
+  "image#cashback__regulation-banner": {
+    "props": {
+      "blockClass": "cashback__regulation-banner",
+      "src": "assets/images/cashback/cashDesk1.png"
+    }
+  },
+  "image#cashback__regulation-banner--mobile": {
+    "props": {
+      "blockClass": "cashback__regulation-banner",
+      "src": "assets/images/cashback/cashMob1.png"
+    }
+  },
+  "flex-layout.col#cashback__regulation": {
+    "props": {
+      "blockClass": "cashback__regulation"
+    },
+    "children": [
+      "rich-text#cashback__regulation-text--01",
+      "image#cashback__regulation-picture--01",
+      "rich-text#cashback__regulation-text--02",
+      "image#cashback__regulation-picture--02",
+      "rich-text#cashback__regulation-text--03",
+      "rich-text#cashback__regulation-button"
+    ]
+  },
+  "rich-text#cashback__regulation-text--01": {
+    "title": "texto",
+    "props": {
+      "blockClass": "cashback__regulation",
+      "text": "# Cashback Guess\n<span class='vtex_span'>Para utilizar o benefício, leia o regulamento abaixo:</span>\n## Como funciona o Cashback da Guess Brasil?\n\nCada compra realizada na Guess Brasil, seja nas lojas físicas ou no e-commerce [**guessbrasil.com.br**](https://guessbrasil.com.br), gera bônus que podem ser acumulados e resgatados. O resgate gera um desconto na próxima compra.\n### Como ganho o cashback?\n\nA cada compra no e-commerce e/ou nas lojas físicas, o cliente cadastrado acumula **15%** do valor total (sem considerar o frete, no caso das compras online).\n### Quando poderei utilizar meu cashback e existe um limite máximo de uso?\n- O cashback é gerado **3 dias** após a compra na loja física ou 3 dias após a entrega do pedido, no caso de compras online.\n- O crédito é válido por 90 dias a partir da data que foi gerado. Fique atento para não perder seu bônus!\n- O desconto máximo equivale a 30% da compra. Ou seja, para utilizar seu bônus, sua compra deve custar 3 vezes o valor do cupom.Exemplo: se você tem R$100 acumulado, deve fazer uma compra de, pelo menos, R$300. Caso sua compra não atinja o valor mínimo, o desconto não será aplicado no carrinho.\n- Ao gerar o cupom, todo o crédito acumulado vira desconto para ser utilizado **uma única vez**.\n\n### Bônus de loja física pode ser utilizado no e-commerce? E bônus do e-commerce pode ser usado na loja física?\n\nSim! O cliente Guess Brasil acumula os bônus e eles ficam registrados em seu cadastro pessoal de acordo com o número de telefone.  \nNão importa o canal onde a compra foi realizada - loja física, online ou ambas - o bônus fica atrelado a este cadastro.  \nApós o acúmulo, o cliente decide se irá usar inteiramente o valor acumulado em uma única compra de loja física ou em uma única compra da loja online.\n### Como consulto meu saldo acumulado? E como resgato meu cupom de desconto?\n\nVocê pode consultar seu saldo através deste [link](#).Insira o número de celular de seu cadastro como cliente Guess Brasil e clique em Consultar saldo. Na tela aparecerá seu saldo e também o período de validade.Se você quiser gerar seu cupom, acesse este [link](#) e clique em “Resgatar Bônus”.Na tela seguinte aparecerá o código de cupom. Copie e cole no carrinho da sua compra. **Importante**: se você for utilizar seu bônus nas lojas físicas, não gere o cupom. Seu desconto será aplicado no caixa da loja. Basta informar o número de telefone."
+    }
+  },
+  "image#cashback__regulation-picture--01": {
+    "props": {
+      "src": "assets/images/cashback/bonus-resgate.jpg"
+    }
+  },
+  "rich-text#cashback__regulation-text--02": {
+    "title": "texto",
+    "props": {
+      "blockClass": "cashback__regulation",
+      "text": "## Como utilizar meu bônus?\n<span style='text-decoration:underline'>Para usar em loja física</span>: você deve informar seu celular do cadastro no balcão do caixa ao fazer o pagamento da compra.\n\n*Para usar no e-commerce*: acesse este [link](#), clique em **Resgatar código** para gerar um cupom exclusivo de desconto.Insira o cupom gerado no carrinho de compras. Veja a seguir:"
+    }
+  },
+  "image#cashback__regulation-picture--02": {
+    "props": {
+      "src": "assets/images/cashback/cupom-vale-compra.jpg"
+    }
+  },
+  "rich-text#cashback__regulation-text--03": {
+    "title": "texto",
+    "props": {
+      "blockClass": "cashback__regulation",
+      "text": "**Importante**: se você optar por utilizar seu bônus em loja física, não gere o cupom de resgate no site. Dirija-se diretamente à loja onde você quer fazer a compra e informe os dados do seu cadastro no momento do pagamento. Uma vez gerado, o cupom só poderá ser utilizado no site **guessbrasil.com.br** até a data limite de utilização e o processo não poderá ser desfeito.\n\n## Posso utilizar meu bônus junto com outros cupons no site?\nO cupom de bônus gerado **não é cumulativo** com outros cupons."
+    }
+  },
+  "rich-text#cashback__regulation-button": {
+    "title": "texto",
+    "props": {
+      "blockClass": "cashback__regulation-button",
+      "text": "[Shop now](https://www.guessbrasil.com.br/)"
+    }
+  }
+}

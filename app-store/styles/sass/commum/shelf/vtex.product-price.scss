@@ -1,11 +1,25 @@
 .sellingPrice--shelf {
     display: flex;
     justify-content: start;
+    width: fit-content !important;
   .currencyContainer--shelf {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
   }
+}
+
+.savings--shelf{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: black;
+}
+
+.installments--shelf{
+  width: fit-content !important;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .listPrice--shelf{

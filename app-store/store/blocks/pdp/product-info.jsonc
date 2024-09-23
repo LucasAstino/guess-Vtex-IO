@@ -1,0 +1,35 @@
+{
+  "disclosure-layout#product__description-pdp": {
+    "props": {
+        "blockClass":"product__description-pdp"
+    },
+    "children": [
+      "disclosure-trigger#product__description-pdp",
+      "disclosure-content#product__description-pdp"
+    ]
+  },
+  "disclosure-content#product__description-pdp": {
+    "props": {
+        "blockClass":"product__description-pdp"
+    },
+    "children": ["product-description"]
+  },
+  "disclosure-trigger#product__description-pdp": {
+    "props": {
+        "blockClass":"product__description-pdp"
+    },
+    "children": ["rich-text#product__description-pdp"]
+  },
+  "rich-text#product__description-pdp": {
+    "title": "caracteristicas do produto",
+    "props": {
+      "text": "Descrição"
+    }
+  },
+  "product-description": {
+    "props": {
+        "showTitle": false,
+        "collapseContent": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "product-list-price#product__price-pdp":{
+        "props":{
+            "blockClass":"product__price-pdp"
+        }
+    },
+    "flex-layout.row#product__price-pdp": {
+        "title": "preço do produto",
+        "props": {
+            "blockClass": "product__price-pdp"
+        },
+        "children": ["product-selling-price#shelf","product-price-savings#shelf"]
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "rich-text#table__sizes-title--feminine": {
+        "title": "Título feminino",
+        "props": {
+            "blockClass":"table__sizes-title",
+            "text": "# Tabela de Medidas Femininos"
+        }
+    },
+  "flex-layout.row#table__sizes-feminine--tables": {
+    "title": "tabelas de medidas",
+    "props": {
+        "blockClass": "table__sizes-feminine--tables"
+    },
+    "children": ["TableFeminine", "image#table__sizes-feminine--tables"]
+  },
+  "image#table__sizes-feminine--tables": {
+    "props": {
+      "src": "assets/images/table-size/feminine/desktopfemin-silhueta.png"
+    }
+  },
+
+  "flex-layout.row#table__sizes-feminine": {
+    "title": "imagens femininas",
+    "props": {
+      "blockClass": "table__sizes-feminine"
+    },
+    "children": [
+      "responsive-layout.desktop#table__sizes-feminine",
+      "responsive-layout.mobile#table__sizes-feminine"
+    ]
+  },
+  "responsive-layout.desktop#table__sizes-feminine": {
+    "children": [ "flex-layout.col##table__sizes-feminine-01",
+    "flex-layout.col##table__sizes-feminine-02",
+    "flex-layout.col##table__sizes-feminine-03"]
+  },
+  "responsive-layout.mobile#table__sizes-feminine": {
+    "children": ["image#table__sizes-feminine--mobile"]
+  },
+  "image#table__sizes-feminine--mobile": {
+    "props": {
+      "src": "assets/images/table-size/feminine/femininoModelagemMobile.png"
+      
+    }
+  },
+  "flex-layout.col##table__sizes-feminine-01": {
+    "children": [
+      "image#table__sizes-feminine-01",
+      "image#table__sizes-feminine-04",
+      "image#table__sizes-feminine-07"
+    ]
+  },
+  "flex-layout.col##table__sizes-feminine-02": {
+    "children": [
+      "image#table__sizes-feminine-02",
+      "image#table__sizes-feminine-05",
+      "image#table__sizes-feminine-08"
+    ]
+  },
+  "flex-layout.col##table__sizes-feminine-03": {
+    "children": [
+      "image#table__sizes-feminine-03",
+      "image#table__sizes-feminine-06",
+      "image#table__sizes-feminine-09"
+    ]
+  },
+  "rich-text#table__sizes-feminine--title": {
+    "title": "titulo das imagens de medidas",
+    "props": {
+      "blockClass": "table__sizes-subtitle",
+      "text": "## Modelagens Jeans"
+    }
+  },
+  "image#table__sizes-feminine-01": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-1981-skinny.jpg"
+    }
+  },
+  "image#table__sizes-feminine-02": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-curvex-skinny.jpg"
+    }
+  },
+  "image#table__sizes-feminine-03": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-mid-rise-skinny.jpg"
+    }
+  },
+  "image#table__sizes-feminine-04": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-straight-leg.jpg"
+    }
+  },
+  "image#table__sizes-feminine-05": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-high-flare.jpg"
+    }
+  },
+  "image#table__sizes-feminine-06": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-marilyn-zip.jpg"
+    }
+  },
+  "image#table__sizes-feminine-07": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-tomboy.jpg"
+    }
+  },
+  "image#table__sizes-feminine-08": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-jegging.jpg"
+    }
+  },
+  "image#table__sizes-feminine-09": {
+    "props": {
+      "src": "assets/images/table-size/feminine/icon-mom.jpg"
+    }
+  },
+  "rich-text#table__sizes-feminine--text": {
+    "title": "Texto feminino",
+    "props": {
+      "blockClass": "table__sizes-text",
+      "text": "### Tire suas dúvidas sobre a tabela de medidas femininas e compre roupas incríveis na Guess Brasil\n\nEntender a tabela de medidas femininas é essencial para garantir roupas com o fit perfeito! Por isso, a Guess Brasil trouxe um passo a passo super completo que facilitará as compras.\n\nSendo assim, não perca nenhum detalhe do conteúdo e anote suas medidas para acertar nas compras. Além disso, é claro, navegue pela loja e confira nosso catálogo repleto de peças cool e sofisticada. Shop now!\n### Como medir roupas comprando online?\n\nSabemos que shop on-line faz parte da rotina de muita gente. Afinal, é muito prático, rápido e vantajoso, já que podemos receber produtos incríveis sem sair de casa. Mas, como acertar no tamanho das roupas sem prová-las antes?\n\nBom, a fashion tip da Guess Brasil é: conheça todos os detalhes da tabela de medidas femininas. Com isso, é possível identificar o tamanho das peças (em centímetros) em relação às diversas partes do corpo e garantir aquela que dá o match perfeito com você.\n### Como medir corretamente cintura e quadril feminino?\n\nUm dos pontos que fazem toda a diferença na hora de selecionar t-shirts, shorts e calças com o caimento perfeito é tirar as medidas corretas. Então, como medir cintura e quadril feminino? Comece com uma fita métrica em mãos.\n\nA medida da cintura pode ser tirada posicionando a fita mais estreita do abdômen — geralmente, dois dedos acima da altura do umbigo. Já o quadril deve ser medido envolvendo a fita na parte mais larga das nádegas, a cerca de 20 cm abaixo da cintura.\n\nNa Guess Brasil, você encontra peças que vão do PP (ou 36) até o EXX (ou 44). Confira a tabela de medidas femininas acima com os respectivos indicadores de tamanhos de busto, cintura e quadril e acerte na escolha.\n### Como saber as medidas dos diferentes modelos de calça feminina?\n\nComo você sabe, a denim fever nunca esteve tão em alta. Por isso, são inúmeros modelos de jeans disponíveis em nosso catálogo, cada um com modelagens e caimentos deslumbrantes.\n\nSendo assim, como eles possuem ajustes diferentes, também é importante atentar-se à tabela de medidas calça jeans feminina. Enquanto o modelo 1981 skinny é super ajustado à silhueta — sendo necessário seguir à risca as dimensões —, o jeans mom pode ser escolhido em um tamanho maior que o seu.\n\nAfinal, a proposta comfy permite tranquilamente que ela fique mais folgada. Ainda, a calça jegging é curinga graças ao tecido mais fino e elástico. Isso dá mais movimento e um ajuste ideal. Nesse caso, atenção, principalmente, às medidas da cintura e quadril, para evitar que ela fique caindo.\n### Você mais estilosa com Guess Brasil!\n\nAgora que já sabe todos os detalhes de como analisar a tabela de medidas femininas da Guess Brasil, navegue pela loja e confira roupas totalmente trendy e sofisticadas.\n\nSelecione suas preferidas e destaque-se com o design exclusivo e qualidade diferenciada de nossas peças. Aproveite ótimas condições de pagamento e entrega em todo o território nacional. Shop now!"
+    }
+  }
+}
