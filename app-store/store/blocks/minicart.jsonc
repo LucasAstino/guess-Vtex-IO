@@ -4,12 +4,5 @@
       "addToCartFeedback": "customEvent",
       "customPixelEventId": "add-to-cart-button"
     }
-  },
-
-  "minicart.v2": {
-    "props": {
-      "customPixelEventId": "add-to-cart-button"
-    },
-    "children": ["minicart-base-content"]
   }
 }

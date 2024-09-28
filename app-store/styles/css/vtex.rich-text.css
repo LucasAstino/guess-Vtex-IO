@@ -28,6 +28,9 @@
   padding: 0 20px;
   font-size: 16px;
 }
+.container--product__description-pdp .paragraph {
+  font-size: 14px;
+}
 
 .container--newsletter__title .paragraph {
   font-family: "Futura";

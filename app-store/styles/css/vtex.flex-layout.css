@@ -70,6 +70,22 @@
 .flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__field-focused) :global(.vtex-input-prefix__group)::before {
   content: "";
 }
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-add-to-cart-button-0-x-buttonText) {
+  text-transform: none;
+  font-size: 16px;
+  line-height: 16px;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-add-to-cart-button-0-x-buttonText):hover {
+  color: white;
+}
+.flexRow--buy-button :global(.vtex-button) {
+  margin: 20px 0 30px;
+  height: 48px;
+}
+.flexRow--buy-button :global(.vtex-button):hover {
+  color: white;
+  border: none;
+}
 .flexRow--product__name-pdp :global(.vtex-store-components-3-x-productNameContainer--quickview) {
   font-size: 20px;
 }
@@ -96,17 +112,6 @@
 
 :global(.vtex-store-components-3-x-container) {
   padding: 0;
-}
-
-.flexRow--main-header .flexRowContent--main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  height: 78px;
-}
-.flexRow--headers__icons .flexRowContent {
-  justify-content: end;
 }
 
 .flexRow--footer__wrapper {
@@ -192,6 +197,24 @@
 }
 .flexRow--footer__copyright {
   background-color: #000;
+}
+
+.flexRow--main-header .flexRowContent--main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 78px;
+}
+.flexRow--main-header-mobile .flexRowContent--main-header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 78px;
+}
+.flexRow--headers__icons .flexRowContent {
+  justify-content: end;
 }
 
 .flexRow--selling-price-savings .flexRowContent {

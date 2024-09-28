@@ -9,6 +9,17 @@
   }
 }
 
+.logoLink--logo__mobile {
+  width: fit-content !important;
+  display: flex;
+  height: fit-content;
+
+  .logoContainer {
+    padding: 0;
+    height: auto;
+  }
+}
+
 .searchBarContainer {
     width: fit-content !important;
   :global(.vtex-input-prefix__group) {

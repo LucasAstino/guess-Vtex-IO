@@ -12,6 +12,16 @@
   height: auto;
 }
 
+.logoLink--logo__mobile {
+  width: fit-content !important;
+  display: flex;
+  height: fit-content;
+}
+.logoLink--logo__mobile .logoContainer {
+  padding: 0;
+  height: auto;
+}
+
 .searchBarContainer {
   width: fit-content !important;
 }

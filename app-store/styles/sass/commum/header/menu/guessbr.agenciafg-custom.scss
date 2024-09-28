@@ -68,14 +68,18 @@
         .bannerContainer {
           .bannerLink {
             display: block;
-            padding-left: 100px;
-            border-left: 1px solid #e5e5e5;
-            font-size: 22px;
-            font-family: Orpheus;
-            color: #000;
-            letter-spacing: 0.05em;
-            margin-top: 5px;
-            text-decoration: none;
+              font-size: 22px;
+              font-family: Orpheus;
+              color: #000;
+              letter-spacing: 0.05em;
+              margin-top: 5px;
+              margin-left: 10px;
+              text-decoration: none;
+            &:first-child{
+              margin-left: 0;
+              padding-left: 100px;
+              border-left: 1px solid #e5e5e5;
+            }
 
             .bannerText {
               &::after {

@@ -1,0 +1,84 @@
+{
+    "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      "drawer#mobile",
+      "search-bar#header",
+      "flex-layout.col#spacer",
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "LoginHeader",
+      "minicart.v2#cart"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+
+  "flex-layout.row#header__drawer-mobile": {
+    "title": "Cabeçalho menu mobile",
+    "props": {
+        "blockClass": "header__drawer-mobile"
+    },
+    "children": [ "flex-layout.col#header__drawer-mobile-left", "flex-layout.col#header__drawer-mobile-right"]
+  },
+
+  "flex-layout.col#header__drawer-mobile-left": {
+    "props": {
+        "blockClass": "header__drawer-mobile-left"
+    },
+    "children": ["logo#drawer","LoginOrUserName"]
+  },
+
+  "flex-layout.col#header__drawer-mobile-right": {
+    "props": {
+        "blockClass": "header__drawer-mobile-right"
+    },
+    "children": ["minicart.v2#cart"]
+  },
+
+  "drawer#mobile": {
+    "props":{
+    "blockClass":"drawer__mobile",
+    "maxWidth":"90%"
+    },
+    "children": [ "flex-layout.row#header__drawer-mobile","AstinoMenu#new","flex-layout.row#footer__social"]
+  },
+
+//   "menu#drawer": {
+//     "children": [
+//       "AstinoMenu#new"
+//     ],
+//     "props": {
+//       "orientation": "vertical"
+//     }
+//   },
+
+  "logo#drawer": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/icons/header/logo.svg",
+      "width": "150",
+      "height": "26",
+      "blockClass": "logo__mobile"
+    }
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo/new-logo-guess-small.png",
+      
+      "width": "106",
+      "height": "40",
+      "blockClass": "logo__mobile"
+    }
+  }
+}

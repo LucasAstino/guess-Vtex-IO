@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.composition__paragraph {
+  font-size: 14px;
+}
+
 .backToTop {
   width: 60px;
   height: 60px;
@@ -51,6 +55,140 @@
     opacity: 0;
   }
 }
+.similar__products-variants {
+  min-height: 60px;
+  margin-bottom: 20px;
+}
+.similar__products-variants .variant-type {
+  text-transform: uppercase;
+}
+.similar__products-variants--wrap {
+  gap: 10px;
+}
+.similar__products-variants--wrap .similar__products-variants--link,
+.similar__products-variants--wrap .similar__image-container--current {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 4px;
+}
+.similar__products-variants--wrap .similar__image-container--current {
+  border: 1px solid black;
+}
+.similar__products-variants--circle {
+  border-radius: 50%;
+}
+
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--cor), :global(.vtex-store-components-3-x-skuSelectorSubcontainer--hexadecimal) {
+  display: none;
+}
+
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorInternalBox) {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  border-radius: 50%;
+}
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorItemTextValue) {
+  padding: 0;
+  color: white;
+  font-size: 12px;
+}
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorOptionsList) {
+  margin: 0;
+}
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorItem) {
+  margin: 0;
+}
+:global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-frameAround) {
+  border: none;
+}
+
+.login__container {
+  position: relative;
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__container .login {
+  width: 50px;
+}
+.login__container .login:hover {
+  cursor: pointer;
+}
+.login__container .login .login__icon {
+  width: fit-content;
+}
+.login__container .login .login__icon::before {
+  content: "";
+  background: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/0.1.5/icons/header/icon-user___de3e7b3….svg) no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+.login__container .login__wrapper {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  width: 132px;
+  background-color: white;
+  top: 90%;
+  position: absolute;
+  translate: -20px;
+  z-index: 99;
+}
+.login__container .login__wrapper::before {
+  content: "";
+  box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
+  background: #fff;
+  display: block;
+  margin: 0 0 0 -0.25em;
+  position: absolute;
+  pointer-events: none;
+  transform: rotate(45deg);
+  width: 0.5em;
+  height: 0.5em;
+  left: auto;
+  right: 40px;
+  top: -3px;
+  z-index: 2;
+}
+.login__container .login__wrapper_closed {
+  display: none;
+}
+.login__container .login__wrapper_open {
+  display: block;
+}
+.login__container .login__wrapper .login__list {
+  list-style: none;
+  padding: 0;
+}
+.login__container .login__wrapper .login__list .login__item {
+  font-size: 10px;
+  opacity: 0.8;
+  padding: 0 20px;
+  letter-spacing: 0.2em;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login__container .login__wrapper .login__list .login__item .login__link {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.login__container .login__wrapper .login__list .login__item .login__link:hover {
+  font-weight: 600;
+}
+
+.hello__user {
+  font-size: 14px;
+}
+.hello__user .hello__login-link {
+  color: black;
+}
+
 .menuContainer {
   z-index: 99;
 }
@@ -118,14 +256,18 @@
 }
 .menuContainer .wrapper .menuItem .submenuContainer .bannerContainer .bannerLink {
   display: block;
-  padding-left: 100px;
-  border-left: 1px solid #e5e5e5;
   font-size: 22px;
   font-family: Orpheus;
   color: #000;
   letter-spacing: 0.05em;
   margin-top: 5px;
+  margin-left: 10px;
   text-decoration: none;
+}
+.menuContainer .wrapper .menuItem .submenuContainer .bannerContainer .bannerLink:first-child {
+  margin-left: 0;
+  padding-left: 100px;
+  border-left: 1px solid #e5e5e5;
 }
 .menuContainer .wrapper .menuItem .submenuContainer .bannerContainer .bannerLink .bannerText::after {
   content: "";

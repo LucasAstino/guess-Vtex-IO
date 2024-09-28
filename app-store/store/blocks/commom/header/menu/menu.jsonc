@@ -1,5 +1,5 @@
 {
-  "AstinoMenu#main": {
+  "AstinoMenu#new": {
     "props": {
       "menuLinks": [
         {
@@ -121,9 +121,135 @@
           "url": "/masculino",
           "hasSubmenu": true,
           "submenuLinks": [
-            { "text": "Roupas", "url": "/masculino/roupas" },
-            { "text": "Calçados", "url": "/masculino/calcados" },
-            { "text": "Acessórios", "url": "/masculino/acessorios" }
+            {
+              "text": "Roupas",
+              "url": "/masculino/roupas",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Ver tudo",
+                  "url": "/masculino/roupas"
+                },
+                {
+                  "text": "New Arrivals",
+                  "url": "/masculino/roupas/new-arrivals"
+                },
+                {
+                  "text": "Bermudas",
+                  "url": "/masculino/roupas/bermudas"
+                },
+                {
+                  "text": "Calças",
+                  "url": "/masculino/roupas/calcas"
+                },
+                {
+                  "text": "Calças Jeans",
+                  "url": "/masculino/roupas/calcas-jeans"
+                },
+                {
+                  "text": "Camisas",
+                  "url": "/masculino/roupas/camisas"
+                },
+                {
+                  "text": "Camisetas",
+                  "url": "/masculino/roupas/camisetas"
+                },
+                {
+                  "text": "Casacos e Jaquetas",
+                  "url": "/masculino/roupas/casacos-e-jaquetas"
+                },
+                {
+                  "text": "Moletons",
+                  "url": "/masculino/roupas/moletons"
+                },
+                {
+                  "text": "Polos",
+                  "url": "/masculino/roupas/polos"
+                },
+                {
+                  "text": "Tricots e Sueteres",
+                  "url": "/masculino/roupas/tricots-e-sueteres"
+                },
+                {
+                  "text": "Sale",
+                  "url": "/masculino/roupas/sale"
+                }
+              ]
+            },
+            {
+              "text": "Calçados",
+              "url": "/masculino/calcados",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Ver tudo",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios"
+                },
+                {
+                  "text": "New Arrivals",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/new-arrivals"
+                },
+                {
+                  "text": "Bonés",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/bones"
+                },
+                {
+                  "text": "Carteiras e Bolsas",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/carteiras-e-bolsas"
+                },
+                {
+                  "text": "Óculos",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/oculos"
+                },
+                {
+                  "text": "Relógios",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/relogios"
+                },
+                {
+                  "text": "Sale",
+                  "url": "https://www.guessbrasil.com.br/masculino/acessorios/sale"
+                }
+              ]
+            },
+            {
+              "text": "Acessórios",
+              "url": "/masculino/acessorios",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "The Logo Shop",
+                  "url": "https://www.guessbrasil.com.br/listas/logo-masculino"
+                },
+                {
+                  "text": "Denim Fit",
+                  "url": "https://www.guessbrasil.com.br/denim-masculino"
+                },
+                {
+                  "text": "Casual",
+                  "url": "https://www.guessbrasil.com.br/listas/casual-masculino"
+                },
+                {
+                  "text": "Trabalho",
+                  "url": "https://www.guessbrasil.com.br/listas/trabalho-masculino"
+                },
+                {
+                  "text": "Night & Life",
+                  "url": "https://www.guessbrasil.com.br/listas/nightlife-masculino"
+                },
+                {
+                  "text": "Conforto",
+                  "url": "https://www.guessbrasil.com.br/listas/conforto-masculino"
+                },
+                {
+                  "text": "Dia a dia",
+                  "url": "https://www.guessbrasil.com.br/listas/dia-a-dia-masculino"
+                },
+                {
+                  "text": "Moda Básica",
+                  "url": "https://www.guessbrasil.com.br/listas/moda-basica-masculina"
+                }
+              ]
+            }
           ],
           "banners": [
             {
@@ -138,9 +264,95 @@
           "url": "/infantil",
           "hasSubmenu": true,
           "submenuLinks": [
-            { "text": "Roupas", "url": "/infantil/roupas" },
-            { "text": "Calçados", "url": "/infantil/calcados" },
-            { "text": "Brinquedos", "url": "/infantil/brinquedos" }
+            {
+              "text": "",
+              "url": "/infantil/roupas",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "New Arrivals",
+                  "url": "/bolsas/new-arrivals"
+                },
+                {
+                  "text": "Bucket",
+                  "url": "/bolsas/bucket"
+                },
+                {
+                  "text": "Hobo",
+                  "url": "/bolsas/hobo"
+                },
+                {
+                  "text": "Pochete",
+                  "url": "/bolsas/pochete"
+                },
+                {
+                  "text": "Tiracolo",
+                  "url": "/bolsas/tiracolo"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "url": "/infantil/calcados",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Bolsa de Mão",
+                  "url": "/bolsas/bolsa-de-mao"
+                },
+                {
+                  "text": "Clutch",
+                  "url": "/bolsas/clutch"
+                },
+                {
+                  "text": "Logo",
+                  "url": "/bolsas/logo"
+                },
+                {
+                  "text": "Satchel",
+                  "url": "/bolsas/satchel"
+                },
+                {
+                  "text": "Tote",
+                  "url": "/bolsas/tote"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "url": "/infantil/brinquedos",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Bolsa Mini",
+                  "url": "/bolsas/bolsa-mini"
+                },
+                {
+                  "text": "Crocco",
+                  "url": "/bolsas/crocco"
+                },
+                {
+                  "text": "Hobo",
+                  "url": "/bolsas/hobo"
+                },
+                {
+                  "text": "Mochila",
+                  "url": "/bolsas/mochila"
+                },
+                {
+                  "text": "Shoulder",
+                  "url": "/bolsas/shoulder"
+                },
+                {
+                  "text": "Transversal",
+                  "url": "/bolsas/transversal"
+                },
+                {
+                  "text": "Sale",
+                  "url": "/bolsas/sale"
+                }
+              ]
+            }
           ],
           "banners": [
             {
@@ -151,24 +363,91 @@
         },
         {
           "text": "Sale",
-          "url": "/acessorios",
+          "url": "/infantil",
           "hasSubmenu": true,
           "submenuLinks": [
-            { "text": "Bolsas", "url": "/acessorios/bolsas" },
-            { "text": "Relógios", "url": "/acessorios/relogios" },
-            { "text": "Óculos", "url": "/acessorios/oculos" }
+            {
+              "text": "",
+              "url": "/infantil/roupas",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Masculino",
+                  "url": "/sale/masculino"
+                },
+                {
+                  "text": "Feminino",
+                  "url": "/sale/feminino"
+                },
+                {
+                  "text": "Bolsas",
+                  "url": "/sale/bolsas"
+                },
+                {
+                  "text": "Shop By Price",
+                  "url": "/bolsas/pochete"
+                },
+                {
+                  "text": "Até R$ 119",
+                  "url": "/listas/ate-119"
+                },
+                {
+                  "text": "Até R$ 229",
+                  "url": "/listas/ate-229"
+                },
+                {
+                  "text": "Até R$ 399",
+                  "url": "/listas/ate-399"
+                },
+                {
+                  "text": "Até R$ 399",
+                  "url": "/listas/ate-399"
+                }
+              ]
+            }
           ],
           "banners": [
             {
               "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-acessorios"
+              "bannerLink": "/promo-infantil"
+            },
+            {
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
+              "bannerLink": "/promo-infantil"
             }
           ]
         },
         {
           "text": "Coleções",
           "url": "/ofertas",
-          "hasSubmenu": false
+          "hasSubmenu": true,
+          "submenuLinks": [
+            {
+              "text": "",
+              "url": "/infantil/roupas",
+              "hasSubmenu": true,
+              "submenuLinks": [
+                {
+                  "text": "Spring  / Summer",
+                  "url": "/colecoes/spring-summer"
+                },
+                {
+                  "text": "Fall / Winter",
+                  "url": "/colecoes/fall-winter"
+                }
+              ]
+            }
+          ],
+          "banners": [
+            {
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
+              "bannerLink": "/promo-infantil"
+            },
+            {
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
+              "bannerLink": "/promo-infantil"
+            }
+          ]
         }
       ]
     }

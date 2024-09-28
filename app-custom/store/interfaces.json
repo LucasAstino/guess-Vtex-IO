@@ -11,14 +11,29 @@
   "BackToTop":{
     "component":"BackToTop"
   },
+  "LoginHeader":{
+    "component":"LoginHeader"
+  },
   "GoogleMap":{
     "component":"Map"
   },
   "TableFeminine":{
     "component":"TableFeminine"
   },
+  "Minicart":{
+    "component":"Minicart"
+  },
+  "fg-product-variants":{
+    "component":"product-variants"
+  },
+  "ProductCharacteristics":{
+    "component":"ProductCharacteristics"
+  },
   "TableMasculine":{
     "component":"TableMasculine"
+  },
+  "LoginOrUserName":{
+    "component":"LoginOrUserName"
   },
   "PopupForm":{
     "component":"PopupForm"

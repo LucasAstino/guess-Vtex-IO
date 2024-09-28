@@ -1,0 +1,29 @@
+query ProductRecommendations(
+  $identifier: ProductUniqueIdentifier
+  $type: CrossSelingInputEnum
+) {
+  productRecommendations(identifier: $identifier, type: $type)
+    @context(provider: "vtex.search-graphql") {
+    productId
+    linkText
+    specificationGroups {
+      name
+      originalName
+      specifications {
+        name
+        originalName
+        values
+      }
+    }
+    items {
+      images {
+        imageLabel
+        imageUrl
+      }
+      variations {
+        name
+        values
+      }
+    }
+  }
+}

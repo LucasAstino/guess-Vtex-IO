@@ -8,6 +8,7 @@ type SubmenuLink = {
   hasSubmenu?: boolean;
   submenuLinks?: SubmenuLink[];
   linkColor?: string;
+  underline?: boolean;
 };
 
 type Banner = {
@@ -24,6 +25,7 @@ type MenuLink = {
   submenuLinks?: SubmenuLink[];
   banners?: Banner[];
   linkColor?: string;
+  underline?: boolean;
 };
 
 interface Props {
@@ -81,7 +83,6 @@ export const AstinoMenu = (props: Props) => {
       >
         {submenuLinks.map((submenuLink, subIndex) => {
           const currentPath = `${parentIndexPath}-${subIndex}`;
-          // console.log("Rendering submenu link:", submenuLink.text); // Verifique o texto dos links de submenu
 
           return (
             <li
@@ -132,7 +133,7 @@ export const AstinoMenu = (props: Props) => {
                 <a
                   href={submenuLink.url}
                   style={{ color: submenuLink.linkColor || "#000" }}
-                  className={handles.menuLink}
+                  className={`${handles.menuLink} ${submenuLink.underline ? "underline" : ""}`}
                 >
                   {submenuLink.text}
                 </a>
@@ -155,8 +156,6 @@ export const AstinoMenu = (props: Props) => {
       <ul className={handles.wrapper}>
         {menuLinks.map((link, index) => {
           const indexPath = `${index}`;
-          // console.log("Rendering main menu link:", link.text); // Verifique o texto dos links principais
-          // console.log("Link banners:", link.banners); // Verifique se os banners estão presentes
 
           return (
             <li
@@ -198,7 +197,7 @@ export const AstinoMenu = (props: Props) => {
               ) : (
                 <a
                   href={link.url}
-                  className={handles.menuLink}
+                  className={`${handles.menuLink} ${link.underline ? "underline" : ""}`}
                   style={{ color: link.linkColor || "#000" }}
                 >
                   {link.text}
@@ -214,16 +213,13 @@ export const AstinoMenu = (props: Props) => {
                   aria-label={`${link.text} submenu`}
                   style={{
                     display: openSubmenus.includes(indexPath) ? "flex" : "none",
-                    // flexDirection: "column",
                   }}
                 >
                   {renderSubmenu(link.submenuLinks, 1, indexPath)}
 
-                  {/* {console.log("antes do render o banner", link)} */}
                   {link.banners && link.banners.length > 0 && (
                     <div className={handles.bannerContainer}>
                       {link.banners.map((banner, bannerIndex) => {
-                        // console.log("Rendering banner:", banner.bannerImage); // Verifique a URL da imagem do banner
 
                         return (
                           <a
@@ -281,6 +277,11 @@ AstinoMenu.schema = {
             type: "string",
             title: "URL do Link",
             default: "#",
+          },
+          underline: {
+            type: "boolean",
+            title: "Ativar underline nos links?",
+            default: true,
           },
           hasSubmenu: {
             type: "boolean",

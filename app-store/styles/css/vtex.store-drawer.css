@@ -1,0 +1,35 @@
+.drawer--drawer__mobile .childrenContainer--drawer__mobile {
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+}
+.drawer--drawer__mobile .childrenContainer--drawer__mobile :global(.vtex-store-components-3-x-logoContainer--logo__mobile) {
+  max-width: 100%;
+}
+.drawer--drawer__mobile .childrenContainer--drawer__mobile :global(.vtex-store-components-3-x-logoContainer--logo__mobile) :global(.vtex-store-components-3-x-logoImage) {
+  max-width: 148px;
+}
+@media (max-width: 1025px) {
+  .drawer--drawer__mobile .childrenContainer--drawer__mobile :global(.vtex-flex-layout-0-x-flexRow--footer__social) {
+    max-width: 100%;
+    padding: 0 10px;
+    margin-top: auto;
+  }
+}
+.drawer--drawer__mobile .childrenContainer--drawer__mobile :global(.vtex-flex-layout-0-x-flexRow--footer__social) :global(.vtex-flex-layout-0-x-flexRowContent--footer__social) {
+  display: flex;
+}
+.drawer--drawer__mobile .closeIconContainer--drawer__mobile {
+  justify-content: end;
+}
+
+.opened--drawer__mobile .closeIconButton--drawer__mobile {
+  margin-right: -17%;
+  top: 15px;
+  position: absolute;
+  color: white;
+}
+
+.overlay--drawer__mobile--visible {
+  opacity: 0.8 !important;
+}

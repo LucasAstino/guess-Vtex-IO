@@ -5444,10 +5444,9 @@ verror@1.10.0:
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context"
   integrity sha512-nd9noja+Rxk1WcS9die0ZB0lhzlYuDBeyzQAdXDkQmEPiZds2jiPNfxefMSJdnh6cgbpUQ4mgQBhhe4m4SD5bA==
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime":
-  version "8.134.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime"
-  integrity sha512-lehqsIn8JPh8smXTCCRkgs/8ZJzsZKL0lfd6flq79Itr97tq9toYMXgtsuj9zfh3Mq2lgXCUhc8sPPCzCL5zVA==
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.8/public/@types/vtex.render-runtime":
+  version "8.134.8"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.8/public/@types/vtex.render-runtime#b54ce7a361a512237c57ae2ad254ba1958b22ef9"
 
 "vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.61.0/public/@types/vtex.search-graphql":
   version "0.61.0"

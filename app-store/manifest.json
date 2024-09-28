@@ -64,6 +64,7 @@
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
     "guessbr.agenciafg-custom": "0.x",
+    "vtex.similar-products-variants": "0.x",
     "vtex.list-context": "0.x",
     "vtex.store-newsletter": "1.x"
   },

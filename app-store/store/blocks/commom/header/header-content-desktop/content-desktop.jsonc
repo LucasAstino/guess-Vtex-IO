@@ -5,7 +5,7 @@
     },
     "children": [
       "logo#desktop",
-      "AstinoMenu#main",
+      "AstinoMenu#new",
       "flex-layout.row#headers__icons"
     ]
   },
@@ -14,7 +14,14 @@
     "props": {
       "blockClass": "headers__icons"
     },
-    "children": ["search-bar#header", "image#find__stores", "login", "minicart.v2"]
+    "children": ["search-bar#header", "image#find__stores", "LoginHeader", "minicart.v2#cart"]
+  },
+
+  "minicart.v2#cart": {
+    "props": {
+      "openOnHover": true
+    },
+    "children": ["minicart-base-content"]
   },
 
   "search-bar#header": {

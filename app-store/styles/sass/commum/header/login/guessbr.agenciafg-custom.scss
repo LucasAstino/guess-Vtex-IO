@@ -1,0 +1,90 @@
+.login__container {
+  position: relative;
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login {
+    width: 50px;
+    &:hover {
+      cursor: pointer;
+    }
+    .login__icon {
+      width: fit-content;
+      &::before {
+        content: "";
+        background: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/0.1.5/icons/header/icon-user___de3e7b3….svg)
+          no-repeat;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  .login__wrapper {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    width: 132px;
+    background-color: white;
+    top: 90%;
+    position: absolute;
+    translate: -20px;
+    z-index: 99;
+    
+    &::before{
+        content: "";
+        box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
+        background: #fff;
+        display: block;
+        margin: 0 0 0 -0.25em;
+        position: absolute;
+        pointer-events: none;
+        transform: rotate(45deg);
+        width: 0.5em;
+        height: 0.5em;
+        left: auto;
+        right: 40px;
+        top: -3px;
+        z-index: 2;
+    }
+
+    &_closed {
+      display: none;
+    }
+    &_open {
+      display: block;
+    }
+    .login__list {
+      list-style: none;
+      padding: 0;
+
+      .login__item {
+        font-size: 10px;
+        opacity: 0.8;
+        padding: 0 20px;
+        letter-spacing: 0.2em;
+        line-height: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .login__link {
+          color: #444;
+          text-decoration: none;
+          text-transform: uppercase;
+          &:hover{
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hello__user{
+  font-size: 14px;
+  .hello__login-link{
+    color: black;
+
+  }
+}
