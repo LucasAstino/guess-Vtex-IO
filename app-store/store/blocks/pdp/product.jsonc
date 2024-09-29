@@ -123,6 +123,7 @@
       "product-assembly-options",
       "product-gifts",
       "flex-layout.row#buy-button",
+      "add-to-list-btn",
       "availability-subscriber",
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
