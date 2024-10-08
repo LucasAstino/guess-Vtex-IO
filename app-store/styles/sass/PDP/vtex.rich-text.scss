@@ -1,17 +1,19 @@
-.container{
-    &--promotion__delivery{
+.container {
+    &--promotion__delivery {
         justify-content: center;
         border: 1px solid black;
-        width: 80%;
-        margin: 20px auto 0;
-        .wrapper{
-            .paragraph{
+        width: 100%;
+        margin: 20px auto 46px;
+
+        .wrapper {
+            .paragraph {
                 margin: 0;
                 text-align: center;
                 padding: 10px 0;
                 font-size: 14px;
             }
-            :first-child{
+
+            :first-child {
                 background-color: white;
                 width: fit-content;
                 display: block;
@@ -19,13 +21,34 @@
                 padding: 0 20px;
                 font-size: 16px;
             }
-           
+
         }
     }
 
-    &--product__description-pdp{
-        .paragraph{
+    &--product__description-pdp {
+        .paragraph {
             font-size: 14px;
+        }
+    }
+
+    &--cashback__pdp {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+            content: "";
+            background-image: url(assets/icons/cashback/icon_cashback.svg);
+            background-repeat: no-repeat;
+            display: block;
+            width: 15px;
+            height: 15px;
+        }
+
+        .paragraph {
+            font-size: 13px;
+            margin: 0;
+
         }
     }
 }

@@ -32,6 +32,10 @@
   "TableMasculine":{
     "component":"TableMasculine"
   },
+  "VisitedProductsSlider":{
+    "component":"VisitedProductsSlider",
+    "composition": "children"
+  },
   "LoginOrUserName":{
     "component":"LoginOrUserName"
   },

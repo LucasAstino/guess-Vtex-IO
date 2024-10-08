@@ -25,7 +25,7 @@ export function LoginHeader() {
     if (orderForm.loggedIn) {
       setLogged(true);
     }
-  }, []);
+  }, [orderForm]);
 
   return (
     <div

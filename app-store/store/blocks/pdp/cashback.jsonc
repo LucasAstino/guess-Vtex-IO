@@ -1,0 +1,9 @@
+{
+    "rich-text#cashback__pdp": {
+        "title": "cashback texto",
+        "props": {
+            "blockClass":"cashback__pdp",
+            "text": "Compre e acumule bônus de **R$ 59,85**"
+        }
+    }
+}

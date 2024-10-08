@@ -2,8 +2,11 @@
   all: unset;
   width: 100%;
   display: flex;
+  padding: 0 10px;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EEEEEE;
 }
 .trigger--product__description-pdp::after {
   content: "";
@@ -17,16 +20,23 @@
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
 }
+.trigger--product__description-pdp :global(.vtex-rich-text-0-x-paragraph--product__description-pdp) {
+  margin: 8px 0;
+}
 .trigger--product__description-pdp--visible::after {
   transform: rotate(44deg);
 }
 
+.content--product__description-pdp {
+  padding: 0 10px;
+}
 .content--product__description-pdp :global(.vtex-store-components-3-x-productDescriptionContainer) :global(.vtex-store-components-3-x-productDescriptionText) {
   white-space: pre-wrap;
   color: black;
 }
 .content--product__description-pdp :global(.vtex-store-components-3-x-productDescriptionText) {
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .trigger--footer__menu-trigger {

@@ -36,6 +36,8 @@
     "apollo-client": "^2.6.8",
     "graphql": "^14.6.0",
     "typescript": "3.9.7",
+    "vtex.address-form": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.6.6/public/_types/react",
+    "vtex.order-shipping": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-shipping@0.7.0/public/@types/vtex.order-shipping",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles",
     "vtex.native-types": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.native-types@0.10.1/public/@types/vtex.native-types",
     "vtex.order-items": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.13.23/public/@types/vtex.order-items",

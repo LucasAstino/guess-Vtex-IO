@@ -18,6 +18,7 @@
     }
     .flexCol--product__right-col {
       width: 40%;
+      max-width:430px;
 
       :global(.vtex-address-form__postalCode) {
         :global(.vtex-input__label) {

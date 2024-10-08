@@ -25,7 +25,7 @@ interface SimilarProductsVariantsProps {
       productId: string
     }
   },
-  imageLabel: string
+  imageLabel?: string
 }
 
 export function SimilarProductsVariants({

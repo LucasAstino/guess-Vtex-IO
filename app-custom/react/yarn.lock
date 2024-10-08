@@ -5419,6 +5419,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.address-form@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.6.6/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.6.6/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles":
   version "1.0.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles"
@@ -5439,6 +5443,10 @@ verror@1.10.0:
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager"
   integrity sha512-8Za+UO/7k78sn9Q478m7Z9aIzDV/NQRBVNKT7U2iM2rpEuF6irLtrwBlyicEaP0QogSWNtAAY+QekFX7AiPWPA==
 
+"vtex.order-shipping@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-shipping@0.7.0/public/@types/vtex.order-shipping":
+  version "0.7.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-shipping@0.7.0/public/@types/vtex.order-shipping#4d020086b9da30807f0b6ec059c30d5a8727889d"
+
 "vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context":
   version "0.10.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context"
@@ -5446,7 +5454,8 @@ verror@1.10.0:
 
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.8/public/@types/vtex.render-runtime":
   version "8.134.8"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.8/public/@types/vtex.render-runtime#b54ce7a361a512237c57ae2ad254ba1958b22ef9"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.8/public/@types/vtex.render-runtime"
+  integrity sha512-suGE4AOfzK8zCtRNoWk11B4RX4BYcTnUgobcP2DTpQtqWmtyU9ShRZMeg/yesvtn90mqFmwx7Jy67729dCrbvQ==
 
 "vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.61.0/public/@types/vtex.search-graphql":
   version "0.61.0"

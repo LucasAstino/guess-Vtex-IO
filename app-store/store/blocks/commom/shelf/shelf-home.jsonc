@@ -17,7 +17,8 @@
     "title": "Layout empilhado da prateleira",
     "children": [
       "product-summary-image#shelf",
-      "vtex.product-highlights@2.x:product-highlights#collection"
+      "vtex.product-highlights@2.x:product-highlights#collection",
+      "modal-trigger#fast-buy"
     ]
   },
   "product-summary-name#shelf": {

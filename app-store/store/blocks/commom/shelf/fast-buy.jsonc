@@ -1,0 +1,22 @@
+{
+    "modal-trigger#fast-buy": {
+        "props": {
+            "blockClass":"fast-buy"
+        },
+    "children": ["rich-text#fast-buy", "modal-layout#fast-buy"]
+  },
+  "rich-text#fast-buy": {
+    "props": {
+      "blockClass":"ast-buy",
+      "text": "Add +"
+    }
+  },
+  "modal-layout#fast-buy": {
+    "children": ["rich-text#modal-content"]
+  },
+  "rich-text#modal-content": {
+    "props": {
+      "text": "Hello"
+    }
+  }
+}

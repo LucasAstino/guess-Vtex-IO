@@ -2,8 +2,11 @@
     all: unset;
     width: 100%;
     display: flex;
+    padding: 0 10px;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #EEEEEE;
     &::after{
         content: "";
         display: block;
@@ -16,6 +19,10 @@
         -webkit-transform: rotate(225deg);
         transform: rotate(225deg);
     }
+    
+    :global(.vtex-rich-text-0-x-paragraph--product__description-pdp){
+        margin: 8px 0;
+    }
 
     &--visible{
         &::after{
@@ -25,6 +32,7 @@
 }
 
 .content--product__description-pdp{
+    padding: 0 10px;
     :global(.vtex-store-components-3-x-productDescriptionContainer){
         :global(.vtex-store-components-3-x-productDescriptionText){
             white-space: pre-wrap;
@@ -34,6 +42,7 @@
 
     :global(.vtex-store-components-3-x-productDescriptionText){
         font-size: 14px;
+        margin-top: 10px;
     }
 
 }

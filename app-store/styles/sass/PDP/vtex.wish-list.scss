@@ -1,0 +1,22 @@
+.wishlistIconContainer{
+    :global(.vtex-button__label){
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        &::after{
+            content: "Salvar na Lista de Desejos";
+            font-size: 13px;
+        }
+    }
+    :global(.vtex-button){
+        border: none;
+    }
+    .outline{
+        background-image: url(assets/icons/cashback/Heart.svg);
+    }
+    .wishlistIcon{
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+    }
+}
