@@ -1,21 +1,30 @@
 import React, { FC, createContext, useContext, useEffect, useState } from 'react';
 import { useProduct } from 'vtex.product-context';
-import { SimilarProductsVariants } from '../product-variants'; // Importa o componente filho
+import { SliderLayout } from 'vtex.slider-layout'; // Importa o SliderLayout
+import { SkuFromShelf } from '../shelfSku'; // Importa o componente filho
+
+interface Sku {
+  skuId: string;
+  name: string;
+  available: boolean;
+}
 
 interface Product {
   productId: string;
   productName: string;
   linkText: string;
   items: {
-    images: {
-      imageUrl: string;
-    }[];
+    itemId: string;
+    name: string;
+    variations: { [key: string]: string[] }; // Ex: { "Color": ["Red", "Blue"] }
+    images: { imageUrl: string }[];
+    skus: Sku[]; // Lista de SKUs
   }[];
 }
 
-type Props ={
-    children: any
-}
+type Props = {
+  children: any;
+};
 
 const ProductListContext = createContext<Product[]>([]);
 
@@ -23,6 +32,8 @@ export const useProductList = () => useContext(ProductListContext);
 
 export const VisitedProductsSlider: FC<Props> = ({ children }) => {
   const [visitedProducts, setVisitedProducts] = useState<Product[]>([]);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null); // Cor selecionada
+  const [selectedSku, setSelectedSku] = useState<Sku | null>(null); // SKU selecionado
   const productContext = useProduct();
 
   useEffect(() => {
@@ -60,7 +71,9 @@ export const VisitedProductsSlider: FC<Props> = ({ children }) => {
     if (productIds.length === 0) return;
 
     try {
-      const response = await fetch(`/api/catalog_system/pub/products/search?fq=productId:${productIds.join('&fq=productId:')}`);
+      const response = await fetch(
+        `/api/catalog_system/pub/products/search?fq=productId:${productIds.join('&fq=productId:')}`
+      );
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -71,22 +84,77 @@ export const VisitedProductsSlider: FC<Props> = ({ children }) => {
     }
   };
 
+  const handleColorSelect = (color: string) => {
+    setSelectedColor(color);
+    setSelectedSku(null); // Reseta o SKU selecionado quando uma nova cor é selecionada
+  };
+
+  const handleSkuSelect = (sku: Sku) => {
+    if (selectedColor) {
+      setSelectedSku(sku);
+    }
+  };
+
   return (
     <ProductListContext.Provider value={visitedProducts}>
       <div className="visited-products-slider">
         {visitedProducts.length > 0 ? (
-          visitedProducts.map(product => (
-            <div key={product.productId} className="product-item">
-              <a href={`/${product.linkText}/p`}>
-                <img src={product.items[0].images[0].imageUrl} alt={product.productName} />
-                <h4>{product.productName}</h4>
-              </a>
-              {/* Renderiza o componente SimilarProductsVariants */}
-              <SimilarProductsVariants productQuery={{ product }} />
-              {/* Renderiza os componentes filhos passados */}
-              {children}
-            </div>
-          ))
+          <SliderLayout
+            itemsPerPage={{
+              desktop: 4,
+              tablet: 2,
+              phone: 1,
+            }}
+            showNavigationArrows="desktopOnly"
+            showPaginationDots="always"
+            fullWidth
+          >
+            {visitedProducts?.map(product => (
+              <div key={product.productId} className="product-item">
+                <a href={`/${product.linkText}/p`}>
+                  <img src={product.items[0].images[0].imageUrl} alt={product.productName} />
+                  <h4>{product.productName}</h4>
+                </a>
+
+                {/* Seletor de cores */}
+                <div className="color-selector">
+                  {product.items[0].variations['Color']?.map(color => (
+                    <button
+                      key={color}
+                      onClick={() => handleColorSelect(color)}
+                      style={{ backgroundColor: color }}
+                    >
+                      {color}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Seletor de SKUs */}
+                <div className="sku-selector">
+                  {console.log(selectedSku)}
+                  {product.items[0].skus?.map(sku => (
+                    <button
+                      key={sku.skuId}
+                      disabled={!selectedColor}
+                      onClick={() => handleSkuSelect(sku)}
+                      style={{
+                        opacity: selectedColor ? 1 : 0.5,
+                        cursor: selectedColor ? 'pointer' : 'not-allowed',
+                      }}
+                    >
+                      {sku.name} {sku.available ? '(Available)' : '(Out of stock)'}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Renderiza o componente SimilarProductsVariants */}
+                <SkuFromShelf productQuery={{ product }} />
+
+                {/* Renderiza os componentes filhos passados */}
+                {children}
+              </div>
+            ))}
+          </SliderLayout>
         ) : (
           <p>No products visited yet</p>
         )}

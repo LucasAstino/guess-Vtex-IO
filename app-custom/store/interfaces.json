@@ -36,6 +36,14 @@
     "component":"VisitedProductsSlider",
     "composition": "children"
   },
+  "BuyToShelf":{
+    "component":"BuyToShelf",
+    "composition": "children"
+  },
+  "SkuFromShelf":{
+    "component":"SkuFromShelf",
+    "composition": "children"
+  },
   "LoginOrUserName":{
     "component":"LoginOrUserName"
   },

@@ -34,16 +34,17 @@ export function SimilarProductsVariants({
 }: SimilarProductsVariantsProps) {
   const { handles } = useCssHandles(HANDLES_VARIANTS)
   const product = useProduct()
-  console.log(product,'contexto de produto similar')
   // const productCurrentImg = product?.selectedItem?.images[0].imageUrl
   // const productCurrentImgAlt = product?.selectedItem?.images[0].imageText
   const color = product?.selectedItem?.variations?.[1]?.values?.[0] || 'N/A'
    const backgroundColor = product?.selectedItem?.variations?.[2]?.values?.[0] || 'N/A'
   const productContext = useProduct()
   // const { route } = useRuntime()
+  console.log(productQuery)
   const productId =
     productQuery?.product?.productId ?? productContext?.product?.productId
 
+    console.log(productId)
   const { data, loading, error } = useQuery(productRecommendationsQuery, {
     variables: {
       identifier: { field: 'id', value: productId },
@@ -109,7 +110,6 @@ export function SimilarProductsVariants({
           //     : element.items[0].images.findIndex(image => image.imageLabel === imageLabel)
 
           // const srcImage = element.items[0].images[imageIndex].imageUrl
-          console.log(element,'similar')
           const backgroundColor = element?.items?.[0].variations?.[2]?.values?.[0] || 'N/A'
           return (
             <Link
