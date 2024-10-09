@@ -35,7 +35,7 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-client": "^2.6.8",
     "graphql": "^14.6.0",
-    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728410342/public/@types/guessbr.agenciafg-custom",
+    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728476781/public/@types/guessbr.agenciafg-custom",
     "typescript": "3.9.7",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles",
     "vtex.native-types": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.native-types@0.10.1/public/@types/vtex.native-types",
