@@ -37,6 +37,12 @@ export const headCustom = () => {
           href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
           rel="stylesheet"
         />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="//io.vtex.com.br/vtex.js/2.0.0/vtex.min.js"></script>
+        <script src="//io.vtex.com.br/vtex.js/2.0.0/extended-ajax.min.js"></script>
+        <script src="//io.vtex.com.br/vtex.js/2.0.0/catalog.min.js"></script>
+        <script src="//io.vtex.com.br/vtex.js/2.0.0/checkout.min.js"></script>
       </Helmet>
     </>
   );
