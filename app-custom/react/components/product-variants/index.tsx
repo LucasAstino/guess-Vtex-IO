@@ -34,12 +34,9 @@ export function SimilarProductsVariants({
 }: SimilarProductsVariantsProps) {
   const { handles } = useCssHandles(HANDLES_VARIANTS)
   const product = useProduct()
-  // const productCurrentImg = product?.selectedItem?.images[0].imageUrl
-  // const productCurrentImgAlt = product?.selectedItem?.images[0].imageText
   const color = product?.selectedItem?.variations?.[1]?.values?.[0] || 'N/A'
    const backgroundColor = product?.selectedItem?.variations?.[2]?.values?.[0] || 'N/A'
   const productContext = useProduct()
-  // const { route } = useRuntime()
   console.log(productQuery)
   const productId =
     productQuery?.product?.productId ?? productContext?.product?.productId
@@ -103,13 +100,7 @@ export function SimilarProductsVariants({
         <span className={handles['similar__products-variants--circle']} style={{height:'20px',width:'20px',backgroundColor:backgroundColor,display:'block'}}></span>
         </div>
         {items.map((element: ProductTypes.Product) => {
-          // const imageIndex = imageLabel === undefined
-          //   ? 0
-          //   : element.items[0].images.findIndex(image => image.imageLabel === imageLabel) === -1
-          //     ? 0
-          //     : element.items[0].images.findIndex(image => image.imageLabel === imageLabel)
-
-          // const srcImage = element.items[0].images[imageIndex].imageUrl
+    
           const backgroundColor = element?.items?.[0].variations?.[2]?.values?.[0] || 'N/A'
           return (
             <Link
