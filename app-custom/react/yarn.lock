@@ -2967,9 +2967,9 @@ growly@^1.3.0:
   resolved "https://registry.npmjs.org/growly/-/growly-1.3.0.tgz"
   integrity sha512-+xGQY0YyAWCnqy7Cd++hc2JqMYzlm0dG30Jd0beaA64sROr8C4nt8Yc9V5Ro3avlSUDTN0ulqP/VBKi1/lLygw==
 
-"guessbr.agenciafg-custom@https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728491671/public/@types/guessbr.agenciafg-custom":
+"guessbr.agenciafg-custom@https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728662431/public/@types/guessbr.agenciafg-custom":
   version "0.0.11"
-  resolved "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728491671/public/@types/guessbr.agenciafg-custom#e91fc1037c25c2087bb708d5afd4b1fb796eb006"
+  resolved "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.11+build1728662431/public/@types/guessbr.agenciafg-custom#7a40e43c796ab8904eea86c8e2f98c16f537dd4f"
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -5422,6 +5422,10 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+"vtex.address-form@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.25.5/public/@types/vtex.address-form":
+  version "4.25.5"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.25.5/public/@types/vtex.address-form#482c473a8979bc10956764515084346b112efcca"
 
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles":
   version "1.0.1"

@@ -16,6 +16,12 @@ query ProductRecommendations(
       }
     }
     items {
+      sellers {
+        sellerId
+        commertialOffer {
+          AvailableQuantity
+        }
+      }
       images {
         imageLabel
         imageUrl

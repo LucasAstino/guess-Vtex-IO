@@ -21,7 +21,8 @@
     "vtex.slider-layout": "0.x",
     "vtex.store-resources": "0.x",
     "vtex.store-components": "3.x",
-    "vtex.product-summary": "2.x"
+    "vtex.product-summary": "2.x",
+    "vtex.address-form": "4.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

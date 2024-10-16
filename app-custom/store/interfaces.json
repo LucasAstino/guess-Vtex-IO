@@ -44,8 +44,14 @@
     "component":"SkuFromShelf",
     "composition": "children"
   },
+  "ShippingSimulator":{
+    "component":"ShippingSimulator"
+  },
   "LoginOrUserName":{
     "component":"LoginOrUserName"
+  },
+  "Topbar":{
+    "component":"Topbar"
   },
   "PopupForm":{
     "component":"PopupForm"
