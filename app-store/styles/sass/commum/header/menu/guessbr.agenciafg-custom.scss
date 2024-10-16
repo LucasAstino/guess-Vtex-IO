@@ -17,9 +17,8 @@
       .menuLink {
         font-family: "Futura";
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         display: block;
-        text-transform: uppercase;
         letter-spacing: 1px;
         color: #000;
         padding: 0;
@@ -27,7 +26,7 @@
       .submenuContainer {
         align-items: stretch;
         padding: 20px;
-        top: 78px;
+        top: 102px;
         .submenuWrapper {
           &.level-1 {
             width: 40%;
@@ -66,6 +65,7 @@
         }
 
         .bannerContainer {
+          display: flex;
           .bannerLink {
             display: block;
               font-size: 22px;

@@ -253,9 +253,9 @@
           ],
           "banners": [
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/715_banner638599482967899564.png",
               "bannerLink": "/promo-masculino2",
-              "bannerText": "agora vai"
+              "bannerText": "Ver todos os produtos"
             }
           ]
         },
@@ -356,8 +356,9 @@
           ],
           "banners": [
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/716_banner638599480172194797.png",
+              "bannerLink": "/promo-infantil",
+              "bannerText": "Trends Bags"
             }
           ]
         },
@@ -408,12 +409,14 @@
           ],
           "banners": [
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/717_banner638306461412939924.jpg",
+              "bannerLink": "/promo-infantil",
+              "bannerText":"Love Denim"
             },
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/718_banner638306448272035460.jpg",
+              "bannerLink": "/promo-infantil",
+              "bannerText":"SALE Acessórios"
             }
           ]
         },
@@ -440,12 +443,14 @@
           ],
           "banners": [
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/719_banner638495708896986763.jpg",
+              "bannerLink": "/promo-infantil",
+              "bannerText":"Fall / Winter"
             },
             {
-              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/71/714_banner638599483704158955.png",
-              "bannerLink": "/promo-infantil"
+              "bannerImage": "https://d3tbq74diqm7l.cloudfront.net/Custom/Content/Banners/72/720_banner638599481967663633.png",
+              "bannerLink": "/promo-infantil",
+              "bannerText":"Spring / Summer"
             }
           ]
         }

@@ -3,3 +3,18 @@
         background-color: white;
     }
 }
+
+.paper--fast-buy{
+    padding: 40px;
+    border-radius: 8px;
+    width: 520px;
+}
+
+.headerContainer--fast-buy{
+    border: none;
+    .closeButtonContainer--fast-buy{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}

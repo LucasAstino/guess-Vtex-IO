@@ -71,3 +71,10 @@
 .imageElement--find__stores {
   padding: 0 16px;
 }
+
+.imageElementLink--find__stores {
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,10 +1,10 @@
-.stackItem--product {
-  width: 100%;
-  min-height: 257px
+.stackContainer--shelf {
+  position: relative;
 }
-
-.stackItem--quickview {
-  right: 0;
-  top: 0;
-  left: auto;
+.stackContainer--shelf .stackItem--shelf--fast-buy {
+  top: calc(100% - 8px);
+  left: calc(100% - 8px);
+  width: fit-content;
+  height: fit-content;
+  translate: -100% -100%;
 }

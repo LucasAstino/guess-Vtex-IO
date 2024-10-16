@@ -15,15 +15,15 @@
     ]
   },
 
-  "VisitedProductsSlider":{
-    "children":["product-list-price"]
+  "VisitedProductsSlider": {
+    "children": []
   },
 
   "viewed-products": {
-    "blocks": [ "product-summary.shelf"],
+    "blocks": ["product-summary.shelf"],
     "children": ["slider-layout#viewed-products"],
     "props": {
-      "blockClass":"lambe",
+      "blockClass": "lambe",
       "showLoading": true,
       "maxItems": 3
     }
@@ -49,12 +49,7 @@
   // "flex-layout.col#product__col-wrapper": {
   //   "children": []
   // },
-  
-  "rich-text#specifications": {
-    "props": {
-      "text": "##### Product Specifications"
-    }
-  },
+
   "flex-layout.row#product-breadcrumb": {
     "props": {
       "blockClass": "product-breadcrumb"
@@ -82,7 +77,10 @@
       // "paddingTop": 7,
       // "paddingBottom": 7
     },
-    "children": ["flex-layout.col#product__left-col", "flex-layout.col#product__right-col"]
+    "children": [
+      "flex-layout.col#product__left-col",
+      "flex-layout.col#product__right-col"
+    ]
   },
 
   // "stack-layout": {
@@ -118,7 +116,7 @@
   "flex-layout.col#product__left-col": {
     "children": ["stack-layout"],
     "props": {
-      "blockClass":"product__col-left"
+      "blockClass": "product__col-left"
     }
   },
   "product-images": {
@@ -134,18 +132,17 @@
   },
   "flex-layout.col#product__right-col": {
     "props": {
-      "blockClass":"product__right-col"
+      "blockClass": "product__right-col"
     },
     "children": [
       "flex-layout.row#product__name-pdp",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
       "flex-layout.row#product__price-pdp",
-      "product-installments#summary",
+      "flex-layout.row#pdp__installmentsAndPayments",
       // "product-identifier.product",
       "fg-product-variants",
-      "sku-selector",
-      // "product-quantity",
+      "flex-layout.row#pdp__skuAndGuideSizes",
       "product-assembly-options",
       "product-gifts",
       "flex-layout.row#buy-button",
@@ -156,25 +153,22 @@
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
       "disclosure-layout#product__description-pdp"
-      // "share#default"
     ]
   },
 
-  "shipping-simulator#pdp":{
-    "props":{
-      "blockClas":"pdp"
+  "shipping-simulator#pdp": {
+    "props": {
+      "blockClas": "pdp"
     }
   },
 
   "rich-text#promotion__delivery": {
     "title": "promoção de frete",
     "props": {
-      "blockClass":"promotion__delivery",
+      "blockClass": "promotion__delivery",
       "text": "FRETE GRÁTIS\n\nPromoção válida para as regiões Sul, Sudeste\ne Centro-Oeste nas compras acima de R$ 499,00"
     }
   },
-
-
 
   "flex-layout.row#product__name-pdp": {
     "props": {

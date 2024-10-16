@@ -8,6 +8,7 @@
   "header-layout.desktop": {
     "children": [
       // "flex-layout.row#1-desktop",
+      "Topbar",
       "flex-layout.row#header__content-desktop",
       // "sticky-layout#4-desktop",
       "Helmet",

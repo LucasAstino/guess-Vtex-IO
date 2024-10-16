@@ -1,0 +1,38 @@
+{
+  "flex-layout.row#pdp__skuAndGuideSizes": {
+    "title": "",
+    "props": {
+      "blockClass": ["pdp__skuAndGuideSizes", "pdp__flex"]
+    },
+    "children": ["sku-selector", "modal-trigger#pdp__guideSizes"]
+  },
+  "modal-trigger#pdp__guideSizes": {
+    "props": {
+      "blockClass": ["pdp__guideSizes", "pdp__trigger"]
+    },
+    "children": ["rich-text#pdp__guideSizes", "modal-layout#pdp__guideSizes"]
+  },
+  "rich-text#pdp__guideSizes": {
+    "props": {
+      "text": "Guia de medidas",
+      "blockClass": ["pdp__guideSizes", "pdp__trigger"]
+    }
+  },
+  "modal-layout#pdp__guideSizes": {
+    "props": {
+        "blockClass":"pdp__guideSizes"
+    },
+    "children": ["modal-header#pdp__guideSizes","image#pdp__guideSizes"]
+  },
+  "modal-header#pdp__guideSizes": {
+    "props": {
+        "showCloseButton": true,
+        "blockClass":["pdp__guideSizes","header__modal"]
+    }
+  },
+  "image#pdp__guideSizes": {
+    "props": {
+      "src": "assets/images/table-size/feminine/modaltabelaMedidasFeminDesktop.png"
+    }
+  }
+}

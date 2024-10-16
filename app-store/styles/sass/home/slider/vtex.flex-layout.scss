@@ -1,0 +1,15 @@
+.flexCol--slider__home-slide {
+  position: absolute;
+  height: fit-content;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.flexRow {
+  &--slider__home-slide--butons {
+    .flexRowContent {
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+}

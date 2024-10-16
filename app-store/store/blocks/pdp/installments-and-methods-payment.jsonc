@@ -1,0 +1,162 @@
+{
+  "flex-layout.row#pdp__installmentsAndPayments": {
+    "title": "",
+    "props": {
+      "blockClass": ["pdp__installmentsAndPayments", "pdp__flex"]
+    },
+    "children": [
+      "product-installments#summary",
+      "modal-trigger#pdp__methodsPayments"
+    ]
+  },
+  "modal-trigger#pdp__methodsPayments": {
+    "props": {
+      "blockClass": ["pdp__methodsPayments", "pdp__trigger"]
+    },
+    "children": [
+      "rich-text#pdp__methodsPayments-trigger",
+      "modal-layout#pdp__methodsPayments"
+    ]
+  },
+  "flex-layout.row#pdp__methodsPayments": {
+    "props": {
+      "blockClass": "pdp__methodsPayments"
+    },
+    "children": [
+      "rich-text#pdp__methodsPayments-title",
+      "rich-text#pdp__methodsPayments-card-title",
+      "rich-text#pdp__methodsPayments-card--visa",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-card--master",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-card--amex",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-card--elo",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-card--diners",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-card--hipercard",
+      "product-installments-list#pdp__methodsPayments",
+      "rich-text#pdp__methodsPayments-pix--title",
+      "rich-text#pdp__methodsPayments-pix-mathod",
+      "product-installments-list#pdp__methodsPayments-pixMethod"
+    ]
+  },
+  "rich-text#pdp__methodsPayments-trigger": {
+    "props": {
+      "text": "Formas de pagamento",
+      "blockClass": ["pdp__methodsPayments", "pdp__trigger"]
+    }
+  },
+  "modal-header#pdp__methodsPayments": {
+    "props": {
+      "blockClass": ["pdp__methodsPayments", "header__modal"],
+      "showCloseButton": true
+    }
+  },
+  "modal-layout#pdp__methodsPayments": {
+    "props": {
+      "blockClass": "pdp__methodsPayments"
+    },
+    "children": [
+      "modal-header#pdp__methodsPayments",
+      "flex-layout.row#pdp__methodsPayments"
+    ]
+  },
+  "rich-text#pdp__methodsPayments-title": {
+    "props": {
+      "text": "Saiba como pagar",
+      "blockClass": ["pdp__methodsPayments-title"]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card-title": {
+    "props": {
+      "text": "Pagamento com cartao de crédito",
+      "blockClass": ["pdp__methodsPayments-card--title"]
+    }
+  },
+  "product-installments-list#pdp__methodsPayments": {
+    "props": {
+      "blockClass": "pdp__methodsPayments"
+    },
+    "children": ["product-installments-list-item#pdp__methodsPayments"]
+  },
+  "product-installments-list-item#pdp__methodsPayments": {
+    "props": {
+      "message": "{installmentsNumber}x de R${installmentValue} sem juros"
+    }
+  },
+  "product-installments-list#pdp__methodsPayments-pixMethod": {
+    "props": {
+      "installmentsToShow": [1],
+      "blockClass": "pdp__methodsPayments"
+    },
+    "children": ["product-installments-list-item"]
+  },
+  "rich-text#pdp__methodsPayments-card--visa": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito Visa via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--visa",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card--master": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito master via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--master",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card--amex": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito amex via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--amex",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card--elo": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito elo via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--elo",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card--diners": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito diners via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--diners",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-card--hipercard": {
+    "props": {
+      "text": "Pagamento com Cartão de Crédito hipercard via CieloV3",
+      "blockClass": [
+        "pdp__methodsPayments-card--hipercard",
+        "pdp__methodsPayments-card"
+      ]
+    }
+  },
+  "rich-text#pdp__methodsPayments-pix--title": {
+    "props": {
+      "text": "Pagamento com PIX",
+      "blockClass": ["pdp__methodsPayments-pix--title"]
+    }
+  },
+  "rich-text#pdp__methodsPayments-pix-mathod": {
+    "props": {
+      "text": "Pagamento com PIX",
+      "blockClass": ["pdp__methodsPayments-pix"]
+    }
+  }
+}

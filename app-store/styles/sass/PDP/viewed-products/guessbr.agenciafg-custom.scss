@@ -1,0 +1,134 @@
+.visited-products-slider {
+  padding: 0 30px;
+  margin-bottom: 150px;
+
+  .sliderTrack{
+    gap: 8px;
+  }
+}
+.title__viewed-product {
+  font-size: 24px;
+  font-weight: 500;
+  max-width: 1366px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+.product__viewed-link {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.product__viewed-name {
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  margin-block-start: 12px;
+  margin-block-end: 8px;
+}
+
+.product__viewed-price {
+  margin-block-start: 8px;
+  margin-block-end: 8px;
+  font-size: 14px;
+}
+
+.product__viewed-wrapper{
+    position: relative;
+}
+
+.product__viewed-addtocart {
+  position: absolute;
+  right: 8px;
+  bottom: 38px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 2px solid #bdbec0;
+  width: 90px;
+  height: 40px;
+  font-size: 18px;
+  text-align: left;
+  padding-inline-start: 15px;
+  padding-inline-end: 10px;
+  font-family: 'Futura';
+  &:hover{
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    rotate: 90deg;
+  }
+}
+
+.product__viewed-installments {
+  font-size: 12px;
+  margin-block-start: 8px;
+  margin-block-end: 8px;
+}
+
+.modalContent{
+    width: 531px;
+    height: 270px;
+    padding: 40px;
+    border-radius: 8px;
+
+    .closeButton{
+      all: unset;
+    font-size: 45px;
+    font-weight: 300;
+    rotate: 45deg;
+
+    &:hover{
+      cursor: pointer;
+    }
+    }
+
+    &__alert-hidden{
+      display: none;
+      
+    }
+
+    &__alert-visible{
+      display: block;
+      position: absolute;
+      bottom: -110px;
+      left: 50%;
+      translate: -50%;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 4px;
+      width: 288px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+
+      &-span{
+        text-decoration: underline;
+      }
+    }
+}
+
+
+

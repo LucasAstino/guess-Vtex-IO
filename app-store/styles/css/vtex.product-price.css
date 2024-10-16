@@ -8,6 +8,16 @@
   text-decoration: line-through;
 }
 
+.installmentsListContainer--pdp__methodsPayments {
+  display: flex;
+  flex-direction: column;
+}
+.installmentsListContainer--pdp__methodsPayments .installments {
+  border-top: 1px solid #999;
+  padding: 0.5em 0 !important;
+  font-weight: 400;
+}
+
 .sellingPrice--shelf {
   display: flex;
   justify-content: start;
@@ -24,6 +34,7 @@
   font-weight: 400;
   line-height: 16px;
   color: black;
+  width: fit-content !important;
 }
 
 .installments--shelf {

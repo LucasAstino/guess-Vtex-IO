@@ -1,7 +1,56 @@
-.triggerContainer{
-    &--product__review{
-        :global(.vtex-rich-text-0-x-paragraph--product__review){
-            margin: 0;
-        }
+.triggerContainer {
+  &--product__review {
+    :global(.vtex-rich-text-0-x-paragraph--product__review) {
+      margin: 0;
+      text-decoration: underline;
     }
+  }
+  &--pdp__trigger {
+    width: fit-content !important;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.headerContainer {
+  &--header__modal {
+    border: 0;
+
+    .closeButtonContainer--header__modal {
+      position: absolute;
+      right: 0;
+      translate: 50% -50%;
+      background-color: #1b1c1d;
+
+      .closeButton {
+          padding: 0.25rem;
+        .closeIcon {
+          display: none;
+        }
+
+        &::before {
+          content: "X";
+          font-size: 25px;
+          font-family: Century;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.modal--pdp__guideSizes {
+  .paper {
+    overflow: visible;
+  }
+  
+}
+
+.modal--pdp__methodsPayments{
+  padding: 35px;
+  .paper--pdp__methodsPayments{
+    overflow: initial;
+  }
 }

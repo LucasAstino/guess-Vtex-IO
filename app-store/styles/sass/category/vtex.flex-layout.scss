@@ -1,0 +1,36 @@
+.flexRow {
+  &--searchbread {
+    :global(.vtex-breadcrumb-1-x-container) {
+      margin: 0;
+      margin-left: 25px;
+      margin-bottom: 29px;
+      :global(.vtex-breadcrumb-1-x-link) {
+        color: #565d61;
+      }
+      :global(.vtex-breadcrumb-1-x-arrow){
+        &::before{
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+
+  &--productCountCol {
+    .flexRowContent--productCountCol {
+      align-items: baseline;
+      gap: 10px;
+    }
+  }
+
+  &--result {
+    .flexRowContent--result {
+        width: 80%;
+        margin: auto;
+      .flexCol--content {
+        margin-top: 50px;
+        padding-left: 25px;
+      }
+    }
+  }
+}

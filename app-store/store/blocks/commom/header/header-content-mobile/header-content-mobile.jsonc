@@ -9,8 +9,7 @@
       "flex-layout.col#spacer",
       "logo#mobile",
       "flex-layout.col#spacer",
-      "LoginHeader",
-      "minicart.v2#cart"
+      "LoginHeader"
     ],
     "props": {
       "blockClass": "main-header-mobile",
@@ -39,7 +38,7 @@
     "props": {
         "blockClass": "header__drawer-mobile-right"
     },
-    "children": ["minicart.v2#cart"]
+    "children": []
   },
 
   "drawer#mobile": {

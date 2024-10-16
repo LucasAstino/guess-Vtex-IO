@@ -6,6 +6,31 @@
         .heading--home_title{
             font-size: 64px;
             color: #655b43;
+            margin-block-start: 100px;
+        }
+    }
+    &--h1__home{
+        position: absolute;
+        z-index: -999;
+    }
+    &--slider__home-title{
+        justify-content: center;
+        .paragraph{
+            margin: 0;
+            color: white;
+            font-family: Orpheus;
+            font-size: 80px;
+        }
+    }
+    &--slider__home-button{
+        justify-content: center;
+        width: fit-content !important;
+        .paragraph{
+            background-color: white;
+            padding: 17px 115px;
+            border-radius: 48px;
+            font-family: open sans;
+            font-size: 18px;
         }
     }
 }

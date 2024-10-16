@@ -1,0 +1,21 @@
+.sliderLayoutContainer--carousel {
+
+    :global(.vtex-store-components-3-x-imageElement--slider__home){
+        filter: brightness(0.7);
+    }
+
+  .paginationDotsContainer--carousel {
+    bottom: 17px;
+  }
+  .paginationDot--carousel {
+    width: 100px !important;
+    height: 3px !important;
+    background-color: white;
+    border-radius: 1.5px;
+    padding: 0;
+    opacity: 50%;
+    &--isActive{
+        opacity: 100%;
+    }
+  }
+}

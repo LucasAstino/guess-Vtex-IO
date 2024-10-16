@@ -1,0 +1,129 @@
+.galleryLayoutSwitcher {
+  display: none;
+}
+
+.galleryTitle--layout {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  font-family: Century;
+  width: fit-content !important;
+  margin: 0;
+}
+
+.totalProducts--layout {
+  width: fit-content !important;
+  font-size: 12px;
+  font-family: Century;
+  text-align: left;
+  font-weight: 700;
+  color: #808080;
+  text-transform: none;
+  padding: 0;
+  &::before {
+    content: "(";
+    font-weight: 500;
+  }
+  .totalProductsMessage {
+    font-size: 0;
+  }
+
+  &::after {
+    content: "resultados)";
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+}
+
+.gallery {
+  padding-left: 0;
+
+  .galleryItem--grid {
+    min-width: 270px;
+    flex-grow: 1;
+    flex-basis: 0 !important;
+    flex-shrink: 1;
+    max-width: 350px !important;
+  }
+}
+
+.filters--layout {
+  margin-top: 20px;
+
+  .caretIcon {
+    display: none;
+  }
+
+  .filterAvailable {
+    position: relative;
+    padding: 10px 0;
+
+    .filterTitleSpan {
+      text-transform: uppercase;
+      font-weight: 450;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      rotate: 90deg;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+    }
+
+    &.filterIsOpen {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  .filter__container--hexadecimal{
+    display: none;
+  }
+
+  .filterTemplateOverflow {
+    :global(.vtex-checkbox__line-container) {
+      align-items: center;
+    }
+  }
+
+  .filter__container--title {
+    display: none;
+  }
+
+  :global(.vtex-slider__selector) {
+    background-color: #fff;
+    border: 1px solid black;
+  }
+
+  :global(.vtex-slider__values-container) {
+    justify-content: space-between;
+
+    :global(.vtex-slider__left-value),
+    :global(.vtex-slider__right-value) {
+      font-size: 10px;
+    }
+    :global(.vtex-slider__dash) {
+      display: none;
+    }
+  }
+}

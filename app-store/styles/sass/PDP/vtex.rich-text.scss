@@ -1,54 +1,180 @@
 .container {
-    &--promotion__delivery {
-        justify-content: center;
-        border: 1px solid black;
-        width: 100%;
-        margin: 20px auto 46px;
+  &--promotion__delivery {
+    justify-content: center;
+    border: 1px solid black;
+    width: 100%;
+    margin: 20px auto 46px;
 
-        .wrapper {
-            .paragraph {
-                margin: 0;
-                text-align: center;
-                padding: 10px 0;
-                font-size: 14px;
-            }
+    .wrapper {
+      .paragraph {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+      }
 
-            :first-child {
-                background-color: white;
-                width: fit-content;
-                display: block;
-                margin: -12px auto 0;
-                padding: 0 20px;
-                font-size: 16px;
-            }
+      :first-child {
+        background-color: white;
+        width: fit-content;
+        display: block;
+        margin: -12px auto 0;
+        padding: 0 20px;
+        font-size: 16px;
+      }
+    }
+  }
 
-        }
+  &--product__description-pdp {
+    .paragraph {
+      font-size: 14px;
+    }
+  }
+
+  &--cashback__pdp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      background-image: url(assets/icons/cashback/icon_cashback.svg);
+      background-repeat: no-repeat;
+      display: block;
+      width: 15px;
+      height: 15px;
     }
 
-    &--product__description-pdp {
-        .paragraph {
-            font-size: 14px;
-        }
+    .paragraph {
+      font-size: 13px;
+      margin: 0;
+    }
+  }
+
+  &--pdp__trigger {
+    width: fit-content !important;
+    .paragraph {
+      font-size: 13px;
+      text-decoration: underline;
+      margin: 0;
+      text-wrap: nowrap;
+    }
+  }
+
+  &--pdp__methodsPayments-title {
+    justify-content: center;
+    .paragraph {
+      font-weight: 300;
+      font-size: 2em;
+      border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+      padding-bottom: 1em;
+      text-transform: uppercase;
+    }
+  }
+
+  &--pdp__methodsPayments-card--title {
+    .paragraph {
+      font-size: 1.3em;
+      padding: 15px 0;
+      font-weight: 400;
+    }
+  }
+  &--pdp__methodsPayments-card {
+    &--visa {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_visa.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
     }
 
-    &--cashback__pdp {
+    &--master {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_master.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
+    }
+    &--amex {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_amex.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
+    }
+    &--elo {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_elo.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
+    }
+    &--diners {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_diners.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
+    }
+    &--hipercard {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(assets/icons/methods-payments/fp_hipercard.gif);
+        background-repeat: no-repeat;
+        width: 61px;
+        height: 30px;
+      }
+    }
+
+    .paragraph {
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+  }
+
+  &--pdp__methodsPayments-pix{
+    
+    .paragraph{
         display: flex;
         align-items: center;
-        gap: 10px;
-
         &::before {
             content: "";
-            background-image: url(assets/icons/cashback/icon_cashback.svg);
+            padding-right: 15px;
+            background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.0/icons/methods-payments/fp_pix___363edbd….gif);
             background-repeat: no-repeat;
-            display: block;
-            width: 15px;
-            height: 15px;
-        }
-
-        .paragraph {
-            font-size: 13px;
-            margin: 0;
-
-        }
+            background-size: contain;
+            width: 61px;
+            height: 30px;
+          }
     }
+  }
 }

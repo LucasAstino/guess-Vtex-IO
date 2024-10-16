@@ -6,6 +6,8 @@
         &::after{
             content: "Salvar na Lista de Desejos";
             font-size: 13px;
+            text-transform: none;
+            text-decoration: underline;
         }
     }
     :global(.vtex-button){

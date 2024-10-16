@@ -7,3 +7,13 @@
     color: #71767F;
     text-decoration: line-through;
 }
+
+.installmentsListContainer--pdp__methodsPayments{
+    display: flex;
+    flex-direction: column;
+    .installments{
+        border-top: 1px solid #999;
+        padding: 0.5em 0 !important;
+        font-weight: 400;
+    }
+}

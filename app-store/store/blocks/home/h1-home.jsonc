@@ -1,0 +1,9 @@
+{
+    "rich-text#h1__home": {
+        "title": "h1 da home",
+        "props": {
+            "text": "h1 pronto esperando conteúdo",
+            "blockClass":"h1__home"
+        }
+    }
+}

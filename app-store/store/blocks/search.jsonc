@@ -63,11 +63,10 @@
   "search-result-layout.desktop": {
     "children": [
       "flex-layout.row#searchbread",
-      "flex-layout.row#searchtitle",
       "flex-layout.row#result"
     ],
     "props": {
-      "pagination": "show-more",
+      "pagination": "infiniteScroll",
       "preventRouteChange": false,
       "defaultGalleryLayout": "grid"
     }
@@ -76,39 +75,72 @@
     "children": ["breadcrumb.search"],
     "props": {
       "preserveLayoutOnMobile": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "blockClass": "searchbread"
     }
-  },
-  "flex-layout.row#searchtitle": {
-    "children": ["search-title.v2"]
   },
   "flex-layout.row#result": {
-    "children": ["flex-layout.col#filter", "flex-layout.col#content"],
+    "children": [ "flex-layout.col#filter", "flex-layout.col#content"],
     "props": {
       "preventHorizontalStretch": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "blockClass": "result"
+
     }
   },
+
+  "disclosure-layout#filter": {
+    "children": ["disclosure-trigger#filter", "disclosure-content#filter"]
+  },
+
+  "disclosure-trigger#filter": {
+    "props": {
+      "blockClass":"filter"
+    },
+    "children": [ "rich-text#filter"]
+  },
+
+  "rich-text#filter": {
+    "props":{
+      "blockClass":"filter",
+      "text":"Filtros"
+    }
+  },
+
+  "disclosure-content#filter": {
+    "props":{
+      "blockClass":"filter"
+    },
+    "children": ["filter-navigator.v3"]
+  },
+
   "flex-layout.col#filter": {
-    "children": ["filter-navigator.v3"],
+    "children": ["disclosure-layout#filter"],
     "props": {
       "blockClass": "filterCol"
     }
   },
+
+  "filter-navigator.v3":{
+    "props": {
+      "initiallyCollapsed": true
+    }
+  },
+
   "flex-layout.col#content": {
     "children": [
       "flex-layout.row#searchinfo",
-      "flex-layout.row#fetchprevious",
       "flex-layout.row#products",
-      "flex-layout.row#fetchmore"
+      "flex-layout.row#seo__content"
     ],
     "props": {
       "width": "grow",
-      "preventVerticalStretch": true
+      "preventVerticalStretch": true,
+      "blockClass":"content"
     }
   },
   "flex-layout.row#searchinfo": {
-    "children": ["flex-layout.col#productCount", "flex-layout.row#orderByAndSwitcher"]
+    "children": ["flex-layout.row#productCount", "flex-layout.row#orderByAndSwitcher"]
   },
   "flex-layout.row#orderByAndSwitcher": {
     "children": ["order-by.v2", "gallery-layout-switcher"],
@@ -119,34 +151,22 @@
       "colGap": 3
     }
   },
-  "flex-layout.col#productCount": {
-    "children": ["total-products.v2"],
+  "flex-layout.row#productCount": {
+    "children": ["search-title.v2","total-products.v2"],
     "props": {
       "blockClass": "productCountCol"
     }
   },
-  "flex-layout.row#fetchprevious": {
-    "props": {
-      "marginBottom": 3
-    },
-    "children": ["search-fetch-previous"]
-  },
-  "flex-layout.row#fetchmore": {
-    "props": {
-      "marginTop": 3
-    },
-    "children": ["search-fetch-more"]
-  },
-  "search-fetch-previous": {
-    "props": {
-      "htmlElementForButton": "a"
-    }
-  },
-  "search-fetch-more": {
-    "props": {
-      "htmlElementForButton": "a"
-    }
-  },
+  // "search-fetch-previous": {
+  //   "props": {
+  //     "htmlElementForButton": "a"
+  //   }
+  // },
+  // "search-fetch-more": {
+  //   "props": {
+  //     "htmlElementForButton": "a"
+  //   }
+  // },
   "flex-layout.row#products": {
     "children": ["search-content"]
   },
@@ -159,12 +179,10 @@
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
       "flex-layout.row#productCountMobile",
-      "flex-layout.row#fetchprevious",
-      "flex-layout.row#contentmobile",
-      "flex-layout.row#fetchmore"
+      "flex-layout.row#contentmobile"
     ],
     "props": {
-      "pagination": "show-more",
+      "pagination": "infiniteScroll",
       "mobileLayout": {
         "mode1": "small",
         "mode2": "normal"
@@ -242,8 +260,8 @@
           "name": "grid",
           "component": "GridSummary",
           "itemsPerRow": {
-            "(min-width:1300px)": 4,
-            "desktop": 3,
+            "(max-width:1440px)": 4,
+            "desktop": 5,
             "tablet": 3,
             "phone": 2
           }
@@ -253,19 +271,13 @@
           "component": "ListSummary",
           "itemsPerRow": 1
         }
-      ]
-      // "ListSummary": "product-summary.shelf#listLayout",
-      // "GridSummary": "product-summary.shelf"
+      ],
+      "GridSummary": "product-summary.shelf#home"
     }
   },
   "gallery-layout-switcher": {
     "children": [
-      /*
-       * For accessbility to work properly,
-       * It's important to define the options in the same order as the layouts
-       */
-      "gallery-layout-option#grid",
-      "gallery-layout-option#list"
+      "gallery-layout-option#grid"
     ]
   },
   "gallery-layout-option#grid": {
@@ -275,15 +287,7 @@
     "children": [
       "icon-grid",
       "responsive-layout.desktop#textOptionGrid"
-    ]
-  },
-  "gallery-layout-option#list": {
-    "props": {
-      "name": "list"
-    },
-    "children": [
-      "icon-inline-grid",
-      "responsive-layout.desktop#textOptionList"
+      
     ]
   },
   "responsive-layout.desktop#textOptionGrid": {
@@ -291,21 +295,9 @@
       "rich-text#option-grid"
     ]
   },
-  "responsive-layout.desktop#textOptionList": {
-    "children": [
-      "rich-text#option-list"
-    ]
-  },
   "rich-text#option-grid": {
     "props": {
       "text": "Grid",
-      "textColor": "c-auto",
-      "blockClass": "layout-option"
-    }
-  },
-  "rich-text#option-list": {
-    "props": {
-      "text": "List",
       "textColor": "c-auto",
       "blockClass": "layout-option"
     }

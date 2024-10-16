@@ -1,0 +1,12 @@
+{
+    "flex-layout.row#bannerTop__slider": {
+        "children": [ "image#bannerTop__slider"]
+    },
+    "image#bannerTop__slider": {
+      "props": {
+        "src": "assets/images/home/bannerTop.jpg",
+        "blockClass":"bannerTop__slider"
+        
+      }
+    }
+}

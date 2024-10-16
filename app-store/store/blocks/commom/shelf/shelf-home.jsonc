@@ -2,10 +2,10 @@
   "product-summary.shelf#home": {
     "title": "Resumo do produto na prateleira",
     "props": {
-      "blockClas":"lambee"
+      "blockClas":"shelf"
     },
     "children": [
-      "stack-layout#prodsum",
+      "stack-layout#shelf",
       "product-specification-badges",
       "product-summary-name#shelf",
       "flex-layout.row#selling-price-savings",
@@ -13,17 +13,27 @@
       // "add-to-cart-button"
     ]
   },
-  "stack-layout#prodsum": {
+
+  // "BuyToShelf":{
+  //   "children":["sku-selector"]
+  // },
+
+  "stack-layout#shelf": {
     "title": "Layout empilhado da prateleira",
+    "props": {
+      "blockClass":"shelf"
+    },
     "children": [
       "product-summary-image#shelf",
       "vtex.product-highlights@2.x:product-highlights#collection",
       "modal-trigger#fast-buy"
+          
     ]
   },
   "product-summary-name#shelf": {
     "props": {
-    "blockClass":"shelf"
+    "blockClass":"shelf",
+    "tag": "h3"
     }
   },
   "product-summary-image#shelf": {

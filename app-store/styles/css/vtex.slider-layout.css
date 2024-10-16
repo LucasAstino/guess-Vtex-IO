@@ -9,3 +9,21 @@
 .sliderLayoutContainer--shelf {
   padding: 0 !important;
 }
+
+.sliderLayoutContainer--carousel :global(.vtex-store-components-3-x-imageElement--slider__home) {
+  filter: brightness(0.7);
+}
+.sliderLayoutContainer--carousel .paginationDotsContainer--carousel {
+  bottom: 17px;
+}
+.sliderLayoutContainer--carousel .paginationDot--carousel {
+  width: 100px !important;
+  height: 3px !important;
+  background-color: white;
+  border-radius: 1.5px;
+  padding: 0;
+  opacity: 50%;
+}
+.sliderLayoutContainer--carousel .paginationDot--carousel--isActive {
+  opacity: 100%;
+}

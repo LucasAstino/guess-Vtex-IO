@@ -1,7 +1,62 @@
 .triggerContainer--product__review :global(.vtex-rich-text-0-x-paragraph--product__review) {
   margin: 0;
+  text-decoration: underline;
+}
+.triggerContainer--pdp__trigger {
+  width: fit-content !important;
+}
+.triggerContainer--pdp__trigger:hover {
+  cursor: pointer;
+}
+
+.headerContainer--header__modal {
+  border: 0;
+}
+.headerContainer--header__modal .closeButtonContainer--header__modal {
+  position: absolute;
+  right: 0;
+  translate: 50% -50%;
+  background-color: #1b1c1d;
+}
+.headerContainer--header__modal .closeButtonContainer--header__modal .closeButton {
+  padding: 0.25rem;
+}
+.headerContainer--header__modal .closeButtonContainer--header__modal .closeButton .closeIcon {
+  display: none;
+}
+.headerContainer--header__modal .closeButtonContainer--header__modal .closeButton::before {
+  content: "X";
+  font-size: 25px;
+  font-family: Century;
+  color: #fff;
+}
+
+.modal--pdp__guideSizes .paper {
+  overflow: visible;
+}
+
+.modal--pdp__methodsPayments {
+  padding: 35px;
+}
+.modal--pdp__methodsPayments .paper--pdp__methodsPayments {
+  overflow: initial;
 }
 
 .triggerContainer--fast-buy {
   background-color: white;
+}
+
+.paper--fast-buy {
+  padding: 40px;
+  border-radius: 8px;
+  width: 520px;
+}
+
+.headerContainer--fast-buy {
+  border: none;
+}
+.headerContainer--fast-buy .closeButtonContainer--fast-buy {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

@@ -5,18 +5,22 @@
         },
     "children": ["rich-text#fast-buy", "modal-layout#fast-buy"]
   },
+  "modal-header#fast-buy": {
+    "props": {
+      "showCloseButton": true,
+      "blockClass":"fast-buy"
+    }
+  },
   "rich-text#fast-buy": {
     "props": {
-      "blockClass":"ast-buy",
-      "text": "Add +"
+      "blockClass":"fast-buy",
+      "text": "Add"
     }
   },
   "modal-layout#fast-buy": {
-    "children": ["rich-text#modal-content"]
-  },
-  "rich-text#modal-content": {
     "props": {
-      "text": "Hello"
-    }
+      "blockClass":"fast-buy"
+    },
+    "children": [ "modal-header#fast-buy","BuyToShelf"]
   }
 }

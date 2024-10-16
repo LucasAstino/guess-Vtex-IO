@@ -21,7 +21,7 @@
 }
 
 .searchBarContainer {
-    width: fit-content !important;
+  width: fit-content !important;
   :global(.vtex-input-prefix__group) {
     transition: all 0.3s ease-in-out;
     border: 0;
@@ -69,7 +69,14 @@
 }
 
 .imageElement {
-    &--find__stores{
-        padding: 0 16px;
-    }
+  &--find__stores {
+    padding: 0 16px;
+  }
+}
+
+.imageElementLink--find__stores {
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

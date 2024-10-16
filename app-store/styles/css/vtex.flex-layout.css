@@ -20,9 +20,37 @@
   }
 }
 
+.flexRow--searchbread :global(.vtex-breadcrumb-1-x-container) {
+  margin: 0;
+  margin-left: 25px;
+  margin-bottom: 29px;
+}
+.flexRow--searchbread :global(.vtex-breadcrumb-1-x-container) :global(.vtex-breadcrumb-1-x-link) {
+  color: #565d61;
+}
+.flexRow--searchbread :global(.vtex-breadcrumb-1-x-container) :global(.vtex-breadcrumb-1-x-arrow)::before {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.flexRow--productCountCol .flexRowContent--productCountCol {
+  align-items: baseline;
+  gap: 10px;
+}
+.flexRow--result .flexRowContent--result {
+  width: 80%;
+  margin: auto;
+}
+.flexRow--result .flexRowContent--result .flexCol--content {
+  margin-top: 50px;
+  padding-left: 25px;
+}
+
 .flexRow--product-main {
   max-width: 1366px;
   margin: auto;
+}
+.flexRow--product-main .flexRowContent--product-main {
+  justify-content: space-between;
 }
 .flexRow--product-main .flexCol--product__col-left {
   width: 60%;
@@ -79,6 +107,34 @@
 .flexRow--product-main .flexCol--product__right-col :global(.vtex-add-to-cart-button-0-x-buttonText):hover {
   color: white;
 }
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-shippingContainer) {
+  position: relative;
+  margin-top: 70px;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-button) {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: fit-content;
+  height: 40px;
+  width: 71px;
+  background-color: black;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-button) :global(.vtex-button__label) {
+  font-size: 0;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: "Ok";
+  font-size: 14px;
+  color: white;
+  text-transform: none;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL) {
+  padding-inline-start: 10px;
+}
+.flexRow--product-main .flexCol--product__right-col :global(.vtex-store-components-3-x-subscriberContainer) {
+  margin-top: 70px;
+}
 .flexRow--buy-button :global(.vtex-button) {
   margin: 20px 0 30px;
   height: 48px;
@@ -105,6 +161,19 @@
 }
 .flexRow--product__price-pdp .flexRowContent--product__price-pdp {
   gap: 5px;
+}
+.flexRow--pdp__flex .flexRowContent {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.flexRow--pdp__skuAndGuideSizes .flexRowContent {
+  margin-bottom: 0;
+}
+.flexRow--pdp__methodsPayments .flexRowContent {
+  flex-direction: column;
+  overflow: scroll;
+  height: 800px;
+  padding: 35px;
 }
 
 .flexRow .stretchChildrenWidth {
@@ -220,6 +289,7 @@
 
 .flexRow--selling-price-savings .flexRowContent {
   gap: 5px;
+  margin-block-end: 8px;
 }
 
 .flexRow--category__list {
@@ -229,42 +299,20 @@
   gap: 8px;
 }
 
-.flexRow--grid_product-home {
-  margin-bottom: 40px;
-  max-width: 1800px;
-  margin: auto;
-}
-.flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
-  width: 60%;
-  height: auto;
-}
-.flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
-  padding: 0;
-}
-.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf),
-.flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
-.flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
-  display: none;
-}
-
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-  padding: 0;
-}
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageContainer) {
-  display: flex;
-}
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
-  margin: 0;
-  max-width: 100% !important;
-  border-radius: 0;
-}
-
 .flexRow--last__shelf {
   margin: 20px auto 60px;
+}
+
+.flexCol--slider__home-slide {
+  position: absolute;
+  height: fit-content;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.flexRow--slider__home-slide--butons .flexRowContent {
+  justify-content: center;
+  gap: 30px;
 }
 
 .flexRow--about-us__container .flexRowContent--about-us__container {
@@ -406,6 +454,40 @@
 .flexRow--cashback__regulation .flexRowContent .flexCol--cashback__regulation :global(.vtex-store-components-3-x-imageElement) {
   display: block;
   margin: auto;
+}
+
+.flexRow--grid_product-home {
+  margin-bottom: 40px;
+  max-width: 1800px;
+  margin: auto;
+}
+.flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
+  width: 60%;
+  height: auto;
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
+  padding: 0;
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf),
+.flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
+.flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
+  display: none;
+}
+
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageContainer) {
+  display: flex;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
+  margin: 0;
+  max-width: 100% !important;
+  border-radius: 0;
 }
 
 .flexRow--dealer__container {

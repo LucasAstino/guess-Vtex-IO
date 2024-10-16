@@ -2,6 +2,9 @@
   &--product-main {
     max-width: 1366px;
     margin: auto;
+    .flexRowContent--product-main{
+      justify-content: space-between;
+    }
     .flexCol--product__col-left {
       width: 60%;
       margin-right: 50px;
@@ -68,6 +71,38 @@
           color: white;
         }
       }
+
+      :global(.vtex-store-components-3-x-shippingContainer){
+        position: relative;
+        margin-top: 70px;
+
+        :global(.vtex-button){
+          position: absolute;
+          top: 25px;
+          right: 0;
+          width: fit-content;
+          height: 40px;
+          width: 71px;
+          background-color: black;
+          :global(.vtex-button__label){
+            font-size: 0;
+            &::before{
+              content: "Ok";
+              font-size: 14px;
+              color: white;
+              text-transform: none;
+            }
+          }
+        }
+
+        :global(.vtex-address-form__postalCode-forgottenURL){
+          padding-inline-start: 10px;
+        }
+      }
+
+      :global(.vtex-store-components-3-x-subscriberContainer){
+        margin-top: 70px;
+      }
     }
   }
 
@@ -103,6 +138,28 @@
     margin-top: 5px;
     .flexRowContent--product__price-pdp {
       gap: 5px;
+    }
+  }
+
+  &--pdp__flex{
+    .flexRowContent{
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+
+  &--pdp__skuAndGuideSizes{
+    .flexRowContent{
+      margin-bottom: 0;
+    }
+  }
+
+  &--pdp__methodsPayments{
+    .flexRowContent{
+      flex-direction: column;
+      overflow: scroll;
+      height: 800px;
+      padding: 35px;
     }
   }
 }

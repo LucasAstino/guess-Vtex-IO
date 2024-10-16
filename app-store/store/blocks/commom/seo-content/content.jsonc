@@ -1,0 +1,15 @@
+{
+    "flex-layout.row#seo__content": {
+        "title": "Conteúdo SEO",
+        "props": {
+            "blockClass": "seo__content"
+        },
+        "children": ["rich-text#seo__content"]
+    },
+    "rich-text#seo__content": {
+        "props": {
+            "blockClass": "seo__content",
+            "text":""
+        }
+    }
+}

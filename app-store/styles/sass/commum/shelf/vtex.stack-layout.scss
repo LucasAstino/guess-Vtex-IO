@@ -1,0 +1,10 @@
+.stackContainer--shelf{
+    position: relative;
+    .stackItem--shelf--fast-buy{
+        top: calc(100% - 8px);
+        left: calc(100% - 8px);
+        width: fit-content;
+        height: fit-content;
+        translate: -100% -100%;
+    }
+}

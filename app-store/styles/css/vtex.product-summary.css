@@ -2,9 +2,14 @@
   justify-content: start;
   padding: 0;
   margin-top: auto;
+  padding-block-start: 12px;
+  margin-block-end: 8px;
 }
 .nameContainer--shelf .productBrand--shelf {
   font-size: 14px;
   line-height: 16.8px;
   font-weight: 400;
+  width: 100%;
+  display: inline-block;
+  text-align: left;
 }

@@ -1,7 +1,8 @@
 {
   "disclosure-layout#product__description-pdp": {
     "props": {
-        "blockClass":"product__description-pdp"
+        "blockClass":"product__description-pdp",
+        "initialVisibility": "visible"
     },
     "children": [
       "disclosure-trigger#product__description-pdp",
@@ -35,7 +36,8 @@
   },
   "disclosure-layout#product__characteristics-pdp": {
     "props": {
-        "blockClass":"product__description-pdp"
+        "blockClass":"product__description-pdp",
+        "initialVisibility": "visible"
     },
     "children": [
       "disclosure-trigger#product__characteristics-pdp",

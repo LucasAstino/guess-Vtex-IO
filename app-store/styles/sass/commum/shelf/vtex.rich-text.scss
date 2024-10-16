@@ -1,0 +1,37 @@
+.container {
+  &--fast-buy {
+    .paragraph {
+        margin: 0;
+        width: 90px;
+        height: 40px;
+        border-radius: 6px;
+        border: 2px solid #bdbec0;
+        display: flex;
+        align-items: center;
+        padding-inline-start: 15px;
+        font-size: 18px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            rotate: 90deg;
+          }
+    }
+  }
+}

@@ -14,16 +14,8 @@
     "props": {
       "blockClass": "headers__icons"
     },
-    "children": ["search-bar#header", "image#find__stores", "LoginHeader", "minicart.v2#cart"]
+    "children": ["search-bar#header", "image#find__stores", "LoginHeader","Minicart"]
   },
-
-  "minicart.v2#cart": {
-    "props": {
-      "openOnHover": true
-    },
-    "children": ["minicart-base-content"]
-  },
-
   "search-bar#header": {
     "props": {
       "placeholder": "O que você procura?"
@@ -34,7 +26,13 @@
     "title": "Buscar Lojas",
     "props": {
       "src": "assets/icons/header/icon-map.svg",
-      "blockClass":"find__stores"
+      "blockClass":"find__stores",
+      "link": {
+        "props": {
+          "label": "Stories",
+          "href": "/institucional/onde-encontrar"
+         }
+      }
     }
   },
 

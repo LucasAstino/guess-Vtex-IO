@@ -1,0 +1,14 @@
+.container{
+    &--filter{
+        .paragraph{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            color: #565d61;
+            text-transform: uppercase;
+            margin: 0;
+            
+        }
+    }
+}
