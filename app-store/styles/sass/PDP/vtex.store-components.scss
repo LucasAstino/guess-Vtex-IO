@@ -1,0 +1,151 @@
+.carouselGaleryThumbs {
+  display: block;
+  padding: 0 15px;
+  .productImagesThumb {
+    .figure--product-image-carrosel {
+      margin-right: 8px;
+      border-radius: 4px;
+    }
+    &.productImagesThumbActive {
+      .figure--product-image-carrosel {
+        border: 0.5px solid black;
+        padding: 1px;
+      }
+    }
+  }
+}
+
+.swiperCaretPrev--product-image-carrosel {
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 30px;
+    background-image: url(assets/icons/commum/arrow.svg);
+    rotate: 180deg;
+  }
+  .caretIcon {
+    display: none;
+  }
+}
+.swiperCaretNext--product-image-carrosel {
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 30px;
+    background-image: url(assets/icons/commum/arrow.svg);
+  }
+  .caretIcon {
+    display: none;
+  }
+}
+
+.skuSelectorName {
+  @include tablet {
+    color: black;
+  }
+}
+
+// .shippingContainer {
+//   position: relative;
+//   margin-top: 70px;
+//   @include tablet{
+//     padding: 0 15px;
+//   }
+//   :global(.vtex-button) {
+//     position: absolute;
+//     top: 25px;
+//     right: 0;
+//     width: fit-content;
+//     height: 40px;
+//     width: 71px;
+//     background-color: black;
+//   }
+// }
+
+.shippingContainer {
+  @include tablet {
+    padding: 0 15px;
+    :global(.vtex-address-form__postalCode) {
+      :global(.vtex-input__label) {
+        font-size: 0;
+        &::before {
+          content: "Simule frete e prazo de entrega";
+          font-size: 14px;
+          letter-spacing: 0.8px;
+          padding-left: 10px;
+        }
+      }
+      :global(.vtex-input-prefix__group) {
+        position: relative;
+        &::before {
+          content: "Insira seu CEP"; /* Texto do "placeholder" */
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          color: #999; /* Cor semelhante ao placeholder */
+          font-size: 16px;
+          pointer-events: none;
+        }
+      }
+
+      :global(.vtex-address-form__postalCode-forgottenURL) {
+        :first-child {
+          text-decoration: underline;
+        }
+        :global(.vtex__icon-external-link) {
+          display: none;
+        }
+      }
+    }
+    :global(.vtex-address-form__field-focused) {
+      :global(.vtex-input-prefix__group) {
+        &::before {
+          content: "";
+        }
+      }
+    }
+    :global(.vtex-add-to-cart-button-0-x-buttonText) {
+      text-transform: none;
+      font-size: 16px;
+      line-height: 16px;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+:global(.vtex-store-components-3-x-shippingContainer) {
+  position: relative;
+  margin-top: 70px;
+
+  :global(.vtex-button) {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    width: fit-content;
+    height: 45px;
+    width: 71px;
+    background-color: black;
+    :global(.vtex-button__label) {
+      font-size: 0;
+      &::before {
+        content: "Ok";
+        font-size: 14px;
+        color: white;
+        text-transform: none;
+      }
+    }
+  }
+
+  :global(.vtex-address-form__postalCode-forgottenURL) {
+    padding-inline-start: 10px;
+  }
+}
+
+:global(.vtex-store-components-3-x-subscriberContainer) {
+  margin-top: 70px;
+}

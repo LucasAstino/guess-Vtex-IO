@@ -1,23 +1,48 @@
 {
-  "rich-text##grid_product-home": {},
   "flex-layout.row#grid_product-home": {
     "props": {
-        "blockClass": "grid_product-home"
+      "blockClass": "grid_product-home"
     },
-    "children": ["flex-layout.col#grid_product", "image#grid_product-home"]
+    "children": [
+      "flex-layout.col#grid_product",
+      "responsive-layout.desktop#grid_product-home--img",
+      "responsive-layout.mobile#grid_product-home--img"
+    ]
+  },
+  "responsive-layout.desktop#grid_product-home--img": {
+    "children": ["image#grid_product-home"]
+  },
+  "responsive-layout.mobile#grid_product-home--img": {
+    "children": ["image#grid_product-home--mobile"]
   },
   "image#grid_product-home": {
     "props": {
       "src": "assets/images/home/grid-product.jpg"
     }
   },
+  "image#grid_product-home--mobile": {
+    "props": {
+      "src": "assets/images/home/gridMobile.png"
+    }
+  },
   "flex-layout.col#grid_product": {
     "props": {
       "blockClass": "grid_product"
     },
-    "children": ["list-context.product-list#demo1"]
+    "children": [
+      "responsive-layout.desktop#grid_product-home",
+      "responsive-layout.mobile#grid_product-home"
+    ]
   },
-  "list-context.product-list#demo1": {
+
+  "responsive-layout.desktop#grid_product-home": {
+    "children": ["list-context.product-list#grid_product-home"]
+  },
+  "responsive-layout.mobile#grid_product-home": {
+    "children": ["list-context.product-list#grid_product-home-mobile"]
+  },
+
+  "list-context.product-list#grid_product-home": {
     "blocks": ["product-summary.shelf#home"],
     "children": ["list-context-renderer#wrapped"],
     "props": {
@@ -30,6 +55,28 @@
     "props": {
       "listElement": "ul",
       "itemElement": "li"
+    }
+  },
+  "slider-layout#grid_product-home": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "list-context.product-list#grid_product-home-mobile": {
+    "blocks": ["product-summary.shelf#home"],
+    "children": ["slider-layout#grid_product-home"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "hideUnavailableItems": true
     }
   }
 }

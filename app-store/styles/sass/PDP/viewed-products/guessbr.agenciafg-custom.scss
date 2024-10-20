@@ -1,9 +1,18 @@
 .visited-products-slider {
   padding: 0 30px;
   margin-bottom: 150px;
+  @include tablet{
+    margin-bottom: 40px;
+    padding: 0px;
+  }
 
   .sliderTrack{
     gap: 8px;
+  }
+}
+.product__viewed-item{
+  @include tablet{
+    max-width: 152px;
   }
 }
 .title__viewed-product {
@@ -13,12 +22,23 @@
   margin: auto;
   margin-top: 150px;
   margin-bottom: 40px;
+  @include tablet{
+    margin-top: 50px;
+    padding-left:15px;
+    font-size: 18px;
+  }
 }
 .product__viewed-link {
   text-decoration: none;
   display: flex;
   position: relative;
   flex-direction: column;
+}
+.product__viewed-image{
+  @include tablet{
+    width: min-content;
+    // height: 205px;
+  }
 }
 .product__viewed-name {
   color: #000;
@@ -27,6 +47,9 @@
   text-decoration: none;
   margin-block-start: 12px;
   margin-block-end: 8px;
+  @include tablet{
+    font-size: 12px;
+  }
 }
 
 .product__viewed-price {
@@ -37,6 +60,7 @@
 
 .product__viewed-wrapper{
     position: relative;
+    
 }
 
 .product__viewed-addtocart {
@@ -53,6 +77,12 @@
   padding-inline-start: 15px;
   padding-inline-end: 10px;
   font-family: 'Futura';
+  @include tablet{
+    width: 55px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px;
+  }
   &:hover{
     cursor: pointer;
   }
@@ -66,6 +96,10 @@
     position: absolute;
     right: 10px;
     top: 50%;
+    @include tablet{
+      width: 10px;
+      height: 2px;
+    }
   }
   &::before {
     content: "";
@@ -77,6 +111,10 @@
     right: 10px;
     top: 50%;
     rotate: 90deg;
+    @include tablet{
+      width: 10px;
+      height: 2px;
+    }
   }
 }
 
@@ -128,6 +166,32 @@
         text-decoration: underline;
       }
     }
+}
+
+.sliderRightArrow{
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 30px;
+    background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.2/icons/commum/arrow___49525ba….svg);
+}
+  .caretIcon{
+    display: none;
+  }
+}
+.sliderLeftArrow{
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 30px;
+    rotate: 180deg;
+    background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.2/icons/commum/arrow___49525ba….svg);
+}
+  .caretIcon{
+    display: none;
+  }
 }
 
 

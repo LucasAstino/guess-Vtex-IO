@@ -40,6 +40,11 @@
   box-sizing: border-box;
   border-bottom: 1px solid #EEEEEE;
 }
+@media (max-width: 1025px) {
+  .trigger--product__description-pdp {
+    padding: 0 15px;
+  }
+}
 .trigger--product__description-pdp::after {
   content: "";
   display: block;
@@ -61,6 +66,11 @@
 
 .content--product__description-pdp {
   padding: 0 10px;
+}
+@media (max-width: 1025px) {
+  .content--product__description-pdp {
+    padding: 0 15px;
+  }
 }
 .content--product__description-pdp :global(.vtex-store-components-3-x-productDescriptionContainer) :global(.vtex-store-components-3-x-productDescriptionText) {
   white-space: pre-wrap;

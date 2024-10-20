@@ -10,6 +10,13 @@
         align-items: center;
         padding-inline-start: 15px;
         font-size: 18px;
+        
+        @include tablet{
+          width: 55px;
+          height: 30px;
+          padding-inline-start: 8px;
+          font-size: 12px;
+        }
 
         &::after {
             content: "";
@@ -20,6 +27,10 @@
             position: absolute;
             right: 10px;
             top: 50%;
+            @include tablet{   
+              width: 8px;
+              height: 1px;
+            }
           }
           &::before {
             content: "";
@@ -31,6 +42,10 @@
             right: 10px;
             top: 50%;
             rotate: 90deg;
+            @include tablet{   
+              width: 8px;
+              height: 1px;
+            }
           }
     }
   }

@@ -5,6 +5,11 @@
 
         .flexRowContent--category__list{
             gap: 8px;
+            @include tablet{
+                gap: 4px;
+                grid-template-columns: repeat(2, 1fr);
+                display: grid;
+            }
         }
     }
 }

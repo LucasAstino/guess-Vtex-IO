@@ -3,12 +3,16 @@
   height: fit-content;
   top: 50%;
   translate: 0 -50%;
+  @include tablet{
+    top: 65%;
+  }
 }
 
 .flexRow {
   &--slider__home-slide--butons {
     .flexRowContent {
       justify-content: center;
+      display: flex;
       gap: 30px;
     }
   }

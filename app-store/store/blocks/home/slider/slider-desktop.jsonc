@@ -1,5 +1,10 @@
 
 {
+
+  "responsive-layout.desktop#slider__home": {
+    "children": [ "slider-layout#slider__home"]
+  },
+
   "slider-layout#slider__home": {
     "props": {
       "itemsPerPage": {

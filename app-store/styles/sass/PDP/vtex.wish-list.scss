@@ -1,4 +1,7 @@
 .wishlistIconContainer{
+    @include tablet{
+        padding: 0 15px;
+    }
     :global(.vtex-button__label){
         display: flex;
         gap: 10px;

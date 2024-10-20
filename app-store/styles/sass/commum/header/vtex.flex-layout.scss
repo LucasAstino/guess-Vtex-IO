@@ -1,5 +1,6 @@
 .flexRow {
   &--main-header {
+    background-color: white;
     .flexRowContent--main-header {
       display: flex;
       justify-content: space-between;
@@ -10,6 +11,7 @@
   }
 
   &--main-header-mobile {
+    background-color: white;
     .flexRowContent--main-header-mobile {
       display: flex;
       justify-content: space-between;

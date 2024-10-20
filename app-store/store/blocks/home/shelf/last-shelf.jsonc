@@ -10,7 +10,7 @@
         "itemsPerPage": {
           "desktop": 4,
           "tablet": 3,
-          "phone": 1
+          "phone": 2
         },
         "showPaginationDots": "never",
         "infinite": true,

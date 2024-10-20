@@ -1,0 +1,287 @@
+body
+    padding-bottom: 0px !important
+    .diferenciais
+        width: 100%
+        margin-top: 20px
+        overflow: hidden
+        position: relative
+        display: none
+        .slider
+            display: flex
+            width: 100%
+            transition: transform 0.5s ease-in-out
+        .item
+            min-width: 100%
+            box-sizing: border-box
+            text-align: center
+             min-width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            box-sizing: border-box
+            text-align: left
+            padding: 20px
+            svg
+                height: 48px
+                width: 60px
+                margin-right: 28px
+                @media(max-width: 768px)
+                    height: 32px
+                    width: 44px 
+            & span 
+                display: block
+                color: #000
+                letter-spacing: 0.4px
+                font-size: 23px
+                @media(max-width: 768px)
+                    font-size: 14px
+                    max-width: 230px
+    .ChangeNumberOfPayments
+        a
+            color: #08c
+            text-decoration: underline
+    .item-remove-ico
+        width: 16px
+        height: 16px
+        border: 1px solid #000
+        display: flex
+        align-items: center
+        justify-content: center
+        @media(max-width: 768px)
+            text-align: center
+    .cart-active
+        .summary-template-holder::before
+            content: "Resumo"
+            letter-spacing: 4px
+            text-transform: uppercase
+            font-size: 27px
+            margin: 0
+            color: #000
+            text-transform: uppercase
+            font-weight: 800
+            display: block
+            margin-bottom: 30px
+            @media(max-width: 768px)
+                text-align: center
+    .cart-template-holder
+        .cart::before
+            content: "Meu carrinho"
+            letter-spacing: 4px
+            text-transform: uppercase
+            font-size: 27px
+            margin: 0
+            color: #000
+            text-transform: uppercase
+            font-weight: 800
+            display: block
+            margin-bottom: 30px
+    .table.cart-items i.icon.icon-remove.item-remove-ico:before
+        width: 7px
+        height: 21px
+    #cart-coupon-add
+        width: 81px
+        background: black
+        border: none
+        color: white
+        font-size: 14px
+        margin: 0
+        height: 35px
+        line-height: 20px
+    .coupon-column
+        .summary-coupon
+            .coupon-form
+                .coupon-fieldset
+                    .coupon-label
+                        display: block!important
+                        margin-bottom: 6px
+                        label
+                            font-size: 15px
+                            color: black
+                            text-align: left
+                            font-weight: 500
+    #shipping-preview-container
+        max-width: 100%
+        margin-bottom: 20px
+        .srp-data.mt4
+            margin-top: 0
+        .srp-main-title
+            font-size: 15px
+            color: black
+            text-align: left
+            line-height: 16px
+            font-weight: 500
+    #cart-coupon
+        margin: 0
+        display: block
+        width: 100%
+        height: 35px
+        background: #e6e6e6
+        border: none
+        box-shadow: none
+        border-radius: 3px
+    .vtex-shipping-preview-0-x-pc
+        .vtex-shipping-preview-0-x-postalCodeForgotten
+            align-items: flex-start
+        .srp-postal-code__form
+            width: 100%
+        #cart-shipping-calculate
+            width: 81px
+            background: black
+            border: none
+            color: white
+            font-size: 14px
+            margin: 0
+            height: 35px
+        .ship-postalCode
+            display: block
+            width: calc(100% - 81px)
+            span.help.error
+                display: none
+            label
+                display: none
+            small
+                a
+                    color: #a5a5a5
+                    text-decoration: underline
+                    font-size: 12px
+            #ship-postalCode
+                display: block
+                width: 100%
+                height: 35px
+                background: #e6e6e6
+                border: none
+                box-shadow: none
+                border-radius: 3px
+    .orderform-template
+        .cart-template.mini-cart
+            .summary-template-holder
+                .summary>.summary-coupon-wrap
+                    padding: 20px 0
+    .orderform-template-holder
+        .step
+            .submit.btn.btn-success
+                font-weight: 600
+                font-size: 14px
+                text-transform: uppercase
+.header-topo
+    background: #be3f66
+    max-width: unset
+    padding: 0 40px
+    height: 90px
+    svg
+        width: 170px
+        height: auto
+        path
+            fill: #fff
+    .content
+        display: flex
+        justify-content: space-between
+        width: 100%
+        padding: 5px 6px
+        align-items: center
+        .logo-topo
+            width: calc(50% + 85px)
+            text-align: right
+            position: relative
+            top: 15px
+        .right-items
+            width: calc(40% - 85px)
+            position: relative
+            top: 15px
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            a
+                color: #fff
+                text-decoration: underline
+                font-weight: 400
+                letter-spacing: 0.2px
+                font-size: 16px
+.middle-footer-blk
+    background-color: #eee
+    .content
+        max-width: 1260px
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-flow: column wrap
+        .shields
+            margin-top: 42px
+        .copyright
+            padding: 15px
+            p
+                color: #5b5b5b
+                font-size: 10pt
+                line-height: 21px
+                letter-spacing: 0.4px
+                margin: 0px
+                font-weight: normal
+        .btncentral
+            width: 170px
+            font-size: 11px
+            height: 28px
+            background: #fff
+            border-radius: 3px
+            margin-bottom: 30px
+            text-align: center
+            vertical-align: middle
+            line-height: 28px
+            cursor: pointer
+            text-decoration: none
+.table.cart-items
+    tbody
+        tr
+            border-top: none
+            border-bottom: 1px solid black
+#cart-to-orderform
+    color: black
+    text-transform: uppercase
+    font-size: 18px
+.checkout-container
+    margin-top: 50px
+.table.cart-items
+    tbody
+        tr
+            td.quantity
+                position: relative
+                .item-multiplier-label
+                    position: absolute
+                    bottom: -27px
+                    font-weight: 600
+body.body-cart
+    background: white
+    .diferenciais.active
+        display: block 
+@media(max-width: 768px)
+    body
+        .orderform-template
+            .custom-cart-template-wrap
+                .summary-cart-template-holder
+                    margin-bottom: 40px
+        .summary-template-holder
+            .cart-links-bottom
+                position: relative
+        .cart-more-options.span7
+            display: none!important
+    .header-topo
+        height: 70px
+        .content
+            justify-content: center
+            .right-items
+                display: none
+            .logo-topo
+                width: 40%
+                svg
+                    width: 100%
+    .middle-footer-blk
+        background: white
+        .content
+            .shields
+                order: 1
+                margin-bottom: 00px
+                margin-top: 20px
+            .copyright
+                p
+                    text-align: center
+                    font-size: 14px

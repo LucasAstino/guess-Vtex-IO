@@ -13,6 +13,12 @@
 .sliderLayoutContainer--carousel :global(.vtex-store-components-3-x-imageElement--slider__home) {
   filter: brightness(0.7);
 }
+@media (max-width: 1025px) {
+  .sliderLayoutContainer--carousel :global(.vtex-store-components-3-x-imageElement--slider__home) {
+    height: 327px;
+    object-fit: cover;
+  }
+}
 .sliderLayoutContainer--carousel .paginationDotsContainer--carousel {
   bottom: 17px;
 }
@@ -26,4 +32,10 @@
 }
 .sliderLayoutContainer--carousel .paginationDot--carousel--isActive {
   opacity: 100%;
+}
+
+@media (max-width: 1025px) {
+  .caretIcon--shelf {
+    height: 20px;
+  }
 }

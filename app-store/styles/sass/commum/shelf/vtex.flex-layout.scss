@@ -1,8 +1,14 @@
-.flexRow{
-    &--selling-price-savings{
-        .flexRowContent{
-            gap: 5px;
-            margin-block-end: 8px;
-        }
+.flexRow {
+  &--selling-price-savings {
+    .flexRowContent {
+      gap: 5px;
+      margin-block-end: 8px;
+      @include tablet {
+        margin-block-end: 0px;
+        gap: 0px;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
+  }
 }

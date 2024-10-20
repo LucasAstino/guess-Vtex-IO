@@ -7,6 +7,9 @@
     align-items: center;
     box-sizing: border-box;
     border-bottom: 1px solid #EEEEEE;
+    @include tablet{
+        padding: 0 15px;
+    }
     &::after{
         content: "";
         display: block;
@@ -33,6 +36,9 @@
 
 .content--product__description-pdp{
     padding: 0 10px;
+    @include tablet{
+        padding: 0 15px;
+    }
     :global(.vtex-store-components-3-x-productDescriptionContainer){
         :global(.vtex-store-components-3-x-productDescriptionText){
             white-space: pre-wrap;

@@ -1,5 +1,5 @@
 {
-    "sticky-layout#1-mobile": {
+    "sticky-layout#mobile": {
     "children": ["flex-layout.row#1-mobile"]
   },
   "flex-layout.row#1-mobile": {
@@ -9,7 +9,8 @@
       "flex-layout.col#spacer",
       "logo#mobile",
       "flex-layout.col#spacer",
-      "LoginHeader"
+      "LoginHeader",
+      "Minicart"
     ],
     "props": {
       "blockClass": "main-header-mobile",
@@ -44,7 +45,7 @@
   "drawer#mobile": {
     "props":{
     "blockClass":"drawer__mobile",
-    "maxWidth":"90%"
+    "maxWidth":"80%"
     },
     "children": [ "flex-layout.row#header__drawer-mobile","AstinoMenu#new","flex-layout.row#footer__social"]
   },

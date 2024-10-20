@@ -1,4 +1,9 @@
 {
+
+  "responsive-layout.desktop#category__list": {
+    "children": ["rich-text#category__list","flex-layout.row#category__list-1","flex-layout.row#category__list-2"]
+  },
+
   "rich-text#category__list": {
     "title": "Titulo da seção de categorias",
     "props": {

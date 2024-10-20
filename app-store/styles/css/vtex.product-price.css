@@ -1,6 +1,11 @@
 .listPriceValue--product__price-pdp {
   text-decoration: none;
 }
+@media (max-width: 1025px) {
+  .listPriceValue--product__price-pdp {
+    padding-left: 15px;
+  }
+}
 
 .currencyContainer--product__price-pdp {
   font-size: 12px;
@@ -28,6 +33,11 @@
   font-weight: 400;
   line-height: 16px;
 }
+@media (max-width: 1025px) {
+  .sellingPrice--shelf .currencyContainer--shelf {
+    font-size: 12px;
+  }
+}
 
 .savings--shelf {
   font-size: 14px;
@@ -36,11 +46,23 @@
   color: black;
   width: fit-content !important;
 }
+@media (max-width: 1025px) {
+  .savings--shelf {
+    padding-left: 5px;
+    font-size: 12px;
+  }
+}
 
 .installments--shelf {
   width: fit-content !important;
   font-size: 12px;
   line-height: 14px;
+}
+@media (max-width: 1025px) {
+  .installments--shelf {
+    text-align: start;
+    font-size: 11px;
+  }
 }
 
 .listPrice--shelf {
@@ -51,4 +73,15 @@
   font-weight: 400;
   line-height: 16px;
   color: #71767F;
+}
+@media (max-width: 1025px) {
+  .listPrice--shelf .currencyContainer--shelf {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1025px) {
+  .listPrice--shelf {
+    width: 100% !important;
+    display: flex;
+  }
 }

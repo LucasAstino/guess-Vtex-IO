@@ -19,6 +19,12 @@
   color: #655b43;
   margin-block-start: 100px;
 }
+@media (max-width: 1025px) {
+  .container--home_title .heading--home_title {
+    margin-block-start: 40px;
+    font-size: 25px;
+  }
+}
 .container--h1__home {
   position: absolute;
   z-index: -999;
@@ -32,6 +38,11 @@
   font-family: Orpheus;
   font-size: 80px;
 }
+@media (max-width: 1025px) {
+  .container--slider__home-title .paragraph {
+    font-size: 44px;
+  }
+}
 .container--slider__home-button {
   justify-content: center;
   width: fit-content !important;
@@ -43,12 +54,27 @@
   font-family: open sans;
   font-size: 18px;
 }
+@media (max-width: 1025px) {
+  .container--slider__home-button .paragraph {
+    padding: 17px 32px;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+}
 
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;
   width: 100%;
   margin: 20px auto 46px;
+}
+@media (max-width: 1025px) {
+  .container--promotion__delivery {
+    margin: 0 15px;
+    width: 90% !important;
+  }
 }
 .container--promotion__delivery .wrapper .paragraph {
   margin: 0;
@@ -71,6 +97,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 1025px) {
+  .container--cashback__pdp {
+    padding: 0 15px;
+  }
 }
 .container--cashback__pdp::before {
   content: "";
@@ -275,6 +306,14 @@
   padding-inline-start: 15px;
   font-size: 18px;
 }
+@media (max-width: 1025px) {
+  .container--fast-buy .paragraph {
+    width: 55px;
+    height: 30px;
+    padding-inline-start: 8px;
+    font-size: 12px;
+  }
+}
 .container--fast-buy .paragraph::after {
   content: "";
   display: block;
@@ -284,6 +323,12 @@
   position: absolute;
   right: 10px;
   top: 50%;
+}
+@media (max-width: 1025px) {
+  .container--fast-buy .paragraph::after {
+    width: 8px;
+    height: 1px;
+  }
 }
 .container--fast-buy .paragraph::before {
   content: "";
@@ -296,6 +341,12 @@
   top: 50%;
   rotate: 90deg;
 }
+@media (max-width: 1025px) {
+  .container--fast-buy .paragraph::before {
+    width: 8px;
+    height: 1px;
+  }
+}
 
 .container--category__list-title {
   display: flex;
@@ -304,6 +355,11 @@
 .container--category__list-title .heading--category__list-title {
   font-size: 64px;
   color: #655b43;
+}
+@media (max-width: 1025px) {
+  .container--category__list-title .heading--category__list-title {
+    font-size: 25px;
+  }
 }
 .container--category__list-link {
   display: flex;

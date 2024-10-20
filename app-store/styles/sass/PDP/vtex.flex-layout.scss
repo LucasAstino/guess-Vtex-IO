@@ -2,7 +2,7 @@
   &--product-main {
     max-width: 1366px;
     margin: auto;
-    .flexRowContent--product-main{
+    .flexRowContent--product-main {
       justify-content: space-between;
     }
     .flexCol--product__col-left {
@@ -21,7 +21,7 @@
     }
     .flexCol--product__right-col {
       width: 40%;
-      max-width:430px;
+      max-width: 430px;
 
       :global(.vtex-address-form__postalCode) {
         :global(.vtex-input__label) {
@@ -47,13 +47,13 @@
           }
         }
 
-        :global(.vtex-address-form__postalCode-forgottenURL){
-            :first-child{
-                text-decoration: underline;
-            }
-            :global(.vtex__icon-external-link){
-                display: none;
-            }
+        :global(.vtex-address-form__postalCode-forgottenURL) {
+          :first-child {
+            text-decoration: underline;
+          }
+          :global(.vtex__icon-external-link) {
+            display: none;
+          }
         }
       }
       :global(.vtex-address-form__field-focused) {
@@ -63,20 +63,20 @@
           }
         }
       }
-      :global(.vtex-add-to-cart-button-0-x-buttonText){
+      :global(.vtex-add-to-cart-button-0-x-buttonText) {
         text-transform: none;
         font-size: 16px;
         line-height: 16px;
-        &:hover{
+        &:hover {
           color: white;
         }
       }
 
-      :global(.vtex-store-components-3-x-shippingContainer){
+      :global(.vtex-store-components-3-x-shippingContainer) {
         position: relative;
         margin-top: 70px;
 
-        :global(.vtex-button){
+        :global(.vtex-button) {
           position: absolute;
           top: 25px;
           right: 0;
@@ -84,9 +84,9 @@
           height: 40px;
           width: 71px;
           background-color: black;
-          :global(.vtex-button__label){
+          :global(.vtex-button__label) {
             font-size: 0;
-            &::before{
+            &::before {
               content: "Ok";
               font-size: 14px;
               color: white;
@@ -95,22 +95,41 @@
           }
         }
 
-        :global(.vtex-address-form__postalCode-forgottenURL){
+        :global(.vtex-address-form__postalCode-forgottenURL) {
           padding-inline-start: 10px;
         }
       }
 
-      :global(.vtex-store-components-3-x-subscriberContainer){
+      :global(.vtex-store-components-3-x-subscriberContainer) {
         margin-top: 70px;
       }
     }
   }
 
-  &--buy-button{
-    :global(.vtex-button){
+  &--pdp__installmentsAndPayments{
+    .flexRowContent{
+      @include tablet{
+        padding: 0 15px;
+        display: flex;
+        gap: 26px;
+        flex-direction: column;
+        border-bottom: 1px solid #EEEEEE;
+      }
+    }
+  }
+
+  &--buy-button {
+    @include tablet{
+      padding: 0 15px;
+
+      :global(.vtex-add-to-cart-button-0-x-buttonText){
+        text-transform: none;
+      }
+    }
+    :global(.vtex-button) {
       margin: 20px 0 30px;
       height: 48px;
-      &:hover{
+      &:hover {
         color: white;
         border: none;
       }
@@ -120,6 +139,9 @@
   &--product__name-pdp {
     :global(.vtex-store-components-3-x-productNameContainer--quickview) {
       font-size: 20px;
+      @include tablet{
+        padding: 0 15px;
+      }
     }
   }
 
@@ -128,6 +150,10 @@
     margin-bottom: 20px;
     .flexRowContent {
       gap: 10px;
+      display: flex;
+      @include tablet{
+        padding: 0 15px;
+      }
     }
     :global(.vtex-reviews-and-ratings-3-x-inlineContainer) {
       width: fit-content;
@@ -138,28 +164,74 @@
     margin-top: 5px;
     .flexRowContent--product__price-pdp {
       gap: 5px;
+      display: flex;
+      @include tablet{
+        margin-bottom: 5px;
+        padding-left: 15px;
+        :global(.vtex-product-price-1-x-currencyContainer),:global(.vtex-product-price-1-x-savings) {
+          font-size: 14px;
+        }
+      }
     }
   }
 
-  &--pdp__flex{
-    .flexRowContent{
+  &--pdp__flex {
+    .flexRowContent {
       justify-content: space-between;
       margin-bottom: 50px;
+      @include tablet{
+        margin-bottom: 0px;
+        padding-bottom: 26px;
+      }
     }
   }
 
-  &--pdp__skuAndGuideSizes{
-    .flexRowContent{
+  &--pdp__skuAndGuideSizes {
+    .flexRowContent {
       margin-bottom: 0;
+      display: flex;
+      @include tablet{
+        padding: 0 15px;
+      }
     }
   }
 
-  &--pdp__methodsPayments{
-    .flexRowContent{
+  &--pdp__methodsPayments {
+    .flexRowContent {
       flex-direction: column;
       overflow: scroll;
       height: 800px;
       padding: 35px;
+    }
+  }
+
+  &--product-breadcrumb {
+    .flexRowContent {
+      @include tablet {
+        margin-bottom: 15px;
+        :global(.vtex-breadcrumb-1-x-container) {
+          display: flex;
+          height: 14px;
+          padding: 0;
+          max-width: 320px;
+          overflow: hidden;
+          margin-left: 15px;
+          :global(.vtex-breadcrumb-1-x-link) {
+            text-wrap: nowrap;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            &:global(.vtex-breadcrumb-1-x-homeLink){
+              overflow: visible;
+            }
+          }
+          :global(.vtex-breadcrumb-1-x-arrow) {
+            display: flex;
+            width: 80px;
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }

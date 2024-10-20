@@ -4,6 +4,9 @@
     margin-top: auto;
     padding-block-start: 12px;
     margin-block-end: 8px;
+    @include tablet{
+      margin-block-end: 0;
+    }
   .productBrand--shelf {
     font-size: 14px;
     line-height: 16.8px;
@@ -11,5 +14,8 @@
     width: 100%;
     display: inline-block;
     text-align: left;
+    @include tablet{
+      font-size: 12px;
+    }
   }
 }

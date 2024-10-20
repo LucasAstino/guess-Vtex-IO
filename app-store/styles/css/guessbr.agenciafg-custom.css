@@ -59,6 +59,12 @@
   min-height: 60px;
   margin-bottom: 26px;
 }
+@media (max-width: 1025px) {
+  .similar__products-variants {
+    margin-top: 26px;
+    padding: 0 15px;
+  }
+}
 .similar__products-variants--fastBuy {
   margin-bottom: 48px;
 }
@@ -182,8 +188,20 @@
   padding: 0 30px;
   margin-bottom: 150px;
 }
+@media (max-width: 1025px) {
+  .visited-products-slider {
+    margin-bottom: 40px;
+    padding: 0px;
+  }
+}
 .visited-products-slider .sliderTrack {
   gap: 8px;
+}
+
+@media (max-width: 1025px) {
+  .product__viewed-item {
+    max-width: 152px;
+  }
 }
 
 .title__viewed-product {
@@ -194,12 +212,25 @@
   margin-top: 150px;
   margin-bottom: 40px;
 }
+@media (max-width: 1025px) {
+  .title__viewed-product {
+    margin-top: 50px;
+    padding-left: 15px;
+    font-size: 18px;
+  }
+}
 
 .product__viewed-link {
   text-decoration: none;
   display: flex;
   position: relative;
   flex-direction: column;
+}
+
+@media (max-width: 1025px) {
+  .product__viewed-image {
+    width: min-content;
+  }
 }
 
 .product__viewed-name {
@@ -209,6 +240,11 @@
   text-decoration: none;
   margin-block-start: 12px;
   margin-block-end: 8px;
+}
+@media (max-width: 1025px) {
+  .product__viewed-name {
+    font-size: 12px;
+  }
 }
 
 .product__viewed-price {
@@ -236,6 +272,14 @@
   padding-inline-end: 10px;
   font-family: "Futura";
 }
+@media (max-width: 1025px) {
+  .product__viewed-addtocart {
+    width: 55px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px;
+  }
+}
 .product__viewed-addtocart:hover {
   cursor: pointer;
 }
@@ -249,6 +293,12 @@
   right: 10px;
   top: 50%;
 }
+@media (max-width: 1025px) {
+  .product__viewed-addtocart::after {
+    width: 10px;
+    height: 2px;
+  }
+}
 .product__viewed-addtocart::before {
   content: "";
   display: block;
@@ -259,6 +309,12 @@
   right: 10px;
   top: 50%;
   rotate: 90deg;
+}
+@media (max-width: 1025px) {
+  .product__viewed-addtocart::before {
+    width: 10px;
+    height: 2px;
+  }
 }
 
 .product__viewed-installments {
@@ -303,6 +359,29 @@
 }
 .modalContent__alert-visible-span {
   text-decoration: underline;
+}
+
+.sliderRightArrow::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 30px;
+  background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.2/icons/commum/arrow___49525ba….svg);
+}
+.sliderRightArrow .caretIcon {
+  display: none;
+}
+
+.sliderLeftArrow::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 30px;
+  rotate: 180deg;
+  background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.2/icons/commum/arrow___49525ba….svg);
+}
+.sliderLeftArrow .caretIcon {
+  display: none;
 }
 
 .login__container {
@@ -407,9 +486,65 @@
   margin: 0;
   height: 100%;
 }
+@media (max-width: 1025px) {
+  .menuContainer .wrapper {
+    width: 100%;
+    position: relative;
+  }
+}
 .menuContainer .wrapper .menuItem {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem {
+    padding: 1rem 0;
+    padding-right: 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: white;
+    padding-right: 0;
+    z-index: 1;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .menuLink {
+    color: #808080 !important;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .menuLink .submenuToggleIcon.active {
+    padding-left: 5px;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .menuLink .submenuToggleIcon.active::after {
+    transform: rotate(134deg);
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .submenuContainer.openSubmenu {
+    padding: 0;
+    height: 80%;
+    justify-content: flex-start;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .submenuContainer.openSubmenu .submenuWrapper.level-1.openSubmenu .menuLink {
+    justify-content: space-between;
+    flex-direction: row;
+    color: black !important;
+    font-size: 16px;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .submenuContainer.openSubmenu .submenuWrapper.level-1.openSubmenu .menuLink .submenuToggleIcon {
+    padding-left: 5px;
+  }
+  .menuContainer .wrapper .menuItem.activeMenuItem .submenuContainer.openSubmenu .submenuWrapper.level-1.openSubmenu .menuLink .submenuToggleIcon::after {
+    transform: rotate(45deg);
+  }
 }
 .menuContainer .wrapper .menuItem .menuLink {
   font-family: "Futura";
@@ -420,13 +555,31 @@
   color: #000;
   padding: 0;
 }
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .menuLink {
+    font-size: 16px;
+    display: flex;
+    margin: 0;
+  }
+}
 .menuContainer .wrapper .menuItem .submenuContainer {
   align-items: stretch;
   padding: 20px;
-  top: 102px;
+  top: 78px;
+}
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .submenuContainer {
+    padding: 0;
+    padding-block-start: 20px;
+  }
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper.level-1 {
   width: 40%;
+}
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper.level-1 {
+    width: 100%;
+  }
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper.level-1 .menuLink {
   margin-bottom: 10px;
@@ -434,6 +587,11 @@
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .submenuItem {
   width: 100%;
   max-width: 250px;
+}
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .submenuItem {
+    max-width: 100%;
+  }
 }
 .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .submenuItem .menuLink {
   color: #000;
@@ -455,6 +613,14 @@
   letter-spacing: 0.05em;
   text-transform: capitalize;
 }
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .level-2 {
+    display: none;
+  }
+  .menuContainer .wrapper .menuItem .submenuContainer .submenuWrapper .level-2.openSubmenu {
+    display: block;
+  }
+}
 .menuContainer .wrapper .menuItem .submenuContainer .bannerContainer {
   display: flex;
 }
@@ -472,6 +638,12 @@
   margin-left: 0;
   padding-left: 100px;
   border-left: 1px solid #e5e5e5;
+}
+@media (max-width: 1025px) {
+  .menuContainer .wrapper .menuItem .submenuContainer .bannerContainer .bannerLink:first-child {
+    padding-left: 0;
+    border: 0;
+  }
 }
 .menuContainer .wrapper .menuItem .submenuContainer .bannerContainer .bannerLink .bannerText::after {
   content: "";
@@ -691,6 +863,11 @@
   height: 37px;
   background-color: #808080;
 }
+@media (max-width: 1025px) {
+  .textSliderContainer {
+    padding: 20px;
+  }
+}
 
 .textSliderItem {
   position: absolute;
@@ -705,6 +882,12 @@
   color: white;
   font-family: Century;
   font-size: 14px;
+}
+@media (max-width: 1025px) {
+  .textSliderItem {
+    width: 300px;
+    text-align: center;
+  }
 }
 
 .textSliderItem.active {

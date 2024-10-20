@@ -1,6 +1,6 @@
 .menuContainer {
   z-index: 99;
-  @include desktop{
+  @include desktop {
     margin-right: auto;
     margin-left: inherit;
     height: 100%;
@@ -11,9 +11,64 @@
     margin: 0;
     height: 100%;
 
+    @include tablet {
+      width: 100%;
+      position: relative;
+    }
+
     .menuItem {
       display: flex;
       align-items: center;
+      @include tablet {
+        padding: 1rem 0;
+        padding-right: 5px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        &.activeMenuItem {
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          background: white;
+          padding-right: 0;
+          z-index: 1;
+          .menuLink {
+            color: #808080 !important;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            .submenuToggleIcon.active {
+              padding-left: 5px;
+              &::after {
+                transform: rotate(134deg);
+              }
+            }
+          }
+          .submenuContainer.openSubmenu {
+            padding: 0;
+            height: 80%;
+            justify-content: flex-start;
+            .submenuWrapper.level-1.openSubmenu {
+              .menuLink {
+                justify-content: space-between;
+                flex-direction: row;
+                color: black !important;
+                font-size: 16px;
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+                .submenuToggleIcon {
+                  padding-left: 5px;
+                  &::after {
+                    transform: rotate(45deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
       .menuLink {
         font-family: "Futura";
         font-weight: 400;
@@ -22,15 +77,27 @@
         letter-spacing: 1px;
         color: #000;
         padding: 0;
+        @include tablet {
+          font-size: 16px;
+          display: flex;
+          margin: 0;
+        }
       }
       .submenuContainer {
         align-items: stretch;
         padding: 20px;
-        top: 102px;
+        top: 78px;
+        @include tablet {
+          padding: 0;
+          padding-block-start: 20px;
+        }
         .submenuWrapper {
           &.level-1 {
             width: 40%;
-            .menuLink{
+            @include tablet {
+              width: 100%;
+            }
+            .menuLink {
               margin-bottom: 10px;
             }
           }
@@ -38,6 +105,9 @@
           .submenuItem {
             width: 100%;
             max-width: 250px;
+            @include tablet {
+              max-width: 100%;
+            }
             .menuLink {
               color: #000;
               text-transform: capitalize;
@@ -61,6 +131,13 @@
                 text-transform: capitalize;
               }
             }
+
+            @include tablet {
+              display: none;
+              &.openSubmenu {
+                display: block;
+              }
+            }
           }
         }
 
@@ -68,17 +145,21 @@
           display: flex;
           .bannerLink {
             display: block;
-              font-size: 22px;
-              font-family: Orpheus;
-              color: #000;
-              letter-spacing: 0.05em;
-              margin-top: 5px;
-              margin-left: 10px;
-              text-decoration: none;
-            &:first-child{
+            font-size: 22px;
+            font-family: Orpheus;
+            color: #000;
+            letter-spacing: 0.05em;
+            margin-top: 5px;
+            margin-left: 10px;
+            text-decoration: none;
+            &:first-child {
               margin-left: 0;
               padding-left: 100px;
               border-left: 1px solid #e5e5e5;
+              @include tablet {
+                padding-left: 0;
+                border: 0;
+              }
             }
 
             .bannerText {

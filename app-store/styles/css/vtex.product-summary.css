@@ -5,6 +5,11 @@
   padding-block-start: 12px;
   margin-block-end: 8px;
 }
+@media (max-width: 1025px) {
+  .nameContainer--shelf {
+    margin-block-end: 0;
+  }
+}
 .nameContainer--shelf .productBrand--shelf {
   font-size: 14px;
   line-height: 16.8px;
@@ -12,4 +17,9 @@
   width: 100%;
   display: inline-block;
   text-align: left;
+}
+@media (max-width: 1025px) {
+  .nameContainer--shelf .productBrand--shelf {
+    font-size: 12px;
+  }
 }

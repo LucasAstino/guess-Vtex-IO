@@ -7,6 +7,10 @@
             font-size: 64px;
             color: #655b43;
             margin-block-start: 100px;
+            @include tablet{
+                margin-block-start: 40px;
+                font-size: 25px;
+            }
         }
     }
     &--h1__home{
@@ -20,17 +24,29 @@
             color: white;
             font-family: Orpheus;
             font-size: 80px;
+            @include tablet{
+                font-size: 44px;
+            }
         }
     }
     &--slider__home-button{
         justify-content: center;
         width: fit-content !important;
+       
         .paragraph{
             background-color: white;
             padding: 17px 115px;
             border-radius: 48px;
             font-family: open sans;
             font-size: 18px;
+            @include tablet{
+                padding: 17px 32px;
+                height: 40px;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+        
+            }
         }
     }
 }

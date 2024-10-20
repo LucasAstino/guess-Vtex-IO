@@ -5,6 +5,9 @@
     .heading--category__list-title {
       font-size: 64px;
       color: #655b43;
+      @include tablet{
+        font-size: 25px;
+      }
     }
   }
   &--category__list-link{

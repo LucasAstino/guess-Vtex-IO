@@ -7,37 +7,21 @@
   },
   "header-layout.desktop": {
     "children": [
-      // "flex-layout.row#1-desktop",
       "Topbar",
-      "flex-layout.row#header__content-desktop",
-      // "sticky-layout#4-desktop",
+       "sticky-layout#desktop",
       "Helmet",
       "PopupForm",
       "BackToTop"
     ]
   },
-  
-  
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
   },
-  // "sticky-layout#4-desktop": {
-  //   "props": {
-  //     "blockClass": "sticky-header"
-  //   },
-  //   "children": ["flex-layout.row#4-desktop"]
-  // },
-  // "flex-layout.col#category-menu": {
-  //   "props": {
-  //     "verticalAlign": "middle"
-  //   },
-  //   "children": ["vtex.menu@2.x:menu#category-menu"]
-  // },
- 
+
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile","Helmet","PopupForm"]
+    "children": ["Topbar", "sticky-layout#mobile", "Helmet", "PopupForm"]
   }
-  
 }

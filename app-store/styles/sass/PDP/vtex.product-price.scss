@@ -1,5 +1,8 @@
 .listPriceValue--product__price-pdp{
     text-decoration: none;
+    @include tablet{
+        padding-left: 15px;
+    }
 }
 
 .currencyContainer--product__price-pdp{

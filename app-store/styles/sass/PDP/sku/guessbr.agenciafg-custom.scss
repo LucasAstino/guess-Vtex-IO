@@ -1,6 +1,10 @@
 .similar__products-variants {
   min-height: 60px;
   margin-bottom: 26px;
+  @include tablet{
+    margin-top: 26px;
+    padding: 0 15px;
+  }
   &--fastBuy {
     margin-bottom: 48px;
   }

@@ -1,4 +1,8 @@
 {
+  "sticky-layout#desktop": {
+    "children": [ "flex-layout.row#header__content-desktop"]
+  },
+
   "flex-layout.row#header__content-desktop": {
     "props": {
       "blockClass": "main-header"

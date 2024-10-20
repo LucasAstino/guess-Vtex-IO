@@ -2,6 +2,10 @@
 
     :global(.vtex-store-components-3-x-imageElement--slider__home){
         filter: brightness(0.7);
+        @include tablet{
+          height: 327px;
+          object-fit: cover;
+        }
     }
 
   .paginationDotsContainer--carousel {
@@ -17,5 +21,11 @@
     &--isActive{
         opacity: 100%;
     }
+  }
+}
+
+.caretIcon--shelf{
+  @include tablet{
+    height: 20px;
   }
 }

@@ -4,6 +4,10 @@
     border: 1px solid black;
     width: 100%;
     margin: 20px auto 46px;
+    @include tablet{
+      margin: 0 15px;
+      width: 90% !important;
+    }
 
     .wrapper {
       .paragraph {
@@ -34,6 +38,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @include tablet{
+      padding: 0 15px;
+    }
 
     &::before {
       content: "";
