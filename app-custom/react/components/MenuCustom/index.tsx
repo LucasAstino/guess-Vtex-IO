@@ -189,7 +189,7 @@ export const AstinoMenu = (props: Props) => {
                   {link.hasSubmenu && (
                     <span
                       className={`${handles.submenuToggleIcon} ${
-                        openSubmenus.includes(indexPath) ? "active" : ""
+                        openSubmenus.includes(indexPath) ? "guessbr-agenciafg-custom-0-x-active" : ""
                       }`}
                     />
                   )}

@@ -16,7 +16,9 @@ export const HANDLES_VIEWED = [
   "title__viewed-product",
   "product__viewed-name",
   "product__viewed-wrapper",
+  "product__viewed-item",
   "product__viewed-link",
+  "product__viewed-image",
   "product__viewed-price",
   "product__viewed-installments",
   "product__viewed-addtocart",
@@ -202,9 +204,9 @@ export const VisitedProductsSlider: FC<Props> = () => {
               itemsPerPage={{
                 desktop: 4,
                 tablet: 2,
-                phone: 1,
+                phone: 2,
               }}
-              showNavigationArrows="desktopOnly"
+              showNavigationArrows="always"
               showPaginationDots="never"
               fullWidth
             >
@@ -228,13 +230,13 @@ export const VisitedProductsSlider: FC<Props> = () => {
                   "$1-500-610"
                 );
                 return (
-                  <div key={product.productId} className="product-item">
+                  <div key={product.productId} className={handles["product__viewed-item"]}>
                     <div className={handles["product__viewed-wrapper"]}>
                       <a
                         className={handles["product__viewed-link"]}
                         href={`/${product.linkText}/p`}
                       >
-                        <img src={image} alt={product.productName} />
+                        <img className={handles["product__viewed-image"]} src={image} alt={product.productName} />
                         <h3 className={handles["product__viewed-name"]}>
                           {product.productName}
                         </h3>
