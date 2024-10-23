@@ -53,6 +53,10 @@
   "Topbar":{
     "component":"Topbar"
   },
+  "Container-lp":{
+    "component":"Container-lp",
+    "composition": "children"
+  },
   "PopupForm":{
     "component":"PopupForm"
   }
