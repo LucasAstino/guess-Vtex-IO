@@ -29,6 +29,9 @@
   "store.custom#where-to-find": {
     "path": "institucional/onde-encontrar"
   },
+  "store.custom#landing-page": {
+    "path": "/camisetas-masculinas-em-promocao"
+  },
   "store.custom#contact-us": {
     "path": "/contact-us"
   }

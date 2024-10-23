@@ -64,6 +64,176 @@
   }
 }
 
+.container--lp__first-banner {
+  height: 100%;
+}
+.container--lp__first-banner .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container--lp__first-banner .wrapper .heading {
+  font-family: Orpheus;
+  text-transform: unset;
+  font-size: 54px;
+  word-break: break-word;
+  max-width: 540px;
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+}
+@media (max-width: 1025px) {
+  .container--lp__first-banner .wrapper .heading {
+    width: 100%;
+    display: block;
+    padding: 20px 20px 0 20px;
+    font-size: 40px;
+    text-align: start;
+  }
+}
+@media (max-width: 1025px) {
+  .container--lp__first-banner .wrapper .paragraph {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+}
+.container--lp__first-banner .wrapper .paragraph .link {
+  font-family: "Century";
+  color: #0c0c0c;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 55px;
+  display: inline-block;
+}
+@media (max-width: 1025px) {
+  .container--lp__first-banner .wrapper .paragraph .link {
+    text-align: end;
+    padding-right: 40px;
+    font-size: 14px;
+  }
+}
+.container--lp__first-banner .wrapper .paragraph .link::after {
+  content: url(assets/images/LP/arrow.svg);
+  margin-left: 7px;
+}
+.container--lp__title-shelf {
+  justify-content: center;
+}
+.container--lp__title-shelf .paragraph {
+  font-family: Orpheus;
+  text-transform: unset;
+  font-size: 54px;
+  word-break: break-word;
+  max-width: 540px;
+  color: #412c1d;
+  text-align: center;
+}
+@media (max-width: 1025px) {
+  .container--lp__secund-banner {
+    width: 100%;
+  }
+}
+.container--lp__secund-banner .wrapper {
+  width: 100%;
+}
+.container--lp__secund-banner .heading {
+  font-weight: 400;
+  text-align: end;
+  font-size: 48px;
+  font-family: "Orpheus";
+  color: #fff;
+}
+@media (max-width: 1025px) {
+  .container--lp__secund-banner .heading {
+    width: 100%;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+.container--lp__secund-banner .heading .link {
+  font-family: "Century";
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  margin-top: 55px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 1025px) {
+  .container--lp__secund-banner .heading .link {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.container--lp__secund-banner .heading .link::after {
+  content: url(assets/images/LP/arrow.svg);
+  margin-left: 7px;
+  filter: invert(1);
+}
+.container--lp__three-banner {
+  width: 39.2% !important;
+  justify-content: center;
+  margin-top: -80px;
+}
+@media (max-width: 1025px) {
+  .container--lp__three-banner {
+    margin: 0;
+    width: 100% !important;
+  }
+}
+.container--lp__three-banner .wrapper {
+  width: 100%;
+  padding: 20px;
+}
+.container--lp__three-banner .heading {
+  font-weight: 400;
+  text-align: end;
+  font-size: 48px;
+  font-family: "Orpheus";
+}
+@media (max-width: 1025px) {
+  .container--lp__three-banner .heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px;
+  }
+}
+.container--lp__three-banner .heading .link {
+  font-family: "Century";
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  margin-top: 55px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 1025px) {
+  .container--lp__three-banner .heading .link {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: end;
+  }
+}
+.container--lp__three-banner .heading .link::after {
+  content: url(assets/images/LP/arrow.svg);
+  margin-left: 7px;
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;

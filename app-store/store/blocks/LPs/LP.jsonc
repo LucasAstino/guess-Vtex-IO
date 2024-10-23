@@ -1,0 +1,107 @@
+{
+  "store.custom#landing-page": {
+    "children": ["flex-layout.row#lp__conteiner"]
+  },
+  "flex-layout.row#lp__conteiner": {
+    "title": "container",
+    "props": {
+      "blockClass": "lp__conteiner"
+    },
+    "children": [
+      "flex-layout.row#lp__first-banner",
+      "flex-layout.row#lp__secund-banner",
+      "rich-text#lp__title-shelf",
+      "flex-layout.row#first__shelf",
+       "Container-lp#lp__three-banner",
+       "flex-layout.row#seo__content"
+    ]
+  },
+  "flex-layout.row#lp__first-banner": {
+    "title": "primeiro banner",
+    "props": {
+      "blockClass": "lp__first-banner"
+    },
+    "children": ["image#lp__first-banner", "Container-lp#lp__first-banner"]
+  },
+  "image#lp__first-banner": {
+    "props": {
+      "src": "assets/images/LP/primeiroBanner.webp",
+      "blockClass": "lp__first-banner"
+    }
+  },
+  "Container-lp#lp__first-banner": {
+    "props":{
+        "blockClass":"lp__first-banner",
+        "backgroundColor":"#EFC166"
+    },
+    "children":["rich-text#lp__first-banner"]
+  },
+  "rich-text#lp__first-banner": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__first-banner"
+    }
+  },
+  "flex-layout.row#lp__secund-banner": {
+    "title": "segundo banner",
+    "props": {
+      "blockClass": "lp__secund-banner"
+    },
+    "children": [ "Container-lp#lp__secund-banner", "image#lp__secund-banner"]
+  },
+  "image#lp__secund-banner": {
+    "props": {
+      "src": "assets/images/LP/segundoBanner.webp",
+      "blockClass": "lp__secund-banner"
+    }
+  },
+  "Container-lp#lp__secund-banner": {
+    "props":{
+        "blockClass":"lp__secund-banner",
+        "backgroundColor":"#D35831"
+    },
+    "children":[ "rich-text#lp__secund-banner"]
+  },
+  "rich-text#lp__secund-banner": {
+    "title": "texto do banner",
+    "props": {
+      "text": "## *T-shirts* <br> exclusivas <br> estão na <br> Guess Brasil [shop now](/masculino/camisetas)",
+      "blockClass": "lp__secund-banner"
+    }
+  },
+  "rich-text#lp__title-shelf": {
+    "title": "titulo da vitrine",
+    "props": {
+        "blockClass":"lp__title-shelf",
+        "text": "*Mais* Vendidos"
+    }
+  },
+  "flex-layout.row#lp__three-banner": {
+    "title": "terceiro banner",
+    "props": {
+      "blockClass": "lp__three-banner"
+    },
+    "children": ["image#lp__three-banner", "rich-text#lp__three-banner"]
+  },
+  "image#lp__three-banner": {
+    "props": {
+      "src": "assets/images/LP/terceiroBanner.webp",
+      "blockClass": "lp__three-banner"
+    }
+  },
+  "Container-lp#lp__three-banner": {
+    "props":{
+        "blockClass":"lp__three-banner",
+        "backgroundColor":"#BBC069"
+    },
+    "children":[ "flex-layout.row#lp__three-banner"]
+  },
+  "rich-text#lp__three-banner": {
+    "title": "texto do banner",
+    "props": {
+      "text": "## Complete *outfits* com <br> acessórios masculinos [check out](/acessorios)",
+      "blockClass": "lp__three-banner"
+    }
+  }
+}

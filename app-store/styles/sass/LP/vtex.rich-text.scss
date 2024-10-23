@@ -1,0 +1,160 @@
+.container {
+  &--lp__first-banner {
+    height: 100%;
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .heading {
+        font-family: Orpheus;
+        text-transform: unset;
+        font-size: 54px;
+        word-break: break-word;
+        max-width: 540px;
+        text-align: center;
+        margin: 0;
+        font-weight: 300;
+        @include tablet {
+          width: 100%;
+          display: block;
+          padding: 20px 20px 0 20px;
+          font-size: 40px;
+          text-align: start;
+        }
+      }
+      .paragraph {
+        @include tablet {
+          display: flex;
+          justify-content: end;
+          width: 100%;
+        }
+        .link {
+          font-family: "Century";
+          color: #0c0c0c;
+          text-decoration: none;
+          font-size: 16px;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          font-weight: bold;
+          margin: 0;
+          margin-top: 55px;
+          display: inline-block;
+          @include tablet {
+            text-align: end;
+            padding-right: 40px;
+            font-size: 14px;
+          }
+          &::after {
+            content: url(assets/images/LP/arrow.svg);
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  &--lp__title-shelf {
+    justify-content: center;
+    .paragraph {
+      font-family: Orpheus;
+      text-transform: unset;
+      font-size: 54px;
+      word-break: break-word;
+      max-width: 540px;
+      color: #412c1d;
+      text-align: center;
+    }
+  }
+
+  &--lp__secund-banner {
+    @include tablet {
+      width: 100%;
+    }
+    .wrapper {
+      width: 100%;
+    }
+    .heading {
+      font-weight: 400;
+      text-align: end;
+      font-size: 48px;
+      font-family: "Orpheus";
+      color: #fff;
+      @include tablet {
+        width: 100%;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        font-size: 40px;
+      }
+      .link {
+        font-family: "Century";
+        display: block;
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        margin-top: 55px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include tablet {
+          font-size: 14px;
+          text-align: center;
+        }
+        &::after {
+          content: url(assets/images/LP/arrow.svg);
+          margin-left: 7px;
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  &--lp__three-banner {
+    width: 39.2% !important;
+    justify-content: center;
+    margin-top: -80px;
+    @include tablet {
+      margin: 0;
+      width: 100% !important;
+    }
+    .wrapper{
+        width: 100%;
+        padding: 20px;
+    }
+    .heading {
+      font-weight: 400;
+      text-align: end;
+      font-size: 48px;
+      font-family: "Orpheus";
+      @include tablet{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 32px;
+      }
+      .link {
+        font-family: "Century";
+        display: block;
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        margin-top: 55px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include tablet{
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: end;
+          }
+        &::after {
+          content: url(assets/images/LP/arrow.svg);
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}

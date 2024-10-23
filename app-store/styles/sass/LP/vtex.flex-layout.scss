@@ -1,0 +1,58 @@
+.flexRow {
+  &--lp__conteiner {
+    .flexRowContent--lp__conteiner {
+      flex-direction: column;
+    }
+  }
+
+  &--lp__first-banner {
+    .flexRowContent {
+      align-items: center;
+      @include tablet{
+        flex-direction: column;
+      }
+      :global(.vtex-store-components-3-x-imageElement--lp__first-banner) {
+        width: 60.8%;
+        height: fit-content;
+        @include tablet{
+            width: 100%;
+          }
+      }
+    }
+  }
+
+  &--lp__secund-banner {
+    .flexRowContent {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+      align-items: center;
+      @include tablet{
+        gap: 10px;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &--lp__three-banner {
+    .flexRowContent {
+        margin-top: 100px;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet{
+            margin: 0;
+            flex-direction: column;
+          }
+        :global(.vtex-store-components-3-x-imageElement--lp__three-banner) {
+            height: fit-content;
+            margin-top: -40px;
+            margin-left: 10%;
+            z-index: 1;
+            @include tablet{
+                margin:0;
+                width: 100%;
+              }
+          }
+    }
+  }
+}
