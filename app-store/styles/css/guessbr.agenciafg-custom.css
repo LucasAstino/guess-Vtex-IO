@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.customContainer {
+  color: var(--custom-text-color) !important;
+}
 .customContainer--lp__first-banner {
   width: 39.2% !important;
   height: 840px;

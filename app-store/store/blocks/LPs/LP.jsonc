@@ -32,7 +32,8 @@
   "Container-lp#lp__first-banner": {
     "props":{
         "blockClass":"lp__first-banner",
-        "backgroundColor":"#EFC166"
+        "backgroundColor":"#EFC166",
+        "textColor": "#fff"
     },
     "children":["rich-text#lp__first-banner"]
   },

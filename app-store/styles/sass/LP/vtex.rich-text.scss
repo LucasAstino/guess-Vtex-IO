@@ -17,6 +17,7 @@
         text-align: center;
         margin: 0;
         font-weight: 300;
+        color: var(--custom-text-color) !important;
         @include tablet {
           width: 100%;
           display: block;
@@ -26,6 +27,7 @@
         }
       }
       .paragraph {
+        color: var(--custom-text-color) !important;
         @include tablet {
           display: flex;
           justify-content: end;
@@ -33,7 +35,7 @@
         }
         .link {
           font-family: "Century";
-          color: #0c0c0c;
+          color: var(--custom-text-color) !important;
           text-decoration: none;
           font-size: 16px;
           text-transform: uppercase;
@@ -50,6 +52,7 @@
           &::after {
             content: url(assets/images/LP/arrow.svg);
             margin-left: 7px;
+            filter: var(--invert-filter);
           }
         }
       }
@@ -64,7 +67,7 @@
       font-size: 54px;
       word-break: break-word;
       max-width: 540px;
-      color: #412c1d;
+      color: var(--custom-text-color) !important;
       text-align: center;
     }
   }
@@ -81,7 +84,7 @@
       text-align: end;
       font-size: 48px;
       font-family: "Orpheus";
-      color: #fff;
+      color: var(--custom-text-color) !important;
       @include tablet {
         width: 100%;
         display: block;
@@ -95,7 +98,7 @@
         font-size: 16px;
         letter-spacing: 0.2em;
         margin-top: 55px;
-        color: white;
+        color: var(--custom-text-color) !important;
         text-decoration: none;
         font-weight: 600;
         text-transform: uppercase;
@@ -107,6 +110,7 @@
           content: url(assets/images/LP/arrow.svg);
           margin-left: 7px;
           filter: invert(1);
+          filter: var(--invert-filter);
         }
       }
     }
@@ -129,6 +133,7 @@
       text-align: end;
       font-size: 48px;
       font-family: "Orpheus";
+      color: var(--custom-text-color) !important;
       @include tablet{
         text-align: center;
         margin-top: 50px;
@@ -140,7 +145,7 @@
         font-size: 16px;
         letter-spacing: 0.2em;
         margin-top: 55px;
-        color: black;
+        color: var(--custom-text-color) !important;
         text-align: center;
         text-decoration: none;
         font-weight: 600;
@@ -153,6 +158,7 @@
         &::after {
           content: url(assets/images/LP/arrow.svg);
           margin-left: 7px;
+          filter: var(--invert-filter);
         }
       }
     }
