@@ -149,6 +149,10 @@
     height: 584px !important;
 }
 
+.selected{
+    background-color: rgba(162, 162, 162, .64);
+}
+
 .wd_browsing_pointofsale:before {
     content: "Encontre uma loja";
     font-size: 40px;

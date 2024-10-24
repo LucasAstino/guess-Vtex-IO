@@ -230,13 +230,20 @@ export const VisitedProductsSlider: FC<Props> = () => {
                   "$1-500-610"
                 );
                 return (
-                  <div key={product.productId} className={handles["product__viewed-item"]}>
+                  <div
+                    key={product.productId}
+                    className={handles["product__viewed-item"]}
+                  >
                     <div className={handles["product__viewed-wrapper"]}>
                       <a
                         className={handles["product__viewed-link"]}
                         href={`/${product.linkText}/p`}
                       >
-                        <img className={handles["product__viewed-image"]} src={image} alt={product.productName} />
+                        <img
+                          className={handles["product__viewed-image"]}
+                          src={image}
+                          alt={product.productName}
+                        />
                         <h3 className={handles["product__viewed-name"]}>
                           {product.productName}
                         </h3>

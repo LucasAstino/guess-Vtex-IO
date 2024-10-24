@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { useCssHandles, CssHandlesTypes } from "vtex.css-handles";
+import { useDevice } from "vtex.device-detector";
 
 interface CustomMinicartProps {
   openOnHover?: boolean;
@@ -15,6 +16,7 @@ interface CustomMinicartProps {
 const CSS_HANDLES = [
   "minicartWrapper",
   "minicartButton",
+  "minicartLink",
   "cartItems",
   "cartItem",
   "cartTitle",
@@ -55,9 +57,8 @@ const CSS_HANDLES = [
   "subtotalValue",
   "goToCart",
   "goToCheckout",
-  "empty"
+  "empty",
 ] as const;
-
 
 export const CustomMinicart: FC<CustomMinicartProps> = ({
   quantityDisplay = "not-empty",
@@ -67,6 +68,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
   const { handles } = useCssHandles(CSS_HANDLES, { classes });
   const { orderForm } = useOrderForm();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { isMobile } = useDevice();
 
   const items = orderForm?.items ?? [];
   const totalItems = items.reduce(
@@ -89,67 +91,78 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
   return (
     <div
       className={`${handles.minicartWrapper} ${openOnHover ? "hoverable" : ""}`}
-      onMouseEnter={openDrawer}
-      onMouseLeave={closeDrawer} // Adiciona controle para fechar ao sair do minicart
+      onMouseEnter={!isMobile ? openDrawer : undefined}
+      onMouseLeave={!isMobile ? closeDrawer : undefined} // Adiciona controle para fechar ao sair do minicart
     >
-      <button className={handles.minicartButton}>
-        {quantityDisplay !== "never" && (
-          <span className={handles.minicartNumber}>{totalItems}</span>
-        )}
-      </button>
-  
-      {totalItems > 0 ? (
-        isDrawerOpen && (
-          <div className={`${handles.minicartContainer}`}>
-            <div className={handles.cartHeader}>
-              <p className={handles.cartTitle}>Meu Carrinho</p>
-              <p className={handles.cartSegure}>Compra 100% segura</p>
-            </div>
-            <div className={handles.cartItems}>
-              {items.map((item: any, index: any) => (
-                <div key={index} className={handles.cartItem}>
-                  <img
-                    className={handles["minicart__product-img"]}
-                    src={item.imageUrls.at1x}
-                    alt={item.name}
-                  />
-                  <div className={handles.itemDetails}>
-                    <p className={handles["minicart__product-name"]}>{item.name}</p>
-                    <span className={handles["minicart__product-un"]}>Valor un.</span>
-                    <span className={handles["minicart__product-price"]}>
-                      R${(item.price / 100).toFixed(2).replace(".", ",")}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className={handles.cartFooter}>
-              <span className={handles.minicartTotalizer}>
-                Total a pagar: R${(totalPrice / 100).toFixed(2)}
-              </span>
-              <div className={handles.minicartButtons}>
-                <a className={handles.cartButton}>Carrinho</a>
-                <a className={handles.checkoutButton}>Finalizar compra</a>
-              </div>
-            </div>
-          </div>
-        )
+      {isMobile ? (
+        <a className={handles.minicartLink} href="/checkout#/cart">
+          <button className={handles.minicartButton}>
+            {quantityDisplay !== "never" && (
+              <span className={handles.minicartNumber}>{totalItems}</span>
+            )}
+          </button>
+        </a>
       ) : (
-        isDrawerOpen && (
-          <div className={`${handles.minicartContainer} ${handles.empty}`}>
-            <div className={handles.cartHeader}>
-              <p className={handles.cartTitle}>Meu Carrinho</p>
-              <p className={handles.cartSegure}>Compra 100% segura</p>
-            </div>
-            <div className={handles.cartFooter}>
-            <div className={handles.emptyCartMessage}>
-            Que pena! Seu carrinho está vazio
+        <button className={handles.minicartButton}>
+          {quantityDisplay !== "never" && (
+            <span className={handles.minicartNumber}>{totalItems}</span>
+          )}
+        </button>
+      )}
+
+      {totalItems > 0
+        ? isDrawerOpen && (
+            <div className={`${handles.minicartContainer}`}>
+              <div className={handles.cartHeader}>
+                <p className={handles.cartTitle}>Meu Carrinho</p>
+                <p className={handles.cartSegure}>Compra 100% segura</p>
+              </div>
+              <div className={handles.cartItems}>
+                {items.map((item: any, index: any) => (
+                  <div key={index} className={handles.cartItem}>
+                    <img
+                      className={handles["minicart__product-img"]}
+                      src={item.imageUrls.at1x}
+                      alt={item.name}
+                    />
+                    <div className={handles.itemDetails}>
+                      <p className={handles["minicart__product-name"]}>
+                        {item.name}
+                      </p>
+                      <span className={handles["minicart__product-un"]}>
+                        Valor un.
+                      </span>
+                      <span className={handles["minicart__product-price"]}>
+                        R${(item.price / 100).toFixed(2).replace(".", ",")}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className={handles.cartFooter}>
+                <span className={handles.minicartTotalizer}>
+                  Total a pagar: R${(totalPrice / 100).toFixed(2)}
+                </span>
+                <div className={handles.minicartButtons}>
+                  <a className={handles.cartButton}>Carrinho</a>
+                  <a className={handles.checkoutButton}>Finalizar compra</a>
+                </div>
               </div>
             </div>
-          </div>
-        )
-      )}
+          )
+        : isDrawerOpen && (
+            <div className={`${handles.minicartContainer} ${handles.empty}`}>
+              <div className={handles.cartHeader}>
+                <p className={handles.cartTitle}>Meu Carrinho</p>
+                <p className={handles.cartSegure}>Compra 100% segura</p>
+              </div>
+              <div className={handles.cartFooter}>
+                <div className={handles.emptyCartMessage}>
+                  Que pena! Seu carrinho está vazio
+                </div>
+              </div>
+            </div>
+          )}
     </div>
   );
-  
 };

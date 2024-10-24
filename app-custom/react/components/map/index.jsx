@@ -9,9 +9,11 @@ export const GoogleMap = () => {
   const mapInstance = useRef(null);
   const markers = useRef([]);
   const [storeLocations, setStoreLocations] = useState([]);
+  const [selectedStore, setSelectedStore] = useState(null); // Estado para armazenar a loja selecionada
   const [modalOpen, setModalOpen] = useState(false);
   const [locationFound, setLocationFound] = useState(false);
   const geocoder = useRef(null);
+  const infoWindowRef = useRef(null); // Referência para o InfoWindow
 
   const _initMap = () => {
     if (!mapRef.current || storeLocations.length === 0) return;
@@ -34,6 +36,24 @@ export const GoogleMap = () => {
         },
         map: mapInstance.current,
         title: stores[index].name,
+      });
+
+      // Ao clicar no marcador, exibir o InfoWindow
+      marker.addListener("click", () => {
+        if (infoWindowRef.current) {
+          infoWindowRef.current.close();
+        }
+
+        infoWindowRef.current = new google.maps.InfoWindow({
+          content: `<div>
+                       <h3 style="font-size: 1.6em;">${pointOfSale.name}</h3>
+                      <p>${stores[index].address.streetAddress}</p>
+                      <p>${stores[index].address.city} - ${stores[index].address.state}</p>
+                      <p>${stores[index].phone}</p>
+                       <p><a style="color:black" href="mailto:sac@guessbrasil.com.br">sac@guessbrasil.com.br</a></p>
+                    </div>`,
+        });
+        infoWindowRef.current.open(mapInstance.current, marker);
       });
 
       markers.current.push(marker);
@@ -68,7 +88,8 @@ export const GoogleMap = () => {
     }
   }, [storeLocations]);
 
-  const handleGoToMap = (pointOfSale) => {
+  // Novo método para clicar na lista de endereços e exibir o InfoWindow
+  const handleGoToMap = (pointOfSale, index) => {
     if (mapInstance.current) {
       const position = {
         lat: pointOfSale.coordinates.latitude,
@@ -76,20 +97,42 @@ export const GoogleMap = () => {
       };
       mapInstance.current.setCenter(position);
       mapInstance.current.setZoom(15);
+
+      // Exibir o InfoWindow correspondente ao ponto clicado
+      if (infoWindowRef.current) {
+        infoWindowRef.current.close();
+      }
+      const marker = markers.current[index];
+      infoWindowRef.current = new google.maps.InfoWindow({
+        content: `<div>
+                      <h3 style="font-size: 1.6em;">${pointOfSale.name}</h3>
+                    <p>${pointOfSale.address.streetAddress}</p>
+                    <p>${pointOfSale.address.city} - ${pointOfSale.address.state}</p>
+                    <p>${pointOfSale.phone}</p>
+                     <p><a style="color:black" href="mailto:sac@guessbrasil.com.br">sac@guessbrasil.com.br</a></p>
+                  </div>`,
+      });
+      infoWindowRef.current.open(mapInstance.current, marker);
+
+      // Atualizar o endereço selecionado
+      setSelectedStore(pointOfSale);
     }
+    document
+      .querySelector("#pointofsale-map")
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const address = document.getElementById("search-pointofsale").value;
-  
+
     if (geocoder.current && address) {
       geocoder.current.geocode({ address }, (results, status) => {
         if (status === "OK" && results[0]) {
           const location = results[0].geometry.location;
           mapInstance.current.setCenter(location);
           mapInstance.current.setZoom(15);
-  
+
           setLocationFound(true);
           setModalOpen(true);
         } else {
@@ -102,7 +145,6 @@ export const GoogleMap = () => {
       setModalOpen(true);
     }
   };
-  
 
   return (
     <div
@@ -147,11 +189,13 @@ export const GoogleMap = () => {
 
           <div id="pointofsale-list" className={styles.list}>
             <ul>
-              {stores.map((point) => (
+              {stores.map((point, index) => (
                 <li
                   key={point.id}
-                  className={styles.pointofsale}
-                  onClick={() => handleGoToMap(point)}
+                  className={`${styles.pointofsale} ${
+                    selectedStore === point ? styles.selected : ""
+                  }`} // Aplica a classe "selected" se o endereço for o selecionado
+                  onClick={() => handleGoToMap(point, index)}
                 >
                   <i className={styles.icon} />
                   <p className={styles.name}>{point.name}</p>
@@ -190,7 +234,10 @@ export const GoogleMap = () => {
                 {locationFound ? (
                   <p>Localização encontrada!</p>
                 ) : (
-                  <p>Oops, aconteceu um erro no processo de busca, tente novamente.</p>
+                  <p>
+                    Oops, aconteceu um erro no processo de busca, tente
+                    novamente.
+                  </p>
                 )}
               </div>
             </div>
