@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* source: <vtex.email-checkout-conflict@0.3.0> */
 .checkEmailAuthConflict__modal,
 .checkEmailAuthConflict__modal--bg {
@@ -46,7 +45,7 @@ button.checkEmailAuthConflict__modal--button {
 .checkEmailAuthConflict__modal--button.js-loading:after {
   border: 3px solid #f3f3f3;
   /* Light grey */
-  border-top: 3px solid rgba(153, 153, 153, 0.6);
+  border-top: 3px solid #9999;
   /* Blue */
   border-radius: 50%;
   width: 10px;
@@ -72,10 +71,12 @@ p.checkEmailAuthConflict__modal--text {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 /* source: <vtex.checkout-ui-custom@0.18.9> */
 input,
 select,
@@ -84,33 +85,81 @@ button {
 }
 
 .vcustom--vtex-omnishipping-1-x-address input,
-#app-container input[type=text],
-#app-container input[type=tel],
-#app-container input[type=email],
+#app-container input[type="text"],
+#app-container input[type="tel"],
+#app-container input[type="email"],
 #app-container select,
 .orderform-template .summary-note .note-textarea,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation input,
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email select:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data select:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation
+  input,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  select:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  select:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="email"]:not(.pac-target-input),
 .orderform-template-holder #shipping-data select:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="email"]:not(.pac-target-input),
 .orderform-template-holder #payment-data select:not(.pac-target-input),
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation input,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation
+  input,
 .cart-more-options .srp-container select,
-.cart-more-options .srp-container input[type=text]:not(.pac-target-input),
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset input[type=text],
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit],
+.cart-more-options .srp-container input[type="text"]:not(.pac-target-input),
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  input[type="text"],
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"],
 .table.cart-items td.quantity input,
 .table.cart-items tbody tr td .product-service select,
 .table.cart-items tr.item-attachments-content input,
@@ -131,33 +180,83 @@ button {
 }
 
 .vcustom--vtex-omnishipping-1-x-address input.error,
-#app-container input.error[type=text],
-#app-container input.error[type=tel],
-#app-container input.error[type=email],
+#app-container input.error[type="text"],
+#app-container input.error[type="tel"],
+#app-container input.error[type="email"],
 #app-container select.error,
 .orderform-template .summary-note .error.note-textarea,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation input.error,
-.orderform-template-holder #client-profile-data form.client-pre-email input.error[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input.error[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input.error[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email select.error:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input.error[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input.error[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input.error[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data select.error:not(.pac-target-input),
-.orderform-template-holder #shipping-data input.error[type=text]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input.error[type=tel]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input.error[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation
+  input.error,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input.error[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input.error[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input.error[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  select.error:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input.error[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input.error[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input.error[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  select.error:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input.error[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input.error[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input.error[type="email"]:not(.pac-target-input),
 .orderform-template-holder #shipping-data select.error:not(.pac-target-input),
-.orderform-template-holder #payment-data input.error[type=text]:not(.pac-target-input),
-.orderform-template-holder #payment-data input.error[type=tel]:not(.pac-target-input),
-.orderform-template-holder #payment-data input.error[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input.error[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input.error[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input.error[type="email"]:not(.pac-target-input),
 .orderform-template-holder #payment-data select.error:not(.pac-target-input),
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation input.error,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation
+  input.error,
 .cart-more-options .srp-container select.error,
-.cart-more-options .srp-container input.error[type=text]:not(.pac-target-input),
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset input.error[type=text],
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button.error[type=submit],
+.cart-more-options
+  .srp-container
+  input.error[type="text"]:not(.pac-target-input),
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  input.error[type="text"],
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button.error[type="submit"],
 .table.cart-items td.quantity input.error,
 .table.cart-items tbody tr td .product-service select.error,
 .table.cart-items tr.item-attachments-content input.error,
@@ -167,33 +266,83 @@ button {
 }
 
 .vcustom--vtex-omnishipping-1-x-address input:focus,
-#app-container input[type=text]:focus,
-#app-container input[type=tel]:focus,
-#app-container input[type=email]:focus,
+#app-container input[type="text"]:focus,
+#app-container input[type="tel"]:focus,
+#app-container input[type="email"]:focus,
 #app-container select:focus,
 .orderform-template .summary-note .note-textarea:focus,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation input:focus,
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=text]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=tel]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=email]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email select:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=text]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=tel]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=email]:focus:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data select:focus:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=text]:focus:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=tel]:focus:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=email]:focus:not(.pac-target-input),
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation
+  input:focus,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="text"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="tel"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="email"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  select:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="text"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="tel"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="email"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  select:focus:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="text"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="tel"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="email"]:focus:not(.pac-target-input),
 .orderform-template-holder #shipping-data select:focus:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=text]:focus:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=tel]:focus:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=email]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="text"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="tel"]:focus:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="email"]:focus:not(.pac-target-input),
 .orderform-template-holder #payment-data select:focus:not(.pac-target-input),
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation input:focus,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-addressFormPart1.vtex-shipping-preview-0-x-geolocation
+  input:focus,
 .cart-more-options .srp-container select:focus,
-.cart-more-options .srp-container input[type=text]:focus:not(.pac-target-input),
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset input[type=text]:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit]:focus,
+.cart-more-options
+  .srp-container
+  input[type="text"]:focus:not(.pac-target-input),
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  input[type="text"]:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"]:focus,
 .table.cart-items td.quantity input:focus,
 .table.cart-items tbody tr td .product-service select:focus,
 .table.cart-items tr.item-attachments-content input:focus,
@@ -221,9 +370,19 @@ input:-webkit-autofill:active {
     background-color: rgba(0, 0, 0, 0);
   }
 }
+
 .btn,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a {
   font-family: "Futura", sans-serif;
   text-shadow: none;
   border-radius: 30px;
@@ -238,19 +397,46 @@ input:-webkit-autofill:active {
 }
 
 .btn,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
 .btn:hover,
 .btn:focus {
   transition: all ease 0.3s;
 }
 
 .btn:hover,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:hover,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:hover,
 .btn:focus,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:focus {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:focus {
   background: none;
 }
 
@@ -260,14 +446,26 @@ input:-webkit-autofill:active {
 }
 
 .btn-link,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a {
   color: #000;
 }
 
 .btn-link:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:hover,
 .btn-link:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:focus {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:focus {
   color: #1d63be;
 }
 
@@ -303,18 +501,72 @@ input:-webkit-autofill:active {
 
 .btn-secondary,
 .orderform-template-holder #payment-data #btn-add-gift-card,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
 .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit],
-.table.cart-items tbody tr td .product-service input[type=submit],
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"],
+.table.cart-items tbody tr td .product-service input[type="submit"],
 .table.cart-items tbody tr td.product-name .add-service.btn,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.add-service,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.add-service,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.add-service,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.add-service,
 .table.cart-items tbody tr td.product-name .clone-item.btn,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item,
 .table.cart-items tbody tr td.product-name .add-item-attachment-container a {
   background: rgba(0, 0, 0, 0);
   border: 1px solid #000;
@@ -323,49 +575,226 @@ input:-webkit-autofill:active {
 
 .btn-secondary:hover,
 .orderform-template-holder #payment-data #btn-add-gift-card:hover,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a:hover,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a:hover,
 .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn:hover,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit]:hover,
-.table.cart-items tbody tr td .product-service input[type=submit]:hover,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"]:hover,
+.table.cart-items tbody tr td .product-service input[type="submit"]:hover,
 .table.cart-items tbody tr td.product-name .add-service.btn:hover,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.add-service:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.add-service:hover,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.add-service:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.add-service:hover,
 .table.cart-items tbody tr td.product-name .clone-item.btn:hover,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item:hover,
-.table.cart-items tbody tr td.product-name .add-item-attachment-container a:hover,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item:hover,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .add-item-attachment-container
+  a:hover,
 .btn-secondary:focus,
 .orderform-template-holder #payment-data #btn-add-gift-card:focus,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a:focus,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a:focus,
 .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn:focus,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit]:focus,
-.table.cart-items tbody tr td .product-service input[type=submit]:focus,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"]:focus,
+.table.cart-items tbody tr td .product-service input[type="submit"]:focus,
 .table.cart-items tbody tr td.product-name .add-service.btn:focus,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.add-service:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.add-service:focus,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.add-service:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.add-service:focus,
 .table.cart-items tbody tr td.product-name .clone-item.btn:focus,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item:focus,
-.table.cart-items tbody tr td.product-name .add-item-attachment-container a:focus,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item:focus,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .add-item-attachment-container
+  a:focus,
 .btn-secondary:active,
 .orderform-template-holder #payment-data #btn-add-gift-card:active,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a:active,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a:active,
 .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn:active,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a:active,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a:active,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit]:active,
-.table.cart-items tbody tr td .product-service input[type=submit]:active,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a:active,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a:active,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  button[type="submit"]:active,
+.table.cart-items tbody tr td .product-service input[type="submit"]:active,
 .table.cart-items tbody tr td.product-name .add-service.btn:active,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.add-service:active,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.add-service:active,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.add-service:active,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.add-service:active,
 .table.cart-items tbody tr td.product-name .clone-item.btn:active,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item:active,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item:active,
-.table.cart-items tbody tr td.product-name .add-item-attachment-container a:active {
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item:active,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item:active,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .add-item-attachment-container
+  a:active {
   background: #f1f7ff;
   border: 1px solid #1d63be;
   color: #1d63be;
@@ -385,21 +814,38 @@ input:-webkit-autofill:active {
 }
 
 .btn#payment-data-submit span,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action a#payment-data-submit span,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a#payment-data-submit span {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a#payment-data-submit
+  span,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a#payment-data-submit
+  span {
   font-size: 14px;
   margin-left: 5px;
   font-weight: bold;
 }
 
 .orderform-template .cart-template.mini-cart h2,
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-toggle,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-toggle,
 .orderform-template-holder #shipping-data .accordion-toggle,
 .orderform-template-holder #payment-data .accordion-toggle,
 .client-pre-email h3.client-pre-email-h span:after,
 .cart-more-options .srp-container .srp-main-title {
-  font-size: 14px;
+  font-size: calc(12px + 2px);
   text-transform: uppercase;
   border-bottom: 1px solid #eeeeee;
   font-weight: bold;
@@ -427,16 +873,60 @@ input:-webkit-autofill:active {
 }
 
 .input-append .btn,
-.input-append .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .input-append a,
-.input-append .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .input-append a,
+.input-append
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .input-append
+  a,
+.input-append
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .input-append
+  a,
 .input-append .add-on,
 .input-prepend .btn,
-.input-prepend .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .input-prepend a,
-.input-prepend .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .input-prepend a,
+.input-prepend
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .input-prepend
+  a,
+.input-prepend
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .input-prepend
+  a,
 .input-prepend .add-on {
   height: 40px;
   line-height: 40px;
@@ -465,65 +955,79 @@ input:-webkit-autofill:active {
 }
 
 @media (max-width: 690px) {
-  .orderform-template-holder .client-profile-data input[type=text] {
+  .orderform-template-holder .client-profile-data input[type="text"] {
     width: 100% !important;
   }
 }
+
 @media (max-width: 690px) {
   .item-quantity-change {
     display: inline-block;
   }
+
   .item-quantity-change {
     float: left;
     padding: 3px 5px 3px 0px;
   }
+
   .item-quantity-change-increment {
     padding-left: 5px;
     padding-right: 0;
   }
+
   .full-cart .cart-links-bottom .btn-success {
     width: 83%;
     display: block;
     margin-top: 10px;
   }
+
   .full-cart .cart table {
     display: block;
     margin-top: 0 !important;
   }
+
   .full-cart .cart table thead {
     display: none;
   }
+
   .full-cart .cart table tbody {
     display: block;
   }
+
   .full-cart .cart table tbody tr + tr {
     border-top: 1px dashed #ddd;
   }
+
   .full-cart .cart table tbody tr {
     display: block;
     margin-top: 10px;
     padding: 10px 0;
     position: relative;
   }
+
   .full-cart .cart table tbody tr .product-name a,
   .full-cart .cart table tbody tr .product-name .seller {
     overflow: hidden;
   }
+
   .full-cart .cart table tbody tr td {
     display: inline-block;
     padding: 4px 0;
   }
+
   .full-cart .cart table tbody tr td.product-name .seller {
     display: block;
     line-height: 120%;
     font-size: 80%;
     margin: 4px 0;
   }
+
   .full-cart .cart table tbody tr td.product-image,
   .full-cart .cart table tbody tr td.bundle-item-image {
     left: 0;
     position: absolute;
   }
+
   .full-cart .cart table tbody tr td.product-name {
     display: block;
     margin-left: 60px;
@@ -531,90 +1035,151 @@ input:-webkit-autofill:active {
     line-height: 140%;
     width: auto;
   }
+
   .full-cart .cart table tbody tr td.product-name {
     padding: 0 0 10px !important;
   }
+
   .full-cart .cart table tbody tr td.empty,
   .full-cart .cart table tbody tr td.shipping-date,
   .full-cart .cart table tbody tr td .brand {
     display: none;
   }
+
   .full-cart .cart table tbody tr td.product-name a,
   .full-cart .cart table tbody tr td.bundle-item-name span {
     display: block;
     padding-right: 20px;
   }
+
   .full-cart .cart table tbody tr td.quantity {
     width: 81px;
     padding: 0px;
     margin-left: 60px;
   }
+
   .full-cart .cart table tbody tr td.quantity input {
     float: left;
     margin: 0;
     width: 25px;
   }
+
   .full-cart .cart table tbody tr td.product-price {
     text-align: right;
     float: right;
     margin-right: 5px;
     padding: 0;
   }
+
   .full-cart .cart table tbody tr td.quantity-price {
     display: none;
   }
+
   .full-cart .cart table tbody tr td.item-remove {
     position: absolute;
     top: 2px;
     right: 0;
     width: 24px;
   }
+
   .cart-links-bottom {
     float: none;
     margin-top: 5px;
     margin-bottom: 40px;
     text-align: right;
   }
+
   .more {
     margin-right: 0;
   }
+
   .full-cart .cart-links-bottom .btn-success {
     width: auto;
   }
+
   .full-cart .cart table tbody tr.item-attachments-head {
     border: 0;
     margin: 0;
     padding: 0;
   }
-  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header {
+
+  .full-cart
+    .cart
+    table
+    tbody
+    tr.item-attachments-head
+    .item-attachments-header {
     top: auto;
   }
-  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header:after {
+
+  .full-cart
+    .cart
+    table
+    tbody
+    tr.item-attachments-head
+    .item-attachments-header:after {
     content: none;
   }
-  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header strong {
+
+  .full-cart
+    .cart
+    table
+    tbody
+    tr.item-attachments-head
+    .item-attachments-header
+    strong {
     box-shadow: none;
   }
+
   .full-cart .cart table tbody tr.item-attachments-content {
     margin: 0;
     border: 0;
     padding: 0;
   }
-  .full-cart .cart table tbody tr.item-attachments-content .item-attachments-item-fields {
+
+  .full-cart
+    .cart
+    table
+    tbody
+    tr.item-attachments-content
+    .item-attachments-item-fields {
     margin-left: 5px;
     width: 95%;
   }
 }
+
 .default-modal {
   border-radius: 4px;
   height: auto;
 }
 
 .modal .btn,
-.modal .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .modal a,
-.modal .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .modal a {
+.modal
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .modal
+  a,
+.modal
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .modal
+  a {
   background: #fff;
 }
 
@@ -656,10 +1221,36 @@ input:-webkit-autofill:active {
 }
 
 #vtexIdContainer .vtexIdUI .btn,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a {
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a {
   border-radius: 30px;
   height: 40px;
   line-height: 40px;
@@ -669,38 +1260,168 @@ input:-webkit-autofill:active {
 }
 
 #vtexIdContainer .vtexIdUI .btn.btn-success,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a.btn-success,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a.btn-success,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.btn-success,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a.btn-success {
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.btn-success,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.btn-success,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success {
   background: #000;
   border: 1px solid #000;
 }
 
 #vtexIdContainer .vtexIdUI .btn.btn-success:hover,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a.btn-success:hover,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a.btn-success:hover,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.btn-success:hover,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a.btn-success:hover,
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.btn-success:hover,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:hover,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.btn-success:hover,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:hover,
 #vtexIdContainer .vtexIdUI .btn.btn-success:focus,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a.btn-success:focus,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a.btn-success:focus,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.btn-success:focus,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a.btn-success:focus,
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.btn-success:focus,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:focus,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.btn-success:focus,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:focus,
 #vtexIdContainer .vtexIdUI .btn.btn-success:active,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a.btn-success:active,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a.btn-success:active,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.btn-success:active,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a.btn-success:active {
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.btn-success:active,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:active,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.btn-success:active,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a.btn-success:active {
   background: #269e24;
   border: 1px solid #269e24;
 }
 
 #vtexIdContainer .vtexIdUI .btn#vtexIdUI-facebook,
-#vtexIdContainer .vtexIdUI .orderform-template-holder #payment-data .payment-discounts-list table td.action a#vtexIdUI-facebook,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action #vtexIdContainer .vtexIdUI a#vtexIdUI-facebook,
-#vtexIdContainer .vtexIdUI .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a#vtexIdUI-facebook,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data #vtexIdContainer .vtexIdUI a#vtexIdUI-facebook {
+#vtexIdContainer
+  .vtexIdUI
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a#vtexIdUI-facebook,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  #vtexIdContainer
+  .vtexIdUI
+  a#vtexIdUI-facebook,
+#vtexIdContainer
+  .vtexIdUI
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a#vtexIdUI-facebook,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  #vtexIdContainer
+  .vtexIdUI
+  a#vtexIdUI-facebook {
   background: #4568ad !important;
 }
 
@@ -708,6 +1429,7 @@ input:-webkit-autofill:active {
   #vtexIdContainer {
     position: fixed !important;
   }
+
   #vtexIdContainer .vtexIdUI {
     overflow: auto;
     border-radius: 0;
@@ -718,6 +1440,7 @@ input:-webkit-autofill:active {
     height: 100% !important;
     border: none;
   }
+
   #vtexIdContainer .vtexIdUI .modal-header .close {
     top: 0;
     right: 0;
@@ -725,6 +1448,7 @@ input:-webkit-autofill:active {
     padding: 4px 8px;
   }
 }
+
 body {
   font-family: "Futura", sans-serif;
   min-width: initial !important;
@@ -750,6 +1474,7 @@ body a:hover {
     padding-bottom: 0px !important;
   }
 }
+
 body .cart-template.full-cart > * {
   opacity: 0;
   transition-delay: 1.2s;
@@ -761,15 +1486,21 @@ body.v-custom-loaded .cart-template.full-cart > * {
   opacity: initial;
 }
 
-body.returningUser.v-custom-addressForm-on.v-custom-step-shipping .accordion-inner.shipping-container .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation {
+body.returningUser.v-custom-addressForm-on.v-custom-step-shipping
+  .accordion-inner.shipping-container
+  .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation {
   display: block;
 }
 
-body.returningUser.v-custom-addressForm-on.v-custom-step-shipping .accordion-inner.shipping-container .vtex-omnishipping-1-x-deliveryGroup {
+body.returningUser.v-custom-addressForm-on.v-custom-step-shipping
+  .accordion-inner.shipping-container
+  .vtex-omnishipping-1-x-deliveryGroup {
   display: block;
 }
 
-body.returningUser.v-custom-addressForm-on.v-custom-step-shipping .accordion-inner.shipping-container .vtex-omnishipping-1-x-submitPaymentButton {
+body.returningUser.v-custom-addressForm-on.v-custom-step-shipping
+  .accordion-inner.shipping-container
+  .vtex-omnishipping-1-x-submitPaymentButton {
   display: block;
 }
 
@@ -794,6 +1525,7 @@ body.returningUser.v-custom-addressForm-on.v-custom-step-shipping .accordion-inn
     width: calc(100% - 20px);
   }
 }
+
 .checkout-container {
   overflow: initial !important;
   z-index: 2;
@@ -804,6 +1536,7 @@ body.returningUser.v-custom-addressForm-on.v-custom-step-shipping .accordion-inn
     margin-bottom: 30px;
   }
 }
+
 .checkout-container .orderform-template,
 .checkout-container .cart-template {
   display: flex;
@@ -855,6 +1588,7 @@ h1#orderform-title {
     margin-bottom: 2px;
   }
 }
+
 .v-custom-assemblies p {
   display: none;
 }
@@ -887,8 +1621,14 @@ h1#orderform-title {
   font-size: 15px;
 }
 
-body.js-vcustom-hideEmailStep .client-profile-data .accordion-toggle > span:before,
-body.v-custom-step-payment .payment-data .accordion-toggle > span:not(.payment-edit-link):before,
+body.js-vcustom-hideEmailStep
+  .client-profile-data
+  .accordion-toggle
+  > span:before,
+body.v-custom-step-payment
+  .payment-data
+  .accordion-toggle
+  > span:not(.payment-edit-link):before,
 body.v-custom-step-shipping .shipping-data .accordion-toggle:before,
 body.v-custom-step-profile .client-profile-data .accordion-toggle > span:before,
 body.v-custom-step-email .client-pre-email h3.client-pre-email-h span:before,
@@ -897,7 +1637,10 @@ body.v-custom-step-payment .client-pre-email h3.client-pre-email-h span:before,
 body.v-custom-step-payment .client-profile-data .accordion-toggle > span:before,
 body.v-custom-step-payment .shipping-data .accordion-toggle:before,
 body.v-custom-step-shipping .client-pre-email h3.client-pre-email-h span:before,
-body.v-custom-step-shipping .client-profile-data .accordion-toggle > span:before,
+body.v-custom-step-shipping
+  .client-profile-data
+  .accordion-toggle
+  > span:before,
 body.v-custom-step-profile .client-pre-email h3.client-pre-email-h span:before {
   background: #000;
   border-color: #000;
@@ -945,19 +1688,24 @@ body.v-custom-step-profile .client-pre-email h3.client-pre-email-h span:before {
     transition: all ease 0.3s;
     z-index: 999;
   }
+
   body.v-custom-step-email:before {
     width: 23%;
   }
+
   body.v-custom-step-profile:before {
     width: 46%;
   }
+
   body.v-custom-step-shipping:before {
     width: 69%;
   }
+
   body.v-custom-step-payment:before {
     width: 92%;
   }
 }
+
 body.v-custom-step-payment .checkout-steps_item_cart .text,
 body.v-custom-step-payment .checkout-steps_item_identification .text,
 body.v-custom-step-payment .checkout-steps_item_shipping .text,
@@ -1070,6 +1818,7 @@ body.v-custom-step-payment .checkout-steps_item_payment .text {
     display: none !important;
   }
 }
+
 .checkout-steps_bar_inner-active {
   width: 0;
   background: #000;
@@ -1161,6 +1910,7 @@ body .main-header > .container {
     justify-content: center;
   }
 }
+
 body .main-header > .container:before,
 body .main-header > .container:after {
   display: none;
@@ -1188,8 +1938,10 @@ body .main-header .header-link a:before {
   float: left;
   width: 10px;
   height: 10px;
-  -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQzLjUyIDQ0My41MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzLjUyIDQ0My41MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0xNDMuNDkyLDIyMS44NjNMMzM2LjIyNiwyOS4xMjljNi42NjMtNi42NjQsNi42NjMtMTcuNDY4LDAtMjQuMTMyYy02LjY2NS02LjY2Mi0xNy40NjgtNi42NjItMjQuMTMyLDBsLTIwNC44LDIwNC44DQoJCQljLTYuNjYyLDYuNjY0LTYuNjYyLDE3LjQ2OCwwLDI0LjEzMmwyMDQuOCwyMDQuOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyYzYuMzg3LTYuNjE0LDYuMzg3LTE3LjA5OSwwLTIzLjcxMg0KCQkJTDE0My40OTIsMjIxLjg2M3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat 50% 50%;
-  mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQzLjUyIDQ0My41MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzLjUyIDQ0My41MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0xNDMuNDkyLDIyMS44NjNMMzM2LjIyNiwyOS4xMjljNi42NjMtNi42NjQsNi42NjMtMTcuNDY4LDAtMjQuMTMyYy02LjY2NS02LjY2Mi0xNy40NjgtNi42NjItMjQuMTMyLDBsLTIwNC44LDIwNC44DQoJCQljLTYuNjYyLDYuNjY0LTYuNjYyLDE3LjQ2OCwwLDI0LjEzMmwyMDQuOCwyMDQuOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyYzYuMzg3LTYuNjE0LDYuMzg3LTE3LjA5OSwwLTIzLjcxMg0KCQkJTDE0My40OTIsMjIxLjg2M3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat 50% 50%;
+  -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQzLjUyIDQ0My41MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzLjUyIDQ0My41MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0xNDMuNDkyLDIyMS44NjNMMzM2LjIyNiwyOS4xMjljNi42NjMtNi42NjQsNi42NjMtMTcuNDY4LDAtMjQuMTMyYy02LjY2NS02LjY2Mi0xNy40NjgtNi42NjItMjQuMTMyLDBsLTIwNC44LDIwNC44DQoJCQljLTYuNjYyLDYuNjY0LTYuNjYyLDE3LjQ2OCwwLDI0LjEzMmwyMDQuOCwyMDQuOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyYzYuMzg3LTYuNjE0LDYuMzg3LTE3LjA5OSwwLTIzLjcxMg0KCQkJTDE0My40OTIsMjIxLjg2M3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==)
+    no-repeat 50% 50%;
+  mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQzLjUyIDQ0My41MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzLjUyIDQ0My41MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0xNDMuNDkyLDIyMS44NjNMMzM2LjIyNiwyOS4xMjljNi42NjMtNi42NjQsNi42NjMtMTcuNDY4LDAtMjQuMTMyYy02LjY2NS02LjY2Mi0xNy40NjgtNi42NjItMjQuMTMyLDBsLTIwNC44LDIwNC44DQoJCQljLTYuNjYyLDYuNjY0LTYuNjYyLDE3LjQ2OCwwLDI0LjEzMmwyMDQuOCwyMDQuOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyYzYuMzg3LTYuNjE0LDYuMzg3LTE3LjA5OSwwLTIzLjcxMg0KCQkJTDE0My40OTIsMjIxLjg2M3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==)
+    no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: #676767;
@@ -1205,14 +1957,17 @@ body .main-header .header-link a.back-cart-link {
     top: 50%;
     transform: translateY(-50%);
   }
+
   body .main-header .header-link a {
     max-width: 80px;
   }
+
   body .main-header .header-link a:before {
     width: 17px;
     height: 17px;
   }
 }
+
 body .main-header .logo {
   max-width: calc(100% - 180px);
 }
@@ -1240,47 +1995,58 @@ body .main-header .checkout-steps {
     padding: 4px 0;
     margin-bottom: 10px;
   }
+
   body:not(.body-cart) .main-header .v-custom-mhide {
     display: none !important;
   }
+
   body:not(.body-cart) .main-header,
   body:not(.body-cart) .main-header > .container {
     background: none;
     border: none;
     justify-content: center;
   }
+
   body:not(.body-cart) .main-header .logo {
     cursor: default;
     pointer-events: none;
     font-weight: bold;
   }
+
   body:not(.body-cart) .main-header .logo svg,
   body:not(.body-cart) .main-header .logo img {
     display: none !important;
   }
+
   body:not(.body-cart) .main-header .logo:before {
     content: "checkout";
     text-transform: uppercase;
   }
+
   body:not(.body-cart) .main-header .logo,
   body:not(.body-cart) .main-header .logo:hover {
     color: #323232;
     font-size: 14px;
   }
+
   body:not(.body-cart) .main-header .header-link {
     display: block;
   }
+
   body:not(.body-cart) .main-header a.buy-more-link {
     display: none;
   }
+
   body:not(.body-cart) .main-header a.back-cart-link {
     display: block !important;
     font-size: 0;
   }
+
   body:not(.body-cart) .main-header a.back-cart-link:before {
     background: #323232;
   }
 }
+
 .main-footer {
   clear: both;
   text-align: center;
@@ -1301,6 +2067,7 @@ body .main-header .checkout-steps {
     position: relative;
   }
 }
+
 .main-footer a.credits-vtex {
   width: 100px;
   display: block;
@@ -1360,6 +2127,7 @@ h1#cart-title {
     padding: 12px;
   }
 }
+
 .cart-template-holder .cart {
   border: none;
   margin-bottom: 20px;
@@ -1457,10 +2225,12 @@ h1#cart-title {
   .table.cart-items tbody tr {
     margin-top: 0 !important;
   }
+
   .table.cart-items tbody tr:first-child {
     border: none;
   }
 }
+
 .table.cart-items tbody tr.item-attachments-head,
 .table.cart-items tbody tr.item-attachments-content {
   display: none;
@@ -1479,12 +2249,14 @@ h1#cart-title {
     display: block;
     padding: 10px 0;
   }
+
   .table.cart-items tbody tr .v-custom-product-item-wrap:after {
     content: "";
     clear: both;
     display: block;
   }
 }
+
 .table.cart-items tbody tr td {
   width: auto;
   border: none;
@@ -1492,20 +2264,92 @@ h1#cart-title {
 
 .table.cart-items tbody tr td.product-name .add-service-container,
 .table.cart-items tbody tr td.product-name .clone-item.btn,
-.table.cart-items tbody tr td.product-name .orderform-template-holder #payment-data .payment-discounts-list table td.action a.clone-item,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .table.cart-items tbody tr td.product-name a.clone-item,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.clone-item,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item,
 .table.cart-items tbody tr td.product-name .add-item-attachment-container {
   margin: 10px 0;
 }
 
 .table.cart-items tbody tr td.product-name .add-service-container + p,
 .table.cart-items tbody tr td.product-name .clone-item.btn + p,
-.table.cart-items tbody tr td.product-name .orderform-template-holder #payment-data .payment-discounts-list table td.action a.clone-item + p,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .table.cart-items tbody tr td.product-name a.clone-item + p,
-.table.cart-items tbody tr td.product-name .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.clone-item + p,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .table.cart-items tbody tr td.product-name a.clone-item + p,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.clone-item
+  + p,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item
+  + p,
+.table.cart-items
+  tbody
+  tr
+  td.product-name
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.clone-item
+  + p,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .table.cart-items
+  tbody
+  tr
+  td.product-name
+  a.clone-item
+  + p,
 .table.cart-items tbody tr td.product-name .add-item-attachment-container + p {
   display: none;
 }
@@ -1515,6 +2359,7 @@ h1#cart-title {
     width: calc(100% - 355px) !important;
   }
 }
+
 .table.cart-items tbody tr td.product-name .seller {
   display: block;
 }
@@ -1542,6 +2387,7 @@ h1#cart-title {
     padding: 0;
   }
 }
+
 .table.cart-items tbody tr td.product-price .new-product-price-label,
 .table.cart-items tbody tr td.product-price .old-product-price-label,
 .table.cart-items tbody tr td.quantity-price .new-product-price-label,
@@ -1571,6 +2417,7 @@ h1#cart-title {
     justify-content: flex-end;
     margin-top: 7px;
   }
+
   .table.cart-items tbody tr td.product-price .total-selling-price .discount,
   .table.cart-items tbody tr td.product-price .best-price .discount,
   .table.cart-items tbody tr td.quantity-price .total-selling-price .discount,
@@ -1579,6 +2426,7 @@ h1#cart-title {
     display: block;
   }
 }
+
 .table.cart-items tbody tr td.product-price .new-product-real-price-per-unit,
 .table.cart-items tbody tr td.quantity-price .new-product-real-price-per-unit {
   display: inline-block;
@@ -1596,62 +2444,157 @@ h1#cart-title {
   font-size: 10px;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--list,
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--list,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--list,
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--list,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling {
   display: block;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--list,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--list {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--list,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--list {
   text-decoration: line-through;
   color: #999999;
 }
 
 .table.cart-items tbody tr td.product-price .v-custom-quantity-price__list,
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling,
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling,
 .table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling {
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling {
   color: #676767;
   font-size: 10px;
   line-height: 11px;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling {
   margin-bottom: 3px;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling .discount,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling .discount {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling
+  .discount,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling
+  .discount {
   display: none;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling:after,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling:after {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling:after,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling:after {
   content: ")";
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling:before,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling:before {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling:before,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling:before {
   content: "(";
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling .best-price,
-.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list--selling .best-price {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  .v-custom-quantity-price__list--selling
+  .best-price,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  .v-custom-quantity-price__list--selling
+  .best-price {
   font-weight: normal;
   display: inline-block;
 }
 
 @media (max-width: 690px) {
-  .table.cart-items tbody tr td.product-price .v-custom-quantity-price__list > *:last-child,
-  .table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__list > *:last-child {
+  .table.cart-items
+    tbody
+    tr
+    td.product-price
+    .v-custom-quantity-price__list
+    > *:last-child,
+  .table.cart-items
+    tbody
+    tr
+    td.quantity-price
+    .v-custom-quantity-price__list
+    > *:last-child {
     margin-bottom: -7px;
   }
 }
-.table.cart-items tbody tr td.product-price.v-custom-quantity-price-active > .list-price,
-.table.cart-items tbody tr td.quantity-price.v-custom-quantity-price-active > .list-price {
+
+.table.cart-items
+  tbody
+  tr
+  td.product-price.v-custom-quantity-price-active
+  > .list-price,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price.v-custom-quantity-price-active
+  > .list-price {
   display: none !important;
 }
 
@@ -1677,8 +2620,18 @@ h1#cart-title {
   background: #fff;
 }
 
-.table.cart-items tbody tr td.product-price a.manualprice-link-remove i.icon-remove:before,
-.table.cart-items tbody tr td.quantity-price a.manualprice-link-remove i.icon-remove:before {
+.table.cart-items
+  tbody
+  tr
+  td.product-price
+  a.manualprice-link-remove
+  i.icon-remove:before,
+.table.cart-items
+  tbody
+  tr
+  td.quantity-price
+  a.manualprice-link-remove
+  i.icon-remove:before {
   width: 10px !important;
   height: 10px !important;
 }
@@ -1698,10 +2651,17 @@ h1#cart-title {
 }
 
 @media (max-width: 690px) {
-  .table.cart-items tbody tr td.product-price span.list-price:not(.hide) + br + span.best-price {
+  .table.cart-items
+    tbody
+    tr
+    td.product-price
+    span.list-price:not(.hide)
+    + br
+    + span.best-price {
     margin-top: 0;
   }
 }
+
 .table.cart-items tbody tr td.item-remove {
   margin-left: auto;
   width: 20px !important;
@@ -1712,6 +2672,7 @@ h1#cart-title {
     top: 0 !important;
   }
 }
+
 .table.cart-items tbody tr td.product-image {
   order: 1;
 }
@@ -1768,7 +2729,7 @@ h1#cart-title {
 }
 
 .table.cart-items tbody tr td .product-service {
-  height: 50px;
+  height: calc(40px + 10px);
   margin-top: 10px;
   position: relative;
 }
@@ -1780,6 +2741,7 @@ h1#cart-title {
     min-width: 250px;
   }
 }
+
 .table.cart-items tbody tr td .product-service p {
   display: flex;
 }
@@ -1814,6 +2776,7 @@ h1#cart-title {
     text-align: center;
   }
 }
+
 .table.cart-items tbody tr.v-custom-indexedItems-in + tr.item-unavailable {
   display: none;
 }
@@ -1880,8 +2843,16 @@ h1#cart-title {
   width: auto;
 }
 
-.table.cart-items tbody tr.v-custom-indexed-item .item-remove i.icon.icon-remove.item-remove-ico:before,
-.table.cart-items tbody tr.item-service .item-remove i.icon.icon-remove.item-remove-ico:before {
+.table.cart-items
+  tbody
+  tr.v-custom-indexed-item
+  .item-remove
+  i.icon.icon-remove.item-remove-ico:before,
+.table.cart-items
+  tbody
+  tr.item-service
+  .item-remove
+  i.icon.icon-remove.item-remove-ico:before {
   content: "-";
   background: #ff4c4c;
   color: #fff;
@@ -1897,6 +2868,7 @@ h1#cart-title {
   .table.cart-items tbody tr.item-service {
     border-top: none !important;
   }
+
   .table.cart-items tbody tr.v-custom-indexed-item .product-price,
   .table.cart-items tbody tr.v-custom-indexed-item .quantity,
   .table.cart-items tbody tr.item-service .product-price,
@@ -1906,6 +2878,7 @@ h1#cart-title {
     min-width: initial !important;
   }
 }
+
 .table.cart-items tbody tr.v-custom-indexed-item:last-child {
   margin-bottom: 20px;
 }
@@ -1919,6 +2892,7 @@ h1#cart-title {
     display: none;
   }
 }
+
 .table.cart-items tbody tr.v-custom-indexed-item td.product-name {
   margin-left: 0 !important;
   padding: 0 !important;
@@ -1968,6 +2942,7 @@ h1#cart-title {
     width: 70px;
   }
 }
+
 .table.cart-items td.product-name a,
 .table.cart-items td.product-name a:hover {
   color: #333;
@@ -2029,12 +3004,18 @@ h1#cart-title {
   margin: 0;
 }
 
-.table.cart-items td.quantity .item-quantity-change.item-quantity-change-decrement i:before {
+.table.cart-items
+  td.quantity
+  .item-quantity-change.item-quantity-change-decrement
+  i:before {
   content: "-";
   line-height: 21px;
 }
 
-.table.cart-items td.quantity .item-quantity-change.item-quantity-change-increment i:before {
+.table.cart-items
+  td.quantity
+  .item-quantity-change.item-quantity-change-increment
+  i:before {
   content: "+";
 }
 
@@ -2042,11 +3023,13 @@ h1#cart-title {
   .table.cart-items td.quantity {
     width: 97px;
   }
+
   .table.cart-items td.product-name,
   .table.cart-items td.quantity {
     margin-left: 90px !important;
   }
 }
+
 .table.cart-items i.icon.icon-remove.item-remove-ico:before {
   content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K");
   width: 15px;
@@ -2098,7 +3081,11 @@ h1#cart-title {
   width: 100%;
 }
 
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a {
   width: 100%;
   text-decoration: underline;
 }
@@ -2109,19 +3096,34 @@ h1#cart-title {
   align-items: center;
 }
 
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset > div[style*=none] {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  > div[style*="none"] {
   display: block !important;
 }
 
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset > div[style*=none] p.coupon-label {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  > div[style*="none"]
+  p.coupon-label {
   display: none;
 }
 
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset > div[style*=flex] p.coupon-label {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  > div[style*="flex"]
+  p.coupon-label {
   display: none;
 }
 
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset > div[style*=flex] p.coupon-fields {
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  > div[style*="flex"]
+  p.coupon-fields {
   width: 100%;
 }
 
@@ -2152,14 +3154,22 @@ h1#cart-title {
   width: auto;
 }
 
-.summary-template-holder .summary-coupon p.coupon-fields .delete #cart-coupon-remove {
+.summary-template-holder
+  .summary-coupon
+  p.coupon-fields
+  .delete
+  #cart-coupon-remove {
   color: #ff4c4c;
   font-size: 0;
   display: flex;
   align-items: center;
 }
 
-.summary-template-holder .summary-coupon p.coupon-fields .delete #cart-coupon-remove:before {
+.summary-template-holder
+  .summary-coupon
+  p.coupon-fields
+  .delete
+  #cart-coupon-remove:before {
   content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K");
   width: 11px;
   height: 12px;
@@ -2194,10 +3204,34 @@ h1#cart-title {
 }
 
 .summary-template-holder .cart-links-bottom .btn,
-.summary-template-holder .cart-links-bottom .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .summary-template-holder .cart-links-bottom a,
-.summary-template-holder .cart-links-bottom .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-links-bottom a {
+.summary-template-holder
+  .cart-links-bottom
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .summary-template-holder
+  .cart-links-bottom
+  a,
+.summary-template-holder
+  .cart-links-bottom
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-links-bottom
+  a {
   width: 100%;
   box-sizing: border-box;
 }
@@ -2214,10 +3248,12 @@ h1#cart-title {
     left: 0;
     z-index: 10000;
   }
+
   .summary-template-holder .cart-links-bottom a {
     border-radius: 0;
   }
 }
+
 .summary-template-holder .summary-totalizers .table td.space,
 .summary-template-holder .summary-totalizers .table td.empty,
 .summary-template-holder .summary-totalizers tbody.shipping-calculate {
@@ -2301,7 +3337,9 @@ h1#cart-title {
   display: block !important;
 }
 
-.cart-more-options .vtex-shipping-preview-0-x-alert .shp-alert-content.vtex-shipping-preview-0-x-content {
+.cart-more-options
+  .vtex-shipping-preview-0-x-alert
+  .shp-alert-content.vtex-shipping-preview-0-x-content {
   display: flex;
   align-items: center;
 }
@@ -2326,7 +3364,7 @@ h1#cart-title {
 }
 
 .cart-more-options .srp-container select,
-.cart-more-options .srp-container input[type=text]:not(.pac-target-input) {
+.cart-more-options .srp-container input[type="text"]:not(.pac-target-input) {
   outline: initial;
 }
 
@@ -2358,10 +3396,40 @@ h1#cart-title {
 }
 
 .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a,
-.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .srp-container .vtex-shipping-preview-0-x-pc a {
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a,
+.cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .srp-container
+  .vtex-shipping-preview-0-x-pc
+  a {
   height: 40px;
   outline: initial;
   border-radius: 4px;
@@ -2387,6 +3455,7 @@ h1#cart-title {
     margin-bottom: 0;
   }
 }
+
 .cart-more-options .cart-select-gift-placeholder:empty {
   display: none;
 }
@@ -2400,11 +3469,38 @@ h1#cart-title {
     display: none !important;
   }
 }
+
 .cart-more-options .vtex-pickup-points-modal-3-x-pickupViewMode .btn,
-.cart-more-options .vtex-pickup-points-modal-3-x-pickupViewMode .orderform-template-holder #payment-data .payment-discounts-list table td.action a,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .cart-more-options .vtex-pickup-points-modal-3-x-pickupViewMode a,
-.cart-more-options .vtex-pickup-points-modal-3-x-pickupViewMode .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .cart-more-options .vtex-pickup-points-modal-3-x-pickupViewMode a {
+.cart-more-options
+  .vtex-pickup-points-modal-3-x-pickupViewMode
+  .orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .cart-more-options
+  .vtex-pickup-points-modal-3-x-pickupViewMode
+  a,
+.cart-more-options
+  .vtex-pickup-points-modal-3-x-pickupViewMode
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .cart-more-options
+  .vtex-pickup-points-modal-3-x-pickupViewMode
+  a {
   padding: 13px 0;
 }
 
@@ -2432,6 +3528,7 @@ h1#cart-title {
     width: 100%;
   }
 }
+
 .body-cart-vertical .summary-template-holder {
   width: 30%;
 }
@@ -2442,6 +3539,7 @@ h1#cart-title {
     margin-top: 20px;
   }
 }
+
 .body-cart-vertical .cart-template.full-cart.active {
   display: flex;
   flex-flow: wrap;
@@ -2449,12 +3547,16 @@ h1#cart-title {
   align-items: flex-start;
 }
 
-.body-cart-vertical .cart-template.full-cart.active .extensions-checkout-buttons-container {
+.body-cart-vertical
+  .cart-template.full-cart.active
+  .extensions-checkout-buttons-container {
   width: auto !important;
   margin: 0;
 }
 
-.body-cart-vertical .cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers {
+.body-cart-vertical
+  .cart-template.full-cart.active
+  .totalizers.summary-totalizers.cart-totalizers {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -2530,7 +3632,7 @@ h1#cart-title {
   position: initial;
 }
 
-.client-pre-email .client-email.input.text input[type=email] {
+.client-pre-email .client-email.input.text input[type="email"] {
   width: 100%;
   box-sizing: border-box;
 }
@@ -2553,6 +3655,7 @@ h1#cart-title {
     width: calc(100% - 60px);
   }
 }
+
 .client-pre-email .client-email.input.text .loading-inline {
   position: absolute;
   color: #fff;
@@ -2563,7 +3666,10 @@ h1#cart-title {
   margin-right: -10px;
 }
 
-.client-pre-email .client-email.input.text .loading-inline[style=""] + #btn-client-pre-email {
+.client-pre-email
+  .client-email.input.text
+  .loading-inline[style=""]
+  + #btn-client-pre-email {
   font-size: 0;
 }
 
@@ -2583,6 +3689,7 @@ h1#cart-title {
     width: 100%;
   }
 }
+
 .client-pre-email .emailInfo .icon-lock {
   color: #eeeeee;
 }
@@ -2592,6 +3699,7 @@ h1#cart-title {
     display: none !important;
   }
 }
+
 .client-pre-email + .client-profile-data .accordion-body:before {
   content: "Waiting for more information";
   display: block;
@@ -2634,11 +3742,15 @@ h1#cart-title {
   display: none;
 }
 
-.client-pre-email[style*="display: none"] + .client-profile-data .accordion-body:before {
+.client-pre-email[style*="display: none"]
+  + .client-profile-data
+  .accordion-body:before {
   display: none;
 }
 
-.client-pre-email[style*="display: none"] + .client-profile-data .accordion-inner {
+.client-pre-email[style*="display: none"]
+  + .client-profile-data
+  .accordion-inner {
   display: block;
 }
 
@@ -2717,13 +3829,19 @@ body:not(.v-custom-step-email) .client-pre-email span.help.error {
   0% {
     background-position: -468px 0;
   }
+
   100% {
     background-position: 468px 0;
   }
 }
+
 .js-v-custom-is-loading .vcustom--vtex-omnishipping-1-x-address:before,
 .js-v-custom-is-loadAddress #shipping-data .accordion-group.shipping-data:after,
-.orderform-template .cart-template.mini-cart .cart .cart-items:not(.v-loaded) li.item:after {
+.orderform-template
+  .cart-template.mini-cart
+  .cart
+  .cart-items:not(.v-loaded)
+  li.item:after {
   animation-duration: 1.25s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -2740,7 +3858,7 @@ svg.pkpmodal-pickup-point-marker-image,
 svg.pkpmodal-pickup-point-marker-image path,
 svg.vtex-omnishipping-1-x-svg,
 svg.vtex-omnishipping-1-x-svg path,
-svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
+svg.pkpmodal-pickup-point-best-marker-image path:not([fill="white"]) {
   fill: #000;
 }
 
@@ -2749,6 +3867,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     width: calc(100% - 20px);
   }
 }
+
 .orderform-template-holder #client-profile-data {
   width: 100%;
 }
@@ -2777,16 +3896,27 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     padding: 20px;
   }
 }
-.orderform-template-holder #client-profile-data form.client-pre-email.client-pre-email,
-.orderform-template-holder #client-profile-data .step.client-profile-data.client-pre-email,
+
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email.client-pre-email,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data.client-pre-email,
 .orderform-template-holder #shipping-data.client-pre-email,
 .orderform-template-holder #payment-data.client-pre-email {
   display: block !important;
-  padding-bottom: 84px;
+  padding-bottom: calc(40px + 14px + 30px);
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit,
-.orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit,
 .orderform-template-holder #shipping-data .link-box-edit,
 .orderform-template-holder #payment-data .link-box-edit {
   background: none;
@@ -2804,15 +3934,29 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   transition: all ease 0.2s;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit:hover,
-.orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit:hover,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit:hover,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit:hover,
 .orderform-template-holder #shipping-data .link-box-edit:hover,
 .orderform-template-holder #payment-data .link-box-edit:hover {
   opacity: 1;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit i.icon-spinner,
-.orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit i.icon-spinner,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit
+  i.icon-spinner,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit
+  i.icon-spinner,
 .orderform-template-holder #shipping-data .link-box-edit i.icon-spinner,
 .orderform-template-holder #payment-data .link-box-edit i.icon-spinner {
   font-size: 17px;
@@ -2822,36 +3966,74 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   top: -7px;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit.active i.icon-edit,
-.orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit.active i.icon-edit,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit.active
+  i.icon-edit,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit.active
+  i.icon-edit,
 .orderform-template-holder #shipping-data .link-box-edit.active i.icon-edit,
 .orderform-template-holder #payment-data .link-box-edit.active i.icon-edit {
   display: none;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit.active i.icon-spinner,
-.orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit.active i.icon-spinner,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit.active
+  i.icon-spinner,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit.active
+  i.icon-spinner,
 .orderform-template-holder #shipping-data .link-box-edit.active i.icon-spinner,
 .orderform-template-holder #payment-data .link-box-edit.active i.icon-spinner {
   display: block;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-toggle,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-toggle,
 .orderform-template-holder #shipping-data .accordion-toggle,
 .orderform-template-holder #payment-data .accordion-toggle {
   padding: 0;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-toggle > i,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle > i,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-toggle
+  > i,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-toggle
+  > i,
 .orderform-template-holder #shipping-data .accordion-toggle > i,
 .orderform-template-holder #payment-data .accordion-toggle > i {
   display: none;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-toggle > span,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle > span,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-toggle
+  > span,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-toggle
+  > span,
 .orderform-template-holder #shipping-data .accordion-toggle > span,
 .orderform-template-holder #payment-data .accordion-toggle > span {
   line-height: 20px;
@@ -2860,10 +4042,22 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   line-height: initial;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-toggle,
-.orderform-template-holder #client-profile-data form.client-pre-email .accordion-inner,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle,
-.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-inner,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .accordion-inner,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-toggle,
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .accordion-inner,
 .orderform-template-holder #shipping-data .accordion-toggle,
 .orderform-template-holder #shipping-data .accordion-inner,
 .orderform-template-holder #payment-data .accordion-toggle,
@@ -2871,21 +4065,57 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   padding: 0;
 }
 
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email input[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data form.client-pre-email select:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data input[type=email]:not(.pac-target-input),
-.orderform-template-holder #client-profile-data .step.client-profile-data select:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #shipping-data input[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  input[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  select:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  input[type="email"]:not(.pac-target-input),
+.orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  select:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #shipping-data
+  input[type="email"]:not(.pac-target-input),
 .orderform-template-holder #shipping-data select:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=text]:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=tel]:not(.pac-target-input),
-.orderform-template-holder #payment-data input[type=email]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="text"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="tel"]:not(.pac-target-input),
+.orderform-template-holder
+  #payment-data
+  input[type="email"]:not(.pac-target-input),
 .orderform-template-holder #payment-data select:not(.pac-target-input) {
   width: 100%;
   max-width: 100%;
@@ -2940,11 +4170,16 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   margin: 0;
 }
 
-.orderform-template-holder #payment-data #iframe-placeholder-creditCardPaymentGroup {
+.orderform-template-holder
+  #payment-data
+  #iframe-placeholder-creditCardPaymentGroup {
   padding-top: 32px;
 }
 
-.orderform-template-holder #payment-data #iframe-placeholder-creditCardPaymentGroup > .payment-group-item-cards {
+.orderform-template-holder
+  #payment-data
+  #iframe-placeholder-creditCardPaymentGroup
+  > .payment-group-item-cards {
   display: block;
   overflow: hidden;
   position: absolute;
@@ -2952,7 +4187,11 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   top: 0;
 }
 
-.orderform-template-holder #payment-data #iframe-placeholder-creditCardPaymentGroup > .payment-group-item-cards .card-flag {
+.orderform-template-holder
+  #payment-data
+  #iframe-placeholder-creditCardPaymentGroup
+  > .payment-group-item-cards
+  .card-flag {
   opacity: 1;
 }
 
@@ -2982,43 +4221,81 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   height: 40px;
 }
 
-.orderform-template-holder #payment-data .payment-group-item span.payment-group-item-text {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item
+  span.payment-group-item-text {
   padding: 0;
   line-height: 17px;
   background: none !important;
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+2),
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+2) ~ .payment-group-item {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 2),
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 2)
+  ~ .payment-group-item {
   width: calc(50% - 3px);
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+3),
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+3) ~ .payment-group-item {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 3),
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 3)
+  ~ .payment-group-item {
   width: calc(33.3% - 4px);
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+4),
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+4) ~ .payment-group-item {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 4),
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 4)
+  ~ .payment-group-item {
   width: calc(25% - 4.8px);
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5),
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5) ~ .payment-group-item {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5),
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5)
+  ~ .payment-group-item {
   width: 100%;
   margin-right: 0;
   height: auto;
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5):after,
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5):before,
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5) ~ .payment-group-item:after,
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5) ~ .payment-group-item:before {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5):after,
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5):before,
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5)
+  ~ .payment-group-item:after,
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5)
+  ~ .payment-group-item:before {
   display: none;
 }
 
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5):hover,
-.orderform-template-holder #payment-data .payment-group-item:first-child:nth-last-child(n+5) ~ .payment-group-item:hover {
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5):hover,
+.orderform-template-holder
+  #payment-data
+  .payment-group-item:first-child:nth-last-child(n + 5)
+  ~ .payment-group-item:hover {
   top: 0;
 }
 
@@ -3055,13 +4332,18 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border-width: 7px;
 }
 
-.orderform-template-holder #payment-data .gift-card-section.form-step.box-default {
+.orderform-template-holder
+  #payment-data
+  .gift-card-section.form-step.box-default {
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-.orderform-template-holder #payment-data .gift-card-section.form-step.box-default label {
+.orderform-template-holder
+  #payment-data
+  .gift-card-section.form-step.box-default
+  label {
   font-weight: bold;
   color: #000;
   font-size: 12px;
@@ -3091,7 +4373,10 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   margin-bottom: 10px;
 }
 
-.orderform-template-holder #payment-data .payment-discounts-list .gift-card-provider-group-loyalty-program {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  .gift-card-provider-group-loyalty-program {
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -3112,13 +4397,21 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder #payment-data .payment-discounts-list table td.code,
-.orderform-template-holder #payment-data .payment-discounts-list table td.number {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.number {
   margin-right: 20px;
   flex-grow: 1;
   padding: 0;
 }
 
-.orderform-template-holder #payment-data .payment-discounts-list table #remove-gift-card {
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  #remove-gift-card {
   text-decoration: underline;
   color: #ff4c4c;
 }
@@ -3148,7 +4441,10 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   color: #323232;
 }
 
-.orderform-template-holder #payment-data p.notification:not([style="display: none;"]) + .box-step {
+.orderform-template-holder
+  #payment-data
+  p.notification:not([style="display: none;"])
+  + .box-step {
   padding: 0;
   border: none;
 }
@@ -3158,6 +4454,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     margin-bottom: 0px !important;
   }
 }
+
 .orderform-template-holder #payment-data .v-custom-payment-item-wrap {
   box-sizing: border-box;
   border-radius: 4px;
@@ -3175,11 +4472,17 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   box-shadow: 0 0 6px #ddd;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap #iframe-placeholder-creditCardPaymentGroup {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  #iframe-placeholder-creditCardPaymentGroup {
   padding-top: 0;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   box-shadow: none;
@@ -3189,14 +4492,20 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   top: 0;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-text {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-text {
   margin-right: auto;
   text-align: left;
   line-height: 27px !important;
   white-space: nowrap;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-text:before {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-text:before {
   content: "";
   width: 20px;
   height: 20px;
@@ -3207,55 +4516,95 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   margin: -3px 10px 0 0;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-cards {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-cards {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-cards .card-flag:last-child {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-cards
+  .card-flag:last-child {
   margin: 0;
 }
 
 @media (max-width: 360px) {
-  .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-cards {
+  .orderform-template-holder
+    #payment-data
+    .v-custom-payment-item-wrap
+    .payment-group-item-cards {
     display: none;
   }
 }
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active {
+
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item.active {
   background: #f1f7ff;
   border-bottom: 1px solid #000;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active .payment-group-item-text:before {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item.active
+  .payment-group-item-text:before {
   background: #000;
   border-color: #000;
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active .payment-group-item-cards span {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item.active
+  .payment-group-item-cards
+  span {
   opacity: 1;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item:hover .payment-group-item-text:before {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item:hover
+  .payment-group-item-text:before {
   border-color: #000;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item:before,
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item:after {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item:before,
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item:after {
   display: none;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-payPalPaymentGroup {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item#payment-group-payPalPaymentGroup {
   position: relative;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-payPalPaymentGroup:after {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item#payment-group-payPalPaymentGroup:after {
   content: "";
   width: 50px;
   height: 20px;
   display: block;
-  background: url("https://io.vtex.com.br/checkout-ui/v6.18.19/img/payment-paypal-landscape.png") center no-repeat;
+  background: url("https://io.vtex.com.br/checkout-ui/v6.18.19/img/payment-paypal-landscape.png")
+    center no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
@@ -3265,12 +4614,16 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border: none;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-AffirmPaymentGroup:after {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item#payment-group-AffirmPaymentGroup:after {
   content: "";
   width: 65px;
   height: 25px;
   display: block;
-  background: url(https://cdn-assets.affirm.com/images/black_logo-transparent_bg.png) center no-repeat;
+  background: url(https://cdn-assets.affirm.com/images/black_logo-transparent_bg.png)
+    center no-repeat;
   background-size: contain;
   position: absolute;
   top: 49%;
@@ -3280,14 +4633,24 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border: none;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active + div,
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap.active > div {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item.active
+  + div,
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap.active
+  > div {
   padding: 20px;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-.orderform-template-holder #payment-data .v-custom-payment-item-wrap .SecurityEnvironmentIcon {
+.orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .SecurityEnvironmentIcon {
   display: none;
 }
 
@@ -3303,6 +4666,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     width: 100%;
   }
 }
+
 .orderform-template-holder .step .box-info {
   color: #323232;
 }
@@ -3325,6 +4689,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     float: none !important;
   }
 }
+
 .orderform-template-holder .step .form-step fieldset p.client-last-name,
 .orderform-template-holder .step .form-step fieldset p.client-first-name {
   width: calc(50% - 5px);
@@ -3336,11 +4701,23 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   .orderform-template-holder .step .form-step fieldset p.client-first-name {
     width: 100%;
   }
-  .orderform-template-holder .step .form-step fieldset p.client-last-name input[type=text],
-  .orderform-template-holder .step .form-step fieldset p.client-first-name input[type=text] {
+
+  .orderform-template-holder
+    .step
+    .form-step
+    fieldset
+    p.client-last-name
+    input[type="text"],
+  .orderform-template-holder
+    .step
+    .form-step
+    fieldset
+    p.client-first-name
+    input[type="text"] {
     width: 100% !important;
   }
 }
+
 .orderform-template-holder .step .form-step fieldset p span.help.error {
   position: absolute;
   font-size: 11px;
@@ -3378,6 +4755,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     width: 100%;
   }
 }
+
 .orderform-template-holder .step.shipping-data .box-step {
   display: flex;
   flex-wrap: wrap;
@@ -3388,35 +4766,70 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   order: 1;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-addressFormPart1 {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.vtex-omnishipping-1-x-addressFormPart1 {
   order: 1;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-addressForm {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.vtex-omnishipping-1-x-addressForm {
   order: 2;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-addressInfo {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.vtex-omnishipping-1-x-addressInfo {
   order: 3;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-deliveryGroup {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.vtex-omnishipping-1-x-deliveryGroup {
   order: 4;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-submitPaymentButton {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.vtex-omnishipping-1-x-submitPaymentButton {
   order: 100;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *.btn-link.vtex-omnishipping-1-x-btnDelivery,
-.orderform-template-holder .step.shipping-data .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .box-step > a.vtex-omnishipping-1-x-btnDelivery,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .orderform-template-holder .step.shipping-data .box-step > a.vtex-omnishipping-1-x-btnDelivery {
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *.btn-link.vtex-omnishipping-1-x-btnDelivery,
+.orderform-template-holder
+  .step.shipping-data
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .box-step
+  > a.vtex-omnishipping-1-x-btnDelivery,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > a.vtex-omnishipping-1-x-btnDelivery {
   order: 5;
   margin-top: 20px;
   background: #000;
 }
 
-.orderform-template-holder .step.shipping-data .box-step > *#postalCode-finished-loading,
+.orderform-template-holder
+  .step.shipping-data
+  .box-step
+  > *#postalCode-finished-loading,
 .orderform-template-holder .step.shipping-data .box-step > *:last-child {
   margin: 0;
 }
@@ -3425,8 +4838,12 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   margin: 0;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-addressSummaryActive .address-summary {
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24'><path fill='%23999999' d='M15.998,5.951L4,16.237V30c0,0.552,0.448,1,1,1h8v-8h6v8h8c0.552,0,1-0.448,1-1V16.238L15.998,5.951z M19,19 h-6v-5h6V19z'></path> <polygon fill='%23999999' points='15.998,0.683 9,6.682 9,3 5,3 5,10.111 0.59,13.892 1.892,15.41 15.998,3.317 30.108,15.41 31.41,13.892 '></polygon></svg>") no-repeat;
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-addressSummaryActive
+  .address-summary {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24'><path fill='%23999999' d='M15.998,5.951L4,16.237V30c0,0.552,0.448,1,1,1h8v-8h6v8h8c0.552,0,1-0.448,1-1V16.238L15.998,5.951z M19,19 h-6v-5h6V19z'></path> <polygon fill='%23999999' points='15.998,0.683 9,6.682 9,3 5,3 5,10.111 0.59,13.892 1.892,15.41 15.998,3.317 30.108,15.41 31.41,13.892 '></polygon></svg>")
+    no-repeat;
   background-position: 12px 9px;
   border: 1px solid #cbcbcb;
 }
@@ -3435,29 +4852,49 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   align-items: center;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsOption {
   background: #fff;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-pickupButton,
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive,
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:hover,
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:active,
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:focus,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsTogglePickup,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-pickupButton,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-pickupViewOptionActive,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-pickupViewOptionActive:hover,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-pickupViewOptionActive:active,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-pickupViewOptionActive:focus,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsTogglePickup,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive {
   background: #000;
   border-color: #000;
   border-radius: 4px;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionInctive {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-pickupViewOptionInctive {
   color: #000;
   border-color: #000;
   border-radius: 4px;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-addressItemOption:hover,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-addressItemOption:hover,
 .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-active {
   background-color: #f1f7ff;
 }
@@ -3476,58 +4913,90 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   text-decoration: underline;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsWrapper,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsToggle {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsWrapper,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsToggle {
   border-radius: 4px;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsWrapper {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsWrapper {
   border: 1px solid #cbcbcb;
   width: 100%;
   overflow: hidden;
   margin: 0 0 20px 0;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-summaryChange {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-summaryChange {
   background: #f1f7ff;
   border-color: #cbcbcb;
   color: #000;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-leanShippingGroupList {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-leanShippingGroupList {
   border-color: #eeeeee;
   margin: 0;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-option:hover,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-leanShippingOptionActive,
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-leanShippingOption {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-option:hover,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-leanShippingOptionActive,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-leanShippingOption {
   background: #fff !important;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-modalDetailsBackLnk svg path,
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-modalDetailsBackLnk {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-modalDetailsBackLnk
+  svg
+  path,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-modalDetailsBackLnk {
   color: #676767;
   fill: #676767;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-primary {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-pickup-points-modal-3-x-primary {
   outline: none;
   background: #000;
   border-color: #000;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-pickupPointChange {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-pickupPointChange {
   border-color: #000;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address p {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-address
+  p {
   clear: both;
   float: none;
   margin: 0;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address p.input.ship-checkboxNumberLabel.text {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-address
+  p.input.ship-checkboxNumberLabel.text {
   width: auto;
   align-self: flex-end;
   display: flex;
@@ -3540,28 +5009,64 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   width: 100%;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-container.shp-pickup-receiver {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver {
   display: block;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-container.shp-pickup-receiver svg.person-blue path {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver
+  svg.person-blue
+  path {
   fill: #000;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-container.shp-pickup-receiver .vtex-omnishipping-1-x-btn {
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver
+  .vtex-omnishipping-1-x-btn {
   color: #000;
 }
 
 @media (max-width: 490px) {
-  .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-dateLink {
+  .orderform-template-holder
+    .step.shipping-data
+    .vtex-omnishipping-1-x-dateLink {
     width: 100%;
   }
 }
+
 .orderform-template-holder .step .submit.btn.btn-success,
-.orderform-template-holder .step .summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data a.submit.btn-success,
-.summary-template-holder .summary-coupon fieldset.coupon-fieldset .coupon-data .orderform-template-holder .step a.submit.btn-success,
-.orderform-template-holder .step #payment-data .payment-discounts-list table td.action a.submit.btn-success,
-.orderform-template-holder #payment-data .payment-discounts-list table td.action .step a.submit.btn-success {
+.orderform-template-holder
+  .step
+  .summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  a.submit.btn-success,
+.summary-template-holder
+  .summary-coupon
+  fieldset.coupon-fieldset
+  .coupon-data
+  .orderform-template-holder
+  .step
+  a.submit.btn-success,
+.orderform-template-holder
+  .step
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  a.submit.btn-success,
+.orderform-template-holder
+  #payment-data
+  .payment-discounts-list
+  table
+  td.action
+  .step
+  a.submit.btn-success {
   display: block;
   margin: 20px auto 0 auto;
   min-width: 55%;
@@ -3579,6 +5084,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     flex-wrap: wrap;
   }
 }
+
 .orderform-template .orderform-template-holder {
   width: 100%;
 }
@@ -3592,12 +5098,14 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     box-sizing: border-box;
   }
 }
+
 @media (max-width: 690px) {
   .orderform-template {
     width: 100%;
     padding-top: 0px;
   }
 }
+
 .orderform-template .cart-template.mini-cart {
   width: 39%;
   min-width: 255px;
@@ -3620,7 +5128,11 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     top: 0;
   }
 }
-.orderform-template .cart-template.mini-cart .cart-items > .v-custom-indexed-item {
+
+.orderform-template
+  .cart-template.mini-cart
+  .cart-items
+  > .v-custom-indexed-item {
   display: none !important;
 }
 
@@ -3638,6 +5150,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     position: relative !important;
   }
 }
+
 .orderform-template .cart-template.mini-cart h2 {
   text-align: left;
   border-top: none;
@@ -3661,27 +5174,57 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   padding: 0;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder .accordion-inner {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .accordion-inner {
   margin-top: 0px;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder .summary > .summary-coupon-wrap,
-.orderform-template .cart-template.mini-cart .summary-template-holder .summary-coupon-wrap > .summary-coupon {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .summary
+  > .summary-coupon-wrap,
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .summary-coupon-wrap
+  > .summary-coupon {
   display: block !important;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder .summary-coupon p {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .summary-coupon
+  p {
   margin: 0;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder .summary > .summary-coupon-wrap {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .summary
+  > .summary-coupon-wrap {
   border-top: 1px solid #cbcbcb;
   padding: 8px 0;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder input[type=text],
-.orderform-template .cart-template.mini-cart .summary-template-holder button[type=submit],
-.orderform-template .cart-template.mini-cart .summary-template-holder p.coupon-fields span.info > span {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  input[type="text"],
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  button[type="submit"],
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  p.coupon-fields
+  span.info
+  > span {
   line-height: 30px !important;
   height: 30px !important;
 }
@@ -3721,32 +5264,56 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template .cart-template.mini-cart .item .service-item .description,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .description {
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .description {
   margin-top: 0;
 }
 
 .orderform-template .cart-template.mini-cart .item .service-item > a,
 .orderform-template .cart-template.mini-cart .item .service-item .quantity,
 .orderform-template .cart-template.mini-cart .item .service-item .shipping-date,
-.orderform-template .cart-template.mini-cart .item .service-item .item-subscription,
+.orderform-template
+  .cart-template.mini-cart
+  .item
+  .service-item
+  .item-subscription,
 .orderform-template .cart-template.mini-cart .item.v-custom-indexed-item > a,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .quantity,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .shipping-date,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .item-subscription {
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .quantity,
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .shipping-date,
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .item-subscription {
   display: none;
 }
 
 .orderform-template .cart-template.mini-cart .item .service-item .price,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .price {
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .price {
   margin: 0;
 }
 
 .orderform-template .cart-template.mini-cart .item .service-item:last-child,
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item:last-child {
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item:last-child {
   margin-bottom: 0;
 }
 
-.orderform-template .cart-template.mini-cart .item.v-custom-indexed-item .item-unavailable {
+.orderform-template
+  .cart-template.mini-cart
+  .item.v-custom-indexed-item
+  .item-unavailable {
   display: none;
 }
 
@@ -3786,6 +5353,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     display: none;
   }
 }
+
 .orderform-template .cart-template.mini-cart .summary-totalizers tbody {
   border-top: 1px solid #cbcbcb;
   border-bottom: 1px solid #cbcbcb;
@@ -3793,7 +5361,11 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   display: block;
 }
 
-.orderform-template .cart-template.mini-cart .summary-totalizers tbody tr.CustomTax:not(.CustomTax--total) {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tbody
+  tr.CustomTax:not(.CustomTax--total) {
   display: none !important;
 }
 
@@ -3806,7 +5378,11 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   padding: 0 0 3px 0 !important;
 }
 
-.orderform-template .cart-template.mini-cart .summary-totalizers tbody td.monetary {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tbody
+  td.monetary {
   text-align: right !important;
   margin-left: auto;
   float: right;
@@ -3816,8 +5392,14 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border-top: none;
 }
 
-.orderform-template .cart-template.mini-cart .summary-totalizers tbody.shipping-reset,
-.orderform-template .cart-template.mini-cart .summary-totalizers tbody.shipping-calculate {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tbody.shipping-reset,
+.orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tbody.shipping-calculate {
   display: none !important;
 }
 
@@ -3829,7 +5411,12 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   text-align: left;
 }
 
-.orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tfoot
+  tr
+  td.monetary {
   text-align: right !important;
   margin-left: auto;
   float: right;
@@ -3856,7 +5443,9 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border-radius: 30px;
 }
 
-.orderform-template .cart-template.mini-cart .cart:hover::-webkit-scrollbar-thumb {
+.orderform-template
+  .cart-template.mini-cart
+  .cart:hover::-webkit-scrollbar-thumb {
   background: #eeeeee;
 }
 
@@ -3865,17 +5454,30 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   overflow: hidden;
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items:not(.v-loaded) li.item {
+.orderform-template
+  .cart-template.mini-cart
+  .cart
+  .cart-items:not(.v-loaded)
+  li.item {
   overflow: hidden;
   position: relative;
   border: none !important;
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items:not(.v-loaded) li.item > * {
+.orderform-template
+  .cart-template.mini-cart
+  .cart
+  .cart-items:not(.v-loaded)
+  li.item
+  > * {
   opacity: 0;
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items:not(.v-loaded) li.item:after {
+.orderform-template
+  .cart-template.mini-cart
+  .cart
+  .cart-items:not(.v-loaded)
+  li.item:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -3905,20 +5507,27 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
     background: #fff;
     margin: 0 !important;
   }
+
   .orderform-template .payment-confirmation-wrap .payment-submit-wrap button {
     border-radius: 0 !important;
   }
 }
+
 @media (max-width: 768px) {
   .orderform-template .payment-confirmation-wrap {
     border: none !important;
   }
+
   .orderform-template .payment-confirmation-wrap .payment-submit-wrap,
   .orderform-template .payment-confirmation-wrap button {
     margin: 0 !important;
   }
 }
-.orderform-template .payment-confirmation-wrap #payment-data-submit:disabled span {
+
+.orderform-template
+  .payment-confirmation-wrap
+  #payment-data-submit:disabled
+  span {
   display: none;
 }
 
@@ -3989,9 +5598,9 @@ body.v-custom-step-payment #shipping-data .shipping-summary-info {
   background: #fff;
 }
 
-#app-container input[type=text],
-#app-container input[type=tel],
-#app-container input[type=email],
+#app-container input[type="text"],
+#app-container input[type="tel"],
+#app-container input[type="email"],
 #app-container select {
   width: 100%;
 }
@@ -4042,7 +5651,7 @@ body.v-custom-step-payment #shipping-data .shipping-summary-info {
 
 #app-container .PaymentCardFlags {
   position: absolute;
-  top: 37.5px;
+  top: calc(30px + (40px - 25px) / 2);
   right: 16px;
   padding: 0;
 }
@@ -4159,7 +5768,10 @@ body.js-vcustom-showNoteField .orderform-template .payment-confirmation-wrap {
   display: block !important;
 }
 
-body.js-vcustom-showNoteField .orderform-template .payment-confirmation-wrap .payment-submit-wrap {
+body.js-vcustom-showNoteField
+  .orderform-template
+  .payment-confirmation-wrap
+  .payment-submit-wrap {
   display: none;
 }
 
@@ -4167,7 +5779,10 @@ body.js-vcustom-showNoteField .orderform-template .summary-note {
   display: block !important;
 }
 
-body.js-vcustom-showNoteField.v-custom-step-payment .orderform-template .payment-confirmation-wrap .payment-submit-wrap {
+body.js-vcustom-showNoteField.v-custom-step-payment
+  .orderform-template
+  .payment-confirmation-wrap
+  .payment-submit-wrap {
   display: block !important;
 }
 
@@ -4272,6 +5887,7 @@ body.js-vcustom-showNoteField.v-custom-step-payment .orderform-template .payment
     margin-bottom: 2px;
   }
 }
+
 .v-custom-assemblies p {
   display: none;
 }
@@ -4295,7 +5911,11 @@ body.v-custom-paymentBuilder-accordion .steps-view {
   display: none;
 }
 
-body.v-custom-changeShippingTimeInfo .orderform-template .cart-template.mini-cart .item span.shipping-date {
+body.v-custom-changeShippingTimeInfo
+  .orderform-template
+  .cart-template.mini-cart
+  .item
+  span.shipping-date {
   display: none;
 }
 
@@ -4308,7 +5928,9 @@ body.v-custom-changeShippingTimeInfo .orderform-template .cart-template.mini-car
   display: none !important;
 }
 
-.js-v-custom-is-loadAddress #shipping-data .accordion-group.shipping-data:after {
+.js-v-custom-is-loadAddress
+  #shipping-data
+  .accordion-group.shipping-data:after {
   content: "";
   display: block;
   opacity: 1;
@@ -4329,7 +5951,8 @@ body.v-custom-changeShippingTimeInfo .orderform-template .cart-template.mini-car
   display: none;
 }
 
-body.v-custom-addressForm-on.v-custom-step-shipping .vcustom--vtex-omnishipping-1-x-address {
+body.v-custom-addressForm-on.v-custom-step-shipping
+  .vcustom--vtex-omnishipping-1-x-address {
   display: block;
 }
 
@@ -4337,13 +5960,18 @@ body.v-custom-addressForm-on.v-custom-step-shipping .v-custom-ship-info {
   display: flex;
 }
 
-body.v-custom-addressForm-on.v-custom-step-shipping .v-custom-ship-info .ship-number {
+body.v-custom-addressForm-on.v-custom-step-shipping
+  .v-custom-ship-info
+  .ship-number {
   margin-right: 10px;
 }
 
-body.v-custom-addressForm-on.v-custom-step-shipping .vtex-omnishipping-1-x-addressForm,
-body.v-custom-addressForm-on.v-custom-step-shipping .vtex-omnishipping-1-x-deliveryGroup,
-body.v-custom-addressForm-on.v-custom-step-shipping .vtex-omnishipping-1-x-submitPaymentButton {
+body.v-custom-addressForm-on.v-custom-step-shipping
+  .vtex-omnishipping-1-x-addressForm,
+body.v-custom-addressForm-on.v-custom-step-shipping
+  .vtex-omnishipping-1-x-deliveryGroup,
+body.v-custom-addressForm-on.v-custom-step-shipping
+  .vtex-omnishipping-1-x-submitPaymentButton {
   display: none;
 }
 
@@ -4362,7 +5990,9 @@ body.v-custom-googleForm-on .alert-noStreet {
   display: none;
 }
 
-.v-custom-googleFormScript-added.v-custom-googleForm-on .accordion-inner.shipping-container > * {
+.v-custom-googleFormScript-added.v-custom-googleForm-on
+  .accordion-inner.shipping-container
+  > * {
   display: none;
 }
 
@@ -4374,42 +6004,70 @@ body.v-custom-fnsCustomAddressForm .accordion-inner.shipping-container {
   transition: all ease 0.3s;
 }
 
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-selectDeliveryText + div {
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-selectDeliveryText
+  + div {
   margin: 0 !important;
 }
 
-body.v-custom-fnsCustomAddressForm .orderform-template-holder p.vtex-omnishipping-1-x-submitPaymentButton.btn-submit-wrapper.btn-go-to-payment-wrapper {
+body.v-custom-fnsCustomAddressForm
+  .orderform-template-holder
+  p.vtex-omnishipping-1-x-submitPaymentButton.btn-submit-wrapper.btn-go-to-payment-wrapper {
   margin-bottom: 0 !important;
 }
 
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-addressFormPart1 .input.ship-country,
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-addressFormPart1 .input.ship-addressQuery,
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-addressFormPart1 .input.ship-postalCode {
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-addressFormPart1
+  .input.ship-country,
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-addressFormPart1
+  .input.ship-addressQuery,
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-addressFormPart1
+  .input.ship-postalCode {
   display: none;
 }
 
-body.v-custom-fnsCustomAddressForm.returningUser .vtex-omnishipping-1-x-addressFormPart1 .input.ship-postalCode {
+body.v-custom-fnsCustomAddressForm.returningUser
+  .vtex-omnishipping-1-x-addressFormPart1
+  .input.ship-postalCode {
   display: block;
 }
 
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-container.shp-pickup-receiver + .vtex-omnishipping-1-x-shippingSectionTitle + #back-to-address-list + .vtex-omnishipping-1-x-addressFormPart1 p.input.ship-postalCode,
-body.v-custom-fnsCustomAddressForm .vtex-omnishipping-1-x-container.shp-pickup-receiver + .vtex-omnishipping-1-x-shippingSectionTitle + .vtex-omnishipping-1-x-addressFormPart1 p.input.ship-postalCode {
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver
+  + .vtex-omnishipping-1-x-shippingSectionTitle
+  + #back-to-address-list
+  + .vtex-omnishipping-1-x-addressFormPart1
+  p.input.ship-postalCode,
+body.v-custom-fnsCustomAddressForm
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver
+  + .vtex-omnishipping-1-x-shippingSectionTitle
+  + .vtex-omnishipping-1-x-addressFormPart1
+  p.input.ship-postalCode {
   display: block;
 }
 
-body.v-custom-fnsCustomAddressForm .orderform-template-holder .step.shipping-data .box-step .vtex-omnishipping-1-x-addressFormPart1 {
+body.v-custom-fnsCustomAddressForm
+  .orderform-template-holder
+  .step.shipping-data
+  .box-step
+  .vtex-omnishipping-1-x-addressFormPart1 {
   order: 1;
 }
 
-body.v-custom-fnsCustomAddressForm .pac-logo[style*=none] {
+body.v-custom-fnsCustomAddressForm .pac-logo[style*="none"] {
   border: 0;
 }
 
-body.v-custom-fnsCustomAddressForm .pac-logo[style*=none]:after {
+body.v-custom-fnsCustomAddressForm .pac-logo[style*="none"]:after {
   display: none;
 }
 
-body.v-custom-fnsCustomAddressForm #shipping-data .accordion-inner + .vcustom--vtex-omnishipping-1-x-address {
+body.v-custom-fnsCustomAddressForm
+  #shipping-data
+  .accordion-inner
+  + .vcustom--vtex-omnishipping-1-x-address {
   display: none;
 }
 
@@ -4422,11 +6080,15 @@ body.v-custom-fnsCustomAddressForm div#shipping-data > * {
   width: 100%;
 }
 
-body.v-custom-fnsCustomAddressForm div#shipping-data .step.accordion-group.shipping-data {
+body.v-custom-fnsCustomAddressForm
+  div#shipping-data
+  .step.accordion-group.shipping-data {
   order: 1;
 }
 
-body.v-custom-fnsCustomAddressForm div#shipping-data .vcustom--vtex-omnishipping-1-x-address {
+body.v-custom-fnsCustomAddressForm
+  div#shipping-data
+  .vcustom--vtex-omnishipping-1-x-address {
   order: 3;
 }
 
@@ -4494,22 +6156,27 @@ body.v-custom-fnsCustomAddressForm div#shipping-data .vcustom--vtex-omnishipping
     flex-wrap: wrap;
     margin: 0;
   }
+
   .vcustom--vtex-omnishipping-1-x-address__state p.input.ship-state {
     margin: 0;
   }
 }
+
 .pac-container.pac-logo {
   border: 1px solid #cbcbcb;
   border-radius: 4px;
 }
 
 .pac-logo:after {
-  background: #fbfbfb url(https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png) no-repeat 10px center;
+  background: #fbfbfb
+    url(https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png)
+    no-repeat 10px center;
   padding: 14px;
   background-size: 110px;
 }
 
-.address-list.vtex-omnishipping-1-x-addressList + p.input.ship-addressQuery.text {
+.address-list.vtex-omnishipping-1-x-addressList
+  + p.input.ship-addressQuery.text {
   display: none;
 }
 
@@ -4518,15 +6185,23 @@ body.v-custom-fnsCustomAddressForm div#shipping-data .vcustom--vtex-omnishipping
   text-align: center;
 }
 
-.vtex-omnishipping-1-x-addressSummaryActive .address-summary.address-summary-MLT .postalCode:before {
+.vtex-omnishipping-1-x-addressSummaryActive
+  .address-summary.address-summary-MLT
+  .postalCode:before {
   content: " - ";
 }
 
-body.js-vcustom-hideEmailStep .orderform-template-holder #client-profile-data form.client-pre-email.client-pre-email {
+body.js-vcustom-hideEmailStep
+  .orderform-template-holder
+  #client-profile-data
+  form.client-pre-email.client-pre-email {
   display: none !important;
 }
 
-body.js-vcustom-hideEmailStep .client-profile-data .accordion-toggle > span:before {
+body.js-vcustom-hideEmailStep
+  .client-profile-data
+  .accordion-toggle
+  > span:before {
   content: "1";
 }
 
@@ -4534,11 +6209,18 @@ body.js-vcustom-hideEmailStep .shipping-data .accordion-toggle:before {
   content: "2";
 }
 
-body.js-vcustom-hideEmailStep .payment-data .accordion-toggle > span:not(.payment-edit-link):before {
+body.js-vcustom-hideEmailStep
+  .payment-data
+  .accordion-toggle
+  > span:not(.payment-edit-link):before {
   content: "3";
 }
 
-body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordion-body .accordion-inner {
+body.js-vcustom-hideEmailStep
+  .client-pre-email
+  + .client-profile-data
+  .accordion-body
+  .accordion-inner {
   display: block;
 }
 
@@ -4569,8 +6251,16 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   text-align: right !important;
 }
 
-.RTL-checkout .orderform-template-holder #client-profile-data form.client-pre-email .link-box-edit,
-.RTL-checkout .orderform-template-holder #client-profile-data .step.client-profile-data .link-box-edit,
+.RTL-checkout
+  .orderform-template-holder
+  #client-profile-data
+  form.client-pre-email
+  .link-box-edit,
+.RTL-checkout
+  .orderform-template-holder
+  #client-profile-data
+  .step.client-profile-data
+  .link-box-edit,
 .RTL-checkout .orderform-template-holder #shipping-data .link-box-edit,
 .RTL-checkout .orderform-template-holder #payment-data .link-box-edit {
   right: initial;
@@ -4588,7 +6278,12 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   flex-direction: row-reverse;
 }
 
-.RTL-checkout .summary-template-holder .summary-coupon p.coupon-fields span input {
+.RTL-checkout
+  .summary-template-holder
+  .summary-coupon
+  p.coupon-fields
+  span
+  input {
   margin: 0 0 0 10px;
 }
 
@@ -4609,7 +6304,13 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   padding: 0 0 0 20px;
 }
 
-.RTL-checkout .orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary {
+.RTL-checkout
+  .orderform-template
+  .cart-template.mini-cart
+  .summary-totalizers
+  tfoot
+  tr
+  td.monetary {
   text-align: left !important;
 }
 
@@ -4698,7 +6399,7 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   float: right;
 }
 
-.RTL-checkout input.success:not([invalid=true]) {
+.RTL-checkout input.success:not([invalid="true"]) {
   background-position: left top;
 }
 
@@ -4743,18 +6444,34 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   clear: both;
 }
 
-.RTL-checkout .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-AffirmPaymentGroup:after,
-.RTL-checkout .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-payPalPaymentGroup:after {
+.RTL-checkout
+  .orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item#payment-group-AffirmPaymentGroup:after,
+.RTL-checkout
+  .orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item#payment-group-payPalPaymentGroup:after {
   right: initial;
   left: 10px;
 }
 
-.RTL-checkout .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-text {
+.RTL-checkout
+  .orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-text {
   margin-left: auto;
   margin-right: inherit;
 }
 
-.RTL-checkout .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-text:before {
+.RTL-checkout
+  .orderform-template-holder
+  #payment-data
+  .v-custom-payment-item-wrap
+  .payment-group-item-text:before {
   margin-right: initial;
   margin-left: 10px;
 }
@@ -4763,7 +6480,10 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
   text-align: right;
 }
 
-.RTL-checkout .orderform-template .custom-cart-template-wrap .summary-cart-template-holder {
+.RTL-checkout
+  .orderform-template
+  .custom-cart-template-wrap
+  .summary-cart-template-holder {
   direction: rtl;
 }
 
@@ -4843,68 +6563,86 @@ body.js-vcustom-hideEmailStep .client-pre-email + .client-profile-data .accordio
     order: 2;
   }
 }
+
 @media (max-width: 768px) {
   .RTL-checkout .orderform-template .cart-template.mini-cart {
     order: 2;
   }
 }
+
 @media (max-width: 690px) {
   .RTL-checkout .table.cart-items td.product-image a {
     margin-right: 0;
     margin-left: 20px;
   }
+
   .RTL-checkout .full-cart .cart table tbody tr td.product-image,
   .RTL-checkout .full-cart .cart table tbody tr td.bundle-item-image {
     left: initial;
     right: 0;
   }
+
   .RTL-checkout .table.cart-items td.product-name,
   .RTL-checkout .table.cart-items td.quantity {
     margin-left: 0 !important;
     margin-right: 90px !important;
   }
+
   .RTL-checkout .table.cart-items td.quantity {
     float: right;
   }
+
   .RTL-checkout .full-cart .cart table tbody tr td.product-name a,
   .RTL-checkout .full-cart .cart table tbody tr td.bundle-item-name span {
     padding: 0 0 0 20px;
   }
+
   .RTL-checkout .full-cart .cart table tbody tr td.product-price {
     float: left;
   }
+
   .RTL-checkout .full-cart .cart table tbody tr td.item-remove {
     left: 0;
     right: initial;
   }
 }
-body.debug-on > *:not(.container-main,
-.main-header,
-.main-footer,
-#vtexIdContainer,
-.vtex-front-messages-placeholder,
-.pac-container) {
+
+body.debug-on
+  > *:not(
+    .container-main,
+    .main-header,
+    .main-footer,
+    #vtexIdContainer,
+    .vtex-front-messages-placeholder,
+    .pac-container
+  ) {
   display: none;
 }
 
 @font-face {
   font-family: "Futura PT";
-  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.3/fonts/FuturaPT-Medium___202077f72bf63ac2188b8be002217983.woff2") format("woff2");
+  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.3/fonts/FuturaPT-Medium___202077f72bf63ac2188b8be002217983.woff2")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Futura PT";
-  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.6/fonts/FuturaPT-Light___08c14cf47a987d891e31cb7456926fc6.woff2") format("woff2");
+  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.6/fonts/FuturaPT-Light___08c14cf47a987d891e31cb7456926fc6.woff2")
+    format("woff2");
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "CenturyGothic";
-  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.3/fonts/CenturyGothic___9a5496921453f748b822ff786390a70b.woff2") format("woff2");
+  src: url("https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.3/fonts/CenturyGothic___9a5496921453f748b822ff786390a70b.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 .new-carrinho {
   height: 102px;
   display: -webkit-box;
@@ -4994,8 +6732,10 @@ cart-template th.product {
   text-transform: uppercase;
 }
 
-.product-name small.seller {
-  display: none !important;
+.product-name {
+  small.seller {
+    display: none !important;
+  }
 }
 
 .product__color,
@@ -5126,12 +6866,29 @@ footer .input-wrapper label {
   font-size: 0.97em;
 }
 
-footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrapper .input-wrapper label {
+footer
+  .top
+  .wrapper
+  .right
+  .newsletter
+  .wd-marketing-newsletter
+  form
+  .form-wrapper
+  .input-wrapper
+  label {
   display: flex;
   font-weight: normal;
 }
 
-footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrapper .input-wrapper.input-button-marketing-newsletter {
+footer
+  .top
+  .wrapper
+  .right
+  .newsletter
+  .wd-marketing-newsletter
+  form
+  .form-wrapper
+  .input-wrapper.input-button-marketing-newsletter {
   width: 116px;
 }
 
@@ -5140,7 +6897,16 @@ footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrap
   padding-bottom: 0;
 }
 
-footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrapper .input-wrapper.input-email-marketing-newsletter input {
+footer
+  .top
+  .wrapper
+  .right
+  .newsletter
+  .wd-marketing-newsletter
+  form
+  .form-wrapper
+  .input-wrapper.input-email-marketing-newsletter
+  input {
   font-family: Futura;
   font-size: 14px;
   font-weight: 400;
@@ -5160,7 +6926,7 @@ footer .newsletter__send {
   align-items: center;
 }
 
-#checkoutMainContainer {
+#checkoutMainContainer{
   padding-bottom: 0 !important;
 }
 
@@ -5346,7 +7112,10 @@ footer .bottom .copy p {
   display: none;
 }
 
-.table.cart-items td.quantity .item-quantity-change.item-quantity-change-decrement i:before {
+.table.cart-items
+  td.quantity
+  .item-quantity-change.item-quantity-change-decrement
+  i:before {
   content: "";
   display: block;
   width: 10px;
@@ -5487,33 +7256,36 @@ footer .bottom .copy p {
 .aceite-news {
   margin-top: 20px;
   margin-bottom: 10px;
-}
-.aceite-news div {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-.aceite-news .politica_checkbox {
-  width: 18px;
-  height: 18px;
-  margin-top: 0;
-  border: 1px solid #000;
-  border-radius: 0;
+  div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .politica_checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    border: 1px solid #000;
+    border-radius: 0;
+  }
 }
 
-.text-politica p {
-  font-family: "Futura PT";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-  color: #000;
-  margin: 0;
-  letter-spacing: initial;
-}
-.text-politica p a {
-  text-decoration: underline;
-  font-weight: bold;
+.text-politica{
+  p{
+    font-family: 'Futura PT';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    margin: 0;
+    letter-spacing: initial;
+
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
 }
 
 #shipping-preview-container .srp-main-title {
@@ -5809,7 +7581,10 @@ footer .bottom .copy p {
   padding: 16px 22px !important;
 }
 
-.orderform-template .cart-template.mini-cart .summary-template-holder input[type=text] {
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  input[type="text"] {
   height: 40px !important;
 }
 
@@ -5829,51 +7604,67 @@ footer .bottom .copy p {
     background-color: white;
     height: auto;
   }
+
   .new-carrinho .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    .logo {
+      width: 107px;
+      justify-content: center;
+      position: static;
+
+      svg {
+        width: 100%;
+      }
+    }
   }
-  .new-carrinho .wrapper .logo {
-    width: 107px;
-    justify-content: center;
-    position: static;
+
+  .container-cart {
+    &::before {
+      font-size: 24px;
+    }
   }
-  .new-carrinho .wrapper .logo svg {
-    width: 100%;
+
+  .summary-totalizers {
+    .srp-container {
+      max-width: 100% !important;
+    }
   }
-  .container-cart::before {
-    font-size: 24px;
-  }
-  .summary-totalizers .srp-container {
-    max-width: 100% !important;
-  }
+
   .bt-keep-buying {
     width: 100%;
     margin: auto;
     margin-bottom: 10px;
     display: block;
   }
+
   .full-cart .cart table tbody tr td.product-price {
     float: left;
     margin-left: 90px;
   }
+
   .table.cart-items td.quantity {
     min-width: 90px;
     position: absolute;
     right: 30px;
   }
+
   .product-name {
     max-width: 215px;
+
+    small.seller {
+      display: none !important;
+    }
   }
-  .product-name small.seller {
-    display: none !important;
-  }
+
   .table.cart-items td.quantity {
     margin-top: -50px;
   }
+
   .product__color,
   .product__size {
     color: #767676;
@@ -5883,125 +7674,143 @@ footer .bottom .copy p {
     text-transform: capitalize;
     margin-bottom: 0;
   }
+
   .product__color {
     margin-top: 15px;
   }
+
   .cart-template-holder .cart {
     margin-bottom: 0;
   }
+
   .cart-more-options .cart-select-gift-placeholder:empty {
     display: none !important;
   }
+
   .summary-template-holder {
     padding: 0;
+    .cart-links-bottom {
+      position: static;
+      width: auto;
+    }
   }
-  .summary-template-holder .cart-links-bottom {
-    position: static;
-    width: auto;
-  }
-  footer .top {
-    padding: 0;
-  }
-  footer .top .wrapper {
-    flex-direction: column-reverse;
-  }
-  footer .top .wrapper .left {
-    padding: 10px 20px;
-    display: block;
-    width: -webkit-fill-available;
-    background: #fff;
-    padding: 10px 20px;
-  }
-  footer .top .wrapper .left > div {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #eeeeee;
-    padding: 0;
-  }
-  footer .top .wrapper .left > div .title {
-    text-align: left;
-    padding: 20px 0;
-    position: relative;
-    margin: 0;
-    font-family: Futura PT;
-    letter-spacing: 0.18em;
-  }
-  footer .top .wrapper .left > div .title::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 3px;
-    top: 42%;
-    width: 8px;
-    height: 8px;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  footer .top .wrapper .left > div ul {
-    display: none;
-  }
-  footer .top .wrapper .left > div ul.active {
-    display: block;
-  }
-  footer .top .wrapper .right {
-    padding: 26px 20px 20px;
-  }
-  footer .top .wrapper .right .newsletter .subtitle {
-    font-size: 17px;
-  }
-  footer .top .wrapper .right .newsletter label {
-    font-family: "Futura PT";
-    letter-spacing: 0.18em;
-    font-size: 0.97em;
-  }
-  footer .top .wrapper .right .newsletter input#newsletter-email-wd26 {
-    height: 48px !important;
-    width: calc(100% - 109px);
-  }
-  footer .top .wrapper .right .newsletter button {
-    height: 48px !important;
-    width: 109px;
-  }
-  footer .top .wrapper .right .newsletter .aceite-news > div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  footer .top .wrapper .right .newsletter .aceite-news > div input {
-    margin: 0;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #000;
-    border-radius: 0;
-  }
-  footer .top .wrapper .right .newsletter .aceite-news > div label {
-    font-size: 17px;
-    letter-spacing: 0;
-  }
-  footer .top .wrapper .right .newsletter .text-politica p {
-    font-size: 16px;
-    font-family: "Futura PT";
-    margin-top: 15px;
-  }
-  footer .top .wrapper .right .newsletter .text-politica p a {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  footer .middle {
-    padding: 26px 20px;
-  }
-  footer .middle .wrapper {
-    justify-content: initial;
-  }
-  footer .middle .wrapper .left {
-    display: none;
-  }
-  footer .bottom .copy p {
-    font-weight: 300;
-    max-width: 300px;
-    margin: auto;
+
+  footer {
+    .top {
+      padding: 0;
+      .wrapper {
+        flex-direction: column-reverse;
+        .left {
+          padding: 10px 20px;
+          display: block;
+          width: -webkit-fill-available;
+          background: #fff;
+          padding: 10px 20px;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #eeeeee;
+            padding: 0;
+            .title {
+              text-align: left;
+              padding: 20px 0;
+              position: relative;
+              margin: 0;
+              font-family: Futura PT;
+              letter-spacing: 0.18em;
+              &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 3px;
+                top: 42%;
+                width: 8px;
+                height: 8px;
+                border-bottom: 2px solid #000;
+                border-right: 2px solid #000;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+            ul {
+              display: none;
+              &.active {
+                display: block;
+              }
+            }
+          }
+        }
+        .right {
+          padding: 26px 20px 20px;
+          .newsletter {
+            .subtitle {
+              font-size: 17px;
+            }
+            label {
+              font-family: "Futura PT";
+              letter-spacing: 0.18em;
+              font-size: 0.97em;
+            }
+            input#newsletter-email-wd26 {
+              height: 48px !important;
+              width: calc(100% - 109px);
+            }
+            button {
+              height: 48px !important;
+              width: 109px;
+            }
+            .aceite-news {
+              & > div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+
+                input {
+                  margin: 0;
+                  width: 18px;
+                  height: 18px;
+                  border: 1px solid #000;
+                  border-radius: 0;
+                }
+                label {
+                  font-size: 17px;
+                  letter-spacing: 0;
+                }
+              }
+            }
+            .text-politica {
+              p {
+                font-size: 16px;
+                font-family: "Futura PT";
+                margin-top: 15px;
+                a {
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .middle {
+      padding: 26px 20px;
+      .wrapper {
+        justify-content: initial;
+        .left {
+          display: none;
+        }
+      }
+    }
+    .bottom {
+      .copy {
+        p {
+          font-weight: 300;
+          max-width: 300px;
+          margin: auto;
+        }
+      }
+    }
   }
 }

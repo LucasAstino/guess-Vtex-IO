@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp storefront"
+    "gulp": "gulp storefront",
+    "check": "gulp checkout"
   },
   "author": "",
   "license": "ISC"

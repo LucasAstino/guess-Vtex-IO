@@ -20,6 +20,13 @@ const pathsStore = {
     dest: 'styles/css',
   },
 }
+// Custom sass para o checkout
+const pathsCheckout = {
+  styles: {
+    scssFile: 'checkout/style.scss',  // Arquivo de entrada do checkout
+    dest: 'checkout',  // Destino onde será gerado o CSS do checkout
+  },
+}
 
 // Quick/efficient way to get the unique values from a array.
 function uniqValuesArray(a) {
@@ -76,6 +83,15 @@ gulp.task('sass', function (done) {
   done()
 })
 
+gulp.task('sassCheckout', function (done) {
+  gulp
+    .src(pathsCheckout.styles.scssFile)  // Pega o arquivo style.scss do checkout
+    .pipe(sass().on('error', sass.logError))  // Compila o Sass para CSS
+    .pipe(concat('style.css'))  // Renomeia para style.css
+    .pipe(gulp.dest(pathsCheckout.styles.dest))  // Salva dentro da pasta checkout
+  done()
+})
+
 gulp.task('run', gulp.series('getFiles', 'sass'))
 
 gulp.task('watch', function () {
@@ -109,4 +125,13 @@ gulp.task('watch', function () {
   })
 })
 
+// Watcher para o arquivo checkout/style.scss
+gulp.task('watchCheckout', function () {
+  gulp.watch(pathsCheckout.styles.scssFile, gulp.series('sassCheckout')).on('change', function (fileName) {
+    console.log(getCurrentTimestamp() + ' File: \x1b[32m' + fileName + '\x1b[0m builded.')
+  })
+})
+
 gulp.task('storefront', gulp.series('run', 'watch'))
+
+gulp.task('checkout', gulp.series('sassCheckout', 'watchCheckout'))

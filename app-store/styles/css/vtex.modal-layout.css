@@ -42,6 +42,31 @@
   overflow: initial;
 }
 
+:global(.vtex-reviews-and-ratings-3-x-container) {
+  padding: 35px;
+}
+:global(.vtex-reviews-and-ratings-3-x-container) :global(.vtex-reviews-and-ratings-3-x-loginLink) {
+  color: black;
+}
+:global(.vtex-reviews-and-ratings-3-x-container) :global(.vtex-reviews-and-ratings-3-x-reviewsHeading) {
+  font-family: "Futura", sans-serif;
+  color: #000;
+  padding-bottom: 30px;
+  font-weight: 300;
+  text-align: center;
+  display: table;
+  height: auto;
+  line-height: 1;
+  width: 100%;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.container--product__reviews .paper--product__reviews {
+  overflow: visible;
+}
+
 .triggerContainer--fast-buy {
   background-color: white;
 }

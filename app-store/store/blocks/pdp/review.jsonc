@@ -19,7 +19,16 @@
       "text": "Avalie agora"
     }
   },
+  "modal-header#product__review": {
+    "props": {
+        "showCloseButton": true,
+        "blockClass":["product__reviews","header__modal"]
+    }
+  },
   "modal-layout#product__review": {
-    "children": []
+    "props": {
+      "blockClass":["product__reviews"]
+  },
+    "children": [ "modal-header#product__review","product-reviews"]
   }
 }

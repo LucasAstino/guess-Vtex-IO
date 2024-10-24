@@ -67,26 +67,4 @@
       ]
     }
   }
-
-  // "vtex.menu@2.x:menu#footer__menu-assistance": {
-  //   "props": {
-  //     "orientation": "vertical"
-  //   },
-  //   "children": [
-  //     "menu-item#smartphones",
-  //     "menu-item#videogames",
-  //     "menu-item#tvs"
-  //   ]
-  // },
-
-  // "vtex.menu@2.x:menu#footer__menu-help": {
-  //   "props": {
-  //     "orientation": "vertical"
-  //   },
-  //   "children": [
-  //     "menu-item#bags",
-  //     "menu-item#backpacks",
-  //     "menu-item#necessaire"
-  //   ]
-  // }
 }

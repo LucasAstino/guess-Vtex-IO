@@ -26,21 +26,31 @@
     "children": [
       "flex-layout.row#slider__home-slide01",
       "flex-layout.row#slider__home-slide02",
-      "flex-layout.row#slider__home-slide02"
+      "flex-layout.row#slider__home-slide03"
     ]
   },
 
   "flex-layout.row#slider__home-slide01": {
     "children": [
-      "image#slider__home-slide01",
+      "responsive-layout.desktop#slider__home-slide01",
+       "responsive-layout.mobile#slider__home-slide01",
       "flex-layout.col#slider__home-slide01"
     ]
   },
 
   "flex-layout.row#slider__home-slide02": {
     "children": [
-      "image#slider__home-slide02",
+      "responsive-layout.desktop#slider__home-slide02",
+      "responsive-layout.mobile#slider__home-slide02",
       "flex-layout.col#slider__home-slide02"
+    ]
+  },
+
+  "flex-layout.row#slider__home-slide03": {
+    "children": [
+      "responsive-layout.desktop#slider__home-slide03",
+      "responsive-layout.mobile#slider__home-slide03",
+      "flex-layout.col#slider__home-slide03"
     ]
   },
 
@@ -63,6 +73,16 @@
     ]
   },
 
+  "flex-layout.col#slider__home-slide03": {
+    "props": {
+      "blockClass": "slider__home-slide"
+    },
+    "children": [
+      "rich-text#slider__home-03",
+      "flex-layout.row#slider__home-slide03--buttons"
+    ]
+  },
+
   "flex-layout.row#slider__home-slide01--buttons": {
     "props": {
       "blockClass": "slider__home-slide--butons"
@@ -77,9 +97,26 @@
       "blockClass": "slider__home-slide--butons"
     },
     "children": [
-      "rich-text#slider__home-01--button01",
-      "rich-text#slider__home-01--button02"
+      "rich-text#slider__home-02--button01",
+      "rich-text#slider__home-02--button02"
     ]
+  },
+
+  "flex-layout.row#slider__home-slide03--buttons": {
+    "props": {
+      "blockClass": "slider__home-slide--butons"
+    },
+    "children": [
+      "rich-text#slider__home-03--button01",
+      "rich-text#slider__home-03--button02"
+    ]
+  },
+
+  "responsive-layout.desktop#slider__home-slide01": {
+    "children": ["image#slider__home-slide01"]
+  },
+  "responsive-layout.mobile#slider__home-slide01": {
+    "children": ["image#slider__home-slide01--mobile"]
   },
 
   "image#slider__home-slide01": {
@@ -97,7 +134,82 @@
     }
   },
 
+  "image#slider__home-slide01--mobile": {
+    "props": {
+      "src": "assets/images/home/fullBanner.jpg",
+      "link": {
+        "url": "#",
+        "noFollow": false,
+        "openNewTab": false
+      },
+      "alt": "Image 1",
+      "maxWidth": "100%",
+      "layout": "contain",
+      "blockClass": "slider__home"
+    }
+  },
+
+  "responsive-layout.desktop#slider__home-slide02": {
+    "children": ["image#slider__home-slide02"]
+  },
+  "responsive-layout.mobile#slider__home-slide02": {
+    "children": ["image#slider__home-slide02--mobile"]
+  },
+
   "image#slider__home-slide02": {
+    "props": {
+      "src": "assets/images/home/fullBanner.jpg",
+      "link": {
+        "url": "#",
+        "noFollow": false,
+        "openNewTab": false
+      },
+      "alt": "Image 2",
+      "maxWidth": "100%",
+      "layout": "contain",
+      "blockClass": "slider__home"
+    }
+  },
+
+  "image#slider__home-slide02--mobile": {
+    "props": {
+      "src": "assets/images/home/fullBanner.jpg",
+      "link": {
+        "url": "#",
+        "noFollow": false,
+        "openNewTab": false
+      },
+      "alt": "Image 2",
+      "maxWidth": "100%",
+      "layout": "contain",
+      "blockClass": "slider__home"
+    }
+  },
+
+  "responsive-layout.desktop#slider__home-slide03": {
+    "children": ["image#slider__home-slide03"]
+  },
+  "responsive-layout.mobile#slider__home-slide03": {
+    "children": ["image#slider__home-slide03--mobile"]
+  },
+
+
+  "image#slider__home-slide03": {
+    "props": {
+      "src": "assets/images/home/fullBanner.jpg",
+      "link": {
+        "url": "#",
+        "noFollow": false,
+        "openNewTab": false
+      },
+      "alt": "Image 2",
+      "maxWidth": "100%",
+      "layout": "contain",
+      "blockClass": "slider__home"
+    }
+  },
+
+  "image#slider__home-slide03--mobile": {
     "props": {
       "src": "assets/images/home/fullBanner.jpg",
       "link": {
@@ -148,5 +260,50 @@
       "textColor": "black",
       "blockClass": "slider__home-title"
     }
-  }
+  },
+  "rich-text#slider__home-02--button01": {
+    "props": {
+      "text": "Button",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "textColor": "black",
+      "blockClass": "slider__home-button"
+    }
+  },
+  "rich-text#slider__home-02--button02": {
+    "props": {
+      "text": "Button",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "textColor": "black",
+      "blockClass": "slider__home-button"
+    }
+  },
+  "rich-text#slider__home-03": {
+    "props": {
+      "text": "Lorem ipsum",
+      "textPosition": "RIGHT",
+      "textAlignment": "RIGHT",
+      "textColor": "black",
+      "blockClass": "slider__home-title"
+    }
+  },
+  "rich-text#slider__home-03--button01": {
+    "props": {
+      "text": "Button",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "textColor": "black",
+      "blockClass": "slider__home-button"
+    }
+  },
+  "rich-text#slider__home-03--button02": {
+    "props": {
+      "text": "Button",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "textColor": "black",
+      "blockClass": "slider__home-button"
+    }
+  },
 }

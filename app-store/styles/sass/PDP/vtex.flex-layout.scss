@@ -33,19 +33,6 @@
             padding-left: 10px;
           }
         }
-        :global(.vtex-input-prefix__group) {
-          position: relative;
-          &::before {
-            content: "Insira seu CEP"; /* Texto do "placeholder" */
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            color: #999; /* Cor semelhante ao placeholder */
-            font-size: 16px;
-            pointer-events: none;
-          }
-        }
 
         :global(.vtex-address-form__postalCode-forgottenURL) {
           :first-child {
@@ -197,10 +184,11 @@
   }
 
   &--pdp__methodsPayments {
+    overflow: hidden;
     .flexRowContent {
       flex-direction: column;
       overflow: scroll;
-      height: 800px;
+      height: 700px;
       padding: 35px;
     }
   }

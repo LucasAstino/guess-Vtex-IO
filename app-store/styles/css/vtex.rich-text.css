@@ -312,6 +312,9 @@
   padding-bottom: 1em;
   text-transform: uppercase;
 }
+.container--product__review .paragraph {
+  cursor: pointer;
+}
 .container--pdp__methodsPayments-card--title .paragraph {
   font-size: 1.3em;
   padding: 15px 0;

@@ -4,7 +4,7 @@
     border: 1px solid black;
     width: 100%;
     margin: 20px auto 46px;
-    @include tablet{
+    @include tablet {
       margin: 0 15px;
       width: 90% !important;
     }
@@ -39,7 +39,7 @@
     align-items: center;
     gap: 10px;
 
-    @include tablet{
+    @include tablet {
       padding: 0 15px;
     }
 
@@ -76,6 +76,12 @@
       border-bottom: 1px solid rgba(34, 36, 38, 0.15);
       padding-bottom: 1em;
       text-transform: uppercase;
+    }
+  }
+
+  &--product__review {
+    .paragraph {
+      cursor: pointer;
     }
   }
 
@@ -169,20 +175,19 @@
     }
   }
 
-  &--pdp__methodsPayments-pix{
-    
-    .paragraph{
-        display: flex;
-        align-items: center;
-        &::before {
-            content: "";
-            padding-right: 15px;
-            background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.0/icons/methods-payments/fp_pix___363edbd….gif);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 61px;
-            height: 30px;
-          }
+  &--pdp__methodsPayments-pix {
+    .paragraph {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        padding-right: 15px;
+        background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.0/icons/methods-payments/fp_pix___363edbd….gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 61px;
+        height: 30px;
+      }
     }
   }
 }

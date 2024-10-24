@@ -137,19 +137,6 @@
   letter-spacing: 0.8px;
   padding-left: 10px;
 }
-.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input-prefix__group) {
-  position: relative;
-}
-.flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input-prefix__group)::before {
-  content: "Insira seu CEP"; /* Texto do "placeholder" */
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: #999; /* Cor semelhante ao placeholder */
-  font-size: 16px;
-  pointer-events: none;
-}
 .flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-address-form__postalCode-forgottenURL) :first-child {
   text-decoration: underline;
 }
@@ -279,10 +266,13 @@
     padding: 0 15px;
   }
 }
+.flexRow--pdp__methodsPayments {
+  overflow: hidden;
+}
 .flexRow--pdp__methodsPayments .flexRowContent {
   flex-direction: column;
   overflow: scroll;
-  height: 800px;
+  height: 700px;
   padding: 35px;
 }
 @media (max-width: 1025px) {
@@ -458,10 +448,6 @@
   }
 }
 
-.flexRow--last__shelf {
-  margin: 20px auto 60px;
-}
-
 .flexRow--grid_product-home {
   margin-bottom: 40px;
   max-width: 1800px;
@@ -498,6 +484,10 @@
   margin: 0;
   max-width: 100% !important;
   border-radius: 0;
+}
+
+.flexRow--last__shelf {
+  margin: 20px auto 60px;
 }
 
 .flexCol--slider__home-slide {
