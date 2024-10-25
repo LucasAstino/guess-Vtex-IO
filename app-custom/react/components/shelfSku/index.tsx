@@ -9,9 +9,11 @@ import productRecommendationsQuery from "../../queries/productRecommendations.gq
 export const HANDLES_VARIANTS = [
   "similar__products-variants--fastBuy",
   "similar__products-variants--title",
+  "similar__products-variants-wrapper",
   "variant-type",
   "similar__products-variants--wrap",
   "similar__products-variants--sku",
+  "similar__products-variants--sku-selected",
   "similar__products-variants--sku-unavailable",
   "similar__products-variants--sku-title",
   "similar__products-variants--img-current",
@@ -20,7 +22,7 @@ export const HANDLES_VARIANTS = [
   "similar__products-variants--link",
   "similar__image-container",
   "similar__image-container-unavailable",
-  "similar__image-container--current",
+  "similar__image-container--selected",
 ] as const;
 
 interface SkuSpecification {
@@ -52,16 +54,20 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   const { handles } = useCssHandles(HANDLES_VARIANTS);
   const product = useProduct();
   const { addItem } = useOrderItems();
-  // const color = product?.selectedItem?.variations?.[1]?.values?.[0] || "N/A";
+
   const productId =
     productQuery?.product?.productId ?? product?.product?.productId;
-    // const backgroundColor =
-    //  product?.selectedItem?.variations?.[2]?.values?.[0] || "N/A";
 
-     const currentColor =
+  const currentSize =
+    productQuery.product.skuSpecifications?.[0].values[0].name;
+
+  const currentColor =
     productQuery.product.skuSpecifications?.[1].values[0].name;
-     const currentColorCode =
+  const currentColorCode =
     productQuery.product.skuSpecifications?.[2].values[0].name;
+
+  const [selectedSize, setSelectedSize] = useState(currentSize);
+  const [selectedColor, setSelectedColor] = useState(currentColor);
 
   const fetchSkusByColor = async (colorProductId: string) => {
     try {
@@ -83,7 +89,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   // Carregar SKUs da primeira cor na montagem do componente
   useEffect(() => {
     const loadInitialSkus = async () => {
-      const initialSkus = await fetchSkusByColor(productQuery.product.productId);
+      const initialSkus = await fetchSkusByColor(
+        productQuery.product.productId
+      );
       setSkusTamanho(initialSkus);
     };
     loadInitialSkus();
@@ -130,53 +138,104 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   return (
     <>
       <div className={handles["similar__products-variants--fastBuy"]}>
-         <p className={handles["similar__products-variants--title"]}>
-         Selecione uma cor: <span className={handles["variant-type"]}>{currentColor}</span>
-         </p>
-         <div style={{ display: "flex" }} className={handles["similar__products-variants--wrap"]}>
-           <div className={`${handles["similar__image-container"]} ${handles["similar__image-container--current"]}`}>
-             <span
-               className={handles["similar__products-variants--circle"]}
-               style={{
-                 height: "30px",
-                 width: "30px",
-                 backgroundColor: currentColorCode,
-                 display: "block",
-               }}
-             ></span>
-           </div>
-           {items.map((element: ProductTypes.Product, index: number) => {
-             const bgColor =
-               element?.items?.[0].variations?.[2]?.values?.[0] || "N/A";
-               const available = element?.items?.[0]?.sellers?.[0]?.commertialOffer?.AvailableQuantity > 0 
-             return (
-               <div key={index} className={`${handles["similar__image-container"]} ${!available ? handles["similar__image-container-unavailable"] : ''}`}>
-                 <span
-                    className={`${handles["similar__products-variants--circle"]} ${!available ? handles["similar__products-variants--circle-unavailable"] : ''}`}
-                   style={{
-                     height: "30px",
-                     width: "30px",
-                     backgroundColor: bgColor,
-                     display: "block",
-                   }}
-                   onClick={() => handleColorClick(element.productId)}
-                 ></span>
-               </div>
-             );
-           })}
-         </div>
-       </div>
+        <p className={handles["similar__products-variants--title"]}>
+          Selecione uma cor:{" "}
+          <span className={handles["variant-type"]}>{selectedColor}</span>
+        </p>
+        <div
+          style={{ display: "flex" }}
+          className={handles["similar__products-variants--wrap"]}
+        >
+          <div
+            className={`${handles["similar__image-container"]} `}
+          >
+            <span
+              className={handles["similar__products-variants--circle"]}
+              style={{
+                height: "30px",
+                width: "30px",
+                backgroundColor: currentColorCode,
+                display: "block",
+              }}
+              onClick={() => {
+                console.log(productQuery.product.productId)
+                handleColorClick(productQuery.product.productId);
+                setSelectedColor(productQuery.product.skuSpecifications?.[1].values[0].name)
+              }}
+            ></span>
+          </div>
+          {items.map((element: ProductTypes.Product, index: number) => {
+            const bgColor =
+              element?.items?.[0].variations?.[2]?.values?.[0] || "N/A";
+            const available =
+              element?.items?.[0]?.sellers?.[0]?.commertialOffer
+                ?.AvailableQuantity > 0;
+
+                return (
+                  <div
+                key={index}
+                className={`${handles["similar__image-container"]} ${
+                  !available
+                  ? handles["similar__image-container-unavailable"]
+                  : ""
+                }`}
+                >
+                <span
+                  className={`${
+                    handles["similar__products-variants--circle"]
+                  } ${
+                    !available
+                    ? handles[
+                      "similar__products-variants--circle-unavailable"
+                    ]
+                    : ""
+                  }`}
+                  style={{
+                    height: "30px",
+                    width: "30px",
+                    backgroundColor: bgColor,
+                    display: "block",
+                  }}
+                  onClick={() => {
+                    handleColorClick(element.productId);
+                    setSelectedColor(element?.items?.[0].variations?.[1]?.values?.[0])
+                  }}
+                ></span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
       <div>
         {skusTamanho.length > 0 ? (
-          skusTamanho.map((sku: any, index: number) => (
-            <div key={index}>
-              <p className={handles["similar__products-variants--sku-title"]}>Selecione um tamanho: {sku.dimensions.Tamanho}</p>
-              <span className={sku.available ? handles["similar__products-variants--sku"] : handles["similar__products-variants--sku-unavailable"]} onClick={() => handleAddToCart(sku.sku)}>
-                {sku.dimensions.Tamanho || `SKU ${index + 1}`}
-              </span>
-            </div>
-          ))
+          <div>
+            <p className={handles["similar__products-variants--sku-title"]}>
+              Selecione um tamanho: {selectedSize}
+              <ul className={handles["similar__products-variants-wrapper"]}>
+                {skusTamanho.map((sku: any, index: number) => (
+                  <span
+                    key={index}
+                    className={`${
+                      sku.available
+                        ? handles["similar__products-variants--sku"]
+                        : handles["similar__products-variants--sku-unavailable"]
+                    } ${
+                      selectedSize === sku.dimensions.Tamanho
+                        ? handles["similar__products-variants--sku-selected"]
+                        : ""
+                    }`}
+                    onClick={() => {
+                      handleAddToCart(sku.sku);
+                      setSelectedSize(sku.dimensions.Tamanho);
+                    }}
+                  >
+                    {sku.dimensions.Tamanho || `SKU ${index + 1}`}
+                  </span>
+                ))}
+              </ul>
+            </p>
+          </div>
         ) : (
           <span>Sem SKUs disponíveis</span>
         )}

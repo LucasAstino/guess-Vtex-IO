@@ -92,7 +92,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
     <div
       className={`${handles.minicartWrapper} ${openOnHover ? "hoverable" : ""}`}
       onMouseEnter={!isMobile ? openDrawer : undefined}
-      onMouseLeave={!isMobile ? closeDrawer : undefined} // Adiciona controle para fechar ao sair do minicart
+      onMouseLeave={!isMobile ? closeDrawer : undefined} 
     >
       {isMobile ? (
         <a className={handles.minicartLink} href="/checkout#/cart">
@@ -144,8 +144,8 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
                   Total a pagar: R${(totalPrice / 100).toFixed(2)}
                 </span>
                 <div className={handles.minicartButtons}>
-                  <a className={handles.cartButton}>Carrinho</a>
-                  <a className={handles.checkoutButton}>Finalizar compra</a>
+                  <a href="/checkout#/cart" className={handles.cartButton}>Carrinho</a>
+                  <a href="/checkout#/email" className={handles.checkoutButton}>Finalizar compra</a>
                 </div>
               </div>
             </div>

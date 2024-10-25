@@ -59,5 +59,9 @@
   },
   "PopupForm":{
     "component":"PopupForm"
+  },
+  "commumScript":{
+    "component":"commumScript",
+    "render": "lazy"
   }
 }
