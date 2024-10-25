@@ -1,16 +1,55 @@
 {
-
-    "responsive-layout.mobile#category__list": {
-        "children": [ "rich-text#category__list","flex-layout.row#category__list"]
+  "responsive-layout.mobile#category__list": {
+    "children": ["rich-text#category__list", "flex-layout.row#category__list"]
+  },
+  "flex-layout.row#category__list": {
+    "title": "segunda linha de categoria",
+    "props": {
+      "blockClass": "category__list"
     },
-    "flex-layout.row#category__list": {
-      "title": "segunda linha de categoria",
-      "props": {
-          "blockClass": "category__list"
-      },
-      "children": ["flex-layout.col#category__list-1","flex-layout.col#category__list-2","flex-layout.col#category__list-3",
-      "flex-layout.col#category__list-1","flex-layout.col#category__list-2","flex-layout.col#category__list-3"
+    "children": [
+      "flex-layout.col#category__list-1-mobile",
+      "flex-layout.col#category__list-2-mobile",
+      "flex-layout.col#category__list-3-mobile",
+      "flex-layout.col#category__list-4-mobile",
+      "flex-layout.col#category__list-5-mobile",
+      "flex-layout.col#category__list-6-mobile"
     ]
-    }
+  },
+  "flex-layout.col#category__list-1-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-2-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-3-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-4-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-5-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
+  },
+  "flex-layout.col#category__list-6-mobile": {
+    "props": {
+      "blockClass": "category__list"
+    },
+    "children": ["image#category__list", "rich-text#category__list-link"]
   }
-  
+}

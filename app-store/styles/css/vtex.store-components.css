@@ -115,6 +115,10 @@
   margin-top: 70px;
 }
 
+.productImage--product-image-grid {
+  overflow: hidden;
+}
+
 .container {
   display: contents;
 }
@@ -196,4 +200,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+:global(.vtex-store-components-3-x-sizeMobile) {
+  max-width: 106px;
 }

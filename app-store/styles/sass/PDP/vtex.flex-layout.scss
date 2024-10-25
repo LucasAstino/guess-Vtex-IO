@@ -190,6 +190,9 @@
       overflow: scroll;
       height: 700px;
       padding: 35px;
+      @include tablet{
+        padding-bottom: 100px;
+      }
     }
   }
 

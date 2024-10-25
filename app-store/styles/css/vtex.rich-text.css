@@ -312,6 +312,11 @@
   padding-bottom: 1em;
   text-transform: uppercase;
 }
+@media (max-width: 1025px) {
+  .container--pdp__methodsPayments-title .paragraph {
+    font-size: 26px;
+  }
+}
 .container--product__review .paragraph {
   cursor: pointer;
 }
@@ -323,6 +328,11 @@
 .container--pdp__methodsPayments-card--visa {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1025px) {
+  .container--pdp__methodsPayments-card--visa {
+    gap: 10px;
+  }
 }
 .container--pdp__methodsPayments-card--visa::before {
   content: "";
@@ -398,6 +408,11 @@
   font-size: 0.9em;
   font-weight: 500;
 }
+@media (max-width: 1025px) {
+  .container--pdp__methodsPayments-card .paragraph {
+    font-size: 0.8em;
+  }
+}
 .container--pdp__methodsPayments-pix .paragraph {
   display: flex;
   align-items: center;
@@ -410,6 +425,11 @@
   background-size: contain;
   width: 61px;
   height: 30px;
+}
+@media (max-width: 1025px) {
+  .container--pdp__guideSizes .paragraph {
+    white-space: nowrap;
+  }
 }
 
 .container--newsletter__title .paragraph {

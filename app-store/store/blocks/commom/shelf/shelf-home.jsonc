@@ -40,7 +40,7 @@
     "title": "Imagem do produto na prateleira",
     "props": {
       "showBadge": false,
-      // "aspectRatio": "1:1",
+      // "aspectRatio": "9:16",
       "maxHeight": 677
     }
   },

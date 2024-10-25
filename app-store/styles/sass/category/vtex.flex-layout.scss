@@ -33,4 +33,29 @@
       }
     }
   }
+
+  &--productCountMobileRow{
+    .flexRowContent{
+      display: flex;
+      align-items: baseline;
+      padding: 13px 0 13px 25px;
+      gap: 8px;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  &--searchinfomobile{
+    .flexRowContent{
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .flexCol--filterMobileCol{
+        margin: 0;
+        position: absolute;
+        left: 25px;
+        width: fit-content !important;
+      }
+    }
+  }
 }

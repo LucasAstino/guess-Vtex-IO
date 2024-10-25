@@ -46,6 +46,7 @@
 .modal--pdp__guideSizes {
   .paper {
     overflow: visible;
+    
   }
   
 }
@@ -54,6 +55,10 @@
   padding: 35px;
   .paper--pdp__methodsPayments{
     overflow: initial;
+    @include tablet{
+      max-width: 360px;
+      margin: 0;
+    }
   }
 }
 

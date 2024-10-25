@@ -41,6 +41,12 @@
 .modal--pdp__methodsPayments .paper--pdp__methodsPayments {
   overflow: initial;
 }
+@media (max-width: 1025px) {
+  .modal--pdp__methodsPayments .paper--pdp__methodsPayments {
+    max-width: 360px;
+    margin: 0;
+  }
+}
 
 :global(.vtex-reviews-and-ratings-3-x-container) {
   padding: 35px;

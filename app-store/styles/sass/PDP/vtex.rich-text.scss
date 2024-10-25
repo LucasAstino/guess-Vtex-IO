@@ -76,6 +76,9 @@
       border-bottom: 1px solid rgba(34, 36, 38, 0.15);
       padding-bottom: 1em;
       text-transform: uppercase;
+      @include tablet{
+        font-size: 26px;
+      }
     }
   }
 
@@ -96,6 +99,9 @@
     &--visa {
       display: flex;
       align-items: center;
+      @include tablet{
+        gap: 10px;
+      }
       &::before {
         content: "";
         padding-right: 15px;
@@ -172,6 +178,9 @@
       text-align: left;
       font-size: 0.9em;
       font-weight: 500;
+      @include tablet{
+        font-size: 0.8em;
+      }
     }
   }
 
@@ -187,6 +196,14 @@
         background-size: contain;
         width: 61px;
         height: 30px;
+      }
+    }
+  }
+
+  &--pdp__guideSizes{
+    .paragraph{
+      @include tablet{
+        white-space: nowrap;
       }
     }
   }

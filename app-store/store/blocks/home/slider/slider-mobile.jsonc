@@ -24,65 +24,16 @@
         "blockClass": "carousel"
       },
       "children": [
-        "flex-layout.row#slider__home-slide01--mobile",
-        "flex-layout.row#slider__home-slide02--mobile",
-        "flex-layout.row#slider__home-slide02--mobile"
-      ]
-    },
-  
-    "flex-layout.row#slider__home-slide01--mobile": {
-      "children": [
         "image#slider__home-slide01--mobile",
-        "flex-layout.col#slider__home-slide01--mobile"
-      ]
-    },
-  
-    "flex-layout.row#slider__home-slide02--mobile": {
-      "children": [
         "image#slider__home-slide02--mobile",
-        "flex-layout.col#slider__home-slide02--mobile"
+        "image#slider__home-slide03--mobile"
       ]
     },
   
-    "flex-layout.col#slider__home-slide01--mobile": {
-      "props": {
-        "blockClass": "slider__home-slide"
-      },
-      "children": [
-        "rich-text#slider__home-01--mobile",
-        "flex-layout.row#slider__home-slide01--buttons--mobile"
-      ]
-    },
-    "flex-layout.col#slider__home-slide02--mobile": {
-      "props": {
-        "blockClass": "slider__home-slide"
-      },
-      "children": [
-        "rich-text#slider__home-02--mobile",
-        "flex-layout.row#slider__home-slide02--buttons--mobile"
-      ]
-    },
-  
-    "flex-layout.row#slider__home-slide01--buttons--mobile": {
-      "props": {
-        "blockClass": "slider__home-slide--butons"
-      },
-      "children": [
-        "rich-text#slider__home-01--button01--mobile",
-        "rich-text#slider__home-01--button02--mobile"
-      ]
-    },
-    "flex-layout.row#slider__home-slide02--buttons--mobile": {
-      "props": {
-        "blockClass": "slider__home-slide--butons"
-      },
-      "children": [
-        "rich-text#slider__home-01--button01--mobile",
-        "rich-text#slider__home-01--button02--mobile"
-      ]
-    },
+    
   
     "image#slider__home-slide01--mobile": {
+      "title": "Primeiro banner desktop",
       "props": {
         "src": "assets/images/home/fullbannerMobile.jpg",
         "link": {
@@ -98,6 +49,7 @@
     },
   
     "image#slider__home-slide02--mobile": {
+      "title": "Segundo banner desktop",
       "props": {
         "src": "assets/images/home/fullbannerMobile.jpg",
         "link": {
@@ -112,42 +64,23 @@
       }
     },
   
-    "rich-text#slider__home-01--mobile": {
-      "props": {
-        "text": "Lorem ipsum",
-        "textPosition": "LEFT",
-        "textAlignment": "LEFT",
-        "textColor": "black",
-        "blockClass": "slider__home-title"
-      }
-    },
-    "rich-text#slider__home-01--button01--mobile": {
-      "props": {
-        "text": "Button",
-        "textPosition": "LEFT",
-        "textAlignment": "LEFT",
-        "textColor": "black",
-        "blockClass": "slider__home-button"
-      }
-    },
-    "rich-text#slider__home-01--button02--mobile": {
-      "props": {
-        "text": "Button",
-        "textPosition": "LEFT",
-        "textAlignment": "LEFT",
-        "textColor": "black",
-        "blockClass": "slider__home-button"
-      }
-    },
   
-    "rich-text#slider__home-02--mobile": {
+    "image#slider__home-slide03--mobile": {
+      "title": "Terceiro banner desktop",
       "props": {
-        "text": "Lorem ipsum",
-        "textPosition": "RIGHT",
-        "textAlignment": "RIGHT",
-        "textColor": "black",
-        "blockClass": "slider__home-title"
+        "src": "assets/images/home/fullbannerMobile.jpg",
+        "link": {
+          "url": "#",
+          "noFollow": false,
+          "openNewTab": false
+        },
+        "alt": "Image 2",
+        "maxWidth": "100%",
+        "layout": "contain",
+        "blockClass": "slider__home"
       }
     }
+  
+    
   }
   

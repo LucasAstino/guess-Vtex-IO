@@ -118,7 +118,6 @@
 .similar__products-variants--wrap .similar__products-variants--link,
 .similar__products-variants--wrap .similar__image-container--current {
   border-radius: 50%;
-  overflow: hidden;
 }
 .similar__products-variants--wrap .similar__image-container--current {
   border: 1px solid black;
@@ -129,6 +128,14 @@
 
 .similar__products-variants--wrap {
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.similar__products-variants--sku-title .similar__products-variants-wrapper {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .similar__products-variants--sku-title,
@@ -141,7 +148,6 @@
 }
 
 .similar__image-container {
-  overflow: hidden;
   padding: 4px;
   border: 1.5px solid #cbcccd;
   border-radius: 50%;
@@ -152,6 +158,15 @@
 
 .similar__products-variants--sku {
   text-transform: none;
+  cursor: pointer;
+}
+.similar__products-variants--sku-selected {
+  text-decoration: underline;
+}
+.similar__products-variants--sku-unavailable {
+  color: #71767F;
+  pointer-events: none;
+  cursor: no-drop;
 }
 .similar__products-variants--sku:hover {
   cursor: pointer;
@@ -210,10 +225,10 @@
   pointer-events: none;
 }
 :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorItem):global(.vtex-store-components-3-x-unavailable) :global(.vtex-store-components-3-x-skuSelectorInternalBox) {
-  border-color: #BDBEC0;
+  border-color: #bdbec0;
 }
 :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorItem):global(.vtex-store-components-3-x-unavailable) :global(.vtex-store-components-3-x-valueWrapper) {
-  color: #BDBEC0;
+  color: #bdbec0;
 }
 :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) :global(.vtex-store-components-3-x-skuSelectorItem--selected) {
   margin: 0;
@@ -315,6 +330,7 @@
   padding-inline-start: 15px;
   padding-inline-end: 10px;
   font-family: "Futura";
+  color: black;
 }
 @media (max-width: 1025px) {
   .product__viewed-addtocart {
@@ -778,6 +794,8 @@
 .minicartWrapper .minicartContainer .cartItems {
   margin-top: 1rem;
   padding: 10px;
+  max-height: 600px;
+  overflow: auto;
 }
 .minicartWrapper .minicartContainer .cartItem {
   display: flex;
@@ -857,6 +875,7 @@
   justify-content: center;
   background-color: #000;
   color: white;
+  text-decoration: none;
   padding: 0.5rem 1rem;
   letter-spacing: 2px;
   border: none;

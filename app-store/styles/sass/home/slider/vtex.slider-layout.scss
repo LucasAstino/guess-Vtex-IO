@@ -1,7 +1,6 @@
 .sliderLayoutContainer--carousel {
 
     :global(.vtex-store-components-3-x-imageElement--slider__home){
-        filter: brightness(0.7);
         @include tablet{
           height: 327px;
           object-fit: cover;
@@ -27,5 +26,6 @@
 .caretIcon--shelf{
   @include tablet{
     height: 20px;
+    color: black;
   }
 }

@@ -36,19 +36,82 @@
   letter-spacing: 0.05em;
 }
 
-.gallery {
+.gallery--grid {
   padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
-.gallery .galleryItem--grid {
-  min-width: 270px;
+@media (max-width: 1025px) {
+  .gallery--grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    padding: 0 18px;
+  }
+}
+.gallery--grid:global(.vtex__gallery--grid-4) {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1025px) {
+  .gallery--grid:global(.vtex__gallery--grid-4) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
+}
+.gallery--grid .galleryItem--grid {
   flex-grow: 1;
   flex-basis: 0 !important;
   flex-shrink: 1;
   max-width: 350px !important;
 }
 
+@media (max-width: 1025px) {
+  .filterPopupButton {
+    padding: 0;
+  }
+  .filterPopupButton::before {
+    content: "Filtros";
+    font-family: Futura;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #565d61;
+    text-transform: uppercase;
+    margin-right: 7px;
+  }
+  .filterPopupButton::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #565d61;
+    border-bottom: 2px solid #565d61;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -3px;
+  }
+  .filterPopupButton .filterPopupTitle {
+    display: none;
+  }
+  .filterPopupButton .filterPopupArrowIcon {
+    display: none;
+  }
+}
+
+.orderByDropdown .orderByOptionsContainer {
+  z-index: 4;
+  right: 10px;
+  border-radius: 8px;
+}
+
 .filters--layout {
   margin-top: 20px;
+}
+@media (max-width: 1025px) {
+  .filters--layout {
+    margin-top: 0px;
+  }
 }
 .filters--layout .caretIcon {
   display: none;
@@ -109,4 +172,139 @@
 }
 .filters--layout :global(.vtex-slider__values-container) :global(.vtex-slider__dash) {
   display: none;
+}
+
+@media (max-width: 1025px) {
+  .accordionFilter {
+    height: fit-content;
+  }
+  .accordionFilter .filterAccordionBreadcrumbs .filterBreadcrumbsText {
+    font-family: Futura;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #565d61;
+    text-transform: uppercase;
+  }
+  .accordionFilter .filterAccordionItemBox {
+    min-height: 0;
+  }
+  .accordionFilter .filterBreadcrumbsItemName {
+    font-family: Futura;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #565d61;
+    text-transform: uppercase;
+  }
+  .accordionFilter .accordionFilterContainer {
+    padding: 0;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem {
+    padding: 0;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent {
+    padding: 0;
+    margin: 11px 20px 0;
+    padding-bottom: 8px;
+    line-height: 0;
+    border-bottom: 1px solid #b5b5b5;
+    justify-content: space-between;
+    display: flex;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent .accordionFilterItemTitle {
+    font-family: Futura;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent .accordionFilterItemIcon {
+    position: relative;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent .accordionFilterItemIcon::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    rotate: 90deg;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent .accordionFilterItemIcon::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+  }
+  .accordionFilter .accordionFilterContainer .accordionFilterItem .accordionFilterContent .accordionFilterItemIcon .caretIcon {
+    display: none;
+  }
+}
+
+.accordionFilterItemOptions {
+  max-height: 270px;
+}
+
+@media (max-width: 1025px) {
+  .filterButtonsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: auto;
+    position: static;
+    height: fit-content;
+  }
+  .filterButtonsBox .filterClearButtonWrapper {
+    padding: 0;
+    width: 213px;
+  }
+  .filterButtonsBox .filterClearButtonWrapper :global(.vtex-button) {
+    border: 1px solid black;
+  }
+  .filterButtonsBox .filterClearButtonWrapper :global(.vtex-button__label) {
+    font-size: 0;
+  }
+  .filterButtonsBox .filterClearButtonWrapper :global(.vtex-button__label)::before {
+    content: "Limpar todos os filtros";
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .filterButtonsBox .filterApplyButtonWrapper {
+    padding: 0;
+    width: 213px;
+  }
+  .filterButtonsBox .filterApplyButtonWrapper :global(.vtex-button) {
+    border: 1px solid black;
+    background-color: #000000;
+    color: white;
+  }
+  .filterButtonsBox .filterApplyButtonWrapper :global(.vtex-button__label) {
+    font-size: 0;
+  }
+  .filterButtonsBox .filterApplyButtonWrapper :global(.vtex-button__label)::before {
+    content: url(https://www.guessbrasil.com.br//custom/content/themes/tema/assets/img/svg/icon-filter.svg);
+    margin-top: 6px;
+    margin-right: 8px;
+  }
+  .filterButtonsBox .filterApplyButtonWrapper :global(.vtex-button__label)::after {
+    content: "Aplicar Filtros";
+    white-space: nowrap;
+    font-size: 14px;
+  }
 }

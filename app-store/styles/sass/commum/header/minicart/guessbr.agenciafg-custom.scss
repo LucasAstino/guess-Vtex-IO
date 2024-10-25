@@ -71,6 +71,9 @@
     .cartItems {
       margin-top: 1rem;
       padding: 10px;
+      max-height: 600px;
+      overflow: auto;
+  
     }
 
     .cartItem {
@@ -156,6 +159,7 @@
       justify-content: center;
       background-color: #000;
       color: white;
+      text-decoration: none;
       padding: 0.5rem 1rem;
       letter-spacing: 2px;
       border: none;

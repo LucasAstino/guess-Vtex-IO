@@ -1,7 +1,7 @@
 .similar__products-variants {
   min-height: 60px;
   margin-bottom: 26px;
-  @include tablet{
+  @include tablet {
     margin-top: 26px;
     padding: 0 15px;
   }
@@ -14,7 +14,6 @@
     .similar__products-variants--link,
     .similar__image-container--current {
       border-radius: 50%;
-      overflow: hidden;
     }
     .similar__image-container--current {
       border: 1px solid black;
@@ -27,6 +26,16 @@
 }
 .similar__products-variants--wrap {
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.similar__products-variants--sku-title {
+  .similar__products-variants-wrapper {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .similar__products-variants--sku-title,
@@ -34,12 +43,11 @@
   font-size: 18px;
 }
 
-.similar__products-variants--title{
+.similar__products-variants--title {
   margin-top: 0;
 }
 
 .similar__image-container {
-  overflow: hidden;
   padding: 4px;
   border: 1.5px solid #cbcccd;
   border-radius: 50%;
@@ -50,6 +58,15 @@
 
 .similar__products-variants--sku {
   text-transform: none;
+  cursor:pointer;
+  &-selected{
+    text-decoration: underline;
+  }
+  &-unavailable{
+    color: #71767F;
+    pointer-events: none;
+    cursor: no-drop;
+  }
   &:hover {
     cursor: pointer;
   }
@@ -106,13 +123,13 @@
     }
 
     &:global(.vtex-store-components-3-x-unavailable) {
-      cursor:no-drop ;
+      cursor: no-drop;
       pointer-events: none;
-      :global(.vtex-store-components-3-x-skuSelectorInternalBox){
-        border-color: #BDBEC0;
+      :global(.vtex-store-components-3-x-skuSelectorInternalBox) {
+        border-color: #bdbec0;
       }
       :global(.vtex-store-components-3-x-valueWrapper) {
-        color: #BDBEC0;
+        color: #bdbec0;
       }
     }
   }
