@@ -23,8 +23,11 @@
   "store.custom#cashback-regulation": {
     "path": "/cashback-regulamento"
   },
-  "store.custom#table-sizes": {
-    "path": "institucional/tabela-de-medidas-femininos"
+  "store.custom#table-sizes-feminine": {
+    "path": "institucional/tabela-de-medidas-feminino"
+  },
+  "store.custom#table-sizes-masculine": {
+    "path": "institucional/tabela-de-medidas-masculino"
   },
   "store.custom#where-to-find": {
     "path": "institucional/onde-encontrar"
