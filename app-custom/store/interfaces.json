@@ -3,7 +3,8 @@
     "component":"Helmet"
   },
   "AstinoMenu":{
-    "component":"AstinoMenu"
+    "component":"AstinoMenu",
+    "render": "server"
   },
   "PrivacyPolicy":{
     "component":"PrivacyPolicy"
