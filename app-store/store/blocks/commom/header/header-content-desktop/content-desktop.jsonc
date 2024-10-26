@@ -18,7 +18,7 @@
     "props": {
       "blockClass": "headers__icons"
     },
-    "children": ["search-bar#header", "image#find__stores", "LoginHeader","Minicart"]
+    "children": ["search-bar#header", "image#find__stores", "LoginHeader","image#wishlist","Minicart"]
   },
   
   "search-bar#header": {
@@ -36,6 +36,20 @@
         "props": {
           "label": "Stories",
           "href": "/institucional/onde-encontrar"
+         }
+      }
+    }
+  },
+
+  "image#wishlist": {
+    "title": "Buscar Lojas",
+    "props": {
+      "src": "assets/icons/commum/HeartStraight.svg",
+      "blockClass":"find__stores",
+      "link": {
+        "props": {
+          "label": "Stories",
+          "href": "/account#/wishlist"
          }
       }
     }

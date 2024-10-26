@@ -9,7 +9,7 @@
         "title": "titulo newsletter",
         "props": {
             "blockClass":"newsletter__title",
-            "text": "Get on the list\n\nEm compras **acima de R$ 300 ganhe R$ 50 na Guess List**.Válido para a primeira compra."
+            "text": "Get on the list\n\nEm compras acima de R$ 300 ganhe R$ 50 na Guess List.Válido para a primeira compra."
         }
     },
     "rich-text#newsletter__policy-privacy": {

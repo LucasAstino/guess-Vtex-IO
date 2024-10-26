@@ -21,7 +21,7 @@
 }
 @media (max-width: 1025px) {
   .container--home_title .heading--home_title {
-    margin-block-start: 40px;
+    margin-block-start: 32px;
     font-size: 25px;
   }
 }
@@ -440,7 +440,6 @@
   letter-spacing: 0.04em;
   text-align: left;
   margin-bottom: 5px;
-  text-transform: uppercase;
 }
 .container--newsletter__title .paragraph:first-child {
   font-family: "Futura";
@@ -449,21 +448,21 @@
   line-height: 21px;
   letter-spacing: 0.1em;
   text-align: left;
-  color: #db2828;
-  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
 }
 .container--newsletter__policy-privacy .paragraph {
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #000;
+  color: #565D61;
   margin: 15px 0 0;
   letter-spacing: initial;
 }
 .container--newsletter__policy-privacy .paragraph .link {
-  font-weight: 600;
-  color: #444;
+  font-weight: 400;
+  color: #565D61;
 }
 @media (max-width: 768px) {
   .container--adress {

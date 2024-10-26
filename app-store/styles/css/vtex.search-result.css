@@ -150,9 +150,6 @@
 .filters--layout .filterAvailable.filterIsOpen::before {
   content: none;
 }
-.filters--layout .filter__container--hexadecimal {
-  display: none;
-}
 .filters--layout .filterTemplateOverflow :global(.vtex-checkbox__line-container) {
   align-items: center;
 }

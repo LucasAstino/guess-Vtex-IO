@@ -1,9 +1,14 @@
 .sliderLayoutContainer--carousel {
 
+    :global(.vtex-store-components-3-x-imageElementLink--slider__home){
+        @include tablet{
+          width: 100%;
+        }
+    }
+
     :global(.vtex-store-components-3-x-imageElement--slider__home){
         @include tablet{
-          height: 327px;
-          object-fit: cover;
+          width: 100%;
         }
     }
 

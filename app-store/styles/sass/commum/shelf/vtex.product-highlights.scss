@@ -1,0 +1,28 @@
+.productHighlightWrapper--collection {
+  .productHighlightText[data-highlight-name="sustentavel"] {
+    background: #f3f3f3;
+    color: #018002;
+    font-size: 0px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 15px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 84px;
+    margin-top: 12px;
+
+    &::before{
+        content: "Sustentável";
+        font-size: 14px;
+    }
+    &::after{
+        content: url(assets/icons/shelf/icon-leaf.png);
+    }
+  }
+}

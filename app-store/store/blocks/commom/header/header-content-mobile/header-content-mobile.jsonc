@@ -40,7 +40,7 @@
     "props": {
         "blockClass": "header__drawer-mobile-right"
     },
-    "children": []
+    "children": ["Minicart","image#wishlist"]
   },
 
   "drawer#mobile": {

@@ -16,8 +16,9 @@
       display: block;
       font-size: 14px;
       margin-top: 9px;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       letter-spacing: 0.18em;
+      padding-left: 15px;
     }
 
     :global(.vtex-input-prefix__group) {
@@ -43,18 +44,21 @@
       border: 0;
       height: 40px;
       font-family: 'Futura';
-      font-size: 12px;
+      font-size: 14px;
       line-height: 16px;
       letter-spacing: 2px;
       text-align: center;
-      font-weight: 300;
-      text-transform: uppercase;
+      font-weight: 400;
       border-radius: 0;
+      text-transform: capitalize;
+      :global(.vtex-checkbox__label){
+      }
     }
   }
 
   .confirmationCheckboxContainer {
     margin-top: 20px;
+    padding-left: 15px;
 
     :global(.vtex-checkbox__inner-container) {
       border:1px solid black;

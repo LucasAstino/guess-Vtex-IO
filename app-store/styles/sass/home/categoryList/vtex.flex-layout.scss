@@ -2,6 +2,9 @@
     &--category__list{
         @extend %container;
         margin-bottom: 50px;
+        @include tablet{
+            margin-bottom: 0px;
+        }
 
         .flexRowContent--category__list{
             gap: 8px;
