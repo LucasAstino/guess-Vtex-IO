@@ -1,0 +1,19 @@
+{
+  "store.custom#table-sizes-masculine": {
+    "children": ["flex-layout.row#table__sizes-container-masculine"]
+  },
+  "flex-layout.row#table__sizes-container-masculine": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "table__sizes-container"
+    },
+    "children": ["tab-layout#table__sizes-masculine"]
+  },
+  "tab-layout#table__sizes-masculine": {
+    "children": ["tab-list#table__sizes", "tab-content#table__sizes"],
+    "props": {
+      "blockClass": "table__sizes",
+      "defaultActiveTabId": "table__sizes-masculine"
+    }
+  }
+}

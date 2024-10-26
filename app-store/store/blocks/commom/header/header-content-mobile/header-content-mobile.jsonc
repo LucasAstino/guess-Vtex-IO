@@ -46,19 +46,11 @@
   "drawer#mobile": {
     "props":{
     "blockClass":"drawer__mobile",
-    "maxWidth":"80%"
+    "maxWidth":"80%",
+    "renderingStrategy":"eager"
     },
     "children": [ "flex-layout.row#header__drawer-mobile","AstinoMenu#new","flex-layout.row#footer__social"]
   },
-
-//   "menu#drawer": {
-//     "children": [
-//       "AstinoMenu#new"
-//     ],
-//     "props": {
-//       "orientation": "vertical"
-//     }
-//   },
 
   "logo#drawer": {
     "props": {

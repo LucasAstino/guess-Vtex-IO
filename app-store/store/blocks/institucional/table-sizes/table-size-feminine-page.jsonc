@@ -1,5 +1,5 @@
 {
-  "store.custom#table-sizes": {
+  "store.custom#table-sizes-feminine": {
     "children": ["flex-layout.row#table__sizes-container"]
   },
   "flex-layout.row#table__sizes-container": {
