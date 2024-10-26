@@ -40,11 +40,22 @@ interface SkuSpecification {
   }[];
 }
 
+interface SKUVariation {
+  variations: Variation[];
+}
+
+interface Variation {
+  name: string;
+  values: string[];
+  __typename: string;
+}
+
 interface SimilarProductsVariantsProps {
   productQuery: {
     product: {
       productId: string;
       skuSpecifications?: SkuSpecification[];
+      sku?: SKUVariation;
     };
   };
   imageLabel?: string;
@@ -55,16 +66,20 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   const product = useProduct();
   const { addItem } = useOrderItems();
 
+  console.log(productQuery.product, "raul");
+
   const productId =
     productQuery?.product?.productId ?? product?.product?.productId;
 
   const currentSize =
-    productQuery.product.skuSpecifications?.[0].values[0].name;
+    productQuery.product.skuSpecifications?.[0]?.values[0].name;
 
-  const currentColor =
-    productQuery.product.skuSpecifications?.[1].values[0].name;
-  const currentColorCode =
-    productQuery.product.skuSpecifications?.[2].values[0].name;
+  const currentColorCode = productQuery.product.sku?.variations[2].values[0];
+
+  const currentColor = productQuery.product.sku?.variations[1].values[0];
+
+  // const currentColorCode =
+  //   productQuery.product.skuSpecifications?.[2]?.values[0].name;
 
   const [selectedSize, setSelectedSize] = useState(currentSize);
   const [selectedColor, setSelectedColor] = useState(currentColor);
@@ -146,9 +161,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
           style={{ display: "flex" }}
           className={handles["similar__products-variants--wrap"]}
         >
-          <div
-            className={`${handles["similar__image-container"]} `}
-          >
+          <div className={`${handles["similar__image-container"]} `}>
             <span
               className={handles["similar__products-variants--circle"]}
               style={{
@@ -158,9 +171,11 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 display: "block",
               }}
               onClick={() => {
-                console.log(productQuery.product.productId)
+                console.log(productQuery.product.productId);
                 handleColorClick(productQuery.product.productId);
-                setSelectedColor(productQuery.product.skuSpecifications?.[1].values[0].name)
+                setSelectedColor(
+                  productQuery.product.skuSpecifications?.[1]?.values[0].name
+                );
               }}
             ></span>
           </div>
@@ -171,24 +186,24 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
               element?.items?.[0]?.sellers?.[0]?.commertialOffer
                 ?.AvailableQuantity > 0;
 
-                return (
-                  <div
+            return (
+              <div
                 key={index}
                 className={`${handles["similar__image-container"]} ${
                   !available
-                  ? handles["similar__image-container-unavailable"]
-                  : ""
+                    ? handles["similar__image-container-unavailable"]
+                    : ""
                 }`}
-                >
+              >
                 <span
                   className={`${
                     handles["similar__products-variants--circle"]
                   } ${
                     !available
-                    ? handles[
-                      "similar__products-variants--circle-unavailable"
-                    ]
-                    : ""
+                      ? handles[
+                          "similar__products-variants--circle-unavailable"
+                        ]
+                      : ""
                   }`}
                   style={{
                     height: "30px",
@@ -198,7 +213,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                   }}
                   onClick={() => {
                     handleColorClick(element.productId);
-                    setSelectedColor(element?.items?.[0].variations?.[1]?.values?.[0])
+                    setSelectedColor(
+                      element?.items?.[0].variations?.[1]?.values?.[0]
+                    );
                   }}
                 ></span>
               </div>

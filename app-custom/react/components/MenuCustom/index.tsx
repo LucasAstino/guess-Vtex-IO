@@ -171,7 +171,8 @@ export const AstinoMenu = (props: Props) => {
               }
             >
               {isMobile ? (
-                <p
+                <a
+                href={link.url}
                   className={handles.menuLink}
                   style={{ color: link.linkColor || "#000" }}
                   onClick={(e) => {
@@ -193,7 +194,7 @@ export const AstinoMenu = (props: Props) => {
                       }`}
                     />
                   )}
-                </p>
+                </a>
               ) : (
                 <a
                   href={link.url}
