@@ -61,6 +61,9 @@
   "PopupForm":{
     "component":"PopupForm"
   },
+  "Contact-us":{
+    "component":"contact-us"
+  },
   "commumScript":{
     "component":"commumScript",
     "render": "lazy"

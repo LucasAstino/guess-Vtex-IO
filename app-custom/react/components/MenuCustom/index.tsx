@@ -48,6 +48,7 @@ const CSS_HANDLES = [
   "submenuToggleIcon",
   "activeMenuItem",
   "hoverMenuItem",
+  "underline",
   "openSubmenu",
   "level-",
 ] as const;
@@ -157,7 +158,7 @@ export const AstinoMenu = (props: Props) => {
                   href={submenuLink.url}
                   style={{ color: submenuLink.linkColor || "#000" }}
                   className={`${handles.menuLink} ${
-                    submenuLink.underline ? "underline" : ""
+                    submenuLink.underline ? `${handles.underline}` : ""
                   }`}
                 >
                   {submenuLink.text}
@@ -226,7 +227,7 @@ export const AstinoMenu = (props: Props) => {
                 <a
                   href={link.url}
                   className={`${handles.menuLink} ${
-                    link.underline ? "underline" : ""
+                    link.underline ? `${handles.underline}` : ""
                   }`}
                   style={{ color: link.linkColor || "#000" }}
                 >
@@ -313,7 +314,7 @@ AstinoMenu.schema = {
           underline: {
             type: "boolean",
             title: "Ativar underline nos links?",
-            default: true,
+            default: false,
           },
           hasSubmenu: {
             type: "boolean",
@@ -360,6 +361,11 @@ AstinoMenu.schema = {
                         type: "string",
                         title: "URL do Link",
                         default: "#",
+                      },
+                      underline: {
+                        type: "boolean",
+                        title: "Ativar underline nos links?",
+                        default: false,
                       },
                     },
                   },
