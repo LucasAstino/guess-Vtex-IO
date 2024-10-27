@@ -692,8 +692,10 @@
   margin: auto;
 }
 
-.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
-  margin: 50px auto;
+.flexRow--contact-us .flexRowContent--contact-us {
+  flex-direction: column;
+  margin: auto;
+  max-width: 720px;
 }
 
 .flexRow--dealer__container {
@@ -735,6 +737,10 @@
   .flexRow--dealer__buttons .flexRowContent--dealer__buttons {
     flex-direction: column;
   }
+}
+
+.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
+  margin: 50px auto;
 }
 
 .flexRow--faq .flexRowContent--faq {

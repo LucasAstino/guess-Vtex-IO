@@ -145,50 +145,70 @@
   display: inline-block;
 }
 
-.searchBarContainer {
-  width: fit-content !important;
+@media (min-width: 1025px) {
+  .searchBarContainer {
+    width: fit-content !important;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group) {
+    transition: all 0.3s ease-in-out;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 0;
+    padding-bottom: 4px;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix) {
+    padding: 0;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+    font-family: "Century";
+    width: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group):hover {
+    border-bottom: 1px solid black;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group):hover :global(.vtex-styleguide-9-x-input) {
+    font-family: "Century";
+    width: 190px;
+    padding: 0;
+    font-size: 14px;
+  }
+  .searchBarContainer .searchBarIcon {
+    padding: 0;
+    width: 52px;
+  }
+  .searchBarContainer .searchBarIcon::before {
+    content: "";
+    background: url(assets/icons/header/icon-search.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: block;
+    margin: auto;
+  }
+  .searchBarContainer .searchBarIcon .searchIcon {
+    display: none;
+  }
 }
-.searchBarContainer :global(.vtex-input-prefix__group) {
-  transition: all 0.3s ease-in-out;
-  border: 0;
-  border-radius: 0;
-  border-bottom: 0;
-  padding-bottom: 4px;
-}
-.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix) {
-  padding: 0;
-}
-.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
-  font-family: "Century";
-  width: 0;
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-  font-size: 14px;
-}
-.searchBarContainer :global(.vtex-input-prefix__group):hover {
-  border-bottom: 1px solid black;
-}
-.searchBarContainer :global(.vtex-input-prefix__group):hover :global(.vtex-styleguide-9-x-input) {
-  font-family: "Century";
-  width: 190px;
-  padding: 0;
-  font-size: 14px;
-}
-.searchBarContainer .searchBarIcon {
-  padding: 0;
-  width: 52px;
-}
-.searchBarContainer .searchBarIcon::before {
-  content: "";
-  background: url(assets/icons/header/icon-search.svg) no-repeat;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  display: block;
-  margin: auto;
-}
-.searchBarContainer .searchBarIcon .searchIcon {
-  display: none;
+@media (max-width: 1025px) {
+  .searchBarContainer .autoCompleteOuterContainer {
+    width: calc(100% - 30px);
+    left: 50%;
+    top: 5px;
+    display: block;
+    margin: auto;
+  }
+  .searchBarContainer .autoCompleteOuterContainer :global(.vtex-input-prefix__group) {
+    display: flex;
+    border: 0;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #000;
+    flex-direction: row-reverse;
+  }
 }
 
 .imageElement--find__stores {

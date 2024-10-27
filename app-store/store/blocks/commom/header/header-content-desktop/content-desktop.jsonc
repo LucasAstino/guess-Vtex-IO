@@ -27,6 +27,8 @@
     }
   },
 
+  
+
   "image#find__stores": {
     "title": "Buscar Lojas",
     "props": {

@@ -5,7 +5,7 @@
   "flex-layout.row#1-mobile": {
     "children": [
       "drawer#mobile",
-      "search-bar#header",
+      "modal-trigger#search__mobile",
       "flex-layout.col#spacer",
       "logo#mobile",
       "flex-layout.col#spacer",
@@ -43,6 +43,8 @@
     "children": ["Minicart","image#wishlist"]
   },
 
+
+
   "drawer#mobile": {
     "props":{
     "blockClass":"drawer__mobile",
@@ -50,6 +52,40 @@
     "renderingStrategy":"eager"
     },
     "children": [ "flex-layout.row#header__drawer-mobile","AstinoMenu#new","flex-layout.row#footer__social"]
+  },
+
+  "image#search__mobile": {
+    "title": "Buscar Lojas",
+    "props": {
+      "src": "assets/icons/header/icon-search.svg",
+      "blockClass":"find__stores",
+      "link": {
+        "props": {
+          "label": "Stories",
+          "href": "/account#/wishlist"
+         }
+      }
+    }
+  },
+
+  "modal-trigger#search__mobile": {
+    "props": {
+      "blockClass":"search__mobile"
+    },
+    "children": ["image#search__mobile","modal-layout#search__mobile"]
+  },
+  "modal-header#search__mobile": {
+
+  },
+  "modal-layout#search__mobile": {
+    "props": {
+      "blockClass":"search__mobile"
+    },
+    "children": [ "modal-header#search__mobile","search-bar#header-mobile"]
+  },
+
+  "search-bar#header-mobile":{
+
   },
 
   "logo#drawer": {

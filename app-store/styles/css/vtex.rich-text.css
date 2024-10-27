@@ -644,6 +644,23 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
 .container--cashback__section-one-left {
   top: 50%;
   left: 50%;
@@ -853,39 +870,6 @@
   margin-left: 10px;
 }
 
-.container--exchange_and_returns .heading {
-  font-family: Calibri;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4285em;
-}
-.container--exchange_and_returns .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-.container--exchange_and_returns .link {
-  color: black;
-  text-decoration: none;
-}
-.container--exchange_and_returns .paragraph {
-  font-family: Calibri;
-  font-size: 14px;
-}
-.container--exchange_and_returns .list {
-  list-style: none;
-}
-.container--exchange_and_returns .listItem {
-  font-weight: 400;
-  font-family: Calibri;
-}
-.container--exchange_and_returns .listItem::before {
-  content: "- ";
-  font-size: 20px;
-}
-
 .container--dealer .heading {
   font-family: Futura;
   font-style: normal;
@@ -934,6 +918,39 @@
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+}
+
+.container--exchange_and_returns .heading {
+  font-family: Calibri;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4285em;
+}
+.container--exchange_and_returns .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--exchange_and_returns .link {
+  color: black;
+  text-decoration: none;
+}
+.container--exchange_and_returns .paragraph {
+  font-family: Calibri;
+  font-size: 14px;
+}
+.container--exchange_and_returns .list {
+  list-style: none;
+}
+.container--exchange_and_returns .listItem {
+  font-weight: 400;
+  font-family: Calibri;
+}
+.container--exchange_and_returns .listItem::before {
+  content: "- ";
+  font-size: 20px;
 }
 
 .container--faq .headingLevel1 {

@@ -6,6 +6,7 @@
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
   "header-layout.desktop": {
+    "title":"header desktop",
     "children": [
       "Topbar",
        "sticky-layout#desktop",
@@ -22,6 +23,7 @@
   },
 
   "header-layout.mobile": {
+    "title":"header mobile",
     "children": ["Topbar", "sticky-layout#mobile", "Helmet", "PopupForm"]
   }
 }
