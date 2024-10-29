@@ -6,6 +6,9 @@
       }
     },
     "flex-layout.row#secund__shelf": {
+      "props": {
+      "blockClass": "secund__shelf"
+    },
       "children": ["list-context.product-list#secund__shelf"]
     },
     "slider-layout#secund-products": {

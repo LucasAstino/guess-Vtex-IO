@@ -1,10 +1,11 @@
 .stackContainer--shelf {
   position: relative;
-  height: 20vw;
-  overflow: hidden;
 }
 .stackContainer--shelf .stackItem--shelf--first {
   height: 100%;
+}
+.stackContainer--shelf .stackItem--shelf--first :global(.vtex-product-summary-2-x-image) {
+  object-fit: cover !important;
 }
 .stackContainer--shelf .stackItem--shelf--fast-buy {
   top: calc(100% - 8px);

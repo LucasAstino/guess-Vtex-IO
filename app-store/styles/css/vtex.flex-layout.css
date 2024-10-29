@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -122,14 +122,6 @@
     margin: 0;
     width: 100%;
   }
-}
-
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
 }
 
 .flexRow--product-main {
@@ -349,6 +341,14 @@
     width: 80px;
     font-size: 12px;
   }
+}
+
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
 }
 
 .flexRow--footer__wrapper {
@@ -586,6 +586,15 @@
 .flexRow--last__shelf {
   margin: 40px auto 60px;
 }
+.flexRow--last__shelf :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy) {
+  bottom: 20px;
+}
+.flexRow--first__shelf :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy) {
+  bottom: 20px;
+}
+.flexRow--secund__shelf :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy) {
+  bottom: 20px;
+}
 
 .flexCol--slider__home-slide {
   position: absolute;
@@ -793,12 +802,12 @@
   }
 }
 
-.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
-  margin: 50px auto;
-}
-
 .flexRow--faq .flexRowContent--faq {
   margin: 100px auto;
+}
+
+.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
+  margin: 50px auto;
 }
 
 .flexRow--privacy_policy .flexRowContent--privacy_policy {

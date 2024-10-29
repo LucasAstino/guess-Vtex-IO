@@ -61,7 +61,11 @@
     flex-basis: 0 !important;
     flex-shrink: 1;
     max-width: 350px !important;
-    :global(.vtex-product-summary-2-x-image){
+    :global(.vtex-stack-layout-0-x-stackContainer--shelf) {
+      height: 20vw;
+      overflow: hidden;
+    }
+    :global(.vtex-product-summary-2-x-image) {
       object-fit: cover !important;
     }
   }
@@ -159,17 +163,18 @@
     }
   }
 
-  .filter__container--category-4{
-    .filterTitleSpan{
+  .filter__container--category-4 {
+    .filterTitleSpan {
       font-size: 0;
-      &::before{
+      &::before {
         content: "Categoria";
         font-size: 14px;
       }
     }
   }
 
-  .filter__container--hexadecimal,.filter__container--brand {
+  .filter__container--hexadecimal,
+  .filter__container--brand {
     display: none;
   }
 

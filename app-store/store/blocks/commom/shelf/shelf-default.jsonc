@@ -1,5 +1,5 @@
 {
-  "product-summary.shelf#home": {
+  "product-summary.shelf#default": {
     "title": "Resumo do produto na prateleira",
     "props": {
       "blockClas": "shelf"
@@ -40,7 +40,15 @@
     "title": "Imagem do produto na prateleira",
     "props": {
       "showBadge": false,
-      "maxHeight": 677
+      "maxHeight": 724
+    }
+  },
+  "product-summary-image#shelf__home": {
+    "title": "Imagem do produto na prateleira",
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "2:3",
+      "maxHeight": 724
     }
   },
   "product-highlight-wrapper": {

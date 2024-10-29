@@ -39,7 +39,7 @@
     },
     "list-context.wishlist": {
         "blocks": [
-            "product-summary.shelf#home"
+            "product-summary.shelf#default"
         ],
         "children": [
             "slider-layout#wishlist"

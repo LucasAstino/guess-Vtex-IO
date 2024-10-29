@@ -1,5 +1,22 @@
 .flexRow{
     &--last__shelf{
         margin: 40px auto 60px;
+        :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy){
+            bottom: 20px;
+        }
     }
+
+    &--first__shelf{
+        :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy){
+            bottom: 20px;
+        }
+    }
+    
+    &--secund__shelf{
+        :global(.vtex-modal-layout-0-x-triggerContainer--fast-buy){
+            bottom: 20px;
+        }
+    }
+
+
 }

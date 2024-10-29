@@ -276,7 +276,7 @@
           "itemsPerRow": 1
         }
       ],
-      "GridSummary": "product-summary.shelf#home"
+      "GridSummary": "product-summary.shelf#default"
     }
   },
   "gallery-layout-switcher": {

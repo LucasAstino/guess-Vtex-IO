@@ -6,6 +6,9 @@
     }
   },
   "flex-layout.row#first__shelf": {
+    "props": {
+      "blockClass": "first__shelf"
+    },
     "children": ["list-context.product-list#first__shelf"]
   },
   "slider-layout#first-products": {

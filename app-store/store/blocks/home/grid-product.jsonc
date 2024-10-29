@@ -43,7 +43,7 @@
   },
 
   "list-context.product-list#grid_product-home": {
-    "blocks": ["product-summary.shelf#home"],
+    "blocks": ["product-summary.shelf#default"],
     "children": ["list-context-renderer#wrapped"],
     "props": {
       "orderBy": "OrderByTopSaleDESC",
