@@ -73,6 +73,19 @@
   overflow: visible;
 }
 
+.container--search__mobile .paper--search__mobile {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-height: 100%;
+}
+.container--search__mobile .paper--search__mobile .headerContainer {
+  border: 0;
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+}
+
 .triggerContainer--fast-buy {
   background-color: white;
   position: absolute;
@@ -100,17 +113,4 @@
   position: absolute;
   right: 10px;
   top: 10px;
-}
-
-.container--search__mobile .paper--search__mobile {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  max-height: 100%;
-}
-.container--search__mobile .paper--search__mobile .headerContainer {
-  border: 0;
-  width: fit-content;
-  position: absolute;
-  right: 10px;
 }
