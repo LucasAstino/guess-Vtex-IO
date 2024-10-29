@@ -55,6 +55,16 @@
   }
 }
 
+.similar__products-addtocart{
+  all: unset;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: auto;
+  padding:10px;
+}
+
 .similar__products-variants--sku {
   text-transform: none;
   cursor:pointer;

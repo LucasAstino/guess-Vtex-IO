@@ -98,7 +98,10 @@
         .submenuWrapper {
           &.level-1 {
             width: 40%;
+            display: flex;
+            justify-content: center;
             @include tablet {
+              flex-direction: column;
               width: 100%;
             }
             .menuLink {
@@ -147,6 +150,9 @@
 
         .bannerContainer {
           display: flex;
+          @include tablet{
+            flex-direction: column;
+          }
           .bannerLink {
             display: block;
             font-size: 22px;
@@ -156,6 +162,9 @@
             margin-top: 5px;
             margin-left: 10px;
             text-decoration: none;
+            @include tablet{
+              margin-left: 0;
+            }
             &:first-child {
               margin-left: 0;
               padding-left: 100px;

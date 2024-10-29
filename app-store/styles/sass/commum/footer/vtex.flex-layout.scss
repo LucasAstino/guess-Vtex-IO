@@ -73,6 +73,9 @@
     .flexRowContent {
       display: flex;
       align-items: center;
+      @include tablet{
+        justify-content: center;
+      }
     }
   }
 

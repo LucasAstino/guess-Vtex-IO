@@ -18,7 +18,12 @@
         "showPaginationDots": "never",
         "infinite": true,
         "fullWidth": false,
-        "blockClass": "shelf"
+        "blockClass": "shelf",
+         "centerMode": {
+        "desktop": "disabled",
+        "phone": "to-the-left"
+      },
+      "centerModeSlidesGap": 8
       }
     },
     "list-context.product-list#secund__shelf": {

@@ -17,6 +17,7 @@
 .container--home_title .heading--home_title {
   font-size: 64px;
   color: #655b43;
+  font-weight: 400;
   margin-block-start: 100px;
 }
 @media (max-width: 1025px) {
@@ -505,6 +506,7 @@
   align-items: center;
   padding-inline-start: 15px;
   font-size: 18px;
+  position: relative;
 }
 @media (max-width: 1025px) {
   .container--fast-buy .paragraph {
@@ -572,6 +574,22 @@
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
+}
+@media (max-width: 1025px) {
+  .container--category__list-link .paragraph--category__list-link {
+    width: 150px;
+    font-size: 13px;
+    border: 0;
+  }
+  .container--category__list-link .paragraph--category__list-link::after {
+    content: "";
+    width: 51px;
+    height: 1px;
+    margin: auto;
+    background-color: black;
+    display: block;
+    margin-top: 8px;
+  }
 }
 .container--category__list-link .paragraph--category__list-link .link {
   text-decoration: none;
@@ -641,23 +659,6 @@
   .container--about-us__last-paragraph .paragraph {
     margin: 1rem 0;
     text-align: justify;
-  }
-}
-
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  font-size: 40px;
-}
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
   }
 }
 
@@ -868,6 +869,23 @@
   text-align: center;
   margin-top: 50px;
   margin-left: 10px;
+}
+
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
 }
 
 .container--dealer .heading {

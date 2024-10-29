@@ -5,14 +5,15 @@
       "flex-layout.row#bannerTop__slider",
       "responsive-layout.desktop#slider__home",
       "responsive-layout.mobile#slider__home",
-      "rich-text#first__shelf-title",
-      "flex-layout.row#first__shelf",
+      // "rich-text#first__shelf-title",
+      // "flex-layout.row#first__shelf",
+      "ConditionBlock#conditionl__home",
       "__fold__",
        "responsive-layout.desktop#category__list",
        "responsive-layout.mobile#category__list",
       "rich-text#first__shelf-title",
        "flex-layout.row#grid_product-home",
-      "rich-text#secund__shelf-title",
+      "rich-text#last__shelf-title",
       "flex-layout.row#secund__shelf",
       "flex-layout.row#last__shelf"
     ]

@@ -1,6 +1,13 @@
 .triggerContainer{
     &--fast-buy{
         background-color: white;
+        position: absolute;
+        bottom: 10px;
+        right: 8px;
+        border-radius:8px;
+        @include tablet{
+            bottom: 8px;
+        }
     }
 }
 

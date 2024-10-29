@@ -124,6 +124,14 @@
   }
 }
 
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
 .flexRow--product-main {
   max-width: 1366px;
   margin: auto;
@@ -327,14 +335,6 @@
   }
 }
 
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
-}
-
 .flexRow--footer__wrapper {
   background: #eee;
   padding: 70px 10px;
@@ -416,6 +416,11 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 1025px) {
+  .flexRow--footer__adress .flexRowContent {
+    justify-content: center;
+  }
+}
 .flexRow--footer__copyright {
   background-color: #000;
 }
@@ -488,6 +493,10 @@
     gap: 4px;
     grid-template-columns: repeat(2, 1fr);
     display: grid;
+    justify-items: center;
+  }
+  .flexRow--category__list .flexRowContent--category__list .flexCol--category__list {
+    width: fit-content;
   }
 }
 
@@ -502,7 +511,12 @@
 .flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
   width: 60%;
   height: auto;
-  object-fit: contain;
+}
+@media (max-width: 1025px) {
+  .flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
+    width: 50%;
+    object-fit: fill;
+  }
 }
 .flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
   padding: 0;
@@ -511,6 +525,12 @@
 .flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
 .flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
   display: none;
+}
+
+@media (max-width: 1025px) {
+  .flexCol--grid_product {
+    width: 50% !important;
+  }
 }
 
 .flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
@@ -528,9 +548,26 @@
   max-width: 100% !important;
   border-radius: 0;
 }
-
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
+    max-height: 245px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageNormal) {
+    max-height: 245px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-slider-layout-0-x-sliderLayoutContainer) :global(.vtex-product-summary-2-x-containerNormal) {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100% !important;
+  }
+}
 .flexRow--last__shelf {
-  margin: 20px auto 60px;
+  margin: 40px auto 60px;
 }
 
 .flexCol--slider__home-slide {

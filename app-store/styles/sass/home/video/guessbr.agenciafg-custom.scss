@@ -1,0 +1,8 @@
+.video__player{
+    aspect-ratio: 16/9;
+    margin-top: 78px;
+    @include tablet{
+        margin-top: 33px;
+        aspect-ratio: 360/355;
+    }
+}

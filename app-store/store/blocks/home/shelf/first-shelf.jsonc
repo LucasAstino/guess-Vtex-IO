@@ -2,7 +2,7 @@
   "rich-text#first__shelf-title": {
     "props": {
       "text": "## Lorem Ipsum Dolor Sit",
-      "blockClass": ["first__shelf-title","home_title"]
+      "blockClass": ["first__shelf-title", "home_title"]
     }
   },
   "flex-layout.row#first__shelf": {
@@ -15,19 +15,43 @@
         "tablet": 3,
         "phone": 2
       },
-      
+
       "showPaginationDots": "never",
       "infinite": true,
       "fullWidth": false,
-      "blockClass": "shelf"
+      "blockClass": "shelf",
+      "centerMode": {
+        "desktop": "disabled",
+        "phone": "to-the-left"
+      },
+      "centerModeSlidesGap": 8
     }
   },
   "list-context.product-list#first__shelf": {
-    "blocks": [ "product-summary.shelf#home"],
+    "blocks": ["product-summary.shelf#home"],
     "children": ["slider-layout#first-products"],
     "props": {
       "orderBy": "OrderByTopSaleDESC",
       "hideUnavailableItems": true
     }
+  },
+
+  "Container-lp#conditionl__home": {
+    "children": ["rich-text#first__shelf-title", "flex-layout.row#first__shelf"]
+  },
+  
+
+"VideoPlayer":{
+  "props":{
+    "playIcon":"assets/icons/commum/play.svg"
+  }
+},
+
+  "ConditionBlock#conditionl__home": {
+    "props":{
+      "toggleActive": false,
+        "blockClass":"conditionl__home"
+    },
+    "children": ["Container-lp#conditionl__home", "VideoPlayer"]
   }
 }

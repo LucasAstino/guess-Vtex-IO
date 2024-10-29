@@ -5,25 +5,40 @@
     .heading--category__list-title {
       font-size: 64px;
       color: #655b43;
-      @include tablet{
+      @include tablet {
         font-size: 25px;
       }
     }
   }
-  &--category__list-link{
+  &--category__list-link {
     display: flex;
     justify-content: center;
-    .paragraph--category__list-link{
-        width: 184px;
-        font-family: "Open Sans";
-        font-size: 24px;
-        text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
-        .link{
-          text-decoration: none;
-          color: black;
+    .paragraph--category__list-link {
+      width: 184px;
+      font-family: "Open Sans";
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid black;
+      @include tablet {
+        width: 150px;
+        font-size: 13px;
+        border: 0;
+        
+        &::after {
+          content: "";
+          width: 51px;
+          height: 1px;
+          margin: auto;
+          background-color: black;
+          display: block;
+          margin-top: 8px;
         }
+      }
+      .link {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }
