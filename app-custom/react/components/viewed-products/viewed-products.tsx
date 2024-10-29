@@ -15,6 +15,7 @@ export const HANDLES_VIEWED = [
   "visited-products-slider",
   "title__viewed-product",
   "product__viewed-name",
+  "product__viewed-container",
   "product__viewed-wrapper",
   "product__viewed-item",
   "product__viewed-link",
@@ -200,78 +201,148 @@ export const VisitedProductsSlider: FC<Props> = () => {
             <h2 className={handles["title__viewed-product"]}>
               Vistos recentemente
             </h2>
-            <SliderLayout
-              itemsPerPage={{
-                desktop: 4,
-                tablet: 2,
-                phone: 2,
-              }}
-              showNavigationArrows="always"
-              showPaginationDots="never"
-              fullWidth
-            >
-              {availableProducts.map((product) => {
-                const maxInstallment =
-                  product.items[0].sellers[0].commertialOffer.PaymentOptions
-                    .installmentOptions[0]?.installments.length - 1;
-                const count =
-                  product.items[0].sellers[0].commertialOffer.PaymentOptions
-                    .installmentOptions[0]?.installments[maxInstallment]?.count;
-                const maxInstallmentValue =
-                  product.items[0].sellers[0].commertialOffer.PaymentOptions
-                    .installmentOptions[0]?.installments[maxInstallment]?.value;
-                const price =
-                  product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
-                    "pt-BR",
-                    { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+            {availableProducts.length >= 4 ? (
+              <SliderLayout
+                itemsPerPage={{
+                  desktop: 4,
+                  tablet: 2,
+                  phone: 2,
+                }}
+                showNavigationArrows="always"
+                showPaginationDots="never"
+                fullWidth
+              >
+                {availableProducts.map((product) => {
+                  const maxInstallment =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments.length - 1;
+                  const count =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments[maxInstallment]
+                      ?.count;
+                  const maxInstallmentValue =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments[maxInstallment]
+                      ?.value;
+                  const price =
+                    product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
+                      "pt-BR",
+                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    );
+                  const image = product.items[0].images[0].imageUrl.replace(
+                    /(ids\/\d+)/,
+                    "$1-500-724"
                   );
-                const image = product.items[0].images[0].imageUrl.replace(
-                  /(ids\/\d+)/,
-                  "$1-500-610"
-                );
-                return (
-                  <div
-                    key={product.productId}
-                    className={handles["product__viewed-item"]}
-                  >
-                    <div className={handles["product__viewed-wrapper"]}>
-                      <a
-                        className={handles["product__viewed-link"]}
-                        href={`/${product.linkText}/p`}
-                      >
-                        <img
-                          className={handles["product__viewed-image"]}
-                          src={image}
-                          alt={product.productName}
-                        />
-                        <h3 className={handles["product__viewed-name"]}>
-                          {product.productName}
-                        </h3>
-                      </a>
-                      <button
-                        className={handles["product__viewed-addtocart"]}
-                        onClick={() => handleOpenModal(product)}
-                      >
-                        Add
-                      </button>
-                    </div>
-                    <p className={handles["product__viewed-price"]}>
-                      R$ {price}
-                    </p>
-
-                    {maxInstallment && (
-                      <p className={handles["product__viewed-installments"]}>
-                        ou {count}x sem juros de R$
-                        {(maxInstallmentValue / 100)
-                          .toFixed(2)
-                          .replace(".", ",")}{" "}
-                        no cartão de crédito
+                  return (
+                    <div
+                      key={product.productId}
+                      className={handles["product__viewed-item"]}
+                    >
+                      <div className={handles["product__viewed-wrapper"]}>
+                        <a
+                          className={handles["product__viewed-link"]}
+                          href={`/${product.linkText}/p`}
+                        >
+                          <img
+                            className={handles["product__viewed-image"]}
+                            src={image}
+                            alt={product.productName}
+                          />
+                          <h3 className={handles["product__viewed-name"]}>
+                            {product.productName}
+                          </h3>
+                        </a>
+                        <button
+                          className={handles["product__viewed-addtocart"]}
+                          onClick={() => handleOpenModal(product)}
+                        >
+                          Add
+                        </button>
+                      </div>
+                      <p className={handles["product__viewed-price"]}>
+                        R$ {price}
                       </p>
-                    )}
-                  </div>
-                );
-              })}
-            </SliderLayout>
+
+                      {maxInstallment && (
+                        <p className={handles["product__viewed-installments"]}>
+                          ou {count}x sem juros de R$
+                          {(maxInstallmentValue / 100)
+                            .toFixed(2)
+                            .replace(".", ",")}{" "}
+                          no cartão de crédito
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </SliderLayout>
+            ) : (
+              <div className={handles["product__viewed-container"]}>
+                {availableProducts.map((product) => {
+                  const maxInstallment =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments.length - 1;
+                  const count =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments[maxInstallment]
+                      ?.count;
+                  const maxInstallmentValue =
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0]?.installments[maxInstallment]
+                      ?.value;
+                  const price =
+                    product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
+                      "pt-BR",
+                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    );
+                  const image = product.items[0].images[0].imageUrl.replace(
+                    /(ids\/\d+)/,
+                    "$1-500-724"
+                  );
+                  return (
+                    <div
+                      key={product.productId}
+                      className={handles["product__viewed-item"]}
+                    >
+                      <div className={handles["product__viewed-wrapper"]}>
+                        <a
+                          className={handles["product__viewed-link"]}
+                          href={`/${product.linkText}/p`}
+                        >
+                          <img
+                            className={handles["product__viewed-image"]}
+                            src={image}
+                            alt={product.productName}
+                          />
+                          <h3 className={handles["product__viewed-name"]}>
+                            {product.productName}
+                          </h3>
+                        </a>
+                        <button
+                          className={handles["product__viewed-addtocart"]}
+                          onClick={() => handleOpenModal(product)}
+                        >
+                          Add
+                        </button>
+                      </div>
+                      <p className={handles["product__viewed-price"]}>
+                        R$ {price}
+                      </p>
+
+                      {maxInstallment && (
+                        <p className={handles["product__viewed-installments"]}>
+                          ou {count}x sem juros de R$
+                          {(maxInstallmentValue / 100)
+                            .toFixed(2)
+                            .replace(".", ",")}{" "}
+                          no cartão de crédito
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </>
         ) : (
           <></>
