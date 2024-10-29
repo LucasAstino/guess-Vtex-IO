@@ -1,6 +1,7 @@
 .flexRow {
   &--product-main {
-    max-width: 1366px;
+    max-width: 1800px;
+    padding: 0 20px;
     margin: auto;
     .flexRowContent--product-main {
       justify-content: space-between;
@@ -15,7 +16,7 @@
         :global(
             .vtex-store-components-3-x-productImageTag--product-image-grid--main
           ) {
-          max-height: 690px !important;
+          max-height: 855px !important;
         }
       }
     }
@@ -93,23 +94,23 @@
     }
   }
 
-  &--pdp__installmentsAndPayments{
-    .flexRowContent{
-      @include tablet{
+  &--pdp__installmentsAndPayments {
+    .flexRowContent {
+      @include tablet {
         padding: 0 15px;
         display: flex;
         gap: 26px;
         flex-direction: column;
-        border-bottom: 1px solid #EEEEEE;
+        border-bottom: 1px solid #eeeeee;
       }
     }
   }
 
   &--buy-button {
-    @include tablet{
+    @include tablet {
       padding: 0 15px;
 
-      :global(.vtex-add-to-cart-button-0-x-buttonText){
+      :global(.vtex-add-to-cart-button-0-x-buttonText) {
         text-transform: none;
       }
     }
@@ -126,7 +127,7 @@
   &--product__name-pdp {
     :global(.vtex-store-components-3-x-productNameContainer--quickview) {
       font-size: 20px;
-      @include tablet{
+      @include tablet {
         padding: 0 15px;
       }
     }
@@ -138,7 +139,7 @@
     .flexRowContent {
       gap: 10px;
       display: flex;
-      @include tablet{
+      @include tablet {
         padding: 0 15px;
       }
     }
@@ -152,10 +153,11 @@
     .flexRowContent--product__price-pdp {
       gap: 5px;
       display: flex;
-      @include tablet{
+      @include tablet {
         margin-bottom: 5px;
         padding-left: 15px;
-        :global(.vtex-product-price-1-x-currencyContainer),:global(.vtex-product-price-1-x-savings) {
+        :global(.vtex-product-price-1-x-currencyContainer),
+        :global(.vtex-product-price-1-x-savings) {
           font-size: 14px;
         }
       }
@@ -166,7 +168,7 @@
     .flexRowContent {
       justify-content: space-between;
       margin-bottom: 50px;
-      @include tablet{
+      @include tablet {
         margin-bottom: 0px;
         padding-bottom: 26px;
       }
@@ -177,7 +179,7 @@
     .flexRowContent {
       margin-bottom: 0;
       display: flex;
-      @include tablet{
+      @include tablet {
         padding: 0 15px;
       }
     }
@@ -190,7 +192,7 @@
       overflow: scroll;
       height: 700px;
       padding: 35px;
-      @include tablet{
+      @include tablet {
         padding-bottom: 100px;
       }
     }
@@ -198,9 +200,14 @@
 
   &--product-breadcrumb {
     .flexRowContent {
+      :global(.vtex-breadcrumb-1-x-container) {
+        font-size: 12px;
+
+      }
       @include tablet {
         margin-bottom: 15px;
         :global(.vtex-breadcrumb-1-x-container) {
+          font-size: 12px;
           display: flex;
           height: 14px;
           padding: 0;
@@ -212,7 +219,7 @@
             font-size: 12px;
             text-overflow: ellipsis;
             overflow: hidden;
-            &:global(.vtex-breadcrumb-1-x-homeLink){
+            &:global(.vtex-breadcrumb-1-x-homeLink) {
               overflow: visible;
             }
           }

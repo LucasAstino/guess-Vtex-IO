@@ -129,7 +129,7 @@
   height: fit-content;
 }
 .logoLink--logo__desktop .logoContainer {
-  padding: 0 30px 0 10px;
+  padding: 0 30px 0 0px;
   height: auto;
   display: inline-block;
 }

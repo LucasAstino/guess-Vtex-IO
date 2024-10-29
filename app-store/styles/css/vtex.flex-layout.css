@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -125,7 +125,8 @@
 }
 
 .flexRow--product-main {
-  max-width: 1366px;
+  max-width: 1800px;
+  padding: 0 20px;
   margin: auto;
 }
 .flexRow--product-main .flexRowContent--product-main {
@@ -141,7 +142,7 @@
   gap: 5px;
 }
 .flexRow--product-main .flexCol--product__col-left :global(.vtex-store-components-3-x-content--product-image-grid) :global(.vtex-store-components-3-x-productImageTag--product-image-grid--main) {
-  max-height: 690px !important;
+  max-height: 855px !important;
 }
 .flexRow--product-main .flexCol--product__right-col {
   width: 40%;
@@ -207,7 +208,7 @@
     display: flex;
     gap: 26px;
     flex-direction: column;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #eeeeee;
   }
 }
 @media (max-width: 1025px) {
@@ -262,7 +263,8 @@
     margin-bottom: 5px;
     padding-left: 15px;
   }
-  .flexRow--product__price-pdp .flexRowContent--product__price-pdp :global(.vtex-product-price-1-x-currencyContainer), .flexRow--product__price-pdp .flexRowContent--product__price-pdp :global(.vtex-product-price-1-x-savings) {
+  .flexRow--product__price-pdp .flexRowContent--product__price-pdp :global(.vtex-product-price-1-x-currencyContainer),
+  .flexRow--product__price-pdp .flexRowContent--product__price-pdp :global(.vtex-product-price-1-x-savings) {
     font-size: 14px;
   }
 }
@@ -299,11 +301,15 @@
     padding-bottom: 100px;
   }
 }
+.flexRow--product-breadcrumb .flexRowContent :global(.vtex-breadcrumb-1-x-container) {
+  font-size: 12px;
+}
 @media (max-width: 1025px) {
   .flexRow--product-breadcrumb .flexRowContent {
     margin-bottom: 15px;
   }
   .flexRow--product-breadcrumb .flexRowContent :global(.vtex-breadcrumb-1-x-container) {
+    font-size: 12px;
     display: flex;
     height: 14px;
     padding: 0;
@@ -432,8 +438,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 20px;
   height: 78px;
+  max-width: 1800px;
 }
 .flexRow--main-header-mobile {
   background-color: white;
@@ -634,6 +641,12 @@
   }
 }
 
+.flexRow--contact-us .flexRowContent--contact-us {
+  flex-direction: column;
+  margin: auto;
+  max-width: 720px;
+}
+
 .flexRow--cashback__container .flexRowContent--cashback__container {
   flex-direction: column;
   max-width: 1366px;
@@ -729,12 +742,6 @@
   margin: auto;
 }
 
-.flexRow--contact-us .flexRowContent--contact-us {
-  flex-direction: column;
-  margin: auto;
-  max-width: 720px;
-}
-
 .flexRow--dealer__container {
   max-width: 1086px;
   margin: 80px auto 100px;
@@ -776,24 +783,8 @@
   }
 }
 
-.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
-  margin: 50px auto;
-}
-
 .flexRow--faq .flexRowContent--faq {
   margin: 100px auto;
-}
-
-.flexRow--privacy_policy .flexRowContent--privacy_policy {
-  max-width: 1280px;
-  margin: 0 auto;
-  overflow: hidden;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
-  .flexRow--privacy_policy .flexRowContent--privacy_policy {
-    padding: 0 10px;
-  }
 }
 
 .flexRow--table__sizes-container .flexRowContent--table__sizes-container {
@@ -837,4 +828,20 @@
   .flexRow--table__sizes-masculine--tables .flexRowContent {
     flex-direction: column;
   }
+}
+
+.flexRow--privacy_policy .flexRowContent--privacy_policy {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .flexRow--privacy_policy .flexRowContent--privacy_policy {
+    padding: 0 10px;
+  }
+}
+
+.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
+  margin: 50px auto;
 }
