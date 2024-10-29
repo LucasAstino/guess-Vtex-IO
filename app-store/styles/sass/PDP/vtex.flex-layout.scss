@@ -23,6 +23,11 @@
     .flexCol--product__right-col {
       width: 40%;
       max-width: 430px;
+      position: sticky;
+      top: 100px;
+      @include tablet{
+        position: static;
+      }
 
       :global(.vtex-address-form__postalCode) {
         :global(.vtex-input__label) {
@@ -202,6 +207,9 @@
     .flexRowContent {
       :global(.vtex-breadcrumb-1-x-container) {
         font-size: 12px;
+        max-width: 1800px;
+        padding: 0 20px;
+        margin: 24px 0;
 
       }
       @include tablet {

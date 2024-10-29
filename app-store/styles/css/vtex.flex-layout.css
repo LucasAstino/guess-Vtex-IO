@@ -9,13 +9,13 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
@@ -124,6 +124,14 @@
   }
 }
 
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
@@ -147,6 +155,13 @@
 .flexRow--product-main .flexCol--product__right-col {
   width: 40%;
   max-width: 430px;
+  position: sticky;
+  top: 100px;
+}
+@media (max-width: 1025px) {
+  .flexRow--product-main .flexCol--product__right-col {
+    position: static;
+  }
 }
 .flexRow--product-main .flexCol--product__right-col :global(.vtex-address-form__postalCode) :global(.vtex-input__label) {
   font-size: 0;
@@ -303,6 +318,9 @@
 }
 .flexRow--product-breadcrumb .flexRowContent :global(.vtex-breadcrumb-1-x-container) {
   font-size: 12px;
+  max-width: 1800px;
+  padding: 0 20px;
+  margin: 24px 0;
 }
 @media (max-width: 1025px) {
   .flexRow--product-breadcrumb .flexRowContent {
@@ -331,14 +349,6 @@
     width: 80px;
     font-size: 12px;
   }
-}
-
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
 }
 
 .flexRow--footer__wrapper {
@@ -641,12 +651,6 @@
   }
 }
 
-.flexRow--contact-us .flexRowContent--contact-us {
-  flex-direction: column;
-  margin: auto;
-  max-width: 720px;
-}
-
 .flexRow--cashback__container .flexRowContent--cashback__container {
   flex-direction: column;
   max-width: 1366px;
@@ -742,6 +746,12 @@
   margin: auto;
 }
 
+.flexRow--contact-us .flexRowContent--contact-us {
+  flex-direction: column;
+  margin: auto;
+  max-width: 720px;
+}
+
 .flexRow--dealer__container {
   max-width: 1086px;
   margin: 80px auto 100px;
@@ -783,8 +793,24 @@
   }
 }
 
+.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
+  margin: 50px auto;
+}
+
 .flexRow--faq .flexRowContent--faq {
   margin: 100px auto;
+}
+
+.flexRow--privacy_policy .flexRowContent--privacy_policy {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .flexRow--privacy_policy .flexRowContent--privacy_policy {
+    padding: 0 10px;
+  }
 }
 
 .flexRow--table__sizes-container .flexRowContent--table__sizes-container {
@@ -828,20 +854,4 @@
   .flexRow--table__sizes-masculine--tables .flexRowContent {
     flex-direction: column;
   }
-}
-
-.flexRow--privacy_policy .flexRowContent--privacy_policy {
-  max-width: 1280px;
-  margin: 0 auto;
-  overflow: hidden;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
-  .flexRow--privacy_policy .flexRowContent--privacy_policy {
-    padding: 0 10px;
-  }
-}
-
-.flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
-  margin: 50px auto;
 }

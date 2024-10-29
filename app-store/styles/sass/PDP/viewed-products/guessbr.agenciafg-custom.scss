@@ -1,3 +1,7 @@
+.product__viewed-container{
+  display: flex;
+  gap: 8px;
+}
 .visited-products-slider {
   padding: 0 30px;
   margin-bottom: 150px;
@@ -11,6 +15,7 @@
   }
 }
 .product__viewed-item{
+  max-width: 20vw;
   @include tablet{
     max-width: 152px;
   }

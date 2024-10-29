@@ -1,0 +1,7 @@
+.customContainer--shelf{
+    height: 100%;
+    :global(.vtex-product-summary-2-x-imageContainer){
+        height: 100%;
+        width: 100%;
+    }
+}

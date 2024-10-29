@@ -40,7 +40,8 @@
 .gallery--grid {
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  // grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
@@ -60,6 +61,9 @@
     flex-basis: 0 !important;
     flex-shrink: 1;
     max-width: 350px !important;
+    :global(.vtex-product-summary-2-x-image){
+      object-fit: cover !important;
+    }
   }
 }
 

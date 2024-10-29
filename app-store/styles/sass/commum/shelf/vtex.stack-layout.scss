@@ -1,6 +1,10 @@
 .stackContainer--shelf{
     position: relative;
-    height: 100%;
+    height: 20vw;
+    overflow: hidden;
+    .stackItem--shelf--first{
+        height: 100%;
+    }
     .stackItem--shelf--fast-buy{
         top: calc(100% - 8px);
         left: calc(100% - 8px);

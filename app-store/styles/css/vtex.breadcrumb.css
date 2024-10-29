@@ -1,7 +1,6 @@
 .container {
-  max-width: 1800px;
-  padding: 0 20px;
-  margin: 24px auto;
+  max-width: 1366px;
+  margin: auto;
 }
 .container .termArrow::before, .container .arrow::before {
   content: "/";
