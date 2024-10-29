@@ -17,6 +17,7 @@ export const HANDLES_VARIANTS = [
   "similar__products-variants--sku-unavailable",
   "similar__products-variants--sku-title",
   "similar__products-variants--img-current",
+  "similar__products-addtocart",
   "similar__products-variants--circle",
   "similar__products-variants--circle-unavailable",
   "similar__products-variants--link",
@@ -83,6 +84,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
 
   const [selectedSize, setSelectedSize] = useState(currentSize);
   const [selectedColor, setSelectedColor] = useState(currentColor);
+  const [addToCartSku, setAddToCartSku] = useState('');
 
   const fetchSkusByColor = async (colorProductId: string) => {
     try {
@@ -243,7 +245,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                         : ""
                     }`}
                     onClick={() => {
-                      handleAddToCart(sku.sku);
+                      setAddToCartSku(sku.sku)
                       setSelectedSize(sku.dimensions.Tamanho);
                     }}
                   >
@@ -252,6 +254,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 ))}
               </ul>
             </p>
+            <button onClick={() => handleAddToCart(addToCartSku)} className={handles["similar__products-addtocart"]}>Adicionar ao carrinho</button>
           </div>
         ) : (
           <span>Sem SKUs disponíveis</span>

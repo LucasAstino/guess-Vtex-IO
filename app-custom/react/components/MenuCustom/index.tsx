@@ -55,7 +55,6 @@ const CSS_HANDLES = [
 
 export const AstinoMenu = (props: Props) => {
   const { menuLinks } = props;
-  console.log("menuLinks props:", menuLinks); 
 
   const [openSubmenus, setOpenSubmenus] = useState<string[]>([]);
   const { handles } = useCssHandles(CSS_HANDLES);

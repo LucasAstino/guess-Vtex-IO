@@ -58,11 +58,18 @@
     "component":"Container-lp",
     "composition": "children"
   },
+  "ConditionBlock":{
+    "component":"conditionBlock",
+    "composition": "children"
+  },
   "PopupForm":{
     "component":"PopupForm"
   },
   "Contact-us":{
     "component":"contact-us"
+  },
+  "VideoPlayer":{
+    "component":"Video"
   },
   "commumScript":{
     "component":"commumScript",
