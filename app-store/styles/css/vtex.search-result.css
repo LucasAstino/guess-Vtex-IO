@@ -121,7 +121,6 @@
   padding: 10px 0;
 }
 .filters--layout .filterAvailable .filterTitleSpan {
-  text-transform: uppercase;
   font-weight: 450;
   font-size: 14px;
   letter-spacing: 0.1em;
@@ -149,6 +148,16 @@
 }
 .filters--layout .filterAvailable.filterIsOpen::before {
   content: none;
+}
+.filters--layout .filter__container--category-4 .filterTitleSpan {
+  font-size: 0;
+}
+.filters--layout .filter__container--category-4 .filterTitleSpan::before {
+  content: "Categoria";
+  font-size: 14px;
+}
+.filters--layout .filter__container--hexadecimal, .filters--layout .filter__container--brand {
+  display: none;
 }
 .filters--layout .filterTemplateOverflow :global(.vtex-checkbox__line-container) {
   align-items: center;

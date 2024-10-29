@@ -121,7 +121,6 @@
     padding: 10px 0;
 
     .filterTitleSpan {
-      text-transform: uppercase;
       font-weight: 450;
       font-size: 14px;
       letter-spacing: 0.1em;
@@ -156,9 +155,19 @@
     }
   }
 
-  // .filter__container--hexadecimal {
-  //   display: none;
-  // }
+  .filter__container--category-4{
+    .filterTitleSpan{
+      font-size: 0;
+      &::before{
+        content: "Categoria";
+        font-size: 14px;
+      }
+    }
+  }
+
+  .filter__container--hexadecimal,.filter__container--brand {
+    display: none;
+  }
 
   .filterTemplateOverflow {
     :global(.vtex-checkbox__line-container) {
