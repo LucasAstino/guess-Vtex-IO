@@ -70,8 +70,7 @@
       "ConditionBlock",
       "flex-layout.row#searchbread",
       "flex-layout.row#result",
-      "commumScript",
-      "search-fetch-more"
+      "commumScript"
     ],
     "props": {
       "pagination": "show-more",
@@ -143,19 +142,29 @@
       "itemsPerPage": {
         "desktop": 6,
         "tablet": 4,
-        "phone": 1
+        "phone": 3
       },
       "infinite": true,
-      "blockClass":"search__result",
-      "showPaginationDots":"never",
-      "showNavigationArrows":"never"
+      "blockClass": "search__result",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "centerMode": {
+        "desktop": false,
+        "tablet": false, 
+        "phone": true
+      },
+      "centerPadding": {
+        "desktop": "0px",
+        "tablet": "0px",
+        "phone": "30px" 
+      }
     }
   },
 
   "image#search__result": {
     "props": {
       "src": "",
-      "blockClass":"search__result"
+      "blockClass": "search__result"
     }
   },
 
@@ -185,6 +194,7 @@
     "children": [
       "flex-layout.row#searchinfo",
       "flex-layout.row#products",
+       "search-fetch-more",
       "flex-layout.row#seo__content"
     ],
     "props": {
@@ -228,8 +238,7 @@
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
-      "flex-layout.row#contentmobile",
-      "search-fetch-more"
+      "flex-layout.row#contentmobile"
     ],
     "props": {
       "pagination": "show-more",
@@ -288,7 +297,7 @@
     }
   },
   "search-not-found-layout": {
-    "children": ["flex-layout.row#searchbread", "flex-layout.row#notfound"]
+    "children": ["flex-layout.row#searchbread",  "flex-layout.row#notfound"]
   },
 
   "flex-layout.row#notfound": {
@@ -297,6 +306,62 @@
       "fullWidth": true
     }
   },
+
+  // "flex-layout.row#not-found": {
+  //   "props": {
+  //     "blockClass": "not-found"
+  //   },
+  //   "children": ["flex-layout.col#not-found"]
+  // },
+
+  // "flex-layout.row#not-found--links": {
+  //   "children": [ "rich-text#not-found--link01",
+  //   "rich-text#not-found--link02",
+  //   "rich-text#not-found--link03",
+  //   "rich-text#not-found--link04",
+  //   "rich-text#not-found--link05"]
+  // },
+
+  // "flex-layout.col#not-found": {
+  //   "props": {
+  //     "blockClass":"not-found"
+  //   },
+  //   "children": [
+  //     "rich-text#not-found--text",
+  //     "flex-layout.row#not-found--links"
+  //   ]
+  // },
+
+  // "rich-text#not-found--text": {
+  //   "props": {
+  //     "text": "Parece que não temos o que você está procurando...\n**QUE TAL CONFERIR OUTROS PRODUTOS EM:**"
+  //   }
+  // },
+  // "rich-text#not-found--link01": {
+  //   "props": {
+  //     "text": "ACESSÓRIOS"
+  //   }
+  // },
+  // "rich-text#not-found--link02": {
+  //   "props": {
+  //     "text": "FEMININO"
+  //   }
+  // },
+  // "rich-text#not-found--link03": {
+  //   "props": {
+  //     "text": "MASCULINO"
+  //   }
+  // },
+  // "rich-text#not-found--link04": {
+  //   "props": {
+  //     "text": "SALE"
+  //   }
+  // },
+  // "rich-text#not-found--link05": {
+  //   "props": {
+  //     "text": "NEW ARRIVALS"
+  //   }
+  // },
 
   "breadcrumb": {
     "props": {

@@ -1,0 +1,10 @@
+.flexRow{
+    &--not-found{
+        .flexRowContent{
+            .flexCol--not-found{
+                max-width: 1150px;
+                margin: auto;
+            }
+        }
+    }
+}

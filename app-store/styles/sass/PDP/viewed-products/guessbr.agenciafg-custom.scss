@@ -75,12 +75,11 @@
   background-color: #ffffff;
   border-radius: 6px;
   border: 2px solid #bdbec0;
-  width: 90px;
-  height: 40px;
-  font-size: 18px;
+  width: 60px;
+  height: 30px;
+  font-size: 16px;
   text-align: left;
-  padding-inline-start: 15px;
-  padding-inline-end: 10px;
+  padding-inline-start: 5px;
   font-family: 'Futura';
   color: black;
   @include tablet{
@@ -96,8 +95,8 @@
   &::after {
     content: "";
     display: block;
-    width: 12px;
-    height: 2px;
+    width: 8px;
+    height: 1px;
     background-color: black;
     position: absolute;
     right: 10px;
@@ -110,8 +109,8 @@
   &::before {
     content: "";
     display: block;
-    width: 12px;
-    height: 2px;
+    width: 8px;
+    height: 1px;
     background-color: black;
     position: absolute;
     right: 10px;
