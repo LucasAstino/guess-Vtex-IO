@@ -1,10 +1,28 @@
+.sliderLayoutContainer--search__result {
+  padding: 20px;
+}
+.sliderLayoutContainer--search__result .sliderTrack {
+  gap: 25px;
+}
+
 .sliderLayoutContainer--shelf {
   max-width: 1800px;
   margin: auto;
 }
 @media (min-width: 1025px) {
+  .sliderLayoutContainer--shelf .sliderTrackContainer--shelf {
+    overflow: visible;
+  }
+}
+@media (min-width: 1025px) {
   .sliderLayoutContainer--shelf .slide--shelf .slideChildrenContainer--shelf :global(.vtex-product-summary-2-x-containerNormal) {
+    overflow: visible;
     max-width: calc(100% - 8px) !important;
+  }
+}
+@media (max-width: 1025px) {
+  .sliderLayoutContainer--shelf .sliderArrows--shelf {
+    translate: 0 -50px;
   }
 }
 

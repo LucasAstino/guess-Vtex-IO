@@ -1,16 +1,17 @@
 .flexRow {
   &--searchbread {
     :global(.vtex-breadcrumb-1-x-container) {
-      margin: 0;
-      margin-left: 25px;
+      margin: auto;
       margin-bottom: 29px;
+      max-width: 1800px;
+      padding: 0 20px;
       :global(.vtex-breadcrumb-1-x-link) {
         color: #565d61;
       }
-      :global(.vtex-breadcrumb-1-x-arrow){
-        &::before{
-            font-size: 10px;
-            color: rgba(0, 0, 0, 0.4);
+      :global(.vtex-breadcrumb-1-x-arrow) {
+        &::before {
+          font-size: 10px;
+          color: rgba(0, 0, 0, 0.4);
         }
       }
     }
@@ -25,8 +26,9 @@
 
   &--result {
     .flexRowContent--result {
-        width: 80%;
-        margin: auto;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 40px;
       .flexCol--content {
         margin-top: 50px;
         padding-left: 25px;
@@ -34,8 +36,8 @@
     }
   }
 
-  &--productCountMobileRow{
-    .flexRowContent{
+  &--productCountMobileRow {
+    .flexRowContent {
       display: flex;
       align-items: baseline;
       padding: 13px 0 13px 25px;
@@ -44,13 +46,13 @@
     }
   }
 
-  &--searchinfomobile{
-    .flexRowContent{
+  &--searchinfomobile {
+    .flexRowContent {
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
       position: relative;
-      .flexCol--filterMobileCol{
+      .flexCol--filterMobileCol {
         margin: 0;
         position: absolute;
         left: 25px;

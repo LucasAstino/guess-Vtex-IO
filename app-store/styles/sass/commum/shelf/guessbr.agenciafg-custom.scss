@@ -5,3 +5,42 @@
         width: 100%;
     }
 }
+
+.custom-modal-container{
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    z-index: 999;
+    border-radius:8px;
+    width: 60px;
+    border: 2px solid #bdbec0;
+    @include tablet{
+        bottom: 8px;
+    }
+
+    .modal-content{
+        position: absolute;
+        right: -10px;
+        background: #F9F9F9;
+        width: 25vw;
+        padding: 20px;
+        border-radius: 8px;
+
+        .modal-content--wrapper{
+            .similar__products-variants--circle{
+                height: 25px !important;
+                width: 25px !important;
+            }
+            .modal-content--button{
+                all: unset;
+                position: absolute;
+                right: 15px;
+                top: 5px;
+                font-size: 35px;
+                font-weight: 300;
+                rotate: 45deg;
+            }
+        }
+    }
+}

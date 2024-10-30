@@ -4,7 +4,10 @@
         position: absolute;
         bottom: 10px;
         right: 8px;
+        z-index: 999;
         border-radius:8px;
+        width: 60px;
+        border: 2px solid #bdbec0;
         @include tablet{
             bottom: 8px;
         }

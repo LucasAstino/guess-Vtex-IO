@@ -22025,6 +22025,9 @@ validateAuthEmail.init();
     a(507),
     a(928);
 })();
+
+
+
 var intervalId = null;
 var intervalClickDelivery = null;
 var shippingContainer = $("#shipping-preview-container").prependTo(
@@ -22050,6 +22053,24 @@ var clickOnCepBtn = function () {
   }, 8000);
 };
 
+const checkUrlAndRun = () => {
+  const interval = setInterval(() => {
+    if (window.location.href.includes('/checkout#/payment')) {
+      const vale = document.querySelector('#show-gift-card-group');
+      const valelabel = document.querySelector('.gift-card-section .payment-discounts-options label');
+      if (vale) {
+        vale.textContent = 'Vale-Compra'; 
+        valelabel.textContent = 'Vale Compra'; 
+        console.log(vale, 'Texto atualizado com sucesso!');
+        clearInterval(interval); 
+      } else {
+        console.log('Elemento não encontrado, tentando novamente...');
+      }
+    }
+  }, 1000); 
+};
+
+
 var cashbackValue = 0;
 
 var shipping =
@@ -22072,81 +22093,78 @@ var addHtmlContentAfter = function (selector, html) {
   }
 };
 $(document).ready(function () {
-    vtexjs.checkout.getOrderForm().done(function (orderForm) {
-      console.log(orderForm);
-      cashbackValue = orderForm.totalizers[0].value * 0.15;
-      cashbackValue = cashbackValue / 100;
-  
-      let items = orderForm.items;
-      items.forEach((i) => {
-        const skuId = i.id; // SKU do item atual
-  
-        // Faz a requisição para obter as informações do SKU
-        fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${skuId}`)
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Informações do SKU:", data[0].items);
-            let sku = data[0].items.find(e => e.itemId == skuId); // Encontra o SKU correto
-  
-            if (sku) {
-              let color = sku.Cor && sku.Cor.length ? `<p class="product__color">Cor: ${sku.Cor[0]}</p>` : ''; // Verifica se há cores
-              let size = sku.Tamanho && sku.Tamanho.length ? `<p class="product__size">Tamanho: ${sku.Tamanho[0]}</p>` : ''; // Verifica se há tamanhos
-  
-              // Seleciona todos os links de nome de produto
-              const links = document.querySelectorAll(".product-name a");
-              
-              // Verifica cada link para ver se o id contém o número do SKU
-              links.forEach(link => {
-                if (link.id && link.id.includes(skuId.toString())) {
-                  // Adiciona as informações de cor, tamanho e nome ao link correto
-                  link.insertAdjacentHTML("beforeend", color);
-                  link.insertAdjacentHTML("beforeend", size);
-                }
-              });
-            }
-          })
-          .catch((error) => {
-            console.error("Erro ao buscar informações do SKU:", error);
-          });
-      });
-  
-      var cashback =
-        '<div class="loyality-points"><p class="text">Finalize seu pedido e <strong>receba R$ ' +
-        cashbackValue.toFixed(2).replace(".", ",") +
-        "</strong><br> em sua próxima compra.</p></div>";
-  
-      addHtmlContent(".full-cart .summary-template-holder", cashback);
-    });
-  
-    intervalId = setInterval(moveShipping, 500);
-    intervalClickDelivery = setInterval(clickOnCepBtn, 500);
-  
-    setTimeout(function () {
-      addHtmlContent(".cart-links.cart-links-bottom", shipping);
-      if (window.screen.width > 768) {
-        addHtmlContentAfter(".cart-template-holder .cart", backToHome);
-      } else {
-        addHtmlContentAfter(".btn-place-order-wrapper", backToHome);
-      }
-    }, 1000);
+  vtexjs.checkout.getOrderForm().done(function (orderForm) {
+    console.log(orderForm);
+    cashbackValue = orderForm.totalizers[0].value * 0.15;
+    cashbackValue = cashbackValue / 100;
 
+    let items = orderForm.items;
+    items.forEach((i) => {
+      const skuId = i.id; // SKU do item atual
 
+      // Faz a requisição para obter as informações do SKU
+      fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${skuId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Informações do SKU:", data[0].items);
+          let sku = data[0].items.find((e) => e.itemId == skuId); // Encontra o SKU correto
 
-    const titles = document.querySelectorAll('footer .title');
+          if (sku) {
+            let color =
+              sku.Cor && sku.Cor.length
+                ? `<p class="product__color">Cor: ${sku.Cor[0]}</p>`
+                : ""; // Verifica se há cores
+            let size =
+              sku.Tamanho && sku.Tamanho.length
+                ? `<p class="product__size">Tamanho: ${sku.Tamanho[0]}</p>`
+                : ""; // Verifica se há tamanhos
 
+            // Seleciona todos os links de nome de produto
+            const links = document.querySelectorAll(".product-name a");
 
-    console.log(titles)
-  
-    
-    titles.forEach(title => {
-        title.addEventListener('click', function() {
-  
-            
-            const ulElement = this.nextElementSibling; 
-            ulElement.classList.toggle('active'); 
+            // Verifica cada link para ver se o id contém o número do SKU
+            links.forEach((link) => {
+              if (link.id && link.id.includes(skuId.toString())) {
+                // Adiciona as informações de cor, tamanho e nome ao link correto
+                link.insertAdjacentHTML("beforeend", color);
+                link.insertAdjacentHTML("beforeend", size);
+              }
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao buscar informações do SKU:", error);
         });
     });
 
+    var cashback =
+      '<div class="loyality-points"><p class="text">Finalize seu pedido e <strong>receba R$ ' +
+      cashbackValue.toFixed(2).replace(".", ",") +
+      "</strong><br> em sua próxima compra.</p></div>";
 
+    addHtmlContent(".full-cart .summary-template-holder", cashback);
   });
-  
+
+  intervalId = setInterval(moveShipping, 500);
+  intervalClickDelivery = setInterval(clickOnCepBtn, 500);
+
+  setTimeout(function () {
+    addHtmlContent(".cart-links.cart-links-bottom", shipping);
+    if (window.screen.width > 768) {
+      addHtmlContentAfter(".cart-template-holder .cart", backToHome);
+    } else {
+      addHtmlContentAfter(".btn-place-order-wrapper", backToHome);
+    }
+  }, 1000);
+
+  const titles = document.querySelectorAll("footer .title");
+
+  checkUrlAndRun();
+
+  titles.forEach((title) => {
+    title.addEventListener("click", function () {
+      const ulElement = this.nextElementSibling;
+      ulElement.classList.toggle("active");
+    });
+  });
+});

@@ -27,7 +27,7 @@
     "props":{
       "blockClass":"shelf"
     },
-    "children": ["product-summary-image#shelf", "modal-trigger#fast-buy"]
+    "children": ["product-summary-image#shelf__default", "modal-trigger#fast-buy"]
   },
 
   "product-summary-name#shelf": {
@@ -36,18 +36,14 @@
       "tag": "h3"
     }
   },
-  "product-summary-image#shelf": {
+  "product-summary-image#shelf__default": {
     "title": "Imagem do produto na prateleira",
     "props": {
+      "hoverImage": {
+            "criteria": "index",
+            "index": 1
+        },
       "showBadge": false,
-      "maxHeight": 724
-    }
-  },
-  "product-summary-image#shelf__home": {
-    "title": "Imagem do produto na prateleira",
-    "props": {
-      "showBadge": false,
-      "aspectRatio": "2:3",
       "maxHeight": 724
     }
   },

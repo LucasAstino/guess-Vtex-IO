@@ -1,6 +1,13 @@
 {
   "sticky-layout#desktop": {
-    "children": [ "flex-layout.row#header__content-desktop"]
+    "props": {
+      "blockClass": "main-header"
+    },
+    "children": ["Container-lp#header__desktop"]
+  },
+
+  "Container-lp#header__desktop":{
+    "children":["flex-layout.row#header__content-desktop"]
   },
 
   "flex-layout.row#header__content-desktop": {

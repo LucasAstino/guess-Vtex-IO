@@ -9,21 +9,22 @@
   }
 }
 
-.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+.flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
 @media all and (max-width: 1024px) {
-  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--faq .flexRowContent--faq, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
+  .flexRow--terms .flexRowContent--terms, .flexRow--table__sizes-container .flexRowContent--table__sizes-container, .flexRow--faq .flexRowContent--faq, .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns, .flexRow--about-us__container, .flexRow--footer__adress, .flexRow--footer__wrapper .flexRowContent {
     width: calc(100% - 30px);
   }
 }
 
 .flexRow--searchbread :global(.vtex-breadcrumb-1-x-container) {
-  margin: 0;
-  margin-left: 25px;
+  margin: auto;
   margin-bottom: 29px;
+  max-width: 1800px;
+  padding: 0 20px;
 }
 .flexRow--searchbread :global(.vtex-breadcrumb-1-x-container) :global(.vtex-breadcrumb-1-x-link) {
   color: #565d61;
@@ -39,6 +40,7 @@
 .flexRow--result .flexRowContent--result {
   width: 80%;
   margin: auto;
+  margin-bottom: 40px;
 }
 .flexRow--result .flexRowContent--result .flexCol--content {
   margin-top: 50px;
@@ -451,6 +453,7 @@
   padding: 0 20px;
   height: 78px;
   max-width: 1800px;
+  margin: auto;
 }
 .flexRow--main-header-mobile {
   background-color: white;
@@ -802,12 +805,12 @@
   }
 }
 
-.flexRow--faq .flexRowContent--faq {
-  margin: 100px auto;
-}
-
 .flexRow--exchange_and_returns .flexRowContent--exchange_and_returns {
   margin: 50px auto;
+}
+
+.flexRow--faq .flexRowContent--faq {
+  margin: 100px auto;
 }
 
 .flexRow--privacy_policy .flexRowContent--privacy_policy {

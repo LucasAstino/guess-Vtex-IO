@@ -2,6 +2,10 @@
   display: none;
 }
 
+.container--layout {
+  margin-bottom: 40px;
+}
+
 .galleryTitle--layout {
   font-size: 24px;
   font-weight: 500;
@@ -64,7 +68,6 @@
   max-width: 350px !important;
 }
 .gallery--grid .galleryItem--grid :global(.vtex-stack-layout-0-x-stackContainer--shelf) {
-  height: 20vw;
   overflow: hidden;
 }
 .gallery--grid .galleryItem--grid :global(.vtex-product-summary-2-x-image) {
@@ -271,6 +274,10 @@
 
 .accordionFilterItemOptions {
   max-height: 270px;
+}
+
+.buttonShowMore :global(.vtex-button):hover {
+  color: white;
 }
 
 @media (max-width: 1025px) {

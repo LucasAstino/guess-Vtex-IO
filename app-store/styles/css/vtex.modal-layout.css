@@ -72,6 +72,9 @@
 .container--product__reviews .paper--product__reviews {
   overflow: visible;
 }
+.container--product__reviews .paper--product__reviews :global(.vtex-reviews-and-ratings-3-x-container) {
+  overflow: auto;
+}
 
 .container--search__mobile .paper--search__mobile {
   width: 100%;
@@ -91,7 +94,10 @@
   position: absolute;
   bottom: 10px;
   right: 8px;
+  z-index: 999;
   border-radius: 8px;
+  width: 60px;
+  border: 2px solid #bdbec0;
 }
 @media (max-width: 1025px) {
   .triggerContainer--fast-buy {

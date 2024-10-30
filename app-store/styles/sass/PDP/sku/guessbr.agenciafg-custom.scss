@@ -6,6 +6,9 @@
     padding: 0 15px;
   }
   &--fastBuy {
+    @include desktop{
+      margin-bottom: 30px;
+    }
     margin-bottom: 48px;
   }
   &--wrap {
@@ -39,7 +42,8 @@
 
 .similar__products-variants--sku-title,
 .similar__products-variants--title {
-  font-size: 18px;
+  font-size: 16px;
+  text-align: left;
 }
 
 .similar__products-variants--title {

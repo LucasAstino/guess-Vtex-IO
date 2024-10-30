@@ -87,5 +87,8 @@
 .container--product__reviews{
   .paper--product__reviews{
     overflow: visible;
+    :global(.vtex-reviews-and-ratings-3-x-container){
+      overflow: auto;
+    }
   }
 }

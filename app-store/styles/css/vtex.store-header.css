@@ -22,14 +22,6 @@
   padding-bottom: 0.5rem;
 }
 
-/* add a box-shadow to desktop/mobile header when stuck */
-:global(.vtex-sticky-layout-0-x-wrapper--stuck)
-  :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
-:global(.vtex-sticky-layout-0-x-wrapper--stuck)
-  :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-}
-
 /*
  * remove the extra padding when stuck from the desktop header
  * we add a transition only when "stuck" for the "unstick" step seem faster

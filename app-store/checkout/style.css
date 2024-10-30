@@ -5092,12 +5092,11 @@ footer .top .wrapper .right .newsletter {
 footer .top .wrapper .right .newsletter span.title {
   font-family: Futura PT;
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 500;
   line-height: 21px;
   letter-spacing: 0.1em;
   text-align: left;
-  color: #db2828;
-  text-transform: uppercase;
+  color: black;
 }
 
 footer .top .wrapper .right .newsletter .subtitle {
@@ -5108,13 +5107,8 @@ footer .top .wrapper .right .newsletter .subtitle {
   letter-spacing: 0.04em;
   text-align: left;
   margin-bottom: 5px;
-  text-transform: uppercase;
   color: #000000;
   margin-top: 12px;
-}
-
-footer .top .wrapper .right .newsletter .subtitle span {
-  font-weight: bold;
 }
 
 footer .input-wrapper label {
@@ -5129,6 +5123,7 @@ footer .input-wrapper label {
 footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrapper .input-wrapper label {
   display: flex;
   font-weight: normal;
+  padding-left: 15px;
 }
 
 footer .top .wrapper .right .newsletter .wd-marketing-newsletter form .form-wrapper .input-wrapper.input-button-marketing-newsletter {
@@ -5170,12 +5165,11 @@ footer .newsletter__send button {
   line-height: 16px;
   letter-spacing: 2px;
   text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
+  font-weight: 400;
   color: #ffffff;
   background-color: black;
   height: 40px;
-  width: 109px;
+  width: 146px;
   border-radius: 0;
 }
 
@@ -5215,6 +5209,14 @@ footer .middle .wrapper .left .about p {
 footer .middle .wrapper .right {
   max-width: 354px;
   width: 100%;
+}
+
+.gift-card-provider-default{
+  padding: 10px;
+}
+
+.orderform-template-holder #payment-data input#payment-discounts-code{
+  width: 60% !important;
 }
 
 footer .middle .wrapper .right .socials {
@@ -5487,6 +5489,7 @@ footer .bottom .copy p {
 .aceite-news {
   margin-top: 20px;
   margin-bottom: 10px;
+  padding-left: 15px;
 }
 .aceite-news div {
   display: flex;
@@ -5507,13 +5510,13 @@ footer .bottom .copy p {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #000;
+  color: #565D61;
   margin: 0;
   letter-spacing: initial;
 }
 .text-politica p a {
   text-decoration: underline;
-  font-weight: bold;
+  color: #565D61;
 }
 
 #shipping-preview-container .srp-main-title {

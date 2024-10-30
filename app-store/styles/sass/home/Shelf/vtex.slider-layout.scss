@@ -1,16 +1,28 @@
 .sliderLayoutContainer--shelf {
-    max-width: 1800px;
-    margin: auto;
+  max-width: 1800px;
+  margin: auto;
+  .sliderTrackContainer--shelf {
+    @include desktop {
+      overflow: visible;
+    }
+  }
   .slide--shelf {
     .slideChildrenContainer--shelf {
       :global(.vtex-product-summary-2-x-containerNormal) {
-        @include desktop{
+        @include desktop {
+          overflow: visible;
           max-width: calc(100% - 8px) !important;
         }
       }
     }
   }
+
+  .sliderArrows--shelf {
+    @include tablet{
+      translate: 0 -50px;
+    }
+  }
 }
-.sliderLayoutContainer--shelf{
+.sliderLayoutContainer--shelf {
   padding: 0 !important;
 }

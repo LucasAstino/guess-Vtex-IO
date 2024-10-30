@@ -22,5 +22,16 @@
       "blockClass":"fast-buy"
     },
     "children": [ "modal-header#fast-buy","BuyToShelf"]
+  },
+
+  "responsive-layout.desktop#fast-buy": {
+    "children": ["CustomModal"]
+  },
+  "responsive-layout.mobile#fast-buy": {
+    "children": ["modal-trigger#fast-buy"]
+  },
+
+  "CustomModal":{
+    "children":[ "rich-text#fast-buy","BuyToShelf"]
   }
 }
