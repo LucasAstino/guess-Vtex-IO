@@ -3,12 +3,12 @@
     "props": {
       "blockClass": "main-header"
     },
-    "children": ["Container-lp#header__desktop"]
+    "children": ["flex-layout.row#header__content-desktop"]
   },
 
-  "Container-lp#header__desktop":{
-    "children":["flex-layout.row#header__content-desktop"]
-  },
+  // "Container-lp#header__desktop":{
+  //   "children":["flex-layout.row#header__content-desktop"]
+  // },
 
   "flex-layout.row#header__content-desktop": {
     "props": {

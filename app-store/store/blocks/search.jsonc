@@ -148,8 +148,7 @@
       "infinite": true,
       "blockClass":"search__result",
       "showPaginationDots":"never",
-      "showNavigationArrows":"never",
-      "centerMode":"center"
+      "showNavigationArrows":"never"
     }
   },
 
