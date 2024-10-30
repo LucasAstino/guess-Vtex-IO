@@ -496,6 +496,13 @@
   margin: 0;
 }
 
+.container--content__seo {
+  max-width: 1800px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
 .container--fast-buy .wrapper {
   width: 100%;
 }
@@ -873,6 +880,23 @@
   margin-left: 10px;
 }
 
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
 .container--dealer .heading {
   font-family: Futura;
   font-style: normal;
@@ -921,23 +945,6 @@
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
-}
-
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  font-size: 40px;
-}
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
-  }
 }
 
 .container--exchange_and_returns .heading {

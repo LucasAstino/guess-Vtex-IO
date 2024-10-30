@@ -142,7 +142,7 @@
       "itemsPerPage": {
         "desktop": 6,
         "tablet": 4,
-        "phone": 3
+        "phone": 2
       },
       "infinite": true,
       "blockClass": "search__result",
@@ -238,7 +238,7 @@
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
-      "flex-layout.row#contentmobile"
+      "flex-layout.col#contentmobile"
     ],
     "props": {
       "pagination": "show-more",
@@ -249,8 +249,8 @@
       "defaultGalleryLayout": "grid"
     }
   },
-  "flex-layout.row#contentmobile": {
-    "children": ["search-content"],
+  "flex-layout.col#contentmobile": {
+    "children": ["search-fetch-more","search-content"],
     "props": {
       "preserveLayoutOnMobile": true
     }
