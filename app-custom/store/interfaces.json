@@ -62,6 +62,10 @@
     "component":"conditionBlock",
     "composition": "children"
   },
+  "CustomModal":{
+    "component":"CustomModal",
+    "composition": "children"
+  },
   "PopupForm":{
     "component":"PopupForm"
   },

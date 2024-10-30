@@ -8,10 +8,10 @@ interface CustomSectionProps {
 export const ConditionBlock = (props: CustomSectionProps) => {
   const { children, toggleActive } = props;
 
-  if (!children || children.length < 2) {
-    console.error("CustomSection component requires exactly 2 children components.");
-    return null;
-  }
+  // if (!children || children.length < 2) {
+  //   console.error("CustomSection component requires exactly 2 children components.");
+  //   return null;
+  // }
 
   return <section>{toggleActive ? children[0] : children[1]}</section>;
 };

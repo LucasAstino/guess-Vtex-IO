@@ -5,7 +5,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     @media(max-width:768px){
-        width: 100%;
+        width: 70%;
     }
 }
 
@@ -17,7 +17,8 @@
     text-align: center;
     white-space: nowrap;
     width: 10%;
-    @media(max-width:375px){
+    @media(max-width:768px){
+
         padding: 10px 0;;
     }
 }
@@ -31,7 +32,7 @@
 #tabelaFeminino td {
     font-size: 14px;
     @media(max-width:425px){
-        font-size: 10px;
+        font-size: 8px;
     }
 }
 
