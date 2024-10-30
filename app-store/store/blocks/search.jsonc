@@ -238,7 +238,7 @@
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
-      "flex-layout.col#contentmobile"
+      "flex-layout.row#contentmobile"
     ],
     "props": {
       "pagination": "show-more",
@@ -249,8 +249,8 @@
       "defaultGalleryLayout": "grid"
     }
   },
-  "flex-layout.col#contentmobile": {
-    "children": ["search-fetch-more","search-content"],
+  "flex-layout.row#contentmobile": {
+    "children": ["search-content"],
     "props": {
       "preserveLayoutOnMobile": true
     }
