@@ -138,6 +138,16 @@ export const AstinoMenu = (props: Props) => {
                     <p
                       style={{ color: submenuLink.linkColor || "#000" }}
                       className={handles.menuLink}
+                      onClick={(e) => {
+                        if (submenuLink.hasSubmenu) {
+                          e.preventDefault();
+                          handleSubmenuToggle(currentPath);
+                        }
+                      }}
+                      aria-controls={`submenu-${currentPath}`}
+                      aria-expanded={
+                        openSubmenus.includes(currentPath) ? "true" : "false"
+                      }
                     >
                       {submenuLink.text}
                       {submenuLink.hasSubmenu && (
@@ -185,6 +195,7 @@ export const AstinoMenu = (props: Props) => {
                 renderSubmenu(submenuLink.submenuLinks, level + 1, currentPath)}
             </li>
           );
+          
         })}
       </ul>
     );
