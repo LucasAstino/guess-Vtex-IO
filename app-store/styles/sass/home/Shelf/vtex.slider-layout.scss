@@ -3,7 +3,6 @@
   margin: auto;
   .sliderTrackContainer--shelf {
     @include desktop {
-      overflow: visible;
     }
   }
   .slide--shelf {

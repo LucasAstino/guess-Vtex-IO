@@ -131,6 +131,11 @@
   height: auto;
   display: inline-block;
 }
+@media (max-width: 1025px) {
+  .logoLink--logo__mobile .logoContainer {
+    padding-left: 40px;
+  }
+}
 
 @media (min-width: 1025px) {
   .searchBarContainer {
@@ -200,6 +205,11 @@
 
 .imageElement--find__stores {
   padding: 0 16px;
+}
+@media (max-width: 768px) {
+  .imageElement--find__stores {
+    padding: 0 8px;
+  }
 }
 
 .imageElementLink--find__stores {

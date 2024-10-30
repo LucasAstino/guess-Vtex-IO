@@ -1,8 +1,8 @@
 {
     "sticky-layout#mobile": {
-    "children": ["flex-layout.row#1-mobile"]
+    "children": ["flex-layout.row#wrapper__mobile"]
   },
-  "flex-layout.row#1-mobile": {
+  "flex-layout.row#wrapper__mobile": {
     "children": [
       "drawer#mobile",
       "modal-trigger#search__mobile",
@@ -10,6 +10,7 @@
       "logo#mobile",
       "flex-layout.col#spacer",
       "LoginHeader",
+      "image#wishlist",
       "Minicart"
     ],
     "props": {

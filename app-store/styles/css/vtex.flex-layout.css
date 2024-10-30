@@ -67,7 +67,9 @@
 }
 
 .flexRow--bannerTop__slider :global(.vtex-store-components-3-x-imageElement--bannerTop__slider) {
-  width: 100%;
+  width: 1920px;
+  margin: auto;
+  display: block;
 }
 
 .flexRow--lp__conteiner .flexRowContent--lp__conteiner {

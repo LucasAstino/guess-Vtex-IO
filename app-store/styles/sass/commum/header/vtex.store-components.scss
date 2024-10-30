@@ -19,6 +19,9 @@
     padding: 0;
     height: auto;
     display: inline-block;
+    @include tablet{
+      padding-left: 40px;
+    }
   }
 }
 
@@ -94,6 +97,9 @@
 .imageElement {
   &--find__stores {
     padding: 0 16px;
+    @include mobile{
+      padding: 0 8px;
+    }
   }
 }
 

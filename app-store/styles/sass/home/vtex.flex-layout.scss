@@ -1,7 +1,9 @@
-.flexRow{
-    &--bannerTop__slider{
-        :global(.vtex-store-components-3-x-imageElement--bannerTop__slider){
-            width: 100%;
-        }
+.flexRow {
+  &--bannerTop__slider {
+    :global(.vtex-store-components-3-x-imageElement--bannerTop__slider) {
+      width: 1920px;
+      margin: auto;
+      display: block;
     }
+  }
 }

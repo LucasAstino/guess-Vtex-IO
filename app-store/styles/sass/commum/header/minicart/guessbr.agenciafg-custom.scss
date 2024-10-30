@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   position: relative;
+  @include mobile{
+    width: 40px !important;
+    padding: .75rem;
+  }
   .minicartButton {
     all: unset;
     display: flex;
