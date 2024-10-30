@@ -238,7 +238,9 @@
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
-      "flex-layout.row#contentmobile"
+      "flex-layout.row#contentmobile",
+       "search-fetch-more",
+      "flex-layout.row#seo__content"
     ],
     "props": {
       "pagination": "show-more",
