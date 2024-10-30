@@ -27,7 +27,7 @@
     "props":{
       "blockClass":"shelf"
     },
-    "children": ["product-summary-image#shelf__default", "modal-trigger#fast-buy"]
+    "children": ["product-summary-image#shelf__default", "responsive-layout.desktop#fast-buy","responsive-layout.mobile#fast-buy"]
   },
 
   "product-summary-name#shelf": {
