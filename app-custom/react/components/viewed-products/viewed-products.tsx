@@ -188,9 +188,8 @@ export const VisitedProductsSlider: FC<Props> = () => {
     setSelectedProduct(null);
   };
 
-  // Filtra os produtos disponíveis em estoque
   const availableProducts = visitedProducts.filter((product) => {
-    return product.items[0].sellers[0].commertialOffer.IsAvailable; // Retorna apenas produtos disponíveis
+    return product.items[0].sellers[0].commertialOffer.IsAvailable;
   });
 
   return (
@@ -203,11 +202,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
             </h2>
             {availableProducts.length >= 4 ? (
               <SliderLayout
-                itemsPerPage={{
-                  desktop: 4,
-                  tablet: 2,
-                  phone: 2,
-                }}
+                itemsPerPage={{ desktop: 4, tablet: 2, phone: 2 }}
                 showNavigationArrows="always"
                 showPaginationDots="never"
                 fullWidth
@@ -238,11 +233,14 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       key={product.productId}
                       className={handles["product__viewed-item"]}
                     >
+                      
                       <div className={handles["product__viewed-wrapper"]}>
+                        
                         <a
                           className={handles["product__viewed-link"]}
                           href={`/${product.linkText}/p`}
                         >
+                          
                           <img
                             className={handles["product__viewed-image"]}
                             src={image}
@@ -254,24 +252,71 @@ export const VisitedProductsSlider: FC<Props> = () => {
                         </a>
                         <button
                           className={handles["product__viewed-addtocart"]}
-                          onClick={() => handleOpenModal(product)}
+                          onClick={() => {
+                            handleOpenModal(product);
+                          }}
                         >
+                          
                           Add
                         </button>
                       </div>
                       <p className={handles["product__viewed-price"]}>
+                        
                         R$ {price}
                       </p>
-
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
+                          
                           ou {count}x sem juros de R$
                           {(maxInstallmentValue / 100)
                             .toFixed(2)
-                            .replace(".", ",")}{" "}
+                            .replace(".", ",")}
                           no cartão de crédito
                         </p>
                       )}
+                      {selectedProduct &&
+                        selectedProduct.productId === product.productId && (
+                          <div
+                            className={handles.modalContent}
+                            style={{
+                              backgroundColor: "#F9F9F9",
+                              position: "relative",
+                            }}
+                          >
+                            
+                            <button
+                              className={handles.closeButton}
+                              onClick={handleCloseModal}
+                              style={{
+                                position: "absolute",
+                                top: "0px",
+                                right: "10px",
+                              }}
+                            >
+                              
+                              +
+                            </button>
+                            <SkuFromShelf
+                              productQuery={{ product: selectedProduct }}
+                            />
+                            <div
+                              className={handles["modalContent__alert-visible"]}
+                            >
+                              
+                              <p>
+                                
+                                Produto adicionado a
+                                <span
+                                  className={
+                                    handles["modalContent__alert-visible-span"]
+                                  }
+                                >
+                                  Sacola
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                        )}
                     </div>
                   );
                 })}
@@ -320,7 +365,10 @@ export const VisitedProductsSlider: FC<Props> = () => {
                         </a>
                         <button
                           className={handles["product__viewed-addtocart"]}
-                          onClick={() => handleOpenModal(product)}
+                          onClick={() => {
+                            handleOpenModal(product);
+                            console.log(isModalOpen);
+                          }}
                         >
                           Add
                         </button>
@@ -334,10 +382,54 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           ou {count}x sem juros de R$
                           {(maxInstallmentValue / 100)
                             .toFixed(2)
-                            .replace(".", ",")}{" "}
+                            .replace(".", ",")}
                           no cartão de crédito
                         </p>
                       )}
+
+                      {selectedProduct &&
+                        selectedProduct.productId === product.productId && (
+                          <div
+                            className={handles.modalContent}
+                            style={{
+                              backgroundColor: "#F9F9F9",
+                              position: "relative",
+                            }}
+                          >
+                            
+                            <button
+                              className={handles.closeButton}
+                              onClick={handleCloseModal}
+                              style={{
+                                position: "absolute",
+                                top: "0px",
+                                right: "10px",
+                              }}
+                            >
+                              
+                              +
+                            </button>
+                            <SkuFromShelf
+                              productQuery={{ product: selectedProduct }}
+                            />
+                            <div
+                              className={handles["modalContent__alert-visible"]}
+                            >
+                              
+                              <p>
+                                
+                                Produto adicionado a
+                                <span
+                                  className={
+                                    handles["modalContent__alert-visible-span"]
+                                  }
+                                >
+                                  Sacola
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                        )}
                     </div>
                   );
                 })}
@@ -350,55 +442,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
       </div>
 
       {/* Modal */}
-      {isModalOpen && selectedProduct && (
-        <div
-          className={handles.modalOverlay}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className={handles.modalContent}
-            style={{
-              backgroundColor: "#F9F9F9",
-              position: "relative",
-            }}
-          >
-            <button
-              className={handles.closeButton}
-              onClick={handleCloseModal}
-              style={{ position: "absolute", top: "0px", right: "10px" }}
-            >
-              +
-            </button>
-            {/* Passa apenas o produto selecionado para o SkuFromShelf */}
-            <SkuFromShelf productQuery={{ product: selectedProduct }} />
-            <div
-              className={
-                productAdded
-                  ? handles["modalContent__alert-visible"]
-                  : handles["modalContent__alert-hidden"]
-              }
-            >
-              <p>
-                Produto adicionado a{" "}
-                <span className={handles["modalContent__alert-visible-span"]}>
-                  Sacola
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </ProductListContext.Provider>
   );
 };

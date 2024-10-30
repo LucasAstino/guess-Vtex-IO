@@ -13,6 +13,7 @@ export const HANDLES_VARIANTS = [
   "variant-type",
   "similar__products-variants--wrap",
   "similar__products-variants--sku",
+  "similar__products-variants--error",
   "similar__products-variants--sku-selected",
   "similar__products-variants--sku-unavailable",
   "similar__products-variants--sku-title",
@@ -72,8 +73,8 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   const productId =
     productQuery?.product?.productId ?? product?.product?.productId;
 
-  const currentSize =
-    productQuery.product.skuSpecifications?.[0]?.values[0].name;
+  // const currentSize =
+  //   productQuery.product.skuSpecifications?.[0]?.values[0].name;
 
   const currentColorCode = productQuery.product.sku?.variations[2].values[0];
 
@@ -82,9 +83,10 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   // const currentColorCode =
   //   productQuery.product.skuSpecifications?.[2]?.values[0].name;
 
-  const [selectedSize, setSelectedSize] = useState(currentSize);
+  const [selectedSize, setSelectedSize] = useState();
   const [selectedColor, setSelectedColor] = useState(currentColor);
-  const [addToCartSku, setAddToCartSku] = useState('');
+  const [addToCartSku, setAddToCartSku] = useState("");
+  const [infoerror, setInfoerror] = useState(false);
 
   const fetchSkusByColor = async (colorProductId: string) => {
     try {
@@ -93,7 +95,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
       );
       const data = await response.json();
       if (Array.isArray(data.skus)) {
-        return data.skus; // Retorna os SKUs da nova cor
+        return data.skus;
       }
     } catch (error) {
       console.error("Erro ao buscar SKUs:", error);
@@ -103,7 +105,6 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
 
   const [skusTamanho, setSkusTamanho] = useState<ProductTypes.Item[]>([]);
 
-  // Carregar SKUs da primeira cor na montagem do componente
   useEffect(() => {
     const loadInitialSkus = async () => {
       const initialSkus = await fetchSkusByColor(
@@ -230,7 +231,12 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
         {skusTamanho.length > 0 ? (
           <div>
             <p className={handles["similar__products-variants--sku-title"]}>
-              Selecione um tamanho: {selectedSize}
+              Selecione um tamanho:{" "}
+              {infoerror ? (
+                <span className={handles["similar__products-variants--error"]}>Selecione um tamanho</span>
+              ) : (
+                <span>{selectedSize}</span>
+              )}
               <ul className={handles["similar__products-variants-wrapper"]}>
                 {skusTamanho.map((sku: any, index: number) => (
                   <span
@@ -245,7 +251,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                         : ""
                     }`}
                     onClick={() => {
-                      setAddToCartSku(sku.sku)
+                      setAddToCartSku(sku.sku);
                       setSelectedSize(sku.dimensions.Tamanho);
                     }}
                   >
@@ -254,7 +260,19 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 ))}
               </ul>
             </p>
-            <button onClick={() => handleAddToCart(addToCartSku)} className={handles["similar__products-addtocart"]}>Adicionar ao carrinho</button>
+            <button
+              onClick={() => {
+                if (!selectedSize) {
+                  setInfoerror(true);
+                } else {
+                  setInfoerror(false);
+                  handleAddToCart(addToCartSku);
+                }
+              }}
+              className={handles["similar__products-addtocart"]}
+            >
+              Adicionar ao carrinho
+            </button>
           </div>
         ) : (
           <span>Sem SKUs disponíveis</span>
