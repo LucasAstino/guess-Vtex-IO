@@ -10,6 +10,7 @@ type SubmenuLink = {
   submenuLinks?: SubmenuLink[];
   linkColor?: string;
   underline?: boolean;
+  hasLink?: boolean;
 };
 
 type Banner = {
@@ -27,6 +28,7 @@ type MenuLink = {
   banners?: Banner[];
   linkColor?: string;
   underline?: boolean;
+  hasLink?: boolean;
 };
 
 interface Props {
@@ -106,31 +108,47 @@ export const AstinoMenu = (props: Props) => {
               }
             >
               {isMobile ? (
-                level >= 2 ? (
-                  <a
-                    href={submenuLink.url}
-                    style={{ color: submenuLink.linkColor || "#000" }}
-                    className={handles.menuLink}
-                    onClick={(e) => {
-                      if (submenuLink.hasSubmenu) {
-                        e.preventDefault();
-                        handleSubmenuToggle(currentPath);
+                level >= 1 ? (
+                  submenuLink.hasLink ? (
+                    <a
+                      href={submenuLink.url}
+                      style={{ color: submenuLink.linkColor || "#000" }}
+                      className={handles.menuLink}
+                      onClick={(e) => {
+                        if (submenuLink.hasSubmenu) {
+                          e.preventDefault();
+                          handleSubmenuToggle(currentPath);
+                        }
+                      }}
+                      aria-controls={`submenu-${currentPath}`}
+                      aria-expanded={
+                        openSubmenus.includes(currentPath) ? "true" : "false"
                       }
-                    }}
-                    aria-controls={`submenu-${currentPath}`}
-                    aria-expanded={
-                      openSubmenus.includes(currentPath) ? "true" : "false"
-                    }
-                  >
-                    {submenuLink.text}
-                    {submenuLink.hasSubmenu && (
-                      <span
-                        className={`${handles.submenuToggleIcon} ${
-                          openSubmenus.includes(currentPath) ? "active" : ""
-                        }`}
-                      />
-                    )}
-                  </a>
+                    >
+                      {submenuLink.text}
+                      {submenuLink.hasSubmenu && (
+                        <span
+                          className={`${handles.submenuToggleIcon} ${
+                            openSubmenus.includes(currentPath) ? "active" : ""
+                          }`}
+                        />
+                      )}
+                    </a>
+                  ) : (
+                    <p
+                      style={{ color: submenuLink.linkColor || "#000" }}
+                      className={handles.menuLink}
+                    >
+                      {submenuLink.text}
+                      {submenuLink.hasSubmenu && (
+                        <span
+                          className={`${handles.submenuToggleIcon} ${
+                            openSubmenus.includes(currentPath) ? "active" : ""
+                          }`}
+                        />
+                      )}
+                    </p>
+                  )
                 ) : (
                   <p
                     style={{ color: submenuLink.linkColor || "#000" }}
@@ -315,6 +333,11 @@ AstinoMenu.schema = {
             title: "Ativar underline nos links?",
             default: false,
           },
+          hasLink: {
+            type: "boolean",
+            title: "Ativar  link?",
+            default: true,
+          },
           hasSubmenu: {
             type: "boolean",
             title: "Este link possui um submenu?",
@@ -339,6 +362,11 @@ AstinoMenu.schema = {
                   type: "string",
                   title: "URL do Link",
                   default: "#",
+                },
+                hasLink: {
+                  type: "boolean",
+                  title: "Ativar  link?",
+                  default: true,
                 },
                 hasSubmenu: {
                   type: "boolean",
@@ -365,6 +393,11 @@ AstinoMenu.schema = {
                         type: "boolean",
                         title: "Ativar underline nos links?",
                         default: false,
+                      },
+                      hasLink: {
+                        type: "boolean",
+                        title: "Ativar  link?",
+                        default: true,
                       },
                     },
                   },
