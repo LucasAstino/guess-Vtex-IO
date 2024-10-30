@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useRef } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { useCssHandles, CssHandlesTypes } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
@@ -69,6 +69,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
   const { orderForm } = useOrderForm();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { isMobile } = useDevice();
+  const timerRef = useRef<number | null>(null);
 
   const items = orderForm?.items ?? [];
   const totalItems = items.reduce(
@@ -81,18 +82,21 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
   );
 
   const openDrawer = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
     setIsDrawerOpen(true);
   };
 
   const closeDrawer = () => {
-    setIsDrawerOpen(false);
+    timerRef.current = window.setTimeout(() => {
+      setIsDrawerOpen(false);
+    }, 1000);
   };
 
   return (
     <div
       className={`${handles.minicartWrapper} ${openOnHover ? "hoverable" : ""}`}
       onMouseEnter={!isMobile ? openDrawer : undefined}
-      onMouseLeave={!isMobile ? closeDrawer : undefined} 
+      onMouseLeave={!isMobile ? closeDrawer : undefined}
     >
       {isMobile ? (
         <a className={handles.minicartLink} href="/checkout#/cart">
@@ -112,7 +116,11 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
 
       {totalItems > 0
         ? isDrawerOpen && (
-            <div className={`${handles.minicartContainer}`}>
+            <div
+              className={`${handles.minicartContainer}`}
+              onMouseEnter={openDrawer}
+              onMouseLeave={closeDrawer}
+            >
               <div className={handles.cartHeader}>
                 <p className={handles.cartTitle}>Meu Carrinho</p>
                 <p className={handles.cartSegure}>Compra 100% segura</p>
@@ -144,8 +152,12 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
                   Total a pagar: R${(totalPrice / 100).toFixed(2)}
                 </span>
                 <div className={handles.minicartButtons}>
-                  <a href="/checkout#/cart" className={handles.cartButton}>Carrinho</a>
-                  <a href="/checkout#/email" className={handles.checkoutButton}>Finalizar compra</a>
+                  <a href="/checkout#/cart" className={handles.cartButton}>
+                    Carrinho
+                  </a>
+                  <a href="/checkout#/email" className={handles.checkoutButton}>
+                    Finalizar compra
+                  </a>
                 </div>
               </div>
             </div>
