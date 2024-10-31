@@ -6,8 +6,6 @@ const CSS_HANDLES = [
   'formField',
   'formField__label',
   'formField__input',
-  'formField__input-file',
-  'formField__label-file',
   'formField__select',
   'formField__textArea',
   'formButton',
@@ -16,19 +14,19 @@ const CSS_HANDLES = [
 ] as const;
 
 export const ContactForm: React.FC = () => {
-  const {handles} = useCssHandles(CSS_HANDLES);
+  const { handles } = useCssHandles(CSS_HANDLES);
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: '',  // Será mapeado como "title" ao enviar
     orderNumber: '',
     category: '',
     message: '',
   });
-  const [file, setFile] = useState<File | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
     let formErrors: { [key: string]: string } = {};
@@ -36,6 +34,7 @@ export const ContactForm: React.FC = () => {
     if (!formData.name) formErrors.name = 'Nome é obrigatório';
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) formErrors.email = 'Email inválido';
     if (!formData.subject) formErrors.subject = 'Assunto é obrigatório';
+    if (!formData.category) formErrors.category = 'Categoria é obrigatória';
     if (!formData.message) formErrors.message = 'Mensagem é obrigatória';
 
     setErrors(formErrors);
@@ -47,39 +46,37 @@ export const ContactForm: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = e.target.files ? e.target.files[0] : null;
-    setFile(selectedFile);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("subject", formData.subject);
-    formDataToSend.append("orderNumber", formData.orderNumber);
-    formDataToSend.append("category", formData.category);
-    formDataToSend.append("message", formData.message);
+    // Ajuste: Mapear "subject" como "title" para a API VTEX
+    const formDataToSend = {
+      name: formData.name,
+      email: formData.email,
+      title: formData.subject,  // Mapeado corretamente
+      orderNumber: formData.orderNumber || null,
+      category: formData.category,
+      message: formData.message,
+    };
 
-    if (file) {
-      formDataToSend.append("file", file); // Adiciona o arquivo ao FormData
-    }
+    setIsSubmitting(true);
 
     try {
       const response = await fetch('/api/dataentities/CT/documents', {
         method: 'POST',
-        body: formDataToSend,
+        body: JSON.stringify(formDataToSend),
         headers: {
           Accept: 'application/vnd.vtex.ds.v10+json',
+          'Content-Type': 'application/json',
         },
       });
 
       if (!response.ok) {
-        throw new Error(`Erro ao enviar o formulário: ${response.statusText}`);
+        const errorData = await response.json();
+        console.error('Erro ao enviar formulário:', errorData);
+        throw new Error(`Erro ao enviar o formulário: ${errorData.message || response.statusText}`);
       }
 
       setSuccess(true);
@@ -91,10 +88,11 @@ export const ContactForm: React.FC = () => {
         category: '',
         message: '',
       });
-      setFile(null);
     } catch (error) {
       console.error(error);
       setSuccess(false);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -155,11 +153,13 @@ export const ContactForm: React.FC = () => {
           name="category"
           value={formData.category}
           onChange={handleChange}
+          required
         >
           <option value="">Selecione uma opção</option>
           <option value="Loja Física">Loja Física</option>
           <option value="Loja Virtual">Loja Virtual</option>
         </select>
+        {errors.category && <p className={handles.formErrorMessage}>{errors.category}</p>}
       </div>
       <div className={handles.formField}>
         <label className={handles.formField__label} htmlFor="message">Escreva sua solicitação *</label>
@@ -173,22 +173,11 @@ export const ContactForm: React.FC = () => {
         />
         {errors.message && <p className={handles.formErrorMessage}>{errors.message}</p>}
       </div>
-      <div className={handles.formField}>
-        <label className={handles['formField__label-file']} htmlFor="file">Clique aqui para selecionar arquivos que deseja anexar</label>
-        <input
-          className={handles['formField__input-file']
-          }
-          id="file"
-          name="file"
-          type="file"
-          onChange={handleFileChange}
-        />
-      </div>
       {success && (
         <p className={handles.formSuccessMessage}>Formulário enviado com sucesso!</p>
       )}
-      <button type="submit" className={handles.formButton}>
-        Enviar
+      <button type="submit" className={handles.formButton} disabled={isSubmitting}>
+        {isSubmitting ? 'Enviando...' : 'Enviar'}
       </button>
     </form>
   );

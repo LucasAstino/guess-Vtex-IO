@@ -72,6 +72,9 @@
   "Contact-us":{
     "component":"contact-us"
   },
+  "AddToCartAlert":{
+    "component":"AddToCartAlert"
+  },
   "VideoPlayer":{
     "component":"Video"
   },
