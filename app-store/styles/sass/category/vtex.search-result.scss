@@ -2,7 +2,7 @@
   display: none;
 }
 
-.container--layout{
+.container--layout {
   margin-bottom: 40px;
 }
 
@@ -182,8 +182,6 @@
     display: none;
   }
 
-  
-
   .filterTemplateOverflow {
     :global(.vtex-checkbox__line-container) {
       align-items: center;
@@ -212,14 +210,15 @@
   }
 }
 
-.accordionFilterContainer--hexadecimal,.accordionFilterContainer--marca{
+.accordionFilterContainer--hexadecimal,
+.accordionFilterContainer--marca {
   display: none;
 }
 
 .accordionFilterContainer--category-4 {
-  .accordionFilterItemTitle{
+  .accordionFilterItemTitle {
     font-size: 0 !important;
-    &::before{
+    &::before {
       content: "Categoria";
       font-size: 14px;
     }
@@ -230,6 +229,17 @@
   @include tablet {
     height: fit-content;
     .filterAccordionBreadcrumbs {
+      @include tablet {
+        justify-content: space-between;
+
+        :global(.vtex__close-filter) {
+          all: unset;
+          font-size: 40px;
+          rotate: 45deg;
+          font-weight: 300;
+          cursor: pointer;
+        }
+      }
       // margin-bottom: 30px;
       .filterBreadcrumbsText {
         font-family: Futura;
@@ -317,9 +327,9 @@
   max-height: 270px;
 }
 
-.buttonShowMore{
-  :global(.vtex-button){
-    &:hover{
+.buttonShowMore {
+  :global(.vtex-button) {
+    &:hover {
       color: white;
     }
   }

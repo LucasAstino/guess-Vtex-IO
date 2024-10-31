@@ -192,7 +192,8 @@
   display: none;
 }
 
-.accordionFilterContainer--hexadecimal, .accordionFilterContainer--marca {
+.accordionFilterContainer--hexadecimal,
+.accordionFilterContainer--marca {
   display: none;
 }
 
@@ -208,6 +209,20 @@
   .accordionFilter {
     height: fit-content;
   }
+}
+@media (max-width: 1025px) and (max-width: 1025px) {
+  .accordionFilter .filterAccordionBreadcrumbs {
+    justify-content: space-between;
+  }
+  .accordionFilter .filterAccordionBreadcrumbs :global(.vtex__close-filter) {
+    all: unset;
+    font-size: 40px;
+    rotate: 45deg;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1025px) {
   .accordionFilter .filterAccordionBreadcrumbs .filterBreadcrumbsText {
     font-family: Futura;
     font-style: normal;

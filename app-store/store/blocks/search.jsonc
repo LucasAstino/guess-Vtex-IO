@@ -287,7 +287,7 @@
   },
 
   "flex-layout.col#filterMobile": {
-    "children": ["filter-navigator.v3"],
+    "children": ["closeFilter","filter-navigator.v3"],
     "props": {
       "blockClass": "filterMobileCol"
     }
