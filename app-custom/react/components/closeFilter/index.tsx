@@ -22,7 +22,7 @@ export const CustomButtonTrigger: React.FC<Props> = ({
         // Cria o botão
         const button = document.createElement("button");
         button.classList.add('vtex__close-filter'); 
-        button.textContent = "X";
+        button.textContent = "+";
 
         // Define o estilo do botão
         button.style.marginLeft = "10px"; // Ajuste conforme necessário
