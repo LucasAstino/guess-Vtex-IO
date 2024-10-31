@@ -185,7 +185,7 @@ const PopupForm = () => {
                   <em className={styles.modal__line}> </em>
                   <div className={styles.coupon__container}>
                     <p className={styles.couponTextTitle}> Use o cupom </p>
-                    <h1 className={styles.couponCode}> PRIMEIRA50 </h1>
+                    <h1 className={styles.couponCode}>PRIMEIRA50 </h1>
                     <span className={styles.couponSubText}>
                       {" "}
                       <br />
