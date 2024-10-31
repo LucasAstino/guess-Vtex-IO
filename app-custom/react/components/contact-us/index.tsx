@@ -70,7 +70,7 @@ export const ContactForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch('/api/dataentities/YOUR_ENTITY/documents', {
+      const response = await fetch('/api/dataentities/CT/documents', {
         method: 'POST',
         body: formDataToSend,
         headers: {
