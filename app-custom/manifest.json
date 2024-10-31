@@ -1,7 +1,7 @@
 {
   "vendor": "guessbr",
   "name": "agenciafg-custom",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "builders": {
     "react": "3.x",
     "store": "0.x"
