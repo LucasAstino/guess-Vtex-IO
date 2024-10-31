@@ -44,10 +44,10 @@
   background-color: white;
   border-radius: 1.5px;
   padding: 0;
-  opacity: 50%;
+  opacity: 0.5;
 }
 .sliderLayoutContainer--carousel .paginationDot--carousel--isActive {
-  opacity: 100%;
+  opacity: 1;
 }
 
 @media (max-width: 1025px) {

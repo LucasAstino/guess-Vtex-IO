@@ -21,9 +21,9 @@
     background-color: white;
     border-radius: 1.5px;
     padding: 0;
-    opacity: 50%;
+    opacity: 0.5;
     &--isActive{
-        opacity: 100%;
+        opacity: 1;
     }
   }
 }
