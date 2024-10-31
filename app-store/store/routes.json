@@ -1,6 +1,6 @@
 {
   "store.custom#about-us": {
-    "path": "institucional/nossa-historia"
+    "path": "/institucional/nossa-historia"
   },
   "store.custom#privacy_policy": {
     "path": "/politicas-de-privacidade-e-cookies"
@@ -24,13 +24,13 @@
     "path": "/cashback-regulamento"
   },
   "store.custom#table-sizes-feminine": {
-    "path": "institucional/tabela-de-medidas-feminino"
+    "path": "/institucional/tabela-de-medidas-feminino"
   },
   "store.custom#table-sizes-masculine": {
-    "path": "institucional/tabela-de-medidas-masculino"
+    "path": "/institucional/tabela-de-medidas-masculino"
   },
   "store.custom#where-to-find": {
-    "path": "institucional/onde-encontrar"
+    "path": "/institucional/onde-encontrar"
   },
   "store.custom#landing-page": {
     "path": "/camisetas-masculinas-em-promocao"

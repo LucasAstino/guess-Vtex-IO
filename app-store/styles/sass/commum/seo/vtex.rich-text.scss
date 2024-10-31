@@ -12,6 +12,11 @@
     margin-bottom: 40px;
     padding: 0 30px;
     .wrapper--seo__content{
+        .heading--seo__content{
+            @include tablet{
+                font-size: 24px;
+            }
+        }
 
     }
     .link{

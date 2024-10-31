@@ -43,7 +43,7 @@
       "blockClass":"find__stores",
       "link": {
         "props": {
-          "label": "Stories",
+          "label": "Lojas",
           "href": "/institucional/onde-encontrar"
          }
       }
@@ -57,7 +57,7 @@
       "blockClass":"find__stores",
       "link": {
         "props": {
-          "label": "Stories",
+          "label": "wishlist",
           "href": "/account#/wishlist"
          }
       }

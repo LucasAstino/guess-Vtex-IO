@@ -508,6 +508,11 @@
   margin-bottom: 40px;
   padding: 0 30px;
 }
+@media (max-width: 1025px) {
+  .container--seo__content .wrapper--seo__content .heading--seo__content {
+    font-size: 24px;
+  }
+}
 .container--seo__content .link {
   color: black;
 }
