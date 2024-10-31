@@ -816,6 +816,10 @@
   margin: 50px auto;
 }
 
+.flexRow--faq .flexRowContent--faq {
+  margin: 100px auto;
+}
+
 .flexRow--privacy_policy .flexRowContent--privacy_policy {
   max-width: 1280px;
   margin: 0 auto;
@@ -826,10 +830,6 @@
   .flexRow--privacy_policy .flexRowContent--privacy_policy {
     padding: 0 10px;
   }
-}
-
-.flexRow--faq .flexRowContent--faq {
-  margin: 100px auto;
 }
 
 .flexRow--table__sizes-container .flexRowContent--table__sizes-container {

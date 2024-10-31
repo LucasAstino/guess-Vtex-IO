@@ -99,6 +99,10 @@
     opacity: 0;
   }
 }
+.modal_overlay {
+  z-index: 9999 !important;
+}
+
 .customContainer--shelf {
   height: 100%;
 }

@@ -6,10 +6,10 @@
     padding: 0 15px;
   }
   &--fastBuy {
+    margin-bottom: 48px;
     @include desktop{
       margin-bottom: 30px;
     }
-    margin-bottom: 48px;
   }
   &--wrap {
     gap: 10px;
