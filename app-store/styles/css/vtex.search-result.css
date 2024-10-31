@@ -171,6 +171,16 @@
 .filters--layout .filter__container--brand {
   display: none;
 }
+.filters--layout .accordionFilterContainer--hexadecimal, .filters--layout .accordionFilterContainer--marca {
+  display: none;
+}
+.filters--layout .accordionFilterContainer--category-4 .accordionFilterItemTitle {
+  font-size: 0;
+}
+.filters--layout .accordionFilterContainer--category-4 .accordionFilterItemTitle::before {
+  content: "Categoria";
+  font-size: 14px;
+}
 .filters--layout .filterTemplateOverflow :global(.vtex-checkbox__line-container) {
   align-items: center;
 }
