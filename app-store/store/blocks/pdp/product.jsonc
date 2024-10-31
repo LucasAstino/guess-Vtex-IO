@@ -1,8 +1,8 @@
 {
   "store.product": {
     "children": [
-     "responsive-layout.desktop#product-main",
-     "responsive-layout.mobile#product-main"
+      "responsive-layout.desktop#product-main",
+      "responsive-layout.mobile#product-main"
     ]
   },
   "responsive-layout.desktop#product-main": {
@@ -10,14 +10,12 @@
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product-main--desktop",
       "VisitedProductsSlider"
-   
     ]
   },
   "responsive-layout.mobile#product-main": {
     "children": [
       "flex-layout.row#product-main--mobile",
       "VisitedProductsSlider"
-      
     ]
   },
 
@@ -28,11 +26,9 @@
     "children": ["breadcrumb"]
   },
 
- 
   "flex-layout.row#product-main--desktop": {
     "props": {
       "blockClass": "product-main"
-    
     },
     "children": [
       "flex-layout.col#product__left-col",
@@ -43,26 +39,26 @@
   "flex-layout.row#product-main--mobile": {
     "props": {
       "blockClass": "product-main"
-    
     },
     "children": [
       "stack-layout#product-main--mobile",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product__name-pdp",
       "flex-layout.row#product__review",
-       "product-list-price#product__price-pdp",
-       "flex-layout.row#product__price-pdp",
-       "flex-layout.row#pdp__installmentsAndPayments",
-       "fg-product-variants",
-       "flex-layout.row#pdp__skuAndGuideSizes",
-       "flex-layout.row#buy-button",
-       "rich-text#cashback__pdp",
-       "add-to-list-btn",
-       "commumScript",
-       "shipping-simulator#pdp",
-        "rich-text#promotion__delivery",
-        "disclosure-layout#product__characteristics-pdp",
-      "disclosure-layout#product__description-pdp"
+      "product-list-price#product__price-pdp",
+      "flex-layout.row#product__price-pdp",
+      "flex-layout.row#pdp__installmentsAndPayments",
+      "fg-product-variants",
+      "flex-layout.row#pdp__skuAndGuideSizes",
+      "flex-layout.row#buy-button",
+      "rich-text#cashback__pdp",
+      "add-to-list-btn",
+      "commumScript",
+      "shipping-simulator#pdp",
+      "rich-text#promotion__delivery",
+      "disclosure-layout#product__characteristics-pdp",
+      "disclosure-layout#product__description-pdp",
+      "AddToCartAlert"
     ]
   },
 
@@ -80,7 +76,7 @@
       "blockClass": "product"
     },
     "children": [
-       "product-images#mobile"
+      "product-images#mobile"
       // "flex-layout.row#flags-pdp"
     ]
   },
@@ -118,9 +114,9 @@
       },
       "maxHeight": 520,
       "thumbnailVisibility": "visible",
-      "showPaginationDots":false,
+      "showPaginationDots": false,
       "blockClass": "product-image-carrosel",
-      "thumbnailsOrientation":"horizontal"
+      "thumbnailsOrientation": "horizontal"
     }
   },
   "flex-layout.col#product__right-col": {
