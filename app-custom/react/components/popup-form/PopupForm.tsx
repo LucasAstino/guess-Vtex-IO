@@ -118,13 +118,13 @@ Ao fornecer seus dados você concorda com a nossa
                 <button className={styles.modal_close__mobile} onClick={() => { closeModal() }}>
                   x
                 </button>
-                <img src="/arquivos/success.png" alt="modelo" width={80} height={80} />
+                <img src="https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.28/logo/new-logo-guess-small___27ee63f1c7bf362b14233e6c9c9630c7.png" alt="modelo" width={80} height={80} />
                 <p className={styles.success__message}>Cadastro realizado com sucesso!</p>
                 <em className={styles.modal__line}> </em>
                 <div className={styles.coupon__container}>
                   <p className={styles.couponTextTitle}> Use o cupom </p>
-                  <h1 className={styles.couponCode}> DONNA10 </h1>
-                  <span className={styles.couponSubText}>e aproveite um estilo exclusivo com <br /><strong>10% OFF</strong> na 1° compra</span>
+                  <h1 className={styles.couponCode}> PRIMEIRA50 </h1>
+                  <span className={styles.couponSubText}> <br /><strong></strong> </span>
                   <input type='submit' className={styles.returnToSiteBtn} onClick={() => { closeModal() }} value="Ir para o site" />
                 </div>
               </div>
