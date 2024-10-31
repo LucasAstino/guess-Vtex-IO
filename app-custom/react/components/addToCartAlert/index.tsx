@@ -1,47 +1,64 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
-import styles from "./AlertMessage.css"; // Certifique-se de criar e ajustar este CSS
+import { useCssHandles } from "vtex.css-handles";
+import ReactDOM from "react-dom";
 
-export const AddToCartAlert: FC = () => {
+const CSS_ALERT = ["alertadd__container", "alert__container-text"] as const;
+
+export const AddToCartAlert = () => {
   const { orderForm } = useOrderForm();
-  const [prevOrderFormItems, setPrevOrderFormItems] = useState(orderForm?.items || []);
-  const [alertVisible, setAlertVisible] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true);
+  const prevItemsCount = useRef(orderForm.items.length);
+  const [showMessage, setShowMessage] = useState(false);
+  const { handles } = useCssHandles(CSS_ALERT);
 
   useEffect(() => {
-    if (initialLoad) {
-      setPrevOrderFormItems(orderForm?.items || []);
-      setInitialLoad(false);
-      return;
+    // Seleciona o botão de adicionar ao carrinho pelo seletor específico
+    const addToCartButton = document.querySelector(
+      ".vtex-flex-layout-0-x-flexRowContent--buy-button .vtex-button"
+    );
+
+    // Define o manipulador de clique com atraso
+    const handleButtonClick = () => {
+      setTimeout(() => {
+        // Verifica se o número de itens aumentou após 1 segundo do clique
+        if (orderForm.items.length > prevItemsCount.current) {
+          setShowMessage(true); // Exibe a mensagem
+          setTimeout(() => setShowMessage(true), 3000); // Oculta a mensagem após 3 segundos
+        }
+        // Atualiza o número de itens para a próxima verificação
+        prevItemsCount.current = orderForm.items.length;
+      }, 1000); // Atraso de 1 segundo
+    };
+
+    // Adiciona o evento de clique ao botão, se ele existir
+    if (addToCartButton) {
+      addToCartButton.addEventListener("click", handleButtonClick);
     }
 
-    if (orderForm?.items) {
-      const itemAdded = orderForm.items.some((item :any, index :any) => {
-        const prevItem = prevOrderFormItems[index];
-        return !prevItem || item.quantity > prevItem.quantity;
-      });
-
-      if (itemAdded) {
-        console.log('dsdsdasdasdasdasdassd')
-        setAlertVisible(true);
-
-        const timer = setTimeout(() => {
-          setAlertVisible(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
+    // Limpa o evento ao desmontar o componente para evitar vazamento de memória
+    return () => {
+      if (addToCartButton) {
+        addToCartButton.removeEventListener("click", handleButtonClick);
       }
+    };
+  }, [orderForm.items.length]);
 
-      setPrevOrderFormItems(orderForm.items);
-    }
-    return undefined
-  }, [orderForm.items, initialLoad]);
-
-  return (
-    <div className={`${styles.alert} ${alertVisible ? styles.fadeIn : styles.fadeOut}`}>
-      Produto adicionado ao carrinho!
+  // Função para renderizar o conteúdo do modal
+  const ModalContent = () => (
+    <div
+      className={handles.alertadd__container}
+      style={{
+        zIndex: 1000, // Garantindo que fique sobre todos os elementos
+      }}
+    >
+      <div className={handles["alert__container-text"]}>
+        Produto adicionado ao carrinho com sucesso!
+      </div>
     </div>
   );
-  
-};
 
+  // Usa ReactDOM.createPortal para renderizar o modal no body
+  return showMessage
+    ? ReactDOM.createPortal(<ModalContent />, document.body)
+    : null;
+};
