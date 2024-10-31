@@ -13,6 +13,8 @@
 }
 
 
+
+
 .modal_container {
     background: url(/arquivos/background-solo.png);
     border-radius: 10px;
@@ -233,14 +235,10 @@
 }
 
 .modal__line {
-    background: #e5b590;
+    background: #000;
     height: 1px;
     max-width: 400px;
     width: 100%;
-}
-
-.couponCode {
-    background-image: linear-gradient(-180deg, transparent 50%, #f8eade 50%);
 }
 
 .couponSubText {
