@@ -1,5 +1,8 @@
 {
     "sticky-layout#mobile": {
+      "props": {
+      "blockClass": "main-header"
+    },
     "children": ["flex-layout.row#1-mobile"]
   },
   "flex-layout.row#1-mobile": {
