@@ -78,6 +78,9 @@
   "VideoPlayer":{
     "component":"Video"
   },
+  "closeFilter":{
+    "component":"closeFilter"
+  },
   "commumScript":{
     "component":"commumScript",
     "render": "lazy"

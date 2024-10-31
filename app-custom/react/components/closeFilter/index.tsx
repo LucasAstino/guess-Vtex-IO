@@ -1,34 +1,53 @@
-import React, { useEffect } from 'react'
-import styles from './CustomButtonTrigger.css'
+import React, { useEffect } from "react";
 
 interface Props {
-  targetSelector: string // CSS selector do elemento ao lado do qual o botão aparecerá
-  triggerSelector: string // CSS selector do elemento que será clicado
+  targetSelector: string; // CSS selector do elemento ao lado do qual o botão aparecerá
+  triggerSelector: string; // CSS selector do elemento que será clicado
 }
 
-const CustomButtonTrigger: React.FC<Props> = ({ targetSelector, triggerSelector }) => {
+export const CustomButtonTrigger: React.FC<Props> = ({
+  targetSelector,
+  triggerSelector,
+}) => {
   useEffect(() => {
-    const targetElement = document.querySelector(targetSelector)
+    console.log("filter check");
+
+    const targetElement = document.querySelector(".vtex-search-result-3-x-filterBreadcrumbsContent");
 
     if (targetElement) {
-      const button = document.createElement('button')
-      button.className = styles.customButton
-      button.innerText = 'Clique Aqui'
-      button.onclick = () => {
-        const triggerElement = document.querySelector(triggerSelector)
-        
-        // Verifica se o triggerElement é um HTMLElement para garantir que o método .click() está disponível
-        if (triggerElement instanceof HTMLElement) {
-          triggerElement.click()
-        }
+      // Verifica se o botão já existe
+      const existingButton = document.querySelector("#custom-trigger-button");
+      
+      if (!existingButton) {
+        // Cria o botão
+        const button = document.createElement("button");
+        button.classList.add('vtex__close-filter'); 
+        button.textContent = "X";
+
+        // Define o estilo do botão
+        button.style.marginLeft = "10px"; // Ajuste conforme necessário
+
+        // Define a ação do botão para clicar no outro elemento
+        button.addEventListener("click", () => {
+          const otherElement = document.querySelector(
+            ".vtex-search-result-3-x-sidebar"
+          ) as HTMLElement;
+          const siblingElement = otherElement.previousElementSibling as HTMLElement;
+          console.log(siblingElement,"aaaaaaaaaaaaaaaaaaaaaaaaa")
+          if (siblingElement) {
+            siblingElement.click(); // Dispara o clique no outro elemento
+          } else {
+            console.warn("Outro elemento não encontrado!");
+          }
+        });
+
+        // Adiciona o botão ao lado do elemento selecionado
+        targetElement.parentNode?.insertBefore(button, targetElement.nextSibling);
       }
-
-      // Insere o botão ao lado do elemento-alvo
-      targetElement.insertAdjacentElement('afterend', button)
+    } else {
+      console.warn("Elemento alvo não encontrado!");
     }
-  }, [targetSelector, triggerSelector])
+  }, [targetSelector, triggerSelector]);
 
-  return null
-}
-
-export default CustomButtonTrigger
+  return null;
+};
