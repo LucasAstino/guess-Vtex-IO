@@ -182,19 +182,7 @@
     display: none;
   }
 
-  .accordionFilterContainer--hexadecimal,.accordionFilterContainer--marca{
-    display: none;
-  }
-
-  .accordionFilterContainer--category-4 {
-    .accordionFilterItemTitle{
-      font-size: 0;
-      &::before{
-        content: "Categoria";
-        font-size: 14px;
-      }
-    }
-  }
+  
 
   .filterTemplateOverflow {
     :global(.vtex-checkbox__line-container) {
@@ -220,6 +208,20 @@
     }
     :global(.vtex-slider__dash) {
       display: none;
+    }
+  }
+}
+
+.accordionFilterContainer--hexadecimal,.accordionFilterContainer--marca{
+  display: none;
+}
+
+.accordionFilterContainer--category-4 {
+  .accordionFilterItemTitle{
+    font-size: 0 !important;
+    &::before{
+      content: "Categoria";
+      font-size: 14px;
     }
   }
 }

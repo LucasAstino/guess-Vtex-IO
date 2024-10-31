@@ -171,16 +171,6 @@
 .filters--layout .filter__container--brand {
   display: none;
 }
-.filters--layout .accordionFilterContainer--hexadecimal, .filters--layout .accordionFilterContainer--marca {
-  display: none;
-}
-.filters--layout .accordionFilterContainer--category-4 .accordionFilterItemTitle {
-  font-size: 0;
-}
-.filters--layout .accordionFilterContainer--category-4 .accordionFilterItemTitle::before {
-  content: "Categoria";
-  font-size: 14px;
-}
 .filters--layout .filterTemplateOverflow :global(.vtex-checkbox__line-container) {
   align-items: center;
 }
@@ -200,6 +190,18 @@
 }
 .filters--layout :global(.vtex-slider__values-container) :global(.vtex-slider__dash) {
   display: none;
+}
+
+.accordionFilterContainer--hexadecimal, .accordionFilterContainer--marca {
+  display: none;
+}
+
+.accordionFilterContainer--category-4 .accordionFilterItemTitle {
+  font-size: 0 !important;
+}
+.accordionFilterContainer--category-4 .accordionFilterItemTitle::before {
+  content: "Categoria";
+  font-size: 14px;
 }
 
 @media (max-width: 1025px) {
