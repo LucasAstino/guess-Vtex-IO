@@ -23,7 +23,7 @@ export const AddToCartAlert = () => {
         // Verifica se o número de itens aumentou após 1 segundo do clique
         if (orderForm.items.length > prevItemsCount.current) {
           setShowMessage(true); // Exibe a mensagem
-          setTimeout(() => setShowMessage(true), 3000); // Oculta a mensagem após 3 segundos
+          setTimeout(() => setShowMessage(false), 3000); // Oculta a mensagem após 3 segundos
         }
         // Atualiza o número de itens para a próxima verificação
         prevItemsCount.current = orderForm.items.length;
