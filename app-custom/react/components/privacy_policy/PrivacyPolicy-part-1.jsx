@@ -31,7 +31,7 @@ export function PrivacyPolicyPart1() {
               textAlign: "center",
             }}
           >
-            <br />{" "}
+            <br />
             <span
               style={{
                 fontSize: "11pt",
@@ -55,18 +55,18 @@ export function PrivacyPolicyPart1() {
               textAlign: "justify",
             }}
           >
-            A{" "}
+            A
             <strong>
               GUESS BRASIL COMÉRCIO E DISTRIBUIÇÃO S.A (“GUESS BRASIL”)
-            </strong>{" "}
+            </strong>
             sabe o quanto é importante conhecer e estar seguro sobre a utilização dos dados pessoais que tem em seu poder. Por isso, nos preocupamos em esclarecer e explicar nosso Aviso de Privacidade. 
-            <br />{" "}
+            <br />
             <span
               style={{
                 fontSize: "10.5pt",
               }}
             >
-              {" "}
+              
             </span>
           </p>
           <p
@@ -118,7 +118,7 @@ export function PrivacyPolicyPart1() {
             }}
           >
             <strong>Cadastro: </strong>
-            Coletamos os dados de nossos clientes necessários para efetuar o cadastro em nosso e-commerce {" "}
+            Coletamos os dados de nossos clientes necessários para efetuar o cadastro em nosso e-commerce 
             <strong>(Plataforma GUESS BRASIL)</strong>. Os dados são necessários para identificar o usuário e permitir que ele adquira produtos através de nossa plataforma. Os dados pessoais são coletados para que possamos processar, gerenciar, entregar suas compras, trocar ou enviar de volta algum produto caso o cliente assim deseje. Os dados coletados para cadastro são nome, sobrenome, gênero, data de nascimento, CPF, telefone, e-mail e endereço completo.
           </p>
           <p
@@ -187,7 +187,7 @@ export function PrivacyPolicyPart1() {
             }}
           >
             <strong>Geolocalização:</strong> Dados de geolocalização podem ser coletados, caso o usuário autorize a coleta a partir do seu dispositivo.
-            <br />{" "}
+            <br />
             <span
               style={{
                 fontSize: "8.0pt",
@@ -316,7 +316,7 @@ export function PrivacyPolicyPart1() {
               overflow: "auto",
             }}
           >
-            {" "}
+            
             <table
               className="Table"
               style={{
@@ -796,7 +796,7 @@ export function PrivacyPolicyPart1() {
                           Escuta social 
                           <i>
                             (identificando e analisando o que está sendo dito
-                            sobre a{" "}
+                            sobre a
                           </i>
                           <b>GUESS BRASIL</b>
                           <i>
@@ -805,10 +805,10 @@ export function PrivacyPolicyPart1() {
                                 color: "black",
                               }}
                             >
-                              {" "}
+                              
                               nas mídias sociais [somente conteúdo acessível
                               publicamente] a fim de perceber sentimento,
-                              intenção, disposição e tendências de{" "}
+                              intenção, disposição e tendências de
                             </span>
                           </i>
                           <i>
@@ -973,7 +973,7 @@ export function PrivacyPolicyPart1() {
                           }}
                         >
                           Identificação e autenticação para acesso as
-                          dependências das unidades da{" "}
+                          dependências das unidades da
                           <strong>GUESS BRASIL </strong>
                           por meio de imagens e gravações de terceiros,
                           colaboradores e visitante.
@@ -1311,7 +1311,7 @@ export function PrivacyPolicyPart1() {
                   </td>
                 </tr>
               </tbody>
-            </table>{" "}
+            </table>
           </div>
           <p
             style={{
@@ -1431,7 +1431,7 @@ export function PrivacyPolicyPart1() {
               }}
             >
               Dados transferidos para fins de execução do contrato, bem como para a proteção dos interesses da <strong>GUESS BRASIL</strong> em qualquer tipo de conflito, incluindo ações judiciais.
-            </li>{" "}
+            </li>
           </ul>
           <p
             style={{
@@ -1501,7 +1501,7 @@ export function PrivacyPolicyPart1() {
             Os Titulares de dados pessoais têm alguns direitos no que se refere
             aos seus dados pessoais e podem exercê-los clicando aqui para
             acessar o Formulário de Requisição de Dados (DSAR) ou por meio do
-            e-mail:{" "}
+            e-mail:
             <a
               href="mailto:dpo@guessbrasil.com.br"
               style={{
@@ -1598,7 +1598,7 @@ export function PrivacyPolicyPart1() {
               }}
             >
               Revogação do consentimento, quando aplicável.
-            </li>{" "}
+            </li>
           </ul>
           <p
             style={{
@@ -1626,7 +1626,7 @@ export function PrivacyPolicyPart1() {
             A <strong>GUESS BRASIL</strong> sempre avaliará a melhor forma de cumprir a solicitação de exercício de algum de seus direitos. No entanto, a <strong>GUESS BRASIL</strong> poderá deixar de atender a sua solicitação, total ou parcialmente, em situações específicas resguardadas pela legislação, como, por exemplo, para o cumprimento de uma obrigação legal ou de um contrato que mantém com você.
             <br /> <br /> Ressaltamos a importância de manter seus dados pessoais precisos e atualizados. Para tanto, mantenha a <strong>GUESS BRASIL</strong> sempre informada se seus dados pessoais mudarem ou estiverem incorretos. 
             <br /> <br /> Certas requisições poderão ser feitas pelo usuário diretamente por meio da plataforma da <strong>GUESS BRASIL</strong>, através de acesso por e-mail e senha. Portanto, é muito importante que o usuário tenha uma senha forte, e que não a compartilhe com terceiros. O usuário assume total responsabilidade pelo acesso de terceiros à plataforma utilizando sua conta e senha.
-            <br /> <br /> Por motivos de segurança, para as requisições que sejam feitas por meio do e-mail {" "}
+            <br /> <br /> Por motivos de segurança, para as requisições que sejam feitas por meio do e-mail 
             
             <a
               href="mailto:dpo@guessbrasil.com.br"
@@ -1644,7 +1644,7 @@ export function PrivacyPolicyPart1() {
               </span>
             </a>
             , a solicitação será atendida quando tivermos certeza da identidade do usuário. Sendo assim, poderemos solicitar dados ou informações adicionais para a confirmação da identidade e da autenticidade do titular. Estes dados e informações serão protegidos durante o período de armazenamento e eliminados, após transcurso do prazo legal para eventual exercício regular de direitos.
-            <br />{" "}
+            <br />
             <span
               className="MsoHyperlink"
               style={{
@@ -1716,9 +1716,9 @@ export function PrivacyPolicyPart1() {
               textAlign: "justify",
             }}
           >
-            A <strong>GUESS BRASIL</p> disponibiliza abaixo os dados de contato do Encarregado de Dados Pessoais (DPO), sendo este o responsável por atender toda e qualquer solicitação por parte dos titulares ou da Autoridade Nacional, que estejam relacionados com dados pessoais.
+            A <strong>GUESS BRASIL</strong> disponibiliza abaixo os dados de contato do Encarregado de Dados Pessoais (DPO), sendo este o responsável por atender toda e qualquer solicitação por parte dos titulares ou da Autoridade Nacional, que estejam relacionados com dados pessoais.
             <br /> <br /> Para qualquer dúvida, solicitação ou reclamação referente ao tratamento de dados pessoais, favor entrar em contato com o nosso Encarregado de Dados Pessoais:
-            <br /> <br />{" "}
+            <br /> <br />
             <strong
               style={{
                 color: "#0563c1",
@@ -1726,7 +1726,7 @@ export function PrivacyPolicyPart1() {
               }}
             >
               DPO EXPERT®
-            </strong>{" "}
+            </strong>
             <span
               style={{
                 color: "#0563c1",
@@ -1750,14 +1750,14 @@ export function PrivacyPolicyPart1() {
               }}
             >
               )
-            </span>{" "}
+            </span>
             <span
               style={{
                 color: "#0563c1",
               }}
             >
               - contato:
-            </span>{" "}
+            </span>
             <a
               href="mailto:dpo@guessbrasil.com.br"
               style={{
@@ -1773,8 +1773,10 @@ export function PrivacyPolicyPart1() {
                 dpo@guessbrasil.com.br
               </span>
             </a>
-            <br /> <br /> Se, apesar do nosso compromisso e esforços para proteger seus dados, você achar que seus direitos de proteção de dados não foram atendidos, solicitamos que entre em contato com o nosso DPO. Além disso você tem o direito, a qualquer momento, de registrar uma queixa diretamente com a Autoridade Nacional de Proteção de Dados, caso entenda que os direitos sobre os seus dados pessoais foram infringidos.
+            <br /> <br />Se, apesar do nosso compromisso e esforços para proteger seus dados, você achar que seus direitos de proteção de dados não foram atendidos, solicitamos que entre em contato com o nosso DPO. Além disso você tem o direito, a qualquer momento, de registrar uma queixa diretamente com a Autoridade Nacional de Proteção de Dados, caso entenda que os direitos sobre os seus dados pessoais foram infringidos.
+           
           </p>
+          
           <p
             style={{
               margin: "0cm 0cm 8pt",
@@ -1820,7 +1822,7 @@ export function PrivacyPolicyPart1() {
             }}
           >
             <span>
-              <br />{" "}
+              <br />
             </span>
           </p>
           <div
@@ -1831,7 +1833,7 @@ export function PrivacyPolicyPart1() {
               top: "4606.58px",
             }}
           >
-            <div className="gtx-trans-icon"></div>{" "}
+            <div className="gtx-trans-icon"></div>
           </div>
         </div>
       </div>
