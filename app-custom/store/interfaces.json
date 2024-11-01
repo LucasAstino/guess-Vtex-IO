@@ -81,6 +81,9 @@
   "closeFilter":{
     "component":"closeFilter"
   },
+  "ProductCashbackDisplay":{
+    "component":"ProductCashbackDisplay"
+  },
   "commumScript":{
     "component":"commumScript",
     "render": "lazy"
