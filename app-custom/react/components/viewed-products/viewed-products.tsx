@@ -756,27 +756,28 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       key={product.productId}
                       className={handles["product__viewed-item"]}
                     >
-                      <div className={handles["product__viewed-wrapper"]}>
-                        <a
-                          className={handles["product__viewed-link"]}
-                          href={`/${product.linkText}/p`}
-                        >
+                      <a
+                        className={handles["product__viewed-link"]}
+                        href={`/${product.linkText}/p`}
+                      >
+                        <div className={handles["product__viewed-wrapper"]}>
                           <img
                             className={handles["product__viewed-image"]}
                             src={image}
                             alt={product.productName}
                           />
-                          <h3 className={handles["product__viewed-name"]}>
-                            {product.productName}
-                          </h3>
-                        </a>
-                        <button
-                          className={handles["product__viewed-addtocart"]}
-                          onClick={() => handleOpenModal(product)}
-                        >
-                          Add
-                        </button>
-                      </div>
+                          <button
+                            className={handles["product__viewed-addtocart"]}
+                            onClick={() => handleOpenModal(product)}
+                          >
+                            Add
+                          </button>
+                        </div>
+                        <h3 className={handles["product__viewed-name"]}>
+                          {product.productName}
+                        </h3>
+                      </a>
+
                       <p className={handles["product__viewed-price"]}>
                         R$ {price}
                       </p>
