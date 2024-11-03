@@ -348,6 +348,10 @@
   gap: 8px;
 }
 
+.slideChildrenContainer {
+  align-items: flex-start;
+}
+
 .visited-products-slider {
   padding: 0 30px;
   margin-bottom: 150px;
@@ -365,9 +369,9 @@
 .product__viewed-item {
   max-width: 20vw;
 }
-@media (max-width: 1025px) {
+@media (max-width: 768px) {
   .product__viewed-item {
-    max-width: 152px;
+    max-width: 50vw;
   }
 }
 
@@ -422,12 +426,13 @@
 
 .product__viewed-wrapper {
   position: relative;
+  display: flex;
 }
 
 .product__viewed-addtocart {
   position: absolute;
   right: 8px;
-  bottom: 38px;
+  bottom: 8px;
   background-color: #ffffff;
   border-radius: 6px;
   border: 2px solid #bdbec0;
