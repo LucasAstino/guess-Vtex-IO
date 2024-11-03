@@ -54,7 +54,7 @@
       "ProductCashbackDisplay",
       "add-to-list-btn",
       "commumScript",
-      
+
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
@@ -110,10 +110,7 @@
   },
   "product-images#mobile": {
     "props": {
-      "aspectRatio": {
-        "phone": "9:16"
-      },
-      "maxHeight": 520,
+      "aspectRatio": "auto",
       "thumbnailVisibility": "visible",
       "showPaginationDots": false,
       "blockClass": "product-image-carrosel",

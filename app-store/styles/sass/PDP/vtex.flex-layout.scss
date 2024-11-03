@@ -3,6 +3,9 @@
     max-width: 1800px;
     padding: 0 20px;
     margin: auto;
+    @include mobile{
+      padding: 0;
+    }
     .flexRowContent--product-main {
       justify-content: space-between;
     }

@@ -133,6 +133,11 @@
   padding: 0 20px;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .flexRow--product-main {
+    padding: 0;
+  }
+}
 .flexRow--product-main .flexRowContent--product-main {
   justify-content: space-between;
 }
