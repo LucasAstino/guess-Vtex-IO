@@ -233,14 +233,14 @@
 //                       key={product.productId}
 //                       className={handles["product__viewed-item"]}
 //                     >
-                      
+
 //                       <div className={handles["product__viewed-wrapper"]}>
-                        
+
 //                         <a
 //                           className={handles["product__viewed-link"]}
 //                           href={`/${product.linkText}/p`}
 //                         >
-                          
+
 //                           <img
 //                             className={handles["product__viewed-image"]}
 //                             src={image}
@@ -256,17 +256,17 @@
 //                             handleOpenModal(product);
 //                           }}
 //                         >
-                          
+
 //                           Add
 //                         </button>
 //                       </div>
 //                       <p className={handles["product__viewed-price"]}>
-                        
+
 //                         R$ {price}
 //                       </p>
 //                       {maxInstallment && (
 //                         <p className={handles["product__viewed-installments"]}>
-                          
+
 //                           ou {count}x sem juros de R$
 //                           {(maxInstallmentValue / 100)
 //                             .toFixed(2)
@@ -283,7 +283,7 @@
 //                               position: "relative",
 //                             }}
 //                           >
-                            
+
 //                             <button
 //                               className={handles.closeButton}
 //                               onClick={handleCloseModal}
@@ -293,7 +293,7 @@
 //                                 right: "10px",
 //                               }}
 //                             >
-                              
+
 //                               +
 //                             </button>
 //                             <SkuFromShelf
@@ -302,9 +302,9 @@
 //                             <div
 //                               className={handles["modalContent__alert-visible"]}
 //                             >
-                              
+
 //                               <p>
-                                
+
 //                                 Produto adicionado a
 //                                 <span
 //                                   className={
@@ -396,7 +396,7 @@
 //                               position: "relative",
 //                             }}
 //                           >
-                            
+
 //                             <button
 //                               className={handles.closeButton}
 //                               onClick={handleCloseModal}
@@ -406,7 +406,7 @@
 //                                 right: "10px",
 //                               }}
 //                             >
-                              
+
 //                               +
 //                             </button>
 //                             <SkuFromShelf
@@ -415,9 +415,9 @@
 //                             <div
 //                               className={handles["modalContent__alert-visible"]}
 //                             >
-                              
+
 //                               <p>
-                                
+
 //                                 Produto adicionado a
 //                                 <span
 //                                   className={
@@ -446,7 +446,6 @@
 //   );
 // };
 
-
 import React, {
   FC,
   createContext,
@@ -458,6 +457,7 @@ import { useProduct } from "vtex.product-context";
 import { SliderLayout } from "vtex.slider-layout"; // Importa o SliderLayout
 import { SkuFromShelf } from "../shelfSku"; // Importa o componente filho
 import { useCssHandles } from "vtex.css-handles";
+import { useDevice } from "vtex.device-detector";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
 
 export const HANDLES_VIEWED = [
@@ -537,6 +537,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
   const [isModalOpen, setModalOpen] = useState(false); // Estado para controlar a visibilidade do modal
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Produto selecionado para o modal
   const productContext = useProduct();
+  const { isMobile } = useDevice();
   const { handles } = useCssHandles(HANDLES_VIEWED);
   const { orderForm } = useOrderForm();
   const [prevOrderFormItems, setPrevOrderFormItems] = useState<OrderFormItem[]>(
@@ -650,7 +651,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
             <h2 className={handles["title__viewed-product"]}>
               Vistos recentemente
             </h2>
-            {availableProducts.length >= 4 ? (
+            {isMobile || availableProducts.length >= 4 ? (
               <SliderLayout
                 itemsPerPage={{
                   desktop: 4,
@@ -680,34 +681,35 @@ export const VisitedProductsSlider: FC<Props> = () => {
                     );
                   const image = product.items[0].images[0].imageUrl.replace(
                     /(ids\/\d+)/,
-                    "$1-500-724"
+                    "$1-507-736"
                   );
+
                   return (
                     <div
                       key={product.productId}
                       className={handles["product__viewed-item"]}
                     >
-                      <div className={handles["product__viewed-wrapper"]}>
-                        <a
-                          className={handles["product__viewed-link"]}
-                          href={`/${product.linkText}/p`}
-                        >
+                      <a
+                        className={handles["product__viewed-link"]}
+                        href={`/${product.linkText}/p`}
+                      >
+                        <div className={handles["product__viewed-wrapper"]}>
                           <img
                             className={handles["product__viewed-image"]}
                             src={image}
                             alt={product.productName}
                           />
-                          <h3 className={handles["product__viewed-name"]}>
-                            {product.productName}
-                          </h3>
-                        </a>
-                        <button
-                          className={handles["product__viewed-addtocart"]}
-                          onClick={() => handleOpenModal(product)}
-                        >
-                          Add
-                        </button>
-                      </div>
+                          <button
+                            className={handles["product__viewed-addtocart"]}
+                            onClick={() => handleOpenModal(product)}
+                          >
+                            Add
+                          </button>
+                        </div>
+                        <h3 className={handles["product__viewed-name"]}>
+                          {product.productName}
+                        </h3>
+                      </a>
                       <p className={handles["product__viewed-price"]}>
                         R$ {price}
                       </p>
@@ -748,6 +750,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
                     /(ids\/\d+)/,
                     "$1-500-724"
                   );
+
                   return (
                     <div
                       key={product.productId}
