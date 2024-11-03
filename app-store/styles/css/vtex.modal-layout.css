@@ -34,6 +34,15 @@
 .modal--pdp__guideSizes .paper {
   overflow: visible;
 }
+.modal--pdp__guideSizes .paper :global(.vtex-store-components-3-x-imageElement) {
+  width: 65vw;
+}
+@media (max-width: 1025px) {
+  .modal--pdp__guideSizes .paper :global(.vtex__guideSize) {
+    height: 65vh;
+    overflow: scroll;
+  }
+}
 
 .modal--pdp__methodsPayments {
   padding: 35px;

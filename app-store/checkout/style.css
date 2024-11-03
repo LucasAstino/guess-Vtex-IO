@@ -5877,6 +5877,15 @@ footer .bottom .copy p {
   .table.cart-items td.quantity {
     margin-top: -50px;
   }
+
+
+  .PaymentCardCVVHelp {
+
+
+    margin-left: 300px !important;
+
+}
+
   .product__color,
   .product__size {
     color: #767676;

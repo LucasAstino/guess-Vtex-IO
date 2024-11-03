@@ -22,7 +22,7 @@
     "props": {
         "blockClass":"pdp__guideSizes"
     },
-    "children": ["modal-header#pdp__guideSizes","image#pdp__guideSizes"]
+    "children": ["modal-header#pdp__guideSizes", "responsive-layout.desktop#pdp__guideSizes","responsive-layout.mobile#pdp__guideSizes"]
   },
   "modal-header#pdp__guideSizes": {
     "props": {
@@ -30,9 +30,39 @@
         "blockClass":["pdp__guideSizes","header__modal"]
     }
   },
-  "image#pdp__guideSizes": {
+
+  "guideSize#desk":{
+    "children":[  "image#pdp__guideSizes-masculine", "image#pdp__guideSizes-feminine"]
+  },
+  "guideSize#mobile":{
+    "children":[   "image#pdp__guideSizes-masculine--mobile","image#pdp__guideSizes-feminine--mobile"]
+  },
+
+  "responsive-layout.desktop#pdp__guideSizes": {
+    "children": [ "guideSize#desk"]
+  },
+  "responsive-layout.mobile#pdp__guideSizes": {
+    "children": ["guideSize#mobile"]
+  },
+
+  "image#pdp__guideSizes-feminine": {
     "props": {
-      "src": "assets/images/table-size/feminine/modaltabelaMedidasFeminDesktop.png"
+      "src": "assets/images/guideSize/modaltabelaMedidasFeminDesktop.png"
+    }
+  },
+  "image#pdp__guideSizes-feminine--mobile": {
+    "props": {
+      "src": "assets/images/guideSize/modaltabelaMedidasFeminMobile.png"
+    }
+  },
+  "image#pdp__guideSizes-masculine--mobile": {
+    "props": {
+      "src": "assets/images/guideSize/modaltabelaMedidasMascMobile.png"
+    }
+  },
+  "image#pdp__guideSizes-masculine": {
+    "props": {
+      "src": "assets/images/guideSize/modaltabelaMedidasMascDesktop.png"
     }
   }
 }
