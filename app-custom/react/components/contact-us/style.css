@@ -1,3 +1,7 @@
 .octadesk__custom-form__container{
     overflow: hidden;
 }
+
+:global(.vtex__form-octadesk){
+    min-height: 600px;
+}
