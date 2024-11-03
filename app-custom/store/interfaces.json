@@ -66,6 +66,10 @@
     "component":"CustomModal",
     "composition": "children"
   },
+  "guideSize":{
+    "component":"guideSize",
+    "composition": "children"
+  },
   "PopupForm":{
     "component":"PopupForm"
   },

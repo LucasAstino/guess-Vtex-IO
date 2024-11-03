@@ -15,6 +15,7 @@ export function LoginOrUserName() {
 
   useEffect(() => {
     if (orderForm?.loggedIn) {
+      console.log(orderForm,"orderfrommmmmm")
         if(orderForm.clientProfileData.firstName){
             setUserName(orderForm.clientProfileData.firstName)
         }
