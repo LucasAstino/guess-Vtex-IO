@@ -148,7 +148,7 @@
 .modal-content {
   position: absolute;
   right: -10px;
-  background: #F9F9F9;
+  background: #f9f9f9;
   width: 25vw;
   padding: 20px;
   translate: -100%;
@@ -167,6 +167,29 @@
   font-weight: 300;
   rotate: 45deg;
   cursor: pointer;
+}
+
+.similar__modal-addToCart {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  bottom: -100px;
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 1s ease;
+}
+.similar__modal-addToCart-fadeIn {
+  opacity: 1;
+}
+.similar__modal-addToCart-fadeOut {
+  opacity: 0;
+}
+.similar__modal-addToCart--label {
+  margin: 0;
 }
 
 .video__player {
@@ -557,6 +580,97 @@
 }
 .sliderLeftArrow .caretIcon {
   display: none;
+}
+
+.login__container {
+  position: relative;
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__container .login {
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .login__container .login {
+    width: 20px;
+  }
+}
+.login__container .login:hover {
+  cursor: pointer;
+}
+.login__container .login .login__icon {
+  width: fit-content;
+}
+.login__container .login .login__icon::before {
+  content: "";
+  background: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/0.1.5/icons/header/icon-user___de3e7b3….svg) no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+.login__container .login__wrapper {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  width: 132px;
+  background-color: white;
+  top: 90%;
+  position: absolute;
+  translate: -20px;
+  z-index: 99;
+}
+.login__container .login__wrapper::before {
+  content: "";
+  box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
+  background: #fff;
+  display: block;
+  margin: 0 0 0 -0.25em;
+  position: absolute;
+  pointer-events: none;
+  transform: rotate(45deg);
+  width: 0.5em;
+  height: 0.5em;
+  left: auto;
+  right: 40px;
+  top: -3px;
+  z-index: 2;
+}
+.login__container .login__wrapper_closed {
+  display: none;
+}
+.login__container .login__wrapper_open {
+  display: block;
+}
+.login__container .login__wrapper .login__list {
+  list-style: none;
+  padding: 0;
+}
+.login__container .login__wrapper .login__list .login__item {
+  font-size: 10px;
+  opacity: 0.8;
+  padding: 0 20px;
+  letter-spacing: 0.2em;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login__container .login__wrapper .login__list .login__item .login__link {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.login__container .login__wrapper .login__list .login__item .login__link:hover {
+  font-weight: 600;
+}
+
+.hello__user {
+  font-size: 14px;
+}
+.hello__user .hello__login-link {
+  color: black;
 }
 
 .menuContainer {
@@ -1013,95 +1127,4 @@
 
 .textSliderItem.active {
   opacity: 1;
-}
-
-.login__container {
-  position: relative;
-  width: fit-content !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.login__container .login {
-  width: 50px;
-}
-@media (max-width: 768px) {
-  .login__container .login {
-    width: 20px;
-  }
-}
-.login__container .login:hover {
-  cursor: pointer;
-}
-.login__container .login .login__icon {
-  width: fit-content;
-}
-.login__container .login .login__icon::before {
-  content: "";
-  background: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/0.1.5/icons/header/icon-user___de3e7b3….svg) no-repeat;
-  background-size: 100%;
-  width: 20px;
-  height: 20px;
-  display: block;
-  margin: auto;
-}
-.login__container .login__wrapper {
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
-  width: 132px;
-  background-color: white;
-  top: 90%;
-  position: absolute;
-  translate: -20px;
-  z-index: 99;
-}
-.login__container .login__wrapper::before {
-  content: "";
-  box-shadow: -1px -1px 0 0 rgba(34, 36, 38, 0.15);
-  background: #fff;
-  display: block;
-  margin: 0 0 0 -0.25em;
-  position: absolute;
-  pointer-events: none;
-  transform: rotate(45deg);
-  width: 0.5em;
-  height: 0.5em;
-  left: auto;
-  right: 40px;
-  top: -3px;
-  z-index: 2;
-}
-.login__container .login__wrapper_closed {
-  display: none;
-}
-.login__container .login__wrapper_open {
-  display: block;
-}
-.login__container .login__wrapper .login__list {
-  list-style: none;
-  padding: 0;
-}
-.login__container .login__wrapper .login__list .login__item {
-  font-size: 10px;
-  opacity: 0.8;
-  padding: 0 20px;
-  letter-spacing: 0.2em;
-  line-height: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.login__container .login__wrapper .login__list .login__item .login__link {
-  color: #444;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.login__container .login__wrapper .login__list .login__item .login__link:hover {
-  font-weight: 600;
-}
-
-.hello__user {
-  font-size: 14px;
-}
-.hello__user .hello__login-link {
-  color: black;
 }

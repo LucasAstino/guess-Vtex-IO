@@ -1,50 +1,74 @@
-.customContainer--shelf{
+.customContainer--shelf {
+  height: 100%;
+  :global(.vtex-product-summary-2-x-imageContainer) {
     height: 100%;
-    :global(.vtex-product-summary-2-x-imageContainer){
-        height: 100%;
-        width: 100%;
-    }
+    width: 100%;
+  }
 }
 
-.custom-modal-container{
-    background-color: white;
-    position: absolute;
-    bottom: 10px;
-    right: 8px;
-    z-index: 998;
-    border-radius:8px;
-    width: 60px;
-    border: 2px solid #bdbec0;
-    @include tablet{
-        bottom: 8px;
-    }
-
-    
+.custom-modal-container {
+  background-color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  z-index: 998;
+  border-radius: 8px;
+  width: 60px;
+  border: 2px solid #bdbec0;
+  @include tablet {
+    bottom: 8px;
+  }
 }
 
-.modal-content{
-    position: absolute;
-    right: -10px;
-    background: #F9F9F9;
-    width: 25vw;
-    padding: 20px;
-    translate: -100%;
-    border-radius: 8px;
+.modal-content {
+  position: absolute;
+  right: -10px;
+  background: #f9f9f9;
+  width: 25vw;
+  padding: 20px;
+  translate: -100%;
+  border-radius: 8px;
 
-    .modal-content--wrapper{
-        .similar__products-variants--circle{
-            height: 25px !important;
-            width: 25px !important;
-        }
-        .modal-content--button{
-            all: unset;
-            position: absolute;
-            right: 15px;
-            top: 5px;
-            font-size: 35px;
-            font-weight: 300;
-            rotate: 45deg;
-            cursor: pointer;
-        }
+  .modal-content--wrapper {
+    .similar__products-variants--circle {
+      height: 25px !important;
+      width: 25px !important;
     }
+    .modal-content--button {
+      all: unset;
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      font-size: 35px;
+      font-weight: 300;
+      rotate: 45deg;
+      cursor: pointer;
+    }
+  }
+}
+
+.similar__modal-addToCart {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  bottom: -100px;
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 1s ease;
+
+  &-fadeIn {
+    opacity: 1;
+  }
+
+  &-fadeOut {
+    opacity: 0;
+  }
+
+  &--label {
+    margin: 0;
+  }
 }

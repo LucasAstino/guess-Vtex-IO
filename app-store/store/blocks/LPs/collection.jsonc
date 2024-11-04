@@ -15,7 +15,7 @@
         "skusFilter": "ALL_AVAILABLE",
         "simulationBehavior": "default",
         "orderByField": "OrderByTopSaleDESC",
-        "maxItemsPerPage": 10
+        "maxItemsPerPage": 40
       }
     }
   },
