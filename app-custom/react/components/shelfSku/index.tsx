@@ -25,7 +25,11 @@ export const HANDLES_VARIANTS = [
   "similar__image-container",
   "similar__image-container-active",
   "similar__image-container-unavailable",
-  "similar__image-container--selected",
+  "similar__modal-addToCart",
+  "similar__modal-addToCart-fadeIn",
+  "similar__modal-addToCart-fadeOut",
+  "similar__modal-addToCart--content",
+  "similar__modal-addToCart--label",
 ] as const;
 
 interface SkuSpecification {
@@ -68,8 +72,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   const { handles } = useCssHandles(HANDLES_VARIANTS);
   const product = useProduct();
   const { addItem } = useOrderItems();
-
-  console.log(productQuery.product, "raul");
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const productId =
     productQuery?.product?.productId ?? product?.product?.productId;
@@ -152,6 +155,10 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
       seller: "1",
     };
     addItem([itemToAdd]);
+    setIsModalVisible(true);
+    setTimeout(()=>{
+      setIsModalVisible(false)
+    },4000)
   };
 
   return (
@@ -165,7 +172,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
           style={{ display: "flex" }}
           className={handles["similar__products-variants--wrap"]}
         >
-          <div className={`${handles["similar__image-container"]} ${handles["similar__image-container-active"]}`}>
+          <div
+            className={`${handles["similar__image-container"]} ${handles["similar__image-container-active"]}`}
+          >
             <span
               className={handles["similar__products-variants--circle"]}
               style={{
@@ -179,12 +188,16 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 document
                   .querySelectorAll(`.${handles["similar__image-container"]}`)
                   .forEach((container) => {
-                    container.classList.remove(`${handles["similar__image-container-active"]}`);
+                    container.classList.remove(
+                      `${handles["similar__image-container-active"]}`
+                    );
                   });
                 // Add 'active' class to the parent of the clicked circle
                 const parentContainer = e.currentTarget
                   .parentNode as HTMLElement; // Cast to HTMLElement
-                parentContainer.classList.add(`${handles["similar__image-container-active"]}`);
+                parentContainer.classList.add(
+                  `${handles["similar__image-container-active"]}`
+                );
 
                 console.log(productQuery.product.productId);
                 handleColorClick(productQuery.product.productId);
@@ -233,12 +246,16 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                         `.${handles["similar__image-container"]}`
                       )
                       .forEach((container) => {
-                        container.classList.remove(`${handles["similar__image-container-active"]}`);
+                        container.classList.remove(
+                          `${handles["similar__image-container-active"]}`
+                        );
                       });
                     // Add 'active' class to the parent of the clicked circle
                     const parentContainer = e.currentTarget
                       .parentNode as HTMLElement; // Cast to HTMLElement
-                    parentContainer.classList.add(`${handles["similar__image-container-active"]}`);
+                    parentContainer.classList.add(
+                      `${handles["similar__image-container-active"]}`
+                    );
 
                     handleColorClick(element.productId);
                     setSelectedColor(
@@ -305,6 +322,13 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
           <span>Sem SKUs disponíveis</span>
         )}
       </div>
+      {isModalVisible && (
+        <div className={`${handles["similar__modal-addToCart"]} ${isModalVisible ? handles["similar__modal-addToCart-fadeIn"] : handles["similar__modal-addToCart-fadeOut"]}`}>
+          <div className={handles["similar__modal-addToCart--content"]}>
+            <p className={handles["similar__modal-addToCart--label"]}>Produto adicionado ao <u>carrinho!</u></p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
