@@ -23,7 +23,7 @@ export const CustomModal: React.FC<CustomModalProps> = ({ children }) => {
 
   const handleToggleModal = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault(); 
-    event.stopPropagation(); // Impede a propagação do clique
+    event.stopPropagation(); 
 
     setIsOpen(prev => !prev);
 
@@ -31,8 +31,8 @@ export const CustomModal: React.FC<CustomModalProps> = ({ children }) => {
       if (triggerRef.current) {
         const { top, left, height } = triggerRef.current.getBoundingClientRect();
         setModalPosition({
-          top: top + height + window.scrollY, // Posição abaixo do trigger
-          left: left + window.scrollX + triggerRef.current.offsetWidth - (modalRef.current?.offsetWidth || 0) // Alinhamento do lado direito
+          top: top + height + window.scrollY, 
+          left: left + window.scrollX + triggerRef.current.offsetWidth - (modalRef.current?.offsetWidth || 0) 
         });
       }
     }
@@ -44,7 +44,7 @@ export const CustomModal: React.FC<CustomModalProps> = ({ children }) => {
       !triggerRef.current?.contains(event.target as Node) && 
       !modalRef.current.contains(event.target as Node)
     ) {
-      setIsOpen(false); // Fecha o modal se clicar fora
+      setIsOpen(false); 
     }
   };
 
@@ -71,7 +71,7 @@ export const CustomModal: React.FC<CustomModalProps> = ({ children }) => {
             left: modalPosition.left,
             zIndex: 1000,
           }}
-          onClick={(e) => e.stopPropagation()} // Impede o fechamento ao clicar no modal
+          onClick={(e) => e.stopPropagation()} 
         >
           <div className={handles['modal-content--wrapper']}>
             <button onClick={handleToggleModal} className={handles['modal-content--button']}>
