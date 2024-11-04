@@ -59,7 +59,7 @@ CustomTextSlider.defaultProps = {
 }
 
 CustomTextSlider.schema = {
-  title: 'Custom Text Slider',
+  title: 'TopBar Slider',
   description: 'A slider with customizable texts, colors, and transition time.',
   type: 'object',
   properties: {
