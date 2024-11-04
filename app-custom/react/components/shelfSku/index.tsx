@@ -23,6 +23,7 @@ export const HANDLES_VARIANTS = [
   "similar__products-variants--circle-unavailable",
   "similar__products-variants--link",
   "similar__image-container",
+  "similar__image-container-active",
   "similar__image-container-unavailable",
   "similar__image-container--selected",
 ] as const;
@@ -164,7 +165,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
           style={{ display: "flex" }}
           className={handles["similar__products-variants--wrap"]}
         >
-          <div className={`${handles["similar__image-container"]} `}>
+          <div className={`${handles["similar__image-container"]} ${handles["similar__image-container-active"]}`}>
             <span
               className={handles["similar__products-variants--circle"]}
               style={{
@@ -173,7 +174,18 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 backgroundColor: currentColorCode,
                 display: "block",
               }}
-              onClick={() => {
+              onClick={(e) => {
+                // Remove 'active' class from all parents
+                document
+                  .querySelectorAll(`.${handles["similar__image-container"]}`)
+                  .forEach((container) => {
+                    container.classList.remove(`${handles["similar__image-container-active"]}`);
+                  });
+                // Add 'active' class to the parent of the clicked circle
+                const parentContainer = e.currentTarget
+                  .parentNode as HTMLElement; // Cast to HTMLElement
+                parentContainer.classList.add(`${handles["similar__image-container-active"]}`);
+
                 console.log(productQuery.product.productId);
                 handleColorClick(productQuery.product.productId);
                 setSelectedColor(
@@ -214,7 +226,20 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                     backgroundColor: bgColor,
                     display: "block",
                   }}
-                  onClick={() => {
+                  onClick={(e) => {
+                    // Remove 'active' class from all parents
+                    document
+                      .querySelectorAll(
+                        `.${handles["similar__image-container"]}`
+                      )
+                      .forEach((container) => {
+                        container.classList.remove(`${handles["similar__image-container-active"]}`);
+                      });
+                    // Add 'active' class to the parent of the clicked circle
+                    const parentContainer = e.currentTarget
+                      .parentNode as HTMLElement; // Cast to HTMLElement
+                    parentContainer.classList.add(`${handles["similar__image-container-active"]}`);
+
                     handleColorClick(element.productId);
                     setSelectedColor(
                       element?.items?.[0].variations?.[1]?.values?.[0]
@@ -233,7 +258,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
             <p className={handles["similar__products-variants--sku-title"]}>
               Selecione um tamanho:{" "}
               {infoerror ? (
-                <span className={handles["similar__products-variants--error"]}>Selecione um tamanho</span>
+                <span className={handles["similar__products-variants--error"]}>
+                  Selecione um tamanho
+                </span>
               ) : (
                 <span>{selectedSize}</span>
               )}
