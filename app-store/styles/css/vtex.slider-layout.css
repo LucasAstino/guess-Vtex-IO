@@ -1,8 +1,10 @@
 .sliderLayoutContainer--search__result {
   padding: 20px;
 }
-.sliderLayoutContainer--search__result .sliderTrack {
-  gap: 25px;
+@media (min-width: 1025px) {
+  .sliderLayoutContainer--search__result .sliderTrack {
+    gap: 10px;
+  }
 }
 
 .sliderLayoutContainer--shelf {

@@ -142,22 +142,18 @@
       "itemsPerPage": {
         "desktop": 6,
         "tablet": 4,
-        "phone": 2
+        "phone": 1
       },
       "infinite": true,
       "blockClass": "search__result",
       "showPaginationDots": "never",
       "showNavigationArrows": "never",
+      // "centerMode": "center",
       "centerMode": {
-        "desktop": false,
-        "tablet": false, 
-        "phone": true
+        "desktop": "disabled",
+        "phone": "center"
       },
-      "centerPadding": {
-        "desktop": "0px",
-        "tablet": "0px",
-        "phone": "30px" 
-      }
+      "centerPadding": 10
     }
   },
 
@@ -194,7 +190,7 @@
     "children": [
       "flex-layout.row#searchinfo",
       "flex-layout.row#products",
-       "search-fetch-more",
+      "search-fetch-more",
       "flex-layout.row#seo__content"
     ],
     "props": {
@@ -239,7 +235,7 @@
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
       "flex-layout.row#contentmobile",
-       "search-fetch-more",
+      "search-fetch-more",
       "flex-layout.row#seo__content"
     ],
     "props": {
@@ -287,7 +283,7 @@
   },
 
   "flex-layout.col#filterMobile": {
-    "children": ["closeFilter","filter-navigator.v3"],
+    "children": ["closeFilter", "filter-navigator.v3"],
     "props": {
       "blockClass": "filterMobileCol"
     }
@@ -299,7 +295,7 @@
     }
   },
   "search-not-found-layout": {
-    "children": ["flex-layout.row#searchbread",  "flex-layout.row#notfound"]
+    "children": ["flex-layout.row#searchbread", "flex-layout.row#notfound"]
   },
 
   "flex-layout.row#notfound": {

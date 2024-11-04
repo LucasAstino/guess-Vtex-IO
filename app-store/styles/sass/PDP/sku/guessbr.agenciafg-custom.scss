@@ -58,6 +58,9 @@
   padding: 4px;
   border: 1.5px solid #cbcccd;
   border-radius: 50%;
+  &-active{
+    border-color: black;
+  }
   &:hover {
     cursor: pointer;
   }

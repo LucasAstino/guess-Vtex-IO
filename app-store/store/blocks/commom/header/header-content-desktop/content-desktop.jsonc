@@ -51,7 +51,7 @@
   },
 
   "image#wishlist": {
-    "title": "Buscar Lojas",
+    "title": "wishlist",
     "props": {
       "src": "assets/icons/commum/HeartStraight.svg",
       "blockClass":"find__stores",

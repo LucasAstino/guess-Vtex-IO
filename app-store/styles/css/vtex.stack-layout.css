@@ -7,6 +7,7 @@
 .stackContainer--shelf .stackItem--shelf--first :global(.vtex-product-summary-2-x-image) {
   object-fit: cover !important;
   aspect-ratio: 139/203;
+  z-index: 99;
 }
 .stackContainer--shelf .stackItem--shelf--fast-buy {
   top: calc(100% - 8px);
