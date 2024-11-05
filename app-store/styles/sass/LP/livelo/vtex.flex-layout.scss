@@ -1,0 +1,33 @@
+:global(.vtex-store-components-3-x-imageElement--livelo__fullBanner-desk){
+    display: block;
+    margin: auto;
+}
+
+.flexRow{
+    &--livelo__fullBanner-desk{
+        .flexRowContent{
+            justify-content: center;
+            position: relative;
+            max-width: 1366px;
+            margin: auto;
+            .flexCol--livelo__fullBanner{
+                .flexColChild{
+                    display: contents;
+                }
+                position: absolute;
+                max-width: 100%;
+                width: auto;
+                top: 16%;
+                right: 3%;
+            }
+        }
+    }
+
+    &--livelo__category{
+        margin: 40px 0;
+        .flexRowContent--livelo__category{
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
