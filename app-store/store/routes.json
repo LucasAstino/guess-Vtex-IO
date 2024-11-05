@@ -38,6 +38,9 @@
   "store.custom#landing-page-collection": {
     "path": "/sale-verao"
   },
+  "store.custom#landing-page-livelo": {
+    "path": "/livelo"
+  },
   "store.custom#contact-us": {
     "path": "/fale-conosco"
   }
