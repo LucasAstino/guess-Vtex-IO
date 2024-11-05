@@ -53,7 +53,7 @@ interface Seller {
         }[];
       }[];
     };
-    IsAvailable: boolean; // Indica se o produto está disponível
+    IsAvailable: boolean;
   };
 }
 
@@ -86,8 +86,8 @@ export const useProductList = () => useContext(ProductListContext);
 
 export const VisitedProductsSlider: FC<Props> = () => {
   const [visitedProducts, setVisitedProducts] = useState<Product[]>([]);
-  const [isModalOpen, setModalOpen] = useState(false); // Estado para controlar a visibilidade do modal
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Produto selecionado para o modal
+  const [isModalOpen, setModalOpen] = useState(false); 
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); 
   const productContext = useProduct();
   const { isMobile } = useDevice();
   const { handles } = useCssHandles(HANDLES_VIEWED);
@@ -183,17 +183,17 @@ export const VisitedProductsSlider: FC<Props> = () => {
 
   const handleOpenModal = (product: Product) => {
     setSelectedProduct(product);
-    setModalOpen(true); // Abre o modal
+    setModalOpen(true); 
   };
 
   const handleCloseModal = () => {
-    setModalOpen(false); // Fecha o modal
+    setModalOpen(false); 
     setSelectedProduct(null);
   };
 
-  // Filtra os produtos disponíveis em estoque
+
   const availableProducts = visitedProducts.filter((product) => {
-    return product.items[0].sellers[0].commertialOffer.IsAvailable; // Retorna apenas produtos disponíveis
+    return product.items[0].sellers[0].commertialOffer.IsAvailable; 
   });
 
   return (
@@ -254,7 +254,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           />
                           <button
                             className={handles["product__viewed-addtocart"]}
-                            onClick={() => handleOpenModal(product)}
+                            onClick={(event) => {handleOpenModal(product) ; event.stopPropagation()}}
                           >
                             Add
                           </button>
@@ -321,7 +321,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           />
                           <button
                             className={handles["product__viewed-addtocart"]}
-                            onClick={() => handleOpenModal(product)}
+                            onClick={(event) => {handleOpenModal(product) ; event.stopPropagation()}}
                           >
                             Add
                           </button>
