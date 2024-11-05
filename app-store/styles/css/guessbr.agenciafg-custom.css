@@ -679,6 +679,10 @@
   color: black;
 }
 
+:global(.vtex-sticky-layout-0-x-wrapper--main-header--stuck) .menuContainer .submenuContainer {
+  top: 78px !important;
+}
+
 .menuContainer {
   z-index: 99;
 }
