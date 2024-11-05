@@ -361,11 +361,17 @@
 }
 
 .flexRow--not-found {
+  padding: 0 20px;
   margin: 40px 0;
 }
 .flexRow--not-found .flexRowContent .flexCol--not-found {
   max-width: 1300px;
   margin: auto;
+}
+@media (max-width: 1025px) {
+  .flexRow--not-found--links .flexRowContent {
+    flex-direction: column;
+  }
 }
 
 .flexRow--footer__wrapper {

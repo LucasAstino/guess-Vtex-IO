@@ -437,17 +437,26 @@
   font-size: 16px;
   font-family: Century;
 }
+@media (max-width: 768px) {
+  .container--not-found--text .paragraph {
+    text-align: center;
+  }
+}
 .container--not-found--text .paragraph .strong {
   font-size: 14px;
 }
 .container--not-found--link {
   justify-content: flex-end;
 }
+@media (max-width: 1025px) {
+  .container--not-found--link {
+    justify-content: center;
+  }
+}
 .container--not-found--link .paragraph {
   font-style: normal;
   font-weight: 500;
   width: 200px;
-  margin-right: 20px;
   letter-spacing: 3px;
   display: flex;
   align-items: center;
@@ -717,6 +726,73 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
+.container--dealer .heading {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.container--dealer .headingLevel1 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+.container--dealer .headingLevel2 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.container--dealer .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 25px;
+  display: block;
+}
+.container--dealer__button .wrapper--dealer__button {
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  .container--dealer__button .wrapper--dealer__button {
+    max-width: 278px;
+  }
+}
+.container--dealer__button .paragraph .link {
+  font-family: Century;
+  color: white;
+  text-decoration: none;
+  background: #0c0c0c;
+  text-transform: uppercase;
+  padding: 12px 27px;
+  font-weight: 400;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 .container--cashback__section-one-left {
   top: 50%;
   left: 50%;
@@ -924,73 +1000,6 @@
   text-align: center;
   margin-top: 50px;
   margin-left: 10px;
-}
-
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  font-size: 40px;
-}
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
-  }
-}
-
-.container--dealer .heading {
-  font-family: Futura;
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-.container--dealer .headingLevel1 {
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #0c0c0c;
-}
-.container--dealer .headingLevel2 {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.03em;
-  color: #000000;
-}
-.container--dealer .paragraph {
-  font-family: Century;
-  font-size: 14px;
-  line-height: 18px;
-  color: #000000;
-  margin-bottom: 25px;
-  display: block;
-}
-.container--dealer__button .wrapper--dealer__button {
-  width: 100%;
-}
-@media (min-width: 1025px) {
-  .container--dealer__button .wrapper--dealer__button {
-    max-width: 278px;
-  }
-}
-.container--dealer__button .paragraph .link {
-  font-family: Century;
-  color: white;
-  text-decoration: none;
-  background: #0c0c0c;
-  text-transform: uppercase;
-  padding: 12px 27px;
-  font-weight: 400;
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .container--exchange_and_returns .heading {

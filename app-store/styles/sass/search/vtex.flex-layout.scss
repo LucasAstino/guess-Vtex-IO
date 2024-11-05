@@ -1,11 +1,20 @@
-.flexRow{
-    &--not-found{
-        margin: 40px 0;
-        .flexRowContent{
-            .flexCol--not-found{
-                max-width: 1300px;
-                margin: auto;
-            }
-        }
+.flexRow {
+  &--not-found {
+    padding: 0 20px;
+    margin: 40px 0;
+    .flexRowContent {
+      .flexCol--not-found {
+        max-width: 1300px;
+        margin: auto;
+      }
     }
+  }
+
+  &--not-found--links {
+    .flexRowContent {
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+  }
 }
