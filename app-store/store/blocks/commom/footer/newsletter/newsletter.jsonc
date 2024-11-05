@@ -16,7 +16,7 @@
         "title": "titulo newsletter",
         "props": {
             "blockClass":"newsletter__policy-privacy",
-            "text": "A GUESS se preocupa com o uso de seus dados pessoais. Ao fornecer seus dados você concorda com a nossa [Aviso de privacidade](/institucional/politica-de-privacidade)"
+            "text": "A GUESS se preocupa com o uso de seus dados pessoais. Ao fornecer seus dados você concorda com a nossa [Aviso de privacidade](/politicas-de-privacidade-e-cookies)"
         }
     },
   "newsletter-form#footer": {

@@ -3,7 +3,7 @@
     "props": {
       "blockClass": "main-header"
     },
-    "children": ["flex-layout.row#header__content-desktop"]
+    "children": [ "Topbar","flex-layout.row#header__content-desktop"]
   },
 
   // "Container-lp#header__desktop":{
@@ -30,7 +30,8 @@
   
   "search-bar#header": {
     "props": {
-      "placeholder": "O que você procura?"
+      "placeholder": "O que você procura?",
+      "displayMode": "search-button"
     }
   },
 

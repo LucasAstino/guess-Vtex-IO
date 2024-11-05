@@ -89,7 +89,10 @@
   },
 
   "search-bar#header-mobile":{
-
+    "props": {
+      "placeholder": "O que você procura?",
+      "displayMode": "search-button"
+    }
   },
 
   "logo#drawer": {

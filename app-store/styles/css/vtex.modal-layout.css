@@ -35,7 +35,8 @@
   overflow: visible;
 }
 .modal--pdp__guideSizes .paper :global(.vtex-store-components-3-x-imageElement) {
-  width: 65vw;
+  width: 55vw;
+  margin-bottom: -100px;
 }
 @media (max-width: 1025px) {
   .modal--pdp__guideSizes .paper :global(.vtex__guideSize) {

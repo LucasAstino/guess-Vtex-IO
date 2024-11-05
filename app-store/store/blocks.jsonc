@@ -32,7 +32,7 @@
   },
 
   "store.not-found#search": {
-    "blocks": ["rich-text#not-found"]
+    "blocks": ["flex-layout.row#not-found"]
   },
 
   "rich-text#not-found": {

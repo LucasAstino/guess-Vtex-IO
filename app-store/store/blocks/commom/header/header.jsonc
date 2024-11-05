@@ -8,7 +8,6 @@
   "header-layout.desktop": {
     "title":"header desktop",
     "children": [
-      "Topbar",
        "sticky-layout#desktop",
       "Helmet",
       "PopupForm",

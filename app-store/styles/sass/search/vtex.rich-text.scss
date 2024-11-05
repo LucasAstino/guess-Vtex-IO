@@ -1,0 +1,41 @@
+.container {
+  &--not-found--text {
+    .paragraph {
+      font-size: 16px;
+      font-family: Century;
+      .strong {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--not-found--link {
+    justify-content: flex-end;
+
+    .paragraph {
+      font-style: normal;
+      font-weight: 500;
+      width: 200px;
+      margin-right: 20px;
+      letter-spacing: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      background-color: black;
+      color: white;
+
+      .link{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--not-found--titleShelf{
+    .paragraph{
+        font-size: 40px;
+        font-weight: 300;
+    }
+  }
+}

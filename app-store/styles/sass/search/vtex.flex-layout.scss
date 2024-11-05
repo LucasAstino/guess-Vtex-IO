@@ -1,8 +1,9 @@
 .flexRow{
     &--not-found{
+        margin: 40px 0;
         .flexRowContent{
             .flexCol--not-found{
-                max-width: 1150px;
+                max-width: 1300px;
                 margin: auto;
             }
         }

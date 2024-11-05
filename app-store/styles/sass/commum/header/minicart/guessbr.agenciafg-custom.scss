@@ -4,8 +4,8 @@
   justify-content: center;
   position: relative;
   @include mobile{
-    width: 40px !important;
-    padding: .75rem;
+    width: fit-content !important;
+    padding: 0 12px 0 8px;
   }
   .minicartButton {
     all: unset;

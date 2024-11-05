@@ -15,6 +15,9 @@
   font-family: Century;
   width: fit-content !important;
   margin: 0;
+  @include tablet{
+    font-size: 16px;
+  }
 }
 
 .totalProducts--layout {

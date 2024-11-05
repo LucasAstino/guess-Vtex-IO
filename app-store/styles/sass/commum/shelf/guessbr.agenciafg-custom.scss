@@ -60,6 +60,11 @@
   opacity: 0;
   transition: 1s ease;
 
+  @include tablet {
+    position: fixed;
+    bottom: 50px;
+  }
+
   &-fadeIn {
     opacity: 1;
   }
