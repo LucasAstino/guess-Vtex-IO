@@ -9,17 +9,19 @@ const CSS_HANDLES = [
 ] as const;
 
 export function LoginOrUserName() {
-    const{handles} = useCssHandles(CSS_HANDLES)
+  const { handles } = useCssHandles(CSS_HANDLES);
   const { orderForm } = useOrderForm();
   const [userName, setUserName] = useState<string | null>(null);
 
   useEffect(() => {
-    if (orderForm?.loggedIn) {
-      console.log(orderForm,"orderfrommmmmm")
-        if(orderForm.clientProfileData.firstName){
-            setUserName(orderForm.clientProfileData.firstName)
-        }
-        setUserName('Usuário')
+    if (orderForm?.loggedIn && orderForm.clientProfileData) {
+      const name = orderForm.clientProfileData.firstName;
+      if (name) {
+        setUserName(name);
+        console.log(name, 'nome do usuário');
+      }
+    } else {
+      setUserName(null);  
     }
   }, [orderForm]);
 

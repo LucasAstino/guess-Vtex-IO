@@ -158,7 +158,7 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
     setIsModalVisible(true);
     setTimeout(()=>{
       setIsModalVisible(false)
-    },4000)
+    },1000)
   };
 
   return (

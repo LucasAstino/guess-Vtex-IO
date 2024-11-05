@@ -17,7 +17,6 @@
 
 .modal_container {
     background: url(/arquivos/background-solo.png);
-    border-radius: 10px;
     display: flex;
     height: 100%;
     max-height: 430px;
@@ -214,24 +213,43 @@
 }
 
 .modal_container_bgWhite {
-    background: #fff;
-    border-radius: 10px;
+    background: black;
     display: flex;
-    height: 100%;
+    height: auto;
     max-height: 485px;
     max-width: 415px;
     position: relative;
     width: 100%;
 }
 
+
+.modal_close_success{
+    color: #db2828;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    top: 5px;
+    padding: 0;
+}
+
 .coupon__container {
-    padding: 10px;
+    color: #db2828;
+    font-size: 22px;
     text-align: center;
 }
 
 .success__message,
 .couponTextTitle {
-    font-size: 19px;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    font-family: Century ;
+    text-align: center;
 }
 
 .modal__line {
@@ -241,8 +259,25 @@
     width: 100%;
 }
 
+.couponCode{
+    max-width: 160px;
+    margin: auto;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 13px 8px;
+    display: block;
+    font-family: Century ;
+}
+
 .couponSubText {
-    font-size: 1.2rem;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+    display: inline-block;
+    font-family: Century ;
+    font-weight: 600;
+    max-width: 270px;
+    margin-bottom: 1.2em;
 }
 
 @media screen and (max-width: 768px) {

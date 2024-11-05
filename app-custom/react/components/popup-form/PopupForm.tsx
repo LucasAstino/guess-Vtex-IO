@@ -138,7 +138,7 @@ const PopupForm = () => {
                         fornecer seus dados você concorda com a nossa
                         <a
                           className={styles.policyLink}
-                          href="/institucional/politica-de-privacidade"
+                          href="/politicas-de-privacidade-e-cookies"
                           target="_blank"
                         >
                           Política de Privacidade
@@ -153,7 +153,7 @@ const PopupForm = () => {
               <>
                 <div className={styles.modal__successWrapp}>
                   <button
-                    className={styles.modal_close}
+                    className={styles.modal_close_success}
                     onClick={() => {
                       closeModal();
                     }}
@@ -168,37 +168,16 @@ const PopupForm = () => {
                   >
                     x
                   </button>
-                  <img
-                    style={{
-                      width: "100%",
-                      objectFit: "contain",
-                      maxWidth: "140px",
-                    }}
-                    src="https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.28/logo/new-logo-guess-small___27ee63f1c7bf362b14233e6c9c9630c7.png"
-                    alt="modelo"
-                    width={80}
-                    height={80}
-                  />
                   <p className={styles.success__message}>
-                    Cadastro realizado com sucesso!
+                  Aproveite<br></br>
+                  seu cupom!
                   </p>
-                  <em className={styles.modal__line}> </em>
                   <div className={styles.coupon__container}>
-                    <p className={styles.couponTextTitle}> Use o cupom </p>
-                    <h1 className={styles.couponCode}>PRIMEIRA50 </h1>
+                    <p className={styles.couponCode}>PRIMEIRA50 </p>
                     <span className={styles.couponSubText}>
-                      {" "}
-                      <br />
-                      <strong></strong>{" "}
+                    Para ativá-lo, basta inserir no
+                    carrinho antes de finalizar a compra
                     </span>
-                    <input
-                      type="submit"
-                      className={styles.returnToSiteBtn}
-                      onClick={() => {
-                        closeModal();
-                      }}
-                      value="Ir para o site"
-                    />
                   </div>
                 </div>
               </>
