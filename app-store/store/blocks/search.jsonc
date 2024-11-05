@@ -294,12 +294,7 @@
     "children": ["flex-layout.row#searchbread", "flex-layout.row#not-found"]
   },
 
-  // "flex-layout.row#notfound": {
-  //   "children": ["not-found"],
-  //   "props": {
-  //     "fullWidth": true
-  //   }
-  // },
+
 
   "flex-layout.row#not-found": {
     "props": {

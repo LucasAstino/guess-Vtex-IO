@@ -3,6 +3,10 @@
     margin: auto;
 }
 
+:global(.vtex-store-components-3-x-imageElementLink){
+    width: fit-content !important;
+}
+
 .flexRow{
     &--livelo__fullBanner-desk{
         .flexRowContent{

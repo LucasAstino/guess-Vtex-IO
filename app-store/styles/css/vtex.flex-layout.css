@@ -518,6 +518,113 @@
   }
 }
 
+.flexRow--category__list {
+  margin-bottom: 50px;
+}
+@media (max-width: 1025px) {
+  .flexRow--category__list {
+    margin-bottom: 0px;
+  }
+}
+.flexRow--category__list .flexRowContent--category__list {
+  gap: 8px;
+}
+@media (max-width: 1025px) {
+  .flexRow--category__list .flexRowContent--category__list {
+    gap: 4px;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    justify-items: center;
+  }
+  .flexRow--category__list .flexRowContent--category__list .flexCol--category__list {
+    width: fit-content;
+  }
+}
+
+.flexRow--grid_product-home {
+  margin-bottom: 40px;
+  max-width: 1800px;
+  margin: auto;
+}
+.flexRow--grid_product-home .flexRowContent {
+  display: flex;
+}
+.flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1025px) {
+  .flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
+    width: 50%;
+  }
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
+  padding: 0;
+}
+.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf),
+.flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
+.flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+  .flexCol--grid_product {
+    width: 50% !important;
+  }
+}
+
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageContainer) {
+  display: flex;
+}
+.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
+  margin: 0;
+  max-width: 100% !important;
+  border-radius: 0;
+}
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
+    max-height: 245px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageNormal) {
+    max-height: 245px;
+  }
+}
+@media (max-width: 1025px) {
+  .flexColChild--grid_product :global(.vtex-slider-layout-0-x-sliderLayoutContainer) :global(.vtex-product-summary-2-x-containerNormal) {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100% !important;
+  }
+}
+.flexCol--slider__home-slide {
+  position: absolute;
+  height: fit-content;
+  top: 50%;
+  translate: 0 -50%;
+}
+@media (max-width: 1025px) {
+  .flexCol--slider__home-slide {
+    top: 65%;
+  }
+}
+
+.flexRow--slider__home-slide--butons .flexRowContent {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+}
+
 .flexRow--about-us__container .flexRowContent--about-us__container {
   display: block;
 }
@@ -770,116 +877,13 @@
   }
 }
 
-.flexRow--category__list {
-  margin-bottom: 50px;
-}
-@media (max-width: 1025px) {
-  .flexRow--category__list {
-    margin-bottom: 0px;
-  }
-}
-.flexRow--category__list .flexRowContent--category__list {
-  gap: 8px;
-}
-@media (max-width: 1025px) {
-  .flexRow--category__list .flexRowContent--category__list {
-    gap: 4px;
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    justify-items: center;
-  }
-  .flexRow--category__list .flexRowContent--category__list .flexCol--category__list {
-    width: fit-content;
-  }
-}
-
-.flexRow--grid_product-home {
-  margin-bottom: 40px;
-  max-width: 1800px;
-  margin: auto;
-}
-.flexRow--grid_product-home .flexRowContent {
-  display: flex;
-}
-.flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-}
-@media (max-width: 1025px) {
-  .flexRow--grid_product-home .flexRowContent :global(.vtex-store-components-3-x-imageElement) {
-    width: 50%;
-  }
-}
-.flexRow--grid_product-home :global(.vtex-product-summary-2-x-element) {
-  padding: 0;
-}
-.flexRow--grid_product-home :global(.vtex-product-summary-2-x-nameContainer--shelf),
-.flexRow--grid_product-home :global(.vtex-flex-layout-0-x-flexRow--selling-price-savings),
-.flexRow--grid_product-home :global(.vtex-product-price-1-x-installments) {
-  display: none;
-}
-
-@media (max-width: 1025px) {
-  .flexCol--grid_product {
-    width: 50% !important;
-  }
-}
-
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-  padding: 0;
-}
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageContainer) {
-  display: flex;
-}
-.flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
-  margin: 0;
-  max-width: 100% !important;
-  border-radius: 0;
-}
-@media (max-width: 1025px) {
-  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-containerNormal) {
-    max-height: 245px;
-  }
-}
-@media (max-width: 1025px) {
-  .flexColChild--grid_product :global(.vtex-list-context-0-x-list) :global(.vtex-product-summary-2-x-imageNormal) {
-    max-height: 245px;
-  }
-}
-@media (max-width: 1025px) {
-  .flexColChild--grid_product :global(.vtex-slider-layout-0-x-sliderLayoutContainer) :global(.vtex-product-summary-2-x-containerNormal) {
-    border-radius: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100% !important;
-  }
-}
-.flexCol--slider__home-slide {
-  position: absolute;
-  height: fit-content;
-  top: 50%;
-  translate: 0 -50%;
-}
-@media (max-width: 1025px) {
-  .flexCol--slider__home-slide {
-    top: 65%;
-  }
-}
-
-.flexRow--slider__home-slide--butons .flexRowContent {
-  justify-content: center;
-  display: flex;
-  gap: 30px;
-}
-
 :global(.vtex-store-components-3-x-imageElement--livelo__fullBanner-desk) {
   display: block;
   margin: auto;
+}
+
+:global(.vtex-store-components-3-x-imageElementLink) {
+  width: fit-content !important;
 }
 
 .flexRow--livelo__fullBanner-desk .flexRowContent {

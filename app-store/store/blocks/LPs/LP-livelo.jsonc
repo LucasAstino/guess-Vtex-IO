@@ -5,19 +5,28 @@
   
     "search-result-layout.customQuery#landing-page-livelo": {
       "blocks": [
-        "search-result-layout.desktop",
-        "search-result-layout.mobile",
-        "search-not-found-layout"
-      ],
-      "props": {
-        "querySchema": {
-          "hideUnavailableItems": true,
-          "skusFilter": "ALL_AVAILABLE",
-          "simulationBehavior": "default",
-          "orderByField": "OrderByTopSaleDESC",
-          "maxItemsPerPage": 40
-        }
+      "search-result-layout.desktop#lp-livelo-custom"
+    ],
+    "props": {
+      "querySchema": {
+        "hideUnavailableItems": true,
+        "skusFilter": "ALL_AVAILABLE",
+        "simulationBehavior": "default",
+        "orderByField": "OrderByTopSaleDESC",
+        "maxItemsPerPage": 40,
+        "mapField": "productClusterIds"
       }
+    }
+  },
+  "search-result-layout.desktop#lp-livelo-custom": {
+        "title": "Listagem Desktop",
+        "children": [
+
+            "flex-layout.row#result"
+        ],
+        "props": {
+            "preventRouteChange": true
+        }
     },
 
 
