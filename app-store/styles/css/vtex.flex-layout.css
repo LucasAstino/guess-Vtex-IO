@@ -128,6 +128,14 @@
   }
 }
 
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
@@ -350,14 +358,6 @@
     width: 80px;
     font-size: 12px;
   }
-}
-
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
 }
 
 .flexRow--not-found {
@@ -896,8 +896,8 @@
   position: absolute;
   max-width: 100%;
   width: auto;
-  top: 16%;
   right: 3%;
+  top: 16%;
 }
 .flexRow--livelo__fullBanner-desk .flexRowContent .flexCol--livelo__fullBanner .flexColChild {
   display: contents;
@@ -908,4 +908,11 @@
 .flexRow--livelo__category .flexRowContent--livelo__category {
   justify-content: center;
   gap: 20px;
+}
+@media (max-width: 1025px) {
+  .flexRow--livelo__category .flexRowContent--livelo__category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
 }

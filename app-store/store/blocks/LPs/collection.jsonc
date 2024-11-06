@@ -5,7 +5,7 @@
 
   "search-result-layout.customQuery#landing-page-collection": {
     "blocks": [
-      "search-result-layout.desktop",
+      "search-result-layout.desktop#lp-collection-custom",
       "search-result-layout.mobile",
       "search-not-found-layout"
     ],
@@ -15,10 +15,21 @@
         "skusFilter": "ALL_AVAILABLE",
         "simulationBehavior": "default",
         "orderByField": "OrderByTopSaleDESC",
-        "maxItemsPerPage": 40
+        "maxItemsPerPage": 40,
+        "mapField": "productClusterIds"
       }
     }
   },
+  "search-result-layout.desktop#lp-collection-custom": {
+        "title": "Listagem Desktop",
+        "children": [
+
+           "flex-layout.row#result"
+        ],
+        "props": {
+            "preventRouteChange": true
+        }
+    },
   "responsive-layout.desktop#collection__fullBanner": {
     "children": ["image#collection__fullBanner-desk"]
   },

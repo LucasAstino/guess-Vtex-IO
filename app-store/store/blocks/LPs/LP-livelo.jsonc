@@ -1,11 +1,19 @@
 {
-    "store.custom#landing-page-livelo": {
-      "blocks": ["responsive-layout.desktop#livelo__fullBanner","responsive-layout.mobile#livelo__fullBanner","flex-layout.row#livelo__category","search-result-layout.customQuery#landing-page-livelo","rich-text#content__seo"]
-    },
-  
-    "search-result-layout.customQuery#landing-page-livelo": {
-      "blocks": [
-      "search-result-layout.desktop#lp-livelo-custom"
+  "store.custom#landing-page-livelo": {
+    "blocks": [
+      "responsive-layout.desktop#livelo__fullBanner",
+      "responsive-layout.mobile#livelo__fullBanner",
+      "flex-layout.row#livelo__category",
+      "search-result-layout.customQuery#landing-page-collection",
+      "rich-text#content__seo"
+    ]
+  },
+
+  "search-result-layout.customQuery#landing-page-collection": {
+    "blocks": [
+      "search-result-layout.desktop#lp-collection-custom",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
     ],
     "props": {
       "querySchema": {
@@ -18,119 +26,121 @@
       }
     }
   },
-  "search-result-layout.desktop#lp-livelo-custom": {
-        "title": "Listagem Desktop",
-        "children": [
+  "search-result-layout.desktop#lp-collection-custom": {
+    "title": "Listagem Desktop",
+    "children": ["flex-layout.row#result"],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
 
-            "flex-layout.row#result"
-        ],
-        "props": {
-            "preventRouteChange": true
-        }
+  "flex-layout.row#livelo__category": {
+    "props": {
+      "blockClass": "livelo__category"
     },
+    "children": [
+      "image#livelo__category01",
+      "image#livelo__category02",
+      "image#livelo__category03",
+      "image#livelo__category04"
+    ]
+  },
 
+  "image#livelo__category01": {
+    "title": "primeira categoria",
+    "props": {
+      "src": ""
+    }
+  },
+  "image#livelo__category02": {
+    "title": "segunda categoria",
+    "props": {
+      "src": ""
+    }
+  },
+  "image#livelo__category03": {
+    "title": "terceira categoria",
+    "props": {
+      "src": ""
+    }
+  },
+  "image#livelo__category04": {
+    "title": "quarta categoria",
+    "props": {
+      "src": ""
+    }
+  },
 
-    "flex-layout.row#livelo__category": {
-        "props": {
-            "blockClass": "livelo__category"
-        },
-        "children": [ "image#livelo__category01", "image#livelo__category02", "image#livelo__category03", "image#livelo__category04"]
-    },
+  "responsive-layout.desktop#livelo__fullBanner": {
+    "children": ["flex-layout.row#livelo__fullBanner-desk"]
+  },
+  "responsive-layout.mobile#livelo__fullBanner": {
+    "children": ["flex-layout.row#livelo__fullBanner-mobile"]
+  },
 
-    "image#livelo__category01": {
-        "title": "primeira categoria",
-      "props": {
-        "src": ""
-        
-      }
+  "flex-layout.row#livelo__fullBanner-desk": {
+    "props": {
+      "blockClass": "livelo__fullBanner-desk"
     },
-    "image#livelo__category02": {
-        "title": "segunda categoria",
-      "props": {
-        "src": ""
-        
-      }
+    "children": [
+      "image#livelo__fullBanner-desk",
+      "flex-layout.col#livelo__fullBanner"
+    ]
+  },
+  "flex-layout.row#livelo__fullBanner-mobile": {
+    "props": {
+      "blockClass": "livelo__fullBanner-mobile"
     },
-    "image#livelo__category03": {
-        "title": "terceira categoria",
-      "props": {
-        "src": ""
-        
-      }
-    },
-    "image#livelo__category04": {
-        "title": "quarta categoria",
-      "props": {
-        "src": ""
-        
-      }
-    },
+    "children": [
+      "image#livelo__fullBanner-mobile",
+      "flex-layout.col#livelo__fullBanner"
+    ]
+  },
 
-    "responsive-layout.desktop#livelo__fullBanner": {
-      "children": ["flex-layout.row#livelo__fullBanner-desk"]
+  "flex-layout.col#livelo__fullBanner": {
+    "props": {
+      "blockClass": "livelo__fullBanner"
     },
-    "responsive-layout.mobile#livelo__fullBanner": {
-      "children": ["flex-layout.row#livelo__fullBanner-mobile"]
-    },
+    "children": [
+      "image#livelo__fullBanner-icon",
+      "rich-text#livelo__fullBanner"
+    ]
+  },
 
-    "flex-layout.row#livelo__fullBanner-desk": {
-        "props": {
-            "blockClass": "livelo__fullBanner-desk"
-        },
-        "children": ["image#livelo__fullBanner-desk", "flex-layout.col#livelo__fullBanner"]
-    },
-    "flex-layout.row#livelo__fullBanner-mobile": {
-        "props": {
-            "blockClass": "livelo__fullBanner-mobile"
-        },
-        "children": ["image#livelo__fullBanner-mobile", "flex-layout.col#livelo__fullBanner"]
-    },
+  "image#livelo__fullBanner-icon": {
+    "title": "icone livelo do fullbanner",
+    "props": {
+      "src": "",
+      "blockClass": "livelo__fullBanner-icon"
+    }
+  },
 
-    "flex-layout.col#livelo__fullBanner": {
-        "props": {
-            "blockClass":"livelo__fullBanner"
-        },
-        "children": ["image#livelo__fullBanner-icon","rich-text#livelo__fullBanner"]
-    },
+  "rich-text#livelo__fullBanner": {
+    "props": {
+      "blockClass": "livelo__fullBanner",
+      "text": "Para acumular pontos,\nutilize o cupom \n## LIVELO\n\n no carrinho de compras: \n [confira o regulamento](/) "
+    }
+  },
 
-    "image#livelo__fullBanner-icon": {
-        "title": "icone livelo do fullbanner",
-      "props": {
-        "src": "",
-        "blockClass":"livelo__fullBanner-icon"
-        
-      }
-    },
-    
-    "rich-text#livelo__fullBanner": {
-        "props": {
-            "blockClass":"livelo__fullBanner",
-            "text": "Para acumular pontos,\nutilize o cupom \n## LIVELO\n\n no carrinho de compras: \n [confira o regulamento](/) "
-        }
-    },
-    
-    "image#livelo__fullBanner-desk": {
-        "title": "fullbanner desk",
-      "props": {
-        "src": "",
-        "blockClass":"livelo__fullBanner-desk"
-        
-      }
-    },
-    "image#livelo__fullBanner-mobile": {
-        "title": "fullbanner mobile",
-      "props": {
-        "src": "",
-        "blockClass":"livelo__fullBanner-mobile"
-        
-      }
-    },
-    "rich-text#content__seo": {
-      "title": "conteudo seo",
-      "props": {
-        "blockClass":"content__seo",
-        "text": ""
-      }
+  "image#livelo__fullBanner-desk": {
+    "title": "fullbanner desk",
+    "props": {
+      "src": "",
+      "blockClass": "livelo__fullBanner-desk"
+    }
+  },
+  "image#livelo__fullBanner-mobile": {
+    "title": "fullbanner mobile",
+    "props": {
+      "src": "",
+      "blockClass": "livelo__fullBanner-mobile"
+    }
+  },
+  "rich-text#content__seo": {
+    "title": "conteudo seo",
+    "props": {
+      "blockClass": "content__seo",
+      "text": ""
     }
   }
-  
+}

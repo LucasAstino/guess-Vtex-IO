@@ -15,14 +15,15 @@
             max-width: 1366px;
             margin: auto;
             .flexCol--livelo__fullBanner{
-                .flexColChild{
-                    display: contents;
-                }
                 position: absolute;
                 max-width: 100%;
                 width: auto;
-                top: 16%;
                 right: 3%;
+                top: 16%;
+                .flexColChild{
+                    display: contents;
+                }
+                
             }
         }
     }
@@ -32,6 +33,11 @@
         .flexRowContent--livelo__category{
             justify-content: center;
             gap: 20px;
+            @include tablet{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0 10px;
+            }
         }
     }
 }
