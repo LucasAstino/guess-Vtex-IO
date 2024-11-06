@@ -80,9 +80,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   // const currentSize =
   //   productQuery.product.skuSpecifications?.[0]?.values[0].name;
 
-  const currentColorCode = productQuery.product.sku?.variations[2].values[0];
+  const currentColorCode = productQuery.product.sku?.variations[2]?.values[0];
 
-  const currentColor = productQuery.product.sku?.variations[1].values[0];
+  const currentColor = productQuery.product.sku?.variations[1]?.values[0];
 
   // const currentColorCode =
   //   productQuery.product.skuSpecifications?.[2]?.values[0].name;
