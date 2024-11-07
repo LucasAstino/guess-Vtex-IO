@@ -1,7 +1,9 @@
-import React, { FC, useState, useRef } from "react";
+import React, { FC, useState, useRef ,useEffect,useContext } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { useCssHandles, CssHandlesTypes } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
+import { ToastContext } from "vtex.styleguide";
+import { ToastContextType } from "vtex.styleguide";
 
 interface CustomMinicartProps {
   openOnHover?: boolean;
@@ -70,8 +72,12 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { isMobile } = useDevice();
   const timerRef = useRef<number | null>(null);
+  const { showToast } = useContext(ToastContext) as ToastContextType;
+  const [initialItemsCount, setInitialItemsCount] = useState<number | null>(null);
+
 
   const items = orderForm?.items ?? [];
+  // const orderFormId = orderForm?.id;
   const totalItems = items.reduce(
     (acc: any, item: any) => acc + item.quantity,
     0
@@ -91,6 +97,28 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
       setIsDrawerOpen(false);
     }, 1000);
   };
+
+  console.log(orderForm,'order')
+  console.log(items,'order')
+  
+  useEffect(() => {
+    if (orderForm && orderForm.id !== 'default-order-form') {
+      if (initialItemsCount === null) {
+        setInitialItemsCount(totalItems);
+      } else if (totalItems > initialItemsCount) {
+        showToast({
+          message: "Produto adicionado ao carrinho!",
+          duration: 3000,
+          action: {
+            label: "Ver carrinho",
+            href: "/checkout#/cart",
+          },
+        });
+        setInitialItemsCount(totalItems); 
+      }
+    }
+  }, [totalItems, initialItemsCount, showToast]);
+  
 
   return (
     <div

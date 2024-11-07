@@ -22,7 +22,8 @@
     "component":"TableFeminine"
   },
   "Minicart":{
-    "component":"Minicart"
+    "component":"Minicart",
+    "render": "server"
   },
   "fg-product-variants":{
     "component":"product-variants"
@@ -75,9 +76,6 @@
   },
   "Contact-us":{
     "component":"contact-us"
-  },
-  "AddToCartAlert":{
-    "component":"AddToCartAlert"
   },
   "VideoPlayer":{
     "component":"Video"
