@@ -58,8 +58,7 @@
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
-      "disclosure-layout#product__description-pdp",
-      "AddToCartAlert"
+      "disclosure-layout#product__description-pdp"
     ]
   },
 
@@ -139,8 +138,7 @@
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
-      "disclosure-layout#product__description-pdp",
-      "AddToCartAlert"
+      "disclosure-layout#product__description-pdp"
     ]
   },
 

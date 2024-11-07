@@ -128,14 +128,6 @@
   }
 }
 
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
-}
-
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
@@ -358,6 +350,14 @@
     width: 80px;
     font-size: 12px;
   }
+}
+
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
 }
 
 .flexRow--not-found {
