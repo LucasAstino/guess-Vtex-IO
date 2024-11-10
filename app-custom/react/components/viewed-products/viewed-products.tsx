@@ -254,7 +254,11 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           />
                           <button
                             className={handles["product__viewed-addtocart"]}
-                            onClick={(event) => {handleOpenModal(product) ; event.stopPropagation()}}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              event.stopPropagation();
+                              handleOpenModal(product);
+                            }}
                           >
                             Add
                           </button>
@@ -321,7 +325,11 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           />
                           <button
                             className={handles["product__viewed-addtocart"]}
-                            onClick={(event) => {handleOpenModal(product) ; event.stopPropagation()}}
+                            onClick={(event) => {
+                              event.preventDefault(); 
+                              event.stopPropagation();
+                              handleOpenModal(product);
+                            }}
                           >
                             Add
                           </button>

@@ -97,9 +97,6 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
       setIsDrawerOpen(false);
     }, 1000);
   };
-
-  console.log(orderForm,'order')
-  console.log(items,'order')
   
   useEffect(() => {
     if (orderForm && orderForm.id !== 'default-order-form') {

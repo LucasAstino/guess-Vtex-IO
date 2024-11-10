@@ -49,6 +49,9 @@
   "ShippingSimulator":{
     "component":"ShippingSimulator"
   },
+  "CsvPreview":{
+    "component":"CsvPreview"
+  },
   "LoginOrUserName":{
     "component":"LoginOrUserName"
   },
