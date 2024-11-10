@@ -41,6 +41,9 @@
   "store.custom#landing-page-livelo": {
     "path": "/livelo"
   },
+  "store.custom#CsvPreview": {
+    "path": "/redirect"
+  },
   "store.custom#contact-us": {
     "path": "/fale-conosco"
   }

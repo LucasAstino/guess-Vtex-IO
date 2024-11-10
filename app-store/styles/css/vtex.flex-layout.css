@@ -66,6 +66,9 @@
   width: fit-content !important;
 }
 
+.flexRow--bannerTop__slider .flexRowContent--bannerTop__slider {
+  justify-content: center;
+}
 .flexRow--bannerTop__slider :global(.vtex-store-components-3-x-imageElement--bannerTop__slider) {
   width: 1920px;
   margin: auto;

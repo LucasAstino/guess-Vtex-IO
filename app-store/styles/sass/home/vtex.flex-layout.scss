@@ -1,5 +1,8 @@
 .flexRow {
   &--bannerTop__slider {
+    .flexRowContent--bannerTop__slider{
+      justify-content: center;
+    }
     :global(.vtex-store-components-3-x-imageElement--bannerTop__slider) {
       width: 1920px;
       margin: auto;
