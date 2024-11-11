@@ -23,24 +23,26 @@
     }
   }
 
-  &--headers__icons{
-    .flexRowContent{
+  &--headers__icons {
+    .flexRowContent {
       justify-content: end;
       align-items: center;
     }
   }
 }
 
-.flexCol--header__drawer-mobile-right{
+.flexCol--header__drawer-mobile-right {
   position: absolute;
   right: 10px;
   display: flex;
   flex-direction: row;
   top: 10px;
   align-items: center;
-  height: fit-content;
+  height:auto;
+  -webkit-align-items: center;
+  -webkit-justify-content: flex-end;
   justify-content: end;
-  .flexColChild--header__drawer-mobile-right{
+  .flexColChild--header__drawer-mobile-right {
     height: fit-content;
   }
 }
