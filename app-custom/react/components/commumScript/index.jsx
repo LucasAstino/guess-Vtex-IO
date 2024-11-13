@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useRuntime } from "vtex.render-runtime";
 
 export const CommumScript = () => {
-   console.log('iiiiiiiiiiiiiiiiiii')
   const { page, route } = useRuntime();
   const isProductListPage = [
     "store.search",
@@ -16,7 +15,6 @@ export const CommumScript = () => {
 
     if (page.includes("store.product")) {
       const input = document.querySelector(".vtex-address-form-4-x-input");
-      console.log('iiiiiiiiiiiiiiiiiii',input)
       if (input) {
         input.setAttribute("placeholder", "Insira seu CEP");
       }

@@ -21,7 +21,6 @@ export function LoginHeader() {
   const [logged, setLogged] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(orderForm?.loggedIn);
     if (orderForm.loggedIn) {
       setLogged(true);
     }

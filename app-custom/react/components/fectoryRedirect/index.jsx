@@ -10,7 +10,6 @@ export const CsvPreview = () => {
 
   const handlePreviewAndDownload = () => {
     if (!file) {
-      console.log('Nenhum arquivo selecionado.');
       return;
     }
 
@@ -49,7 +48,6 @@ export const CsvPreview = () => {
         URL.revokeObjectURL(url);
         document.body.removeChild(link);
 
-        console.log('Arquivo CSV gerado e baixado.');
       },
       error: (error) => {
         console.error('Erro ao processar CSV:', error);

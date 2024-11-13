@@ -10,7 +10,6 @@ export const CustomButtonTrigger: React.FC<Props> = ({
   triggerSelector,
 }) => {
   useEffect(() => {
-    console.log("filter check");
 
     const targetElement = document.querySelector(".vtex-search-result-3-x-filterBreadcrumbsContent");
 
@@ -33,7 +32,6 @@ export const CustomButtonTrigger: React.FC<Props> = ({
             ".vtex-search-result-3-x-sidebar"
           ) as HTMLElement;
           const siblingElement = otherElement.previousElementSibling as HTMLElement;
-          console.log(siblingElement,"aaaaaaaaaaaaaaaaaaaaaaaaa")
           if (siblingElement) {
             siblingElement.click(); // Dispara o clique no outro elemento
           } else {

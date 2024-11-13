@@ -10,7 +10,6 @@ export function ProductCharacteristics(){
     const product = useProduct()
     const composition = product?.product?.properties?.[0].values?.[0]
     const reference = product?.product?.productReference
-    console.log(composition)
     const handles = useCssHandles(HANDLES_CSS)
     return(
       <>

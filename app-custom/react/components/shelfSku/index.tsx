@@ -83,7 +83,6 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   const currentColorCode = productQuery.product.sku?.variations[2]?.values[0];
 
   const currentColor = productQuery.product.sku?.variations[1]?.values[0];
-  console.log(currentColor,"errooooooo")
 
   // const currentColorCode =
   //   productQuery.product.skuSpecifications?.[2]?.values[0].name;
@@ -200,7 +199,6 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                   `${handles["similar__image-container-active"]}`
                 );
 
-                console.log(productQuery.product.productId);
                 handleColorClick(productQuery.product.productId);
                 setSelectedColor(
                   productQuery.product.skuSpecifications?.[1]?.values[0].name

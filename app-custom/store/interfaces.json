@@ -52,6 +52,9 @@
   "CsvPreview":{
     "component":"CsvPreview"
   },
+  "KitLook":{
+    "component":"KitLook"
+  },
   "LoginOrUserName":{
     "component":"LoginOrUserName"
   },
@@ -94,3 +97,5 @@
     "render": "lazy"
   }
 }
+
+

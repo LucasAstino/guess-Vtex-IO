@@ -18,7 +18,6 @@ export function LoginOrUserName() {
       const name = orderForm.clientProfileData.firstName;
       if (name) {
         setUserName(name);
-        console.log(name, 'nome do usuário');
       }
     } else {
       setUserName(null);  

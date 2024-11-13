@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.10",
     "@types/google.maps": "^3.58.0",
     "@types/styled-components": "^5.1.34",
     "@types/swiper": "^6.0.0",
@@ -37,8 +38,8 @@
     "@vtex/test-tools": "^3.3.2",
     "@vtex/tsconfig": "^0.4.4",
     "apollo-client": "^2.6.8",
-    "graphql": "^14.6.0",
-    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.63+build1730927848/public/@types/guessbr.agenciafg-custom",
+    "graphql": "^16.9.0",
+    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.66+build1731520452/public/@types/guessbr.agenciafg-custom",
     "typescript": "3.9.7",
     "vtex.address-form": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.26.0/public/@types/vtex.address-form",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles",
@@ -53,7 +54,7 @@
     "vtex.search-page-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-page-context@0.2.0/public/@types/vtex.search-page-context",
     "vtex.slider-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.slider-layout@0.24.6/public/@types/vtex.slider-layout",
     "vtex.store-components": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.176.0/public/@types/vtex.store-components",
-    "vtex.store-resources": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.0/public/@types/vtex.store-resources",
+    "vtex.store-resources": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.2/public/@types/vtex.store-resources",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.13/public/@types/vtex.styleguide"
   }
 }

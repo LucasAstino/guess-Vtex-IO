@@ -14,7 +14,6 @@ export const GuideSize: React.FC<GuideSizeProps> = ({ children }) => {
 
   const { product } = productContext
   const category = product.categoryTree?.[0]?.name.toLowerCase()
-  console.log(category,'categoriaaaaaaaaaaaaaaaaaaaa')
 
   return (
     <div className='vtex__guideSize'>

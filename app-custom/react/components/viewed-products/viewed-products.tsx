@@ -95,7 +95,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
   const [prevOrderFormItems, setPrevOrderFormItems] = useState<OrderFormItem[]>(
     []
   );
-  console.log(productContext)
   const [productAdded, setProductAdded] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
 
@@ -128,10 +127,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
       });
 
       if (itemAdded) {
-        console.log(
-          productAdded,
-          "Produto adicionado ou quantidade aumentada!"
-        );
         setProductAdded(true);
 
         const timer = setTimeout(() => {

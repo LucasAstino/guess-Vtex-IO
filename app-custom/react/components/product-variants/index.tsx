@@ -37,11 +37,9 @@ export function SimilarProductsVariants({
   const color = product?.selectedItem?.variations?.[1]?.values?.[0] || 'N/A'
    const backgroundColor = product?.selectedItem?.variations?.[2]?.values?.[0] || 'N/A'
   const productContext = useProduct()
-  console.log(productQuery)
   const productId =
     productQuery?.product?.productId ?? productContext?.product?.productId
 
-    console.log(productId)
   const { data, loading, error } = useQuery(productRecommendationsQuery, {
     variables: {
       identifier: { field: 'id', value: productId },
