@@ -33,7 +33,6 @@ const checkUrlAndRun = () => {
       if (vale) {
         vale.textContent = 'Vale-Compra';
         valelabel.textContent = 'Vale Compra';
-        console.log(vale, 'Texto atualizado com sucesso!');
         clearInterval(interval);
       } else {
         console.log('Elemento não encontrado, tentando novamente...');
@@ -199,7 +198,6 @@ $(document).ready(function () {
   // sellerCode.init()
 
   vtexjs.checkout.getOrderForm().done(function (orderForm) {
-    console.log(orderForm);
     cashbackValue = orderForm.totalizers[0].value * 0.30;
     cashbackValue = cashbackValue / 100;
 
@@ -211,7 +209,6 @@ $(document).ready(function () {
       fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${skuId}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log("Informações do SKU:", data[0].items);
           let sku = data[0].items.find((e) => e.itemId == skuId); // Encontra o SKU correto
 
           if (sku) {

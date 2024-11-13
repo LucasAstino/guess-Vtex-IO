@@ -355,6 +355,14 @@
   }
 }
 
+.flexRow .stretchChildrenWidth {
+  display: contents;
+}
+
+:global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
 .flexRow--not-found {
   padding: 0 20px;
   margin: 40px 0;
@@ -367,14 +375,6 @@
   .flexRow--not-found--links .flexRowContent {
     flex-direction: column;
   }
-}
-
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
 }
 
 .flexRow--footer__wrapper {
