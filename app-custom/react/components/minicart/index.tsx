@@ -97,11 +97,11 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
       setIsDrawerOpen(false);
     }, 1000);
   };
-  
+
   useEffect(() => {
     if (orderForm && orderForm.id !== 'default-order-form') {
       if (initialItemsCount === null) {
-        setInitialItemsCount(totalItems);
+        setInitialItemsCount(totalItems)
       } else if (totalItems > initialItemsCount) {
         showToast({
           message: "Produto adicionado ao carrinho!",
@@ -110,12 +110,21 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
             label: "Ver carrinho",
             href: "/checkout#/cart",
           },
-        });
-        setInitialItemsCount(totalItems); 
+        })
+        setInitialItemsCount(totalItems)
+      } else if (initialItemsCount === 0 && totalItems === 1) {
+        showToast({
+          message: "Produto adicionado ao carrinho!",
+          duration: 3000,
+          action: {
+            label: "Ver carrinho",
+            href: "/checkout#/cart",
+          },
+        })
+        setInitialItemsCount(totalItems)
       }
     }
-  }, [totalItems, initialItemsCount, showToast]);
-  
+  }, [totalItems, initialItemsCount, orderForm, showToast])
 
   return (
     <div
