@@ -214,11 +214,14 @@
 }
 
 .kitLook__item {
-  max-width: 205px;
+  max-width: 140px;
 }
 
 .kitLook__item-name {
   font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .kitLook__item-link {

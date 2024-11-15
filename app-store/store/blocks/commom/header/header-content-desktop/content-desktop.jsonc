@@ -16,7 +16,7 @@
     },
     "children": [
       "logo#desktop",
-      
+      "AstinoMenu#new",
       "flex-layout.row#headers__icons"
     ]
   },
@@ -25,7 +25,7 @@
     "props": {
       "blockClass": "headers__icons"
     },
-    "children": ["AstinoMenu#new","search-bar#header", "image#find__stores", "LoginHeader","image#wishlist","Minicart"]
+    "children": ["search-bar#header", "image#find__stores", "LoginHeader","image#wishlist","Minicart"]
   },
   
   "search-bar#header": {

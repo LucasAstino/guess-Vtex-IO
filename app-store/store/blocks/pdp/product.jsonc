@@ -143,6 +143,10 @@
     ]
   },
 
+  "KitLook":{
+    "children":["CustomModal"]
+  },
+
   "shipping-simulator#pdp": {
     "props": {
       "blockClas": "pdp"
