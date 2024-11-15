@@ -52,6 +52,7 @@ interface Seller {
           value: number;
         }[];
       }[];
+      price: string;
     };
     IsAvailable: boolean;
   };
@@ -213,15 +214,14 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 {availableProducts.map((product) => {
                   const maxInstallment =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length - 1;
+                      .installmentOptions[0]?.installments.length - 0;
                   const count =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments[maxInstallment]
-                      ?.count;
+                      .installmentOptions[0]?.installments.length || 1 ;
                   const maxInstallmentValue =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
                       .installmentOptions[0]?.installments[maxInstallment]
-                      ?.value;
+                      ?.value || product.items[0].sellers[0].commertialOffer.PaymentOptions.installmentOptions[0].installments[0].value
                   const price =
                     product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
                       "pt-BR",
@@ -265,9 +265,10 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       <p className={handles["product__viewed-price"]}>
                         R$ {price}
                       </p>
-
+                      {console.log(product)}
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
+                          {console.log(maxInstallment)}
                           ou {count}x sem juros de R$
                           {(maxInstallmentValue / 100)
                             .toFixed(2)
@@ -338,8 +339,10 @@ export const VisitedProductsSlider: FC<Props> = () => {
                         R$ {price}
                       </p>
 
+                      {console.log(maxInstallment)}
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
+                          {console.log(maxInstallment,'parcela')}
                           ou {count}x sem juros de R$
                           {(maxInstallmentValue / 100)
                             .toFixed(2)
