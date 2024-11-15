@@ -404,12 +404,22 @@
   gap: 8px;
 }
 
+.sliderLayoutContainer {
+  max-width: 1900px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .sliderLayoutContainer {
+    padding: 0 5px;
+  }
+}
+
 .slideChildrenContainer {
   align-items: flex-start;
 }
 
 .visited-products-slider {
-  padding: 0 30px;
+  padding: 0 5px;
   margin-bottom: 150px;
 }
 @media (max-width: 1025px) {
@@ -423,7 +433,7 @@
 }
 
 .product__viewed-item {
-  max-width: 20vw;
+  max-width: 24vw;
 }
 @media (max-width: 768px) {
   .product__viewed-item {
@@ -434,10 +444,11 @@
 .title__viewed-product {
   font-size: 24px;
   font-weight: 500;
-  max-width: 1366px;
   margin: auto;
+  max-width: 1800px;
   margin-top: 150px;
   margin-bottom: 40px;
+  padding-left: 20px;
 }
 @media (max-width: 1025px) {
   .title__viewed-product {

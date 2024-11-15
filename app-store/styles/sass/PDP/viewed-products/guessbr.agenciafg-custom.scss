@@ -2,11 +2,20 @@
   display: flex;
   gap: 8px;
 }
+
+.sliderLayoutContainer{
+  max-width: 1900px;
+  margin: auto;
+  @include mobile{
+    padding: 0 5px;
+  }
+}
+
 .slideChildrenContainer{
   align-items: flex-start;
 }
 .visited-products-slider {
-  padding: 0 30px;
+  padding: 0 5px;
   margin-bottom: 150px;
   @include tablet{
     margin-bottom: 40px;
@@ -18,7 +27,7 @@
   }
 }
 .product__viewed-item{
-  max-width: 20vw;
+  max-width: 24vw;
   @include mobile{
     max-width: 50vw;
   }
@@ -26,10 +35,11 @@
 .title__viewed-product {
   font-size: 24px;
   font-weight: 500;
-  max-width: 1366px;
   margin: auto;
+  max-width: 1800px;
   margin-top: 150px;
   margin-bottom: 40px;
+  padding-left: 20px;
   @include tablet{
     margin-top: 50px;
     padding-left:15px;
