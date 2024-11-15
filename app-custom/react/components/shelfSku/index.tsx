@@ -145,7 +145,27 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
 
   const handleColorClick = async (colorProductId: string) => {
     const newSkus = await fetchSkusByColor(colorProductId);
-    setSkusTamanho(newSkus); // Atualiza os SKUs com os da nova cor
+    setSkusTamanho(newSkus);
+    const allUnavailable = newSkus.every((sku: any) => !sku.available);
+    if (allUnavailable) {
+      document
+        .querySelectorAll(`[data-color-id="${colorProductId}"]`)
+        .forEach((element) => {
+          element.classList.add(
+            handles["similar__products-variants--circle-unavailable"]
+          );
+        });
+    } else {
+      document
+        .querySelectorAll(`[data-color-id="${colorProductId}"]`)
+        .forEach((element) => {
+          element.classList.remove(
+            handles["similar__products-variants--circle-unavailable"]
+          );
+        });
+    }
+    setSkusTamanho(newSkus);
+    return newSkus;
   };
 
   const handleAddToCart = (skuId: string) => {
@@ -156,9 +176,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
     };
     addItem([itemToAdd]);
     setIsModalVisible(true);
-    setTimeout(()=>{
-      setIsModalVisible(false)
-    },1000)
+    setTimeout(() => {
+      setIsModalVisible(false);
+    }, 1000);
   };
 
   return (
@@ -209,35 +229,24 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
           {items.map((element: ProductTypes.Product, index: number) => {
             const bgColor =
               element?.items?.[0].variations?.[2]?.values?.[0] || "N/A";
-            const available =
-              element?.items?.[0]?.sellers?.[0]?.commertialOffer
-                ?.AvailableQuantity > 0;
+            // const available =
+            //   element?.items?.[0]?.sellers?.[0]?.commertialOffer
+            //     ?.AvailableQuantity > 0;
 
             return (
               <div
                 key={index}
-                className={`${handles["similar__image-container"]} ${
-                  !available
-                    ? handles["similar__image-container-unavailable"]
-                    : ""
-                }`}
+                className={`${handles["similar__image-container"]}`}
               >
                 <span
-                  className={`${
-                    handles["similar__products-variants--circle"]
-                  } ${
-                    !available
-                      ? handles[
-                          "similar__products-variants--circle-unavailable"
-                        ]
-                      : ""
-                  }`}
+                  className={`${handles["similar__products-variants--circle"]}`}
                   style={{
                     height: "30px",
                     width: "30px",
                     backgroundColor: bgColor,
                     display: "block",
                   }}
+                  data-color-id={element.productId}
                   onClick={(e) => {
                     // Remove 'active' class from all parents
                     document
@@ -310,12 +319,10 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 } else {
                   setInfoerror(false);
                   handleAddToCart(addToCartSku);
-                  window.location.href = '/checkout#/cart';
+                  window.location.href = "/checkout#/cart";
                 }
-                
               }}
               className={handles["similar__products-addtocart"]}
-              
             >
               Adicionar ao carrinho
             </button>
@@ -325,9 +332,17 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
         )}
       </div>
       {isModalVisible && (
-        <div className={`${handles["similar__modal-addToCart"]} ${isModalVisible ? handles["similar__modal-addToCart-fadeIn"] : handles["similar__modal-addToCart-fadeOut"]}`}>
+        <div
+          className={`${handles["similar__modal-addToCart"]} ${
+            isModalVisible
+              ? handles["similar__modal-addToCart-fadeIn"]
+              : handles["similar__modal-addToCart-fadeOut"]
+          }`}
+        >
           <div className={handles["similar__modal-addToCart--content"]}>
-            <p className={handles["similar__modal-addToCart--label"]}>Produto adicionado ao <u>carrinho!</u></p>
+            <p className={handles["similar__modal-addToCart--label"]}>
+              Produto adicionado ao <u>carrinho!</u>
+            </p>
           </div>
         </div>
       )}
