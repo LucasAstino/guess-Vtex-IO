@@ -1,10 +1,30 @@
 query GetProductLinkAndImage($identifier: ProductUniqueIdentifier) {
   product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
+     productId
     linkText
-    productName
+    specificationGroups {
+      name
+      originalName
+      specifications {
+        name
+        originalName
+        values
+      }
+    }
     items {
+      sellers {
+        sellerId
+        commertialOffer {
+          AvailableQuantity
+        }
+      }
       images {
+        imageLabel
         imageUrl
+      }
+      variations {
+        name
+        values
       }
     }
   }

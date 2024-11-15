@@ -389,7 +389,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
             >
               +
             </button>
-            {/* Passa apenas o produto selecionado para o SkuFromShelf */}
             <SkuFromShelf productQuery={{ product: selectedProduct }} />
             <div
               className={
