@@ -6,8 +6,8 @@ import React, {
   useState,
 } from "react";
 import { useProduct } from "vtex.product-context";
-import { SliderLayout } from "vtex.slider-layout"; 
-import { SkuFromShelf } from "../shelfSku"; 
+import { SliderLayout } from "vtex.slider-layout";
+import { SkuFromShelf } from "../shelfSku";
 import { useCssHandles } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
@@ -87,8 +87,8 @@ export const useProductList = () => useContext(ProductListContext);
 
 export const VisitedProductsSlider: FC<Props> = () => {
   const [visitedProducts, setVisitedProducts] = useState<Product[]>([]);
-  const [isModalOpen, setModalOpen] = useState(false); 
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); 
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const productContext = useProduct();
   const { isMobile } = useDevice();
   const { handles } = useCssHandles(HANDLES_VIEWED);
@@ -179,17 +179,16 @@ export const VisitedProductsSlider: FC<Props> = () => {
 
   const handleOpenModal = (product: Product) => {
     setSelectedProduct(product);
-    setModalOpen(true); 
+    setModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    setModalOpen(false); 
+    setModalOpen(false);
     setSelectedProduct(null);
   };
 
-
   const availableProducts = visitedProducts.filter((product) => {
-    return product.items[0].sellers[0].commertialOffer.IsAvailable; 
+    return product.items[0].sellers[0].commertialOffer.IsAvailable;
   });
 
   return (
@@ -217,11 +216,13 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       .installmentOptions[0]?.installments.length - 0;
                   const count =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length || 1 ;
+                      .installmentOptions[0]?.installments.length || 1;
                   const maxInstallmentValue =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
                       .installmentOptions[0]?.installments[maxInstallment]
-                      ?.value || product.items[0].sellers[0].commertialOffer.PaymentOptions.installmentOptions[0].installments[0].value
+                      ?.value ||
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0].installments[0].value;
                   const price =
                     product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
                       "pt-BR",
@@ -285,15 +286,16 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 {availableProducts.map((product) => {
                   const maxInstallment =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length - 1;
+                      .installmentOptions[0]?.installments.length - 0;
                   const count =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments[maxInstallment]
-                      ?.count;
+                      .installmentOptions[0]?.installments.length || 1;
                   const maxInstallmentValue =
                     product.items[0].sellers[0].commertialOffer.PaymentOptions
                       .installmentOptions[0]?.installments[maxInstallment]
-                      ?.value;
+                      ?.value ||
+                    product.items[0].sellers[0].commertialOffer.PaymentOptions
+                      .installmentOptions[0].installments[0].value;
                   const price =
                     product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
                       "pt-BR",
@@ -322,7 +324,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           <button
                             className={handles["product__viewed-addtocart"]}
                             onClick={(event) => {
-                              event.preventDefault(); 
+                              event.preventDefault();
                               event.stopPropagation();
                               handleOpenModal(product);
                             }}
@@ -340,9 +342,10 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       </p>
 
                       {console.log(maxInstallment)}
+                      {console.log(product)}
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
-                          {console.log(maxInstallment,'parcela')}
+                          {console.log(maxInstallment, "parcela")}
                           ou {count}x sem juros de R$
                           {(maxInstallmentValue / 100)
                             .toFixed(2)
