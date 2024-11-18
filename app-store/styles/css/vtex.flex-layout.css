@@ -676,13 +676,6 @@
   }
 }
 
-.flexRow--contact-us .flexRowContent--contact-us {
-  flex-direction: column;
-  margin: auto;
-  max-width: 720px;
-  padding: 0 20px;
-}
-
 .flexRow--cashback__container .flexRowContent--cashback__container {
   flex-direction: column;
   max-width: 1366px;
@@ -776,6 +769,13 @@
 .flexRow--cashback__regulation .flexRowContent .flexCol--cashback__regulation :global(.vtex-store-components-3-x-imageElement) {
   display: block;
   margin: auto;
+}
+
+.flexRow--contact-us .flexRowContent--contact-us {
+  flex-direction: column;
+  margin: auto;
+  max-width: 720px;
+  padding: 0 20px;
 }
 
 .flexRow--dealer__container {

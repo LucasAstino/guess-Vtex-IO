@@ -1,0 +1,9 @@
+{
+    "image#topBanner__PDP": {
+        "title": "Top banner",
+      "props": {
+        "src": ""
+        
+      }
+    }
+}
