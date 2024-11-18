@@ -157,7 +157,7 @@ export const KitLookComponent = () => {
             item && (
               <div className={handles["kitLook__item"]} key={index}>
                 <CustomModal>
-                  Add
+                <button class="guessbr-agenciafg-custom-0-x-product__viewed-addtocart">Add</button>
                   <SkuFromShelf productQuery={{ product: item }} />
                 </CustomModal>
 
