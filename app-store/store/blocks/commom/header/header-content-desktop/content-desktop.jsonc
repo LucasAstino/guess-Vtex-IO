@@ -3,7 +3,7 @@
     "props": {
       "blockClass": "main-header"
     },
-    "children": [ "Topbar","flex-layout.row#header__content-desktop"]
+    "children": ["telemarketing", "Topbar","flex-layout.row#header__content-desktop"]
   },
 
   // "Container-lp#header__desktop":{
