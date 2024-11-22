@@ -142,8 +142,8 @@
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
-      "disclosure-layout#product__description-pdp"
-      // "KitLook"
+      "disclosure-layout#product__description-pdp",
+      "KitLook"
     ]
   },
 

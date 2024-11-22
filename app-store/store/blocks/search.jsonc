@@ -158,6 +158,7 @@
   },
 
   "image#search__result": {
+    "title": "top banner",
     "props": {
       "src": "",
       "blockClass": "search__result"

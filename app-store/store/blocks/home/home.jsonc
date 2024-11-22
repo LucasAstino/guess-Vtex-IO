@@ -7,6 +7,7 @@
       "responsive-layout.mobile#slider__home",
       // "rich-text#first__shelf-title",
       // "flex-layout.row#first__shelf",
+      // "GiftCards",
       "ConditionBlock#conditionl__home",
       "__fold__",
        "responsive-layout.desktop#category__list",

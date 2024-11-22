@@ -14,14 +14,20 @@
     "image#bannerTop__slider_desktop": {
       "props": {
         "src": "assets/images/home/bannerTop.jpg",
-        "blockClass":"bannerTop__slider"
+        "blockClass":"bannerTop__slider",
+        "experimentalSetExplicitDimensions": true,
+        "width": "1920",
+        "height": "100"
         
       }
     },
     "image#bannerTop__slider-mobile": {
       "props": {
         "src": "assets/images/home/topbannermobile.svg",
-        "blockClass":"bannerTop__slider"
+        "blockClass":"bannerTop__slider",
+        "experimentalSetExplicitDimensions": true,
+        "width": "425",
+        "height": "71"
         
       }
     }

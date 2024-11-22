@@ -612,6 +612,12 @@
     max-width: 100% !important;
   }
 }
+@media (min-width: 1025px) {
+  .flexRow--last__shelf {
+    margin-bottom: 80px;
+  }
+}
+
 .flexCol--slider__home-slide {
   position: absolute;
   height: fit-content;

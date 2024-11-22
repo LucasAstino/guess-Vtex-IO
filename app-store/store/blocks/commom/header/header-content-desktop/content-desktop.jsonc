@@ -42,6 +42,9 @@
     "props": {
       "src": "assets/icons/header/icon-map.svg",
       "blockClass":"find__stores",
+      "experimentalSetExplicitDimensions": true,
+      "width": "20",
+      "height": "20",
       "link": {
         "props": {
           "label": "Lojas",
@@ -56,6 +59,9 @@
     "props": {
       "src": "assets/icons/commum/HeartStraight.svg",
       "blockClass":"find__stores",
+      "experimentalSetExplicitDimensions": true,
+      "width": "20",
+      "height": "20",
       "link": {
         "props": {
           "label": "wishlist",

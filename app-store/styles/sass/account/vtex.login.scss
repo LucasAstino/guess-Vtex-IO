@@ -7,3 +7,10 @@
 :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper){
     display: none;
 }
+
+:global(.w-100.pv7.fl .flex-column .f6.link.no-underline.c-link.hover-c-link){
+    text-decoration: underline;
+}
+:global(.vtex-my-orders-app-3-x-productName){
+    color: black;
+}

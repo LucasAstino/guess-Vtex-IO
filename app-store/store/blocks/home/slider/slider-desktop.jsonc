@@ -41,6 +41,9 @@
         "noFollow": false,
         "openNewTab": false
       },
+      "experimentalSetExplicitDimensions": true,
+      "width": "1920",
+      "height": "873",
       "alt": "Image 1",
       "maxWidth": "100%",
       "layout": "contain",
@@ -57,6 +60,9 @@
         "noFollow": false,
         "openNewTab": false
       },
+      "experimentalSetExplicitDimensions": true,
+      "width": "1920",
+      "height": "873",
       "alt": "Image 2",
       "maxWidth": "100%",
       "layout": "contain",
@@ -73,6 +79,9 @@
         "noFollow": false,
         "openNewTab": false
       },
+      "experimentalSetExplicitDimensions": true,
+      "width": "1920",
+      "height": "873",
       "alt": "Image 2",
       "maxWidth": "100%",
       "layout": "contain",

@@ -45,7 +45,12 @@
   },
   "image#category__list": {
     "props": {
-      "src": "assets/images/home/categoryList.jpg"
+      "src": "assets/images/home/categoryList.jpg",
+      "experimentalSetExplicitDimensions": true,
+      "width": "560",
+      "height": "671",
+      "maxWidth": "100%",
+      "maxHeight": "fit-content"
       
     }
   },

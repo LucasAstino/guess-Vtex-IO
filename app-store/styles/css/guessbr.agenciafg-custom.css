@@ -212,9 +212,22 @@
 .kitLook__container {
   margin-top: 40px;
 }
+.kitLook__container .sliderTrack :first-child {
+  margin-left: 0 !important;
+  width: 100%;
+}
+.kitLook__container .custom-modal-container {
+  width: 50px;
+}
+.kitLook__container .custom-modal-container .product__viewed-addtocart {
+  font-size: 13px;
+}
+.kitLook__container .custom-modal-container .product__viewed-addtocart::before, .kitLook__container .custom-modal-container .product__viewed-addtocart::after {
+  right: 5px;
+}
 
 .kitLook__item {
-  max-width: 140px;
+  max-width: 160px;
 }
 
 .kitLook__item-name {
@@ -231,6 +244,10 @@
 
 .kitLook__title {
   font-size: 18px;
+}
+
+.kitLook__item-wrapper {
+  position: relative;
 }
 
 .similar__products-variants {
@@ -489,6 +506,12 @@
   margin-block-start: 8px;
   margin-block-end: 8px;
   font-size: 14px;
+  display: flex;
+  gap: 5px;
+}
+.product__viewed-price--list {
+  color: #71767F;
+  text-decoration: line-through;
 }
 
 .product__viewed-wrapper {
@@ -497,19 +520,14 @@
 }
 
 .product__viewed-addtocart {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  background-color: #ffffff;
+  all: unset;
   border-radius: 6px;
-  border: 2px solid #bdbec0;
-  width: 60px;
-  height: 30px;
   font-size: 16px;
   text-align: left;
   padding-inline-start: 5px;
   font-family: "Futura";
   color: black;
+  height: 30px;
 }
 @media (max-width: 1025px) {
   .product__viewed-addtocart {

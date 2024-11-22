@@ -74,7 +74,16 @@
   margin-block-start: 8px;
   margin-block-end: 8px;
   font-size: 14px;
+  display: flex;
+  gap: 5px;
+
+  &--list{
+    color: #71767F;
+    text-decoration: line-through;
+  }
 }
+
+
 
 .product__viewed-wrapper{
     position: relative;
@@ -82,19 +91,14 @@
 }
 
 .product__viewed-addtocart {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  background-color: #ffffff;
+  all: unset;
   border-radius: 6px;
-  border: 2px solid #bdbec0;
-  width: 60px;
-  height: 30px;
   font-size: 16px;
   text-align: left;
   padding-inline-start: 5px;
   font-family: 'Futura';
   color: black;
+  height: 30px;
   @include tablet{
     width: 55px;
     height: 30px;
