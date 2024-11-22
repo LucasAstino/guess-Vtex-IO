@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.10",
     "@types/google.maps": "^3.58.0",
     "@types/styled-components": "^5.1.34",
     "@types/swiper": "^6.0.0",
@@ -20,8 +19,7 @@
     "react-html-parser": "^2.0.2",
     "react-intl": "^3.12.0",
     "react-player": "^2.16.0",
-    "styled-components": "^6.1.12",
-    "swiper": "^10.0.4"
+    "styled-components": "^6.1.12"
   },
   "resolutions": {
     "expect": "28.1.3",
@@ -37,9 +35,8 @@
     "@types/react-dom": "^18.3.1",
     "@vtex/test-tools": "^3.3.2",
     "@vtex/tsconfig": "^0.4.4",
-    "apollo-client": "^2.6.8",
-    "graphql": "^16.9.0",
-    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.66+build1731520452/public/@types/guessbr.agenciafg-custom",
+    "graphql": "^14.7.0",
+    "guessbr.agenciafg-custom": "https://store--guessbr.myvtex.com/_v/private/typings/linked/v1/guessbr.agenciafg-custom@0.0.73+build1732295414/public/@types/guessbr.agenciafg-custom",
     "typescript": "3.9.7",
     "vtex.address-form": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.26.0/public/@types/vtex.address-form",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.1/public/@types/vtex.css-handles",

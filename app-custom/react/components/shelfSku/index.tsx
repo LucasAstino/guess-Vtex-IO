@@ -57,12 +57,21 @@ interface Variation {
   __typename: string;
 }
 
+interface Item {
+  itemId: string;
+  name: string;
+  skus: any[];
+  variations?: Variation[];
+  __typename: string;
+}
+
 interface SimilarProductsVariantsProps {
   productQuery: {
     product: {
       productId: string;
       skuSpecifications?: SkuSpecification[];
       sku?: SKUVariation;
+      items?: Item[];
     };
   };
   imageLabel?: string;
@@ -80,9 +89,9 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
   // const currentSize =
   //   productQuery.product.skuSpecifications?.[0]?.values[0].name;
 
-  const currentColorCode = productQuery.product.sku?.variations[2]?.values[0];
+  const currentColorCode = productQuery.product?.items?.[0]?.variations?.[2]?.values?.[0];
 
-  const currentColor = productQuery.product.sku?.variations[1]?.values[0];
+  const currentColor = productQuery.product?.items?.[0]?.variations?.[1]?.values[0];
 
   // const currentColorCode =
   //   productQuery.product.skuSpecifications?.[2]?.values[0].name;

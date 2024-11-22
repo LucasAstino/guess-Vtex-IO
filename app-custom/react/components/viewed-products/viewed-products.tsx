@@ -10,7 +10,10 @@ import { SliderLayout } from "vtex.slider-layout";
 import { SkuFromShelf } from "../shelfSku";
 import { useCssHandles } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
+import { useApolloClient } from "react-apollo";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
+import { CustomModal } from "../modal/index";
+import Viewed from "../../queries/viewed.gql";
 
 export const HANDLES_VIEWED = [
   "visited-products-slider",
@@ -22,6 +25,9 @@ export const HANDLES_VIEWED = [
   "product__viewed-link",
   "product__viewed-image",
   "product__viewed-price",
+  "product__viewed-price--list",
+  "product__viewed-price--value",
+  "product__viewed-price--discount",
   "product__viewed-installments",
   "product__viewed-addtocart",
   "product__viewed-addtocart--plus",
@@ -45,17 +51,21 @@ interface Seller {
   commertialOffer: {
     AvailableQuantity: number;
     PriceWithoutDiscount: number;
-    PaymentOptions: {
-      installmentOptions: {
-        installments: {
-          count: number;
-          value: number;
-        }[];
-      }[];
-      price: string;
-    };
+    Installments: {
+      NumberOfInstallments: number;
+      count: number;
+      Value: number;
+    }[];
+    ListPrice: number;
+    Price: number;
     IsAvailable: boolean;
   };
+}
+
+interface Variation {
+  name: string;
+  values: string[];
+  __typename: string;
 }
 
 interface Product {
@@ -67,15 +77,11 @@ interface Product {
     name: string;
     skus: Sku[];
     sellers: Seller[];
+    variations?: Variation[];
     images: { imageUrl: string }[];
+    __typename: string;
   }[];
 }
-
-type OrderFormItem = {
-  id: string;
-  name: string;
-  quantity: number;
-};
 
 type Props = {
   children: any;
@@ -87,16 +93,11 @@ export const useProductList = () => useContext(ProductListContext);
 
 export const VisitedProductsSlider: FC<Props> = () => {
   const [visitedProducts, setVisitedProducts] = useState<Product[]>([]);
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const productContext = useProduct();
   const { isMobile } = useDevice();
   const { handles } = useCssHandles(HANDLES_VIEWED);
+  const client = useApolloClient();
   const { orderForm } = useOrderForm();
-  const [prevOrderFormItems, setPrevOrderFormItems] = useState<OrderFormItem[]>(
-    []
-  );
-  const [productAdded, setProductAdded] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
@@ -107,37 +108,11 @@ export const VisitedProductsSlider: FC<Props> = () => {
   }, [productContext]);
 
   useEffect(() => {
-    const productsFromStorage = localStorage.getItem("visitedProductIds");
-    if (productsFromStorage) {
-      const productIds: string[] = JSON.parse(productsFromStorage);
-      fetchProductsByIds(productIds);
-    }
-  }, []);
-
-  useEffect(() => {
     if (orderForm && orderForm.items) {
       if (initialLoad) {
-        setPrevOrderFormItems(orderForm.items);
         setInitialLoad(false);
         return;
       }
-
-      const itemAdded = orderForm.items.some((item: any, index: any) => {
-        const prevItem = prevOrderFormItems[index];
-        return !prevItem || item.quantity > prevItem.quantity;
-      });
-
-      if (itemAdded) {
-        setProductAdded(true);
-
-        const timer = setTimeout(() => {
-          setProductAdded(false);
-        }, 3000);
-
-        return () => clearTimeout(timer);
-      }
-
-      setPrevOrderFormItems(orderForm.items);
     }
     return undefined;
   }, [orderForm.items, initialLoad]);
@@ -159,41 +134,53 @@ export const VisitedProductsSlider: FC<Props> = () => {
     );
   };
 
-  const fetchProductsByIds = async (productIds: string[]) => {
-    if (productIds.length === 0) return;
+  const fetchProductsByIdGQL = async (
+    productId: string
+  ): Promise<Product | null> => {
     try {
-      const response = await fetch(
-        `/api/catalog_system/pub/products/search?fq=productId:${productIds.join(
-          "&fq=productId:"
-        )}`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      setVisitedProducts(data);
+      const { data } = await client.query({
+        query: Viewed,
+        variables: {
+          identifier: { field: "id", value: productId },
+        },
+      });
+      return data?.product || null;
     } catch (error) {
-      console.error("Error fetching products", error);
+      console.error("Error fetching product:", error);
+      return null;
     }
   };
 
-  const handleOpenModal = (product: Product) => {
-    setSelectedProduct(product);
-    setModalOpen(true);
-  };
+  useEffect(() => {
+    const loadVisitedProducts = async () => {
+      const productsFromStorage = localStorage.getItem("visitedProductIds");
+      if (productsFromStorage) {
+        const productIds: string[] = JSON.parse(productsFromStorage);
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
-    setSelectedProduct(null);
-  };
+        // Busca todos os produtos e filtra os valores nulos
+        const fetchedProducts = await Promise.all(
+          productIds.map((id) => fetchProductsByIdGQL(id))
+        );
+        const validProducts = fetchedProducts.filter(
+          (product): product is Product => !!product
+        );
+
+        // Atualiza o estado somente após concluir todas as requisições
+        setVisitedProducts(validProducts);
+      }
+    };
+
+    loadVisitedProducts();
+  }, [client]);
 
   const availableProducts = visitedProducts.filter((product) => {
-    return product.items[0].sellers[0].commertialOffer.IsAvailable;
+    return product.items[0].sellers[0].commertialOffer.AvailableQuantity;
   });
 
   return (
     <ProductListContext.Provider value={availableProducts}>
       <div className={handles["visited-products-slider"]}>
+        {console.log(availableProducts, "nnnnnnnnnnn")}
         {availableProducts.length > 0 ? (
           <>
             <h2 className={handles["title__viewed-product"]}>
@@ -211,20 +198,24 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 fullWidth
               >
                 {availableProducts.map((product) => {
+                  console.log(product, "prod");
                   const maxInstallment =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length - 0;
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .NumberOfInstallments;
                   const count =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length || 1;
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .NumberOfInstallments;
                   const maxInstallmentValue =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments[maxInstallment]
-                      ?.value ||
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0].installments[0].value;
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .Value;
+                  console.log("valueeee", maxInstallmentValue);
                   const price =
-                    product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
+                    product.items[0].sellers[0].commertialOffer.Price.toLocaleString(
+                      "pt-BR",
+                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    );
+                  const listPrice =
+                    product.items[0].sellers[0].commertialOffer.ListPrice.toLocaleString(
                       "pt-BR",
                       { minimumFractionDigits: 2, maximumFractionDigits: 2 }
                     );
@@ -238,6 +229,7 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       key={product.productId}
                       className={handles["product__viewed-item"]}
                     >
+                      {console.log(product, "viewed")}
                       <a
                         className={handles["product__viewed-link"]}
                         href={`/${product.linkText}/p`}
@@ -248,33 +240,55 @@ export const VisitedProductsSlider: FC<Props> = () => {
                             src={image}
                             alt={product.productName}
                           />
-                          <button
-                            className={handles["product__viewed-addtocart"]}
-                            onClick={(event) => {
-                              event.preventDefault();
-                              event.stopPropagation();
-                              handleOpenModal(product);
-                            }}
-                          >
-                            Add
-                          </button>
+                          <CustomModal>
+                            <button className="guessbr-agenciafg-custom-0-x-product__viewed-addtocart">
+                              Add
+                            </button>
+                            <SkuFromShelf productQuery={{ product: product }} />
+                          </CustomModal>
                         </div>
                         <h3 className={handles["product__viewed-name"]}>
                           {product.productName}
                         </h3>
                       </a>
                       <p className={handles["product__viewed-price"]}>
-                        R$ {price}
+                        {listPrice !== price && (
+                          <span
+                            className={handles["product__viewed-price--list"]}
+                          >
+                            R$ {listPrice}
+                          </span>
+                        )}
+
+                        <span
+                          className={handles["product__viewed-price--value"]}
+                        >
+                          R$ {price}
+                        </span>
+                        {listPrice !== price && (
+                          <span
+                            className={
+                              handles["product__viewed-price--discount"]
+                            }
+                          >
+                            (
+                            {Math.round(
+                              ((parseFloat(listPrice as unknown as string) -
+                                parseFloat(price as unknown as string)) /
+                                parseFloat(listPrice as unknown as string)) *
+                                100
+                            )}
+                            % Off)
+                          </span>
+                        )}
                       </p>
                       {console.log(product)}
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
                           {console.log(maxInstallment)}
-                          ou {count}x sem juros de R$
-                          {(maxInstallmentValue / 100)
-                            .toFixed(2)
-                            .replace(".", ",")}{" "}
-                          no cartão de crédito
+                          ou {count}x sem juros de R${" "}
+                          {maxInstallmentValue.toFixed(2).replace(".", ",")} no
+                          cartão de crédito
                         </p>
                       )}
                     </div>
@@ -282,137 +296,13 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 })}
               </SliderLayout>
             ) : (
-              <div className={handles["product__viewed-container"]}>
-                {availableProducts.map((product) => {
-                  const maxInstallment =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length - 0;
-                  const count =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments.length || 1;
-                  const maxInstallmentValue =
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0]?.installments[maxInstallment]
-                      ?.value ||
-                    product.items[0].sellers[0].commertialOffer.PaymentOptions
-                      .installmentOptions[0].installments[0].value;
-                  const price =
-                    product.items[0].sellers[0].commertialOffer.PriceWithoutDiscount.toLocaleString(
-                      "pt-BR",
-                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-                    );
-                  const image = product.items[0].images[0].imageUrl.replace(
-                    /(ids\/\d+)/,
-                    "$1-500-724"
-                  );
-
-                  return (
-                    <div
-                      key={product.productId}
-                      className={handles["product__viewed-item"]}
-                    >
-                      <a
-                        className={handles["product__viewed-link"]}
-                        href={`/${product.linkText}/p`}
-                      >
-                        <div className={handles["product__viewed-wrapper"]}>
-                          <img
-                            className={handles["product__viewed-image"]}
-                            src={image}
-                            alt={product.productName}
-                          />
-                          <button
-                            className={handles["product__viewed-addtocart"]}
-                            onClick={(event) => {
-                              event.preventDefault();
-                              event.stopPropagation();
-                              handleOpenModal(product);
-                            }}
-                          >
-                            Add
-                          </button>
-                        </div>
-                        <h3 className={handles["product__viewed-name"]}>
-                          {product.productName}
-                        </h3>
-                      </a>
-
-                      <p className={handles["product__viewed-price"]}>
-                        R$ {price}
-                      </p>
-
-                      {console.log(maxInstallment)}
-                      {console.log(product)}
-                      {maxInstallment && (
-                        <p className={handles["product__viewed-installments"]}>
-                          {console.log(maxInstallment, "parcela")}
-                          ou {count}x sem juros de R$
-                          {(maxInstallmentValue / 100)
-                            .toFixed(2)
-                            .replace(".", ",")}{" "}
-                          no cartão de crédito
-                        </p>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+              <div className={handles["product__viewed-container"]}></div>
             )}
           </>
         ) : (
           <></>
         )}
       </div>
-
-      {/* Modal */}
-      {isModalOpen && selectedProduct && (
-        <div
-          className={handles.modalOverlay}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className={handles.modalContent}
-            style={{
-              backgroundColor: "#F9F9F9",
-              position: "relative",
-            }}
-          >
-            <button
-              className={handles.closeButton}
-              onClick={handleCloseModal}
-              style={{ position: "absolute", top: "0px", right: "10px" }}
-            >
-              +
-            </button>
-            <SkuFromShelf productQuery={{ product: selectedProduct }} />
-            <div
-              className={
-                productAdded
-                  ? handles["modalContent__alert-visible"]
-                  : handles["modalContent__alert-hidden"]
-              }
-            >
-              <p>
-                Produto adicionado a{" "}
-                <span className={handles["modalContent__alert-visible-span"]}>
-                  Sacola
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </ProductListContext.Provider>
   );
 };

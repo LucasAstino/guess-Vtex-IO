@@ -1,6 +1,6 @@
-query GetProductLinkAndImage($identifier: ProductUniqueIdentifier) {
+query productViewed($identifier: ProductUniqueIdentifier) {
   product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
-     productId
+    productId
     linkText
     productName
     specificationGroups {
@@ -16,7 +16,18 @@ query GetProductLinkAndImage($identifier: ProductUniqueIdentifier) {
       sellers {
         sellerId
         commertialOffer {
+           Installments(criteria: MAX, rates: true) {
+            NumberOfInstallments
+            Value
+            InterestRate
+            TotalValuePlusInterestRate
+            PaymentSystemGroupName
+            PaymentSystemName
+          }
           AvailableQuantity
+          Price
+          ListPrice
+          spotPrice
         }
       }
       images {
