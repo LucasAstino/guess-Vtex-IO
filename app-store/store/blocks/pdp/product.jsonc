@@ -48,7 +48,7 @@
       "stack-layout#product-main--mobile",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product__name-pdp",
-      "custom-flag-black-friday",
+      "flex-layout.row#flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
       "flex-layout.row#product__price-pdp",
@@ -64,6 +64,15 @@
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
       "disclosure-layout#product__description-pdp"
+    ]
+  },
+
+  "flex-layout.row#flag-black-friday": {
+    "props": {
+      "blockClass": "flag-black-friday"
+    },
+    "children": [
+      "custom-flag-black-friday"
     ]
   },
 
