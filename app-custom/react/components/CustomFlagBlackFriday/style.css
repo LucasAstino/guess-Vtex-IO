@@ -1,0 +1,6 @@
+.divFlag {
+    display: flex;
+    position: absolute;
+    top: 6px;
+    z-index: 4;
+}

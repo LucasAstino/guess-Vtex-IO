@@ -48,6 +48,7 @@
       "stack-layout#product-main--mobile",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product__name-pdp",
+      "custom-flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
       "flex-layout.row#product__price-pdp",
@@ -126,6 +127,7 @@
     },
     "children": [
       "flex-layout.row#product__name-pdp",
+      "custom-flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
       "flex-layout.row#product__price-pdp",
