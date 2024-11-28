@@ -96,6 +96,9 @@
   "commumScript":{
     "component":"commumScript",
     "render": "lazy"
+  },
+  "custom-flag-black-friday": {
+    "component": "CustomFlagBlackFriday"
   }
 }
 

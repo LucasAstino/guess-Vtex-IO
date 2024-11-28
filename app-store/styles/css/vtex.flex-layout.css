@@ -250,7 +250,8 @@
   font-size: 20px;
 }
 @media (max-width: 1025px) {
-  .flexRow--product__name-pdp :global(.vtex-store-components-3-x-productNameContainer--quickview) {
+  .flexRow--product__name-pdp :global(.vtex-store-components-3-x-productNameContainer--quickview),
+  .flexRow--flag-black-friday .flexRowContent--flag-black-friday {
     padding: 0 15px;
   }
 }
