@@ -196,8 +196,8 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 showNavigationArrows="always"
                 showPaginationDots="never"
                 centerMode={{
-                  desktop:"disabled",
-                  phone:"to-the-left"
+                  desktop: "disabled",
+                  phone: "to-the-left",
                 }}
                 centerModeSlidesGap={8}
                 fullWidth
@@ -301,7 +301,71 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 })}
               </SliderLayout>
             ) : (
-              <div className={handles["product__viewed-container"]}></div>
+              <div className={handles["product__viewed-container"]}>
+                {availableProducts.map((product) => {
+                  const maxInstallment =
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .NumberOfInstallments;
+                  const count =
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .NumberOfInstallments;
+                  const maxInstallmentValue =
+                    product.items[0].sellers[0].commertialOffer.Installments[0]
+                      .Value;
+                  const price =
+                    product.items[0].sellers[0].commertialOffer.Price.toLocaleString(
+                      "pt-BR",
+                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    );
+                  const image = product.items[0].images[0].imageUrl.replace(
+                    /(ids\/\d+)/,
+                    "$1-507-736"
+                  );
+
+                  return (
+                    <div
+                      key={product.productId}
+                      className={handles["product__viewed-item"]}
+                    >
+                      <a
+                        className={handles["product__viewed-link"]}
+                        href={`/${product.linkText}/p`}
+                      >
+                        <div className={handles["product__viewed-wrapper"]}>
+                          <img
+                            className={handles["product__viewed-image"]}
+                            src={image}
+                            alt={product.productName}
+                          />
+                          <CustomModal>
+                            <button className="guessbr-agenciafg-custom-0-x-product__viewed-addtocart">
+                              Add
+                            </button>
+                            <SkuFromShelf productQuery={{ product: product }} />
+                          </CustomModal>
+                        </div>
+                        <h3 className={handles["product__viewed-name"]}>
+                          {product.productName}
+                        </h3>
+                      </a>
+
+                      <p className={handles["product__viewed-price"]}>
+                        R$ {price}
+                      </p>
+
+                      {maxInstallment && (
+                        <p className={handles["product__viewed-installments"]}>
+                          ou {count}x sem juros de R$
+                          {(maxInstallmentValue / 100)
+                            .toFixed(2)
+                            .replace(".", ",")}{" "}
+                          no cartão de crédito
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             )}
           </>
         ) : (

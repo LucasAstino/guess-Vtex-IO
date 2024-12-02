@@ -3,8 +3,7 @@
     "blocks": [
      "rich-text#h1__home",
       "flex-layout.row#bannerTop__slider",
-      "responsive-layout.desktop#slider__home",
-      "responsive-layout.mobile#slider__home",
+      "list-context.image-list#fullbanner",
       // "rich-text#first__shelf-title",
       // "flex-layout.row#first__shelf",
       // "GiftCards",

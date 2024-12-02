@@ -1,11 +1,117 @@
 
+// {
+
+//   "responsive-layout.desktop#slider__home": {
+//     "children": [ "slider-layout#slider__home"]
+//   },
+
+//   "slider-layout#slider__home": {
+//     "props": {
+//       "itemsPerPage": {
+//         "desktop": 1,
+//         "tablet": 1,
+//         "phone": 1
+//       },
+//       "infinite": true,
+//       "showNavigationArrows": "desktopOnly",
+//       "showPaginationDots": "always",
+//       "usePagination": true,
+//       "fullWidth": true,
+//       "autoplay": {
+//         "timeout": 5000,
+//         "stopOnHover": true
+//       },
+//       "blockClass": "carousel"
+//     },
+//     "children": [
+//       "image#slider__home-slide01",
+//       "image#slider__home-slide02",
+//       "image#slider__home-slide03"
+//     ]
+//   },
+
+  
+
+//   "image#slider__home-slide01": {
+//     "title": "Primeiro banner desktop",
+//     "props": {
+//       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/d4fe46b1-4006-4e81-b0ac-0c05303f5b12___6a991fbe63326b5e35bd19f9bff95c7c.jpg",
+//       "link": {
+//         "url": "#",
+//         "noFollow": false,
+//         "openNewTab": false
+//       },
+//       "experimentalSetExplicitDimensions": true,
+//       "width": "1920",
+//       "height": "873",
+//       "alt": "Image 1",
+//       "maxWidth": "100%",
+//       "layout": "contain",
+//       "blockClass": "slider__home"
+//     }
+//   },
+
+//   "image#slider__home-slide02": {
+//     "title": "Segundo banner desktop",
+//     "props": {
+//       "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/10fec1ac-eba4-416b-9b20-b2099c35ecc1___565655fa0c7c6e1ac78ab2182013d0d0.jpg",
+//       "link": {
+//         "url": "#",
+//         "noFollow": false,
+//         "openNewTab": false
+//       },
+//       "experimentalSetExplicitDimensions": true,
+//       "width": "1920",
+//       "height": "873",
+//       "alt": "Image 2",
+//       "maxWidth": "100%",
+//       "layout": "contain",
+//       "blockClass": "slider__home"
+//     }
+//   },
+
+//   "image#slider__home-slide03": {
+//     "title": "Terceiro banner desktop",
+//     "props": {
+//       "src": "assets/images/home/fullBanner.jpg",
+//       "link": {
+//         "url": "#",
+//         "noFollow": false,
+//         "openNewTab": false
+//       },
+//       "experimentalSetExplicitDimensions": true,
+//       "width": "1920",
+//       "height": "873",
+//       "alt": "Image 2",
+//       "maxWidth": "100%",
+//       "layout": "contain",
+//       "blockClass": "slider__home"
+//     }
+//   }
+
+// }
+
 {
-
-  "responsive-layout.desktop#slider__home": {
-    "children": [ "slider-layout#slider__home"]
+  "list-context.image-list#fullbanner": {
+    "title": "Slider principal home",
+    "children": ["slider-layout#slider__home"],
+    "props": {
+      "height": "auto",
+      "preload": true,
+      "images": [
+        {
+          "image": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/8c43bb56-dfc3-4b41-bfc7-7e42b92edd34___51797ffe748e318f352abe1b6f8fe140.png",
+          "mobileImage": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/0cdbf48a-645a-408f-8595-38365fcee643___b002a208bd6a34ac551e9eb0dfb66080.png"
+        },
+        {
+          "image": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/c21f7a0e-8805-4bd7-8442-781abeeaf590___828f9075d0bd713f79456c7c20bf3778.jpg",
+          "mobileImage": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/f70db5ea-a1c2-4f99-ad64-ca85c7051d72___d56e34eaf3525e46f3ea220c396b2b48.jpg"
+        }
+      ]
+    }
   },
-
   "slider-layout#slider__home": {
+    "title": "Slider principal home",
     "props": {
       "itemsPerPage": {
         "desktop": 1,
@@ -22,71 +128,6 @@
         "stopOnHover": true
       },
       "blockClass": "carousel"
-    },
-    "children": [
-      "image#slider__home-slide01",
-      "image#slider__home-slide02",
-      "image#slider__home-slide03"
-    ]
-  },
-
-  
-
-  "image#slider__home-slide01": {
-    "title": "Primeiro banner desktop",
-    "props": {
-      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/d4fe46b1-4006-4e81-b0ac-0c05303f5b12___6a991fbe63326b5e35bd19f9bff95c7c.jpg",
-      "link": {
-        "url": "#",
-        "noFollow": false,
-        "openNewTab": false
-      },
-      "experimentalSetExplicitDimensions": true,
-      "width": "1920",
-      "height": "873",
-      "alt": "Image 1",
-      "maxWidth": "100%",
-      "layout": "contain",
-      "blockClass": "slider__home"
-    }
-  },
-
-  "image#slider__home-slide02": {
-    "title": "Segundo banner desktop",
-    "props": {
-      "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/10fec1ac-eba4-416b-9b20-b2099c35ecc1___565655fa0c7c6e1ac78ab2182013d0d0.jpg",
-      "link": {
-        "url": "#",
-        "noFollow": false,
-        "openNewTab": false
-      },
-      "experimentalSetExplicitDimensions": true,
-      "width": "1920",
-      "height": "873",
-      "alt": "Image 2",
-      "maxWidth": "100%",
-      "layout": "contain",
-      "blockClass": "slider__home"
-    }
-  },
-
-  "image#slider__home-slide03": {
-    "title": "Terceiro banner desktop",
-    "props": {
-      "src": "assets/images/home/fullBanner.jpg",
-      "link": {
-        "url": "#",
-        "noFollow": false,
-        "openNewTab": false
-      },
-      "experimentalSetExplicitDimensions": true,
-      "width": "1920",
-      "height": "873",
-      "alt": "Image 2",
-      "maxWidth": "100%",
-      "layout": "contain",
-      "blockClass": "slider__home"
     }
   }
-
 }
