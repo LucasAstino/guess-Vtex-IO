@@ -355,11 +355,10 @@ export const VisitedProductsSlider: FC<Props> = () => {
 
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
-                          ou {count}x sem juros de R$
-                          {(maxInstallmentValue / 100)
-                            .toFixed(2)
-                            .replace(".", ",")}{" "}
-                          no cartão de crédito
+                          {console.log(maxInstallment)}
+                          ou {count}x sem juros de R${" "}
+                          {maxInstallmentValue.toFixed(2).replace(".", ",")} no
+                          cartão de crédito
                         </p>
                       )}
                     </div>
