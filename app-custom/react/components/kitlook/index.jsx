@@ -130,7 +130,7 @@ export const KitLookComponent = () => {
             {ids.map((id, index) => {
               const { data, loading, error } = useQuery(KitLook, {
                 variables: {
-                  identifier: { field: "id", value: "2361" },
+                  identifier: { field: "id", value: id },
                 },
                 skip: !id,
               });
