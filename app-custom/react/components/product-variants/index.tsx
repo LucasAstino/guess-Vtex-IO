@@ -50,7 +50,9 @@ export function SimilarProductsVariants({
 
   if (loading || error) return null
 
-  const { productRecommendations } = data
+  console.log(data,"dataaa")
+
+  const { productRecommendations } = data?.productRecommendations || []
 
   const { products } = {
     products: productRecommendations || [],

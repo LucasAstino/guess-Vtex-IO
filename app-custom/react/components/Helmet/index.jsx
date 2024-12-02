@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Helmet } from "vtex.render-runtime";
+// import {GlobalStyles} from "../global-css/index"
+import '../global-css/style.css'
 
 export const headCustom = () => {
   useEffect(() => {
-    // Função para adicionar o script no final da página com defer
     const script = document.createElement("script");
     script.defer = true;
     script.innerHTML = `
@@ -37,6 +38,7 @@ export const headCustom = () => {
           href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
           rel="stylesheet"
         />
+        {/* <GlobalStyles/> */}
       </Helmet>
     </>
   );

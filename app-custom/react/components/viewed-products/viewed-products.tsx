@@ -195,6 +195,11 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 }}
                 showNavigationArrows="always"
                 showPaginationDots="never"
+                centerMode={{
+                  desktop:"disabled",
+                  phone:"to-the-left"
+                }}
+                centerModeSlidesGap={8}
                 fullWidth
               >
                 {availableProducts.map((product) => {

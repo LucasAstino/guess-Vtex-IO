@@ -20,6 +20,14 @@ const pathsStore = {
     dest: 'styles/css',
   },
 }
+
+const pathsCustom = {
+  styles: {
+    scssFile: '../app-custom/react/components/global-css/global.scss', 
+    dest: '../app-custom/react/components/global-css/',
+  },
+}
+
 // Custom sass para o checkout
 const pathsCheckout = {
   styles: {
@@ -92,6 +100,15 @@ gulp.task('sassCheckout', function (done) {
   done()
 })
 
+gulp.task('sassCustom', function (done) {
+  gulp
+    .src(pathsCustom.styles.scssFile)  // Pega o arquivo style.scss do checkout
+    .pipe(sass().on('error', sass.logError))  // Compila o Sass para CSS
+    .pipe(concat('style.css'))  // Renomeia para style.css
+    .pipe(gulp.dest(pathsCustom.styles.dest))  // Salva dentro da pasta checkout
+  done()
+})
+
 gulp.task('run', gulp.series('getFiles', 'sass'))
 
 gulp.task('watch', function () {
@@ -132,6 +149,15 @@ gulp.task('watchCheckout', function () {
   })
 })
 
+// Watcher para o arquivo checkout/style.scss
+gulp.task('watchCustom', function () {
+  gulp.watch(pathsCustom.styles.scssFile, gulp.series('sassCustom')).on('change', function (fileName) {
+    console.log(getCurrentTimestamp() + ' File: \x1b[32m' + fileName + '\x1b[0m builded.')
+  })
+})
+
 gulp.task('storefront', gulp.series('run', 'watch'))
 
 gulp.task('checkout', gulp.series('sassCheckout', 'watchCheckout'))
+
+gulp.task('custom', gulp.series('sassCustom', 'watchCustom'))

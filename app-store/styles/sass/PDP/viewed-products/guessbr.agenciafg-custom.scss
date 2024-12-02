@@ -22,9 +22,6 @@
     padding: 0px;
   }
 
-  .sliderTrack{
-    gap: 8px;
-  }
 }
 .product__viewed-item{
   max-width: 24vw;
@@ -44,6 +41,7 @@
     margin-top: 50px;
     padding-left:15px;
     font-size: 18px;
+    margin-bottom: 20px;
   }
 }
 .product__viewed-link {
@@ -76,6 +74,7 @@
   font-size: 14px;
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 
   &--list{
     color: #71767F;
@@ -93,7 +92,7 @@
 .product__viewed-addtocart {
   all: unset;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
   padding-inline-start: 5px;
   font-family: 'Futura';
@@ -103,7 +102,6 @@
     width: 55px;
     height: 30px;
     font-size: 12px;
-    padding: 5px;
   }
   &:hover{
     cursor: pointer;
@@ -113,21 +111,20 @@
     content: "";
     display: block;
     width: 8px;
-    height: 1px;
+    height: 2px;
     background-color: black;
     position: absolute;
     right: 10px;
     top: 50%;
     @include tablet{
       width: 10px;
-      height: 2px;
     }
   }
   &::before {
     content: "";
     display: block;
     width: 8px;
-    height: 1px;
+    height: 2px;
     background-color: black;
     position: absolute;
     right: 10px;
@@ -135,7 +132,6 @@
     rotate: 90deg;
     @include tablet{
       width: 10px;
-      height: 2px;
     }
   }
 }

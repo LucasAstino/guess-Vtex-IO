@@ -17,6 +17,7 @@
   border: 2px solid #bdbec0;
   @include tablet {
     bottom: 8px;
+    width: 60px;
   }
 }
 
@@ -28,6 +29,13 @@
   padding: 20px;
   translate: -100%;
   border-radius: 8px;
+  @include tablet{
+    width: 85%;
+    translate: 0;
+    padding: 20px;
+    max-height: calc(100% - 4rem);
+    background-color: #F9F9F9 !important;
+  }
 
   .modal-content--wrapper {
     .similar__products-variants--circle {
@@ -43,6 +51,9 @@
       font-weight: 300;
       rotate: 45deg;
       cursor: pointer;
+      @include tablet{
+        font-size: 55px;
+      }
     }
   }
 }

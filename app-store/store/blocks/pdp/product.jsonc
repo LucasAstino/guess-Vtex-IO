@@ -62,7 +62,8 @@
       "shipping-simulator#pdp",
       "rich-text#promotion__delivery",
       "disclosure-layout#product__characteristics-pdp",
-      "disclosure-layout#product__description-pdp"
+      "disclosure-layout#product__description-pdp",
+      "KitLook"
     ]
   },
 
@@ -186,18 +187,18 @@
     "children": ["add-to-cart-button"]
   },
 
-  "flex-layout.row#product-availability": {
-    "props": {
-      "colGap": 7,
-      "marginTop": 4,
-      "marginBottom": 7,
-      "paddingTop": 7
-    },
-    "children": [
-      "flex-layout.col#product__left-col",
-      "flex-layout.col#right-col-availability"
-    ]
-  },
+  // "flex-layout.row#product-availability": {
+  //   "props": {
+  //     "colGap": 7,
+  //     "marginTop": 4,
+  //     "marginBottom": 7,
+  //     "paddingTop": 7
+  //   },
+  //   "children": [
+  //     "flex-layout.col#product__left-col",
+  //     "flex-layout.col#right-col-availability"
+  //   ]
+  // },
   "flex-layout.col#right-col-availability": {
     "props": {
       "preventVerticalStretch": true,

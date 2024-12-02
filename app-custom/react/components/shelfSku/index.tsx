@@ -207,8 +207,8 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
             <span
               className={handles["similar__products-variants--circle"]}
               style={{
-                height: "30px",
-                width: "30px",
+                height: "25px",
+                width: "25px",
                 backgroundColor: currentColorCode,
                 display: "block",
               }}
@@ -250,8 +250,8 @@ export function SkuFromShelf({ productQuery }: SimilarProductsVariantsProps) {
                 <span
                   className={`${handles["similar__products-variants--circle"]}`}
                   style={{
-                    height: "30px",
-                    width: "30px",
+                    height: "25px",
+                    width: "25px",
                     backgroundColor: bgColor,
                     display: "block",
                   }}

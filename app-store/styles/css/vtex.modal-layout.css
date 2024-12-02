@@ -121,6 +121,11 @@
   width: 520px;
   background-color: #F9F9F9;
 }
+@media (max-width: 1025px) {
+  .paper--fast-buy {
+    padding: 20px;
+  }
+}
 
 .headerContainer--fast-buy {
   border: none;

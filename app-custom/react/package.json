@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "watch": "gulp",
+    "gulp": "npm run build && npm run watch"
   },
   "dependencies": {
     "@types/google.maps": "^3.58.0",
@@ -19,6 +22,8 @@
     "react-html-parser": "^2.0.2",
     "react-intl": "^3.12.0",
     "react-player": "^2.16.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.12"
   },
   "resolutions": {
