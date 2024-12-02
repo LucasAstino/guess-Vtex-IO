@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .container--filter .paragraph {
   font-weight: 400;
   font-size: 16px;
@@ -953,6 +952,56 @@
   }
 }
 
+.container--dealer .heading {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.container--dealer .headingLevel1 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c0c0c;
+}
+.container--dealer .headingLevel2 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.container--dealer .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 25px;
+  display: block;
+}
+.container--dealer__button .wrapper--dealer__button {
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  .container--dealer__button .wrapper--dealer__button {
+    max-width: 278px;
+  }
+}
+.container--dealer__button .paragraph .link {
+  font-family: Century;
+  color: white;
+  text-decoration: none;
+  background: #0c0c0c;
+  text-transform: uppercase;
+  padding: 12px 27px;
+  font-weight: 400;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 .container--exchange_and_returns .heading {
   font-family: Calibri;
   color: rgba(0, 0, 0, 0.87) !important;
@@ -984,22 +1033,6 @@
 .container--exchange_and_returns .listItem::before {
   content: "- ";
   font-size: 20px;
-}
-
-.container--faq .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 22px;
-}
-.container--faq .paragraph {
-  font-family: Century;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--faq .link {
-  color: black;
-  text-decoration: none;
 }
 
 .container--table__sizes-title {
@@ -1073,54 +1106,20 @@
   margin: 2rem 0;
 }
 
-.container--dealer .heading {
-  font-family: Futura;
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-.container--dealer .headingLevel1 {
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: 0.15em;
+.container--faq .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
-  color: #0c0c0c;
+  font-size: 22px;
 }
-.container--dealer .headingLevel2 {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.03em;
-  color: #000000;
-}
-.container--dealer .paragraph {
+.container--faq .paragraph {
   font-family: Century;
   font-size: 14px;
-  line-height: 18px;
-  color: #000000;
-  margin-bottom: 25px;
-  display: block;
+  line-height: 1.4285em;
 }
-.container--dealer__button .wrapper--dealer__button {
-  width: 100%;
-}
-@media (min-width: 1025px) {
-  .container--dealer__button .wrapper--dealer__button {
-    max-width: 278px;
-  }
-}
-.container--dealer__button .paragraph .link {
-  font-family: Century;
-  color: white;
+.container--faq .link {
+  color: black;
   text-decoration: none;
-  background: #0c0c0c;
-  text-transform: uppercase;
-  padding: 12px 27px;
-  font-weight: 400;
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .container--livelo__fullBanner {
