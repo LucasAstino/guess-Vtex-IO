@@ -16,9 +16,9 @@
         "src": "assets/images/home/bannerTop.jpg",
         "blockClass":"bannerTop__slider",
         "experimentalSetExplicitDimensions": true,
-        "width": "1920",
-        "height": "100"
-        
+        "alt": "Banner Topo",
+        "width": "1920px",
+        "height": "auto"
       }
     },
     "image#bannerTop__slider-mobile": {
