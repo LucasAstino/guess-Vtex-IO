@@ -1,8 +1,21 @@
 {
-    "image#topBanner__PDP": {
-      "title": "Top Banner PDP",
+    "image#topBanner__PDP_desktop": {
+      "title": "Top Banner Home Desktop",
       "props": {
         "src": "",
+        "blockClass":"bannerTop__slider",
+        "experimentalSetExplicitDimensions": true,
+        "alt": "Banner Topo",
+        "width": "1920px",
+        "height": "auto"
+      }
+    },
+    "image#topBanner__PDP-mobile": {
+      "title": "Top Banner Home Mobile",
+      "props": {
+        "src": "",
+        "blockClass":"bannerTop__slider",
+        "experimentalSetExplicitDimensions": true,
         "alt": "Banner Topo",
         "width": "425px",
         "height": "auto"

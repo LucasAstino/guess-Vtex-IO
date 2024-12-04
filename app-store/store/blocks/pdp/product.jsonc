@@ -29,7 +29,7 @@
       "renderChildren": false
     },
     "children": [
-      "image#topBanner__PDP"
+      "image#topBanner__PDP_desktop"
     ]
   },
   "toggle-layout#bannerTop__pdp-mobile": {
@@ -38,7 +38,7 @@
       "renderChildren": false
     },
     "children": [
-      "image#topBanner__PDP"
+      "image#topBanner__PDP-mobile"
     ]
   },  
 
