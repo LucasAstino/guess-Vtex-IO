@@ -73,6 +73,7 @@
   width: 1920px;
   margin: auto;
   display: block;
+  height: auto;
 }
 
 .flexRow--lp__conteiner .flexRowContent--lp__conteiner {

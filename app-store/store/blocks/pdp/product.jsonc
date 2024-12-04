@@ -8,7 +8,7 @@
   "responsive-layout.desktop#product-main": {
     "title":"Conteúdo dektop",
     "children": [
-      "image#topBanner__PDP",
+      "toggle-layout#bannerTop__pdp-desktop",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product-main--desktop",
       "VisitedProductsSlider"
@@ -17,11 +17,30 @@
   "responsive-layout.mobile#product-main": {
     "title":"Conteúdo mobile",
     "children": [
-      "image#topBanner__PDP",
+      "toggle-layout#bannerTop__pdp-mobile",
       "flex-layout.row#product-main--mobile",
       "VisitedProductsSlider"
     ]
   },
+
+  "toggle-layout#bannerTop__pdp-desktop": {
+    "title": "Ativador Banner Topo Desktop",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#topBanner__PDP"
+    ]
+  },
+  "toggle-layout#bannerTop__pdp-mobile": {
+    "title": "Ativador Banner Topo Mobile",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#topBanner__PDP"
+    ]
+  },  
 
   "flex-layout.row#product-breadcrumb": {
     "props": {

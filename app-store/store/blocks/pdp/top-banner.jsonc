@@ -1,9 +1,11 @@
 {
     "image#topBanner__PDP": {
-        "title": "Top banner",
+      "title": "Top Banner PDP",
       "props": {
-        "src": ""
-        
+        "src": "",
+        "alt": "Banner Topo",
+        "width": "425px",
+        "height": "auto"
       }
     }
 }
