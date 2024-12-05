@@ -6,29 +6,49 @@
         "children": [ "responsive-layout.desktop##bannerTop__slider",  "responsive-layout.mobile##bannerTop__slider"]
     },
     "responsive-layout.desktop##bannerTop__slider": {
-      "children": [ "image#bannerTop__slider_desktop"]
+      "children": ["toggle-layout#bannerTop__slider-desktop"]
     },
     "responsive-layout.mobile##bannerTop__slider": {
-      "children": [ "image#bannerTop__slider-mobile"]
+      "children": ["toggle-layout#bannerTop__slider-mobile"]
     },
+    "toggle-layout#bannerTop__slider-desktop": {
+      "title": "Ativador Banner Topo Desktop",
+      "props": {
+        "renderChildren": false
+      },
+      "children": [
+        "image#bannerTop__slider_desktop"
+      ]
+    },
+    "toggle-layout#bannerTop__slider-mobile": {
+      "title": "Ativador Banner Topo Mobile",
+      "props": {
+        "renderChildren": false
+      },
+      "children": [
+        "image#bannerTop__slider-mobile"
+      ]
+    },   
     "image#bannerTop__slider_desktop": {
+      "title": "Top Banner Home Desktop",
       "props": {
         "src": "assets/images/home/bannerTop.jpg",
         "blockClass":"bannerTop__slider",
         "experimentalSetExplicitDimensions": true,
-        "width": "1920",
-        "height": "100"
-        
+        "alt": "Banner Topo",
+        "width": "1920px",
+        "height": "auto"
       }
     },
     "image#bannerTop__slider-mobile": {
+      "title": "Top Banner Home Mobile",
       "props": {
         "src": "assets/images/home/topbannermobile.svg",
         "blockClass":"bannerTop__slider",
         "experimentalSetExplicitDimensions": true,
-        "width": "425",
-        "height": "71"
-        
+        "alt": "Banner Topo",
+        "width": "425px",
+        "height": "auto"
       }
     }
 }

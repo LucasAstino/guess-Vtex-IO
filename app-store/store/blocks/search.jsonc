@@ -66,7 +66,7 @@
 
   "search-result-layout.desktop": {
     "children": [
-      "image#search__result",
+      "toggle-layout#search__result-desktop",
       "ConditionBlock",
       "flex-layout.row#searchbread",
       "flex-layout.row#result",
@@ -157,11 +157,32 @@
     }
   },
 
+  "toggle-layout#search__result-desktop": {
+    "title": "Ativador Banner Topo Desktop",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#search__result"
+    ]
+  },
+  "toggle-layout#search__result-mobile": {
+    "title": "Ativador Banner Topo Mobile",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "image#search__result"
+    ]
+  },
+
   "image#search__result": {
-    "title": "top banner",
+    "title": "Top Banner Categoria",
     "props": {
       "src": "",
-      "blockClass": "search__result"
+      "blockClass": "search__result",
+      "alt": "Banner Topo",
+      "height": "auto"
     }
   },
 
@@ -230,7 +251,7 @@
 
   "search-result-layout.mobile": {
     "children": [
-      "image#search__result",
+      "toggle-layout#search__result-mobile",
       "ConditionBlock",
       "flex-layout.row#productCountMobile",
       "flex-layout.row#searchinfomobile",

@@ -1,7 +1,7 @@
 {
   "vendor": "guessbr",
   "name": "fg-store",
-  "version": "1.0.79",
+  "version": "1.0.81",
   "builders": {
     "assets": "0.x",
     "styles": "2.x",
@@ -13,6 +13,7 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
+    "vtex.toggle-layout": "0.x",
     "vtex.store": "2.x",
     "vtex.store-header": "2.x",
     "vtex.product-summary": "2.x",
