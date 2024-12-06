@@ -537,27 +537,6 @@
   margin: 0;
 }
 
-.container--content__seo {
-  max-width: 1800px;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 40px;
-}
-
-.container--seo__content {
-  justify-content: center;
-  margin-bottom: 40px;
-  padding: 0 30px;
-}
-@media (max-width: 1025px) {
-  .container--seo__content .wrapper--seo__content .heading--seo__content {
-    font-size: 24px;
-  }
-}
-.container--seo__content .link {
-  color: black;
-}
-
 .container--fast-buy .wrapper {
   width: 100%;
 }
@@ -612,6 +591,27 @@
     width: 8px;
     height: 1px;
   }
+}
+
+.container--content__seo {
+  max-width: 1800px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.container--seo__content {
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 30px;
+}
+@media (max-width: 1025px) {
+  .container--seo__content .wrapper--seo__content .heading--seo__content {
+    font-size: 24px;
+  }
+}
+.container--seo__content .link {
+  color: black;
 }
 
 .container--category__list-title {
@@ -1035,6 +1035,22 @@
   font-size: 20px;
 }
 
+.container--faq .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.container--faq .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--faq .link {
+  color: black;
+  text-decoration: none;
+}
+
 .container--table__sizes-title {
   position: absolute;
   top: 30px;
@@ -1104,22 +1120,6 @@
   font-size: 14px;
   line-height: 1.4285em;
   margin: 2rem 0;
-}
-
-.container--faq .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 22px;
-}
-.container--faq .paragraph {
-  font-family: Century;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--faq .link {
-  color: black;
-  text-decoration: none;
 }
 
 .container--livelo__fullBanner {

@@ -23,7 +23,7 @@
   "search-result-layout.desktop#lp-collection-custom": {
         "title": "Listagem Desktop",
         "children": [
-
+          "toggle-layout#search__result-desktop",
            "flex-layout.row#result"
         ],
         "props": {
