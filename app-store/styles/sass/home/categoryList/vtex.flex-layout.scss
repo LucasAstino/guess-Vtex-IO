@@ -18,6 +18,13 @@
                     width: fit-content;
                 }
             }
+            @include mobile{
+                .flexCol--category__list{
+                    :global(.vtex-store-components-3-x-imageElement) {
+                        max-height: 256px !important;
+                    }
+                }
+            }
         }
     }
 }
