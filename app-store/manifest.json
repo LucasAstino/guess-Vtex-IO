@@ -1,7 +1,7 @@
 {
   "vendor": "guessbr",
   "name": "fg-store",
-  "version": "1.0.86",
+  "version": "1.0.87",
   "builders": {
     "assets": "0.x",
     "styles": "2.x",
