@@ -52,7 +52,9 @@ export function SimilarProductsVariants({
 
   console.log(data,"dataaa")
 
-  const { productRecommendations } = data?.productRecommendations || []
+  const { productRecommendations } = data
+
+  console.log(productRecommendations,'newewwwwww')
 
   const { products } = {
     products: productRecommendations || [],
@@ -75,7 +77,9 @@ export function SimilarProductsVariants({
   })
 
   if (items.length === 0) {
-   
+
+    
+    console.log('variaçãoooo111111111111',items)
     return (
       <div className={handles['similar__products-variants']}>
         <p className={handles['similar__products-variants--title']}>
@@ -89,7 +93,7 @@ export function SimilarProductsVariants({
       </div>
     )
   }
-
+  console.log('variaçãoooo22222222222',items)
   return (
     <div className={handles['similar__products-variants']}>
       <p className={handles['similar__products-variants--title']}>
