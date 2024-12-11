@@ -102,5 +102,9 @@
   },
   "custom-flag-black-friday": {
     "component": "CustomFlagBlackFriday"
+  },
+  "category-validator": {
+    "component": "CategoryValidator",
+    "composition": "children"
   }
 }
