@@ -1,28 +1,37 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
-  },
-  "header.full": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
-  },
-  "header-layout.desktop": {
-    "title":"header desktop",
-    "children": [
-       "sticky-layout#desktop",
-      "Helmet",
-      "PopupForm",
-      "BackToTop"
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
     ]
   },
-
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "title": "header desktop",
+    "children": [
+      "sticky-layout#desktop",
+      "Helmet",
+      "PopupForm",
+      "backToTop"
+    ]
+  },
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
   },
-
   "header-layout.mobile": {
-    "title":"header mobile",
-    "children": ["Topbar", "sticky-layout#mobile", "Helmet", "PopupForm"]
+    "title": "header mobile",
+    "children": [
+      "Topbar",
+      "sticky-layout#mobile",
+      "Helmet",
+      "PopupForm"
+    ]
   }
 }
