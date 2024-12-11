@@ -1,108 +1,106 @@
 {
-  "Helmet":{
-    "component":"Helmet"
+  "Helmet": {
+    "component": "Helmet"
   },
-  "AstinoMenu":{
-    "component":"AstinoMenu",
+  "AstinoMenu": {
+    "component": "AstinoMenu",
     "render": "server"
   },
-  "PrivacyPolicy":{
-    "component":"PrivacyPolicy"
+  "PrivacyPolicy": {
+    "component": "PrivacyPolicy"
   },
-  "BackToTop":{
-    "component":"BackToTop"
+  "backToTop": {
+    "component": "backToTop"
   },
-  "LoginHeader":{
-    "component":"LoginHeader"
+  "LoginHeader": {
+    "component": "LoginHeader"
   },
-  "GoogleMap":{
-    "component":"Map"
+  "GoogleMap": {
+    "component": "Map"
   },
-  "TableFeminine":{
-    "component":"TableFeminine"
+  "TableFeminine": {
+    "component": "TableFeminine"
   },
-  "Minicart":{
-    "component":"Minicart",
+  "Minicart": {
+    "component": "Minicart",
     "render": "server"
   },
-  "fg-product-variants":{
-    "component":"product-variants"
+  "fg-product-variants": {
+    "component": "product-variants"
   },
-  "ProductCharacteristics":{
-    "component":"ProductCharacteristics"
+  "ProductCharacteristics": {
+    "component": "ProductCharacteristics"
   },
-  "TableMasculine":{
-    "component":"TableMasculine"
+  "TableMasculine": {
+    "component": "TableMasculine"
   },
-  "VisitedProductsSlider":{
-    "component":"VisitedProductsSlider",
+  "VisitedProductsSlider": {
+    "component": "VisitedProductsSlider",
     "composition": "children"
   },
-  "BuyToShelf":{
-    "component":"BuyToShelf",
+  "BuyToShelf": {
+    "component": "BuyToShelf",
     "composition": "children"
   },
-  "SkuFromShelf":{
-    "component":"SkuFromShelf",
+  "SkuFromShelf": {
+    "component": "SkuFromShelf",
     "composition": "children"
   },
-  "ShippingSimulator":{
-    "component":"ShippingSimulator"
+  "ShippingSimulator": {
+    "component": "ShippingSimulator"
   },
-  "GiftCards":{
-    "component":"gift"
+  "GiftCards": {
+    "component": "gift"
   },
-  "CsvPreview":{
-    "component":"CsvPreview"
+  "CsvPreview": {
+    "component": "CsvPreview"
   },
-  "KitLook":{
-    "component":"KitLook",
+  "KitLook": {
+    "component": "KitLook",
     "composition": "children"
   },
-  "LoginOrUserName":{
-    "component":"LoginOrUserName"
+  "LoginOrUserName": {
+    "component": "LoginOrUserName"
   },
-  "Topbar":{
-    "component":"Topbar"
+  "Topbar": {
+    "component": "Topbar"
   },
-  "Container-lp":{
-    "component":"Container-lp",
+  "Container-lp": {
+    "component": "Container-lp",
     "composition": "children"
   },
-  "ConditionBlock":{
-    "component":"conditionBlock",
+  "ConditionBlock": {
+    "component": "conditionBlock",
     "composition": "children"
   },
-  "CustomModal":{
-    "component":"CustomModal",
+  "CustomModal": {
+    "component": "CustomModal",
     "composition": "children"
   },
-  "guideSize":{
-    "component":"guideSize",
+  "guideSize": {
+    "component": "guideSize",
     "composition": "children"
   },
-  "PopupForm":{
-    "component":"PopupForm"
+  "PopupForm": {
+    "component": "PopupForm"
   },
-  "Contact-us":{
-    "component":"contact-us"
+  "Contact-us": {
+    "component": "contact-us"
   },
-  "VideoPlayer":{
-    "component":"Video"
+  "VideoPlayer": {
+    "component": "Video"
   },
-  "closeFilter":{
-    "component":"closeFilter"
+  "closeFilter": {
+    "component": "closeFilter"
   },
-  "ProductCashbackDisplay":{
-    "component":"ProductCashbackDisplay"
+  "ProductCashbackDisplay": {
+    "component": "ProductCashbackDisplay"
   },
-  "commumScript":{
-    "component":"commumScript",
+  "commumScript": {
+    "component": "commumScript",
     "render": "lazy"
   },
   "custom-flag-black-friday": {
     "component": "CustomFlagBlackFriday"
   }
 }
-
-
