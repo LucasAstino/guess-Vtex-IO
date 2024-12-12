@@ -14,6 +14,12 @@
   color: black;
 }
 
+@media (max-width: 768px){
+  :global(.vtex-flex-layout-0-x-flexColChild--orderByMobileCol) :global(.vtex-search-result-3-x-filterPopupTitle) {
+    width: 200px;
+  }
+}
+
 .container {
   width: fit-content !important;
 }
