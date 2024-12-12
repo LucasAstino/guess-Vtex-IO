@@ -14,3 +14,12 @@
 :global(.vtex-my-orders-app-3-x-productName){
     color: black;
 }
+
+:global(.vtex-flex-layout-0-x-flexColChild--orderByMobileCol){
+  :global(.vtex-search-result-3-x-filterPopupTitle) {
+    @media (max-width: 768px){
+      width: 200px;
+    }
+  }
+}
+
