@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef ,useEffect,useContext } from "react";
+import React, { FC, useState, useRef, useEffect, useContext } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { useCssHandles, CssHandlesTypes } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
@@ -83,7 +83,7 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
     0
   );
   const totalPrice = items.reduce(
-    (acc: any, item: any) => acc + item.sellingPrice,
+    (acc: any, item: any) => acc + item.sellingPrice * item.quantity,
     0
   );
 
@@ -150,65 +150,66 @@ export const CustomMinicart: FC<CustomMinicartProps> = ({
 
       {totalItems > 0
         ? isDrawerOpen && (
-            <div
-              className={`${handles.minicartContainer}`}
-              onMouseEnter={openDrawer}
-              onMouseLeave={closeDrawer}
-            >
-              <div className={handles.cartHeader}>
-                <p className={handles.cartTitle}>Meu Carrinho</p>
-                <p className={handles.cartSegure}>Compra 100% segura</p>
-              </div>
-              <div className={handles.cartItems}>
-                {items.map((item: any, index: any) => (
-                  <div key={index} className={handles.cartItem}>
-                    <img
-                      className={handles["minicart__product-img"]}
-                      src={item.imageUrls.at1x}
-                      alt={item.name}
-                    />
-                    <div className={handles.itemDetails}>
-                      <p className={handles["minicart__product-name"]}>
-                        {item.name}
-                      </p>
-                      <span className={handles["minicart__product-un"]}>
-                        Valor un.
-                      </span>
-                      <span className={handles["minicart__product-price"]}>
-                        R${(item.price / 100).toFixed(2).replace(".", ",")}
-                      </span>
-                    </div>
+          <div
+            className={`${handles.minicartContainer}`}
+            onMouseEnter={openDrawer}
+            onMouseLeave={closeDrawer}
+          >
+            <div className={handles.cartHeader}>
+              <p className={handles.cartTitle}>Meu Carrinho</p>
+              <p className={handles.cartSegure}>Compra 100% segura</p>
+            </div>
+            <div className={handles.cartItems}>
+              {items.map((item: any, index: any) => (
+                <div key={index} className={handles.cartItem}>
+                  <img
+                    className={handles["minicart__product-img"]}
+                    src={item.imageUrls.at1x}
+                    alt={item.name}
+                  />
+                  <div className={handles.itemDetails}>
+                    <p className={handles["minicart__product-name"]}>
+                      {item.name}
+                    </p>
+                    <span className={handles["minicart__product-un"]}>
+                      Valor un.
+                    </span>
+                    <span className={handles["minicart__product-price"]}>
+                      R${(item.price / 100).toFixed(2).replace(".", ",")}
+                    </span>
                   </div>
-                ))}
-              </div>
-              <div className={handles.cartFooter}>
-                <span className={handles.minicartTotalizer}>
-                  Total a pagar: R${(totalPrice / 100).toFixed(2)}
-                </span>
-                <div className={handles.minicartButtons}>
-                  <a href="/checkout#/cart" className={handles.cartButton}>
-                    Carrinho
-                  </a>
-                  <a href="/checkout#/email" className={handles.checkoutButton}>
-                    Finalizar compra
-                  </a>
                 </div>
+              ))}
+            </div>
+            <div className={handles.cartFooter}>
+              <span className={handles.minicartTotalizer}>
+                Total a pagar: R${(totalPrice / 100).toFixed(2).replace(".", ",")}
+              </span>
+
+              <div className={handles.minicartButtons}>
+                <a href="/checkout#/cart" className={handles.cartButton}>
+                  Carrinho
+                </a>
+                <a href="/checkout#/email" className={handles.checkoutButton}>
+                  Finalizar compra
+                </a>
               </div>
             </div>
-          )
+          </div>
+        )
         : isDrawerOpen && (
-            <div className={`${handles.minicartContainer} ${handles.empty}`}>
-              <div className={handles.cartHeader}>
-                <p className={handles.cartTitle}>Meu Carrinho</p>
-                <p className={handles.cartSegure}>Compra 100% segura</p>
-              </div>
-              <div className={handles.cartFooter}>
-                <div className={handles.emptyCartMessage}>
-                  Que pena! Seu carrinho está vazio
-                </div>
+          <div className={`${handles.minicartContainer} ${handles.empty}`}>
+            <div className={handles.cartHeader}>
+              <p className={handles.cartTitle}>Meu Carrinho</p>
+              <p className={handles.cartSegure}>Compra 100% segura</p>
+            </div>
+            <div className={handles.cartFooter}>
+              <div className={handles.emptyCartMessage}>
+                Que pena! Seu carrinho está vazio
               </div>
             </div>
-          )}
+          </div>
+        )}
     </div>
   );
 };
