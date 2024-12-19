@@ -6,7 +6,16 @@ interface ICategoryValidator {
 
 const CategoryValidator = ({ children }: ICategoryValidator) => {
   useEffect(() => {
-    if (window.location.pathname === '/bolsas') {
+    const validPaths = [
+      '/bolsas',
+      '/feminino',
+      '/masculino',
+      '/feminino/roupas/camisetas',
+      '/feminino/roupas/blusas',
+      '/masculino/roupas/camisetas'
+    ];
+
+    if (validPaths.includes(window.location.pathname)) {
       const container = document.querySelector('.vtex-search-result-3-x-orderByOptionsContainer');
       const orderByOptionItems = Array.from(document.querySelectorAll('.vtex-search-result-3-x-orderByOptionItem'));
 
