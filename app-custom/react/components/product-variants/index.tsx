@@ -34,8 +34,11 @@ export function SimilarProductsVariants({
 }: SimilarProductsVariantsProps) {
   const { handles } = useCssHandles(HANDLES_VARIANTS)
   const product = useProduct()
-  const color = product?.selectedItem?.variations?.[1]?.values?.[0] || 'N/A'
-   const backgroundColor = product?.selectedItem?.variations?.[2]?.values?.[0] || 'N/A'
+  const variations = product?.selectedItem?.variations || [];
+  const colorVariation = variations.find(variation => variation.name === 'Cor');
+  const color = colorVariation?.values?.[0] || 'N/A';
+  const backgroundColorVariation = variations.find(variation => variation.name === 'Hexadecimal');
+  const backgroundColor = backgroundColorVariation?.values?.[0] || 'N/A';
   const productContext = useProduct()
   const productId =
     productQuery?.product?.productId ?? productContext?.product?.productId
@@ -50,11 +53,8 @@ export function SimilarProductsVariants({
 
   if (loading || error) return null
 
-  console.log(data,"dataaa")
-
   const { productRecommendations } = data
 
-  console.log(productRecommendations,'newewwwwww')
 
   const { products } = {
     products: productRecommendations || [],
@@ -78,34 +78,35 @@ export function SimilarProductsVariants({
 
   if (items.length === 0) {
 
-    
-    console.log('variaçãoooo111111111111',items)
+
     return (
       <div className={handles['similar__products-variants']}>
         <p className={handles['similar__products-variants--title']}>
           Cor: <span className={handles['variant-type']}>{color}</span>
         </p>
-        <div style={{display:'flex'}} className={handles['similar__products-variants--wrap']}>
+        <div style={{ display: 'flex' }} className={handles['similar__products-variants--wrap']}>
           <div className={`${handles['similar__image-container']} ${handles['similar__image-container--current']}`}>
-            <span className={handles['similar__products-variants--circle']} style={{height:'20px',width:'20px',backgroundColor:backgroundColor,display:'block'}}></span>
+            <span className={handles['similar__products-variants--circle']} style={{ height: '20px', width: '20px', backgroundColor: backgroundColor, display: 'block' }}></span>
           </div>
         </div>
       </div>
     )
   }
-  console.log('variaçãoooo22222222222',items)
   return (
     <div className={handles['similar__products-variants']}>
       <p className={handles['similar__products-variants--title']}>
         Cor: <span className={handles['variant-type']}>{color}</span>
       </p>
-      <div style={{display:'flex'}} className={handles['similar__products-variants--wrap']}>
+      <div style={{ display: 'flex' }} className={handles['similar__products-variants--wrap']}>
         <div className={`${handles['similar__image-container']} ${handles['similar__image-container--current']}`}>
-        <span className={handles['similar__products-variants--circle']} style={{height:'20px',width:'20px',backgroundColor:backgroundColor,display:'block'}}></span>
+          <span className={handles['similar__products-variants--circle']} style={{ height: '20px', width: '20px', backgroundColor: backgroundColor, display: 'block' }}></span>
         </div>
         {items.map((element: ProductTypes.Product) => {
-    
-          const backgroundColor = element?.items?.[0].variations?.[2]?.values?.[0] || 'N/A'
+
+          const variations = element?.items?.[0]?.variations || [];
+
+          const hexVariation = variations.find((variation) => variation.name === 'Hexadecimal');
+          const backgroundColor = hexVariation?.values?.[0] || 'N/A';
           return (
             <Link
               key={element.productId}
@@ -117,7 +118,7 @@ export function SimilarProductsVariants({
               }}
             >
               <div className={handles['similar__image-container']}>
-              <span className={handles['similar__products-variants--circle']} style={{height:'20px',width:'20px',backgroundColor:backgroundColor,display:'block'}}></span>
+                <span className={handles['similar__products-variants--circle']} style={{ height: '20px', width: '20px', backgroundColor: backgroundColor, display: 'block' }}></span>
               </div>
             </Link>
           )

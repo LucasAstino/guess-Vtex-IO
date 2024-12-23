@@ -1,7 +1,7 @@
 {
   "store.home": {
     "blocks": [
-     "rich-text#h1__home",
+      "rich-text#h1__home",
       "flex-layout.row#bannerTop__slider",
       "list-context.image-list#fullbanner",
       // "rich-text#first__shelf-title",
@@ -9,10 +9,10 @@
       // "GiftCards",
       "ConditionBlock#conditionl__home",
       "__fold__",
-       "responsive-layout.desktop#category__list",
-       "responsive-layout.mobile#category__list",
+      "responsive-layout.desktop#category__list",
+      "responsive-layout.mobile#category__list",
       "rich-text#first__shelf-title",
-       "flex-layout.row#grid_product-home",
+      "flex-layout.row#grid_product-home",
       "rich-text#last__shelf-title",
       "flex-layout.row#secund__shelf",
       "flex-layout.row#last__shelf"
