@@ -106,5 +106,8 @@
   "category-validator": {
     "component": "CategoryValidator",
     "composition": "children"
+  },
+  "GetItemVariation": {
+    "component": "GetItemVariation"
   }
 }
