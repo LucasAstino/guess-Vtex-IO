@@ -12,7 +12,8 @@ const CategoryValidator = ({ children }: ICategoryValidator) => {
       '/masculino',
       '/feminino/roupas/camisetas',
       '/feminino/roupas/blusas',
-      '/masculino/roupas/camisetas'
+      '/masculino/roupas/camisetas',
+      '/sale',
     ];
 
     if (validPaths.includes(window.location.pathname)) {
