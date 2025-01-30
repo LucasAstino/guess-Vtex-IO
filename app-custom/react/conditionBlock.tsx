@@ -1,3 +1,3 @@
-import { ConditionBlock } from './components/ConditionBlock/index'
+import { ConditionBlock } from './components/conditionBlock'
 
 export default ConditionBlock
