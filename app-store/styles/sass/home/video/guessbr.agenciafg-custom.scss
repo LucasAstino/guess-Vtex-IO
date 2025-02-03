@@ -1,8 +1,22 @@
 .video__player{
-    aspect-ratio: 16/9;
     margin-top: 78px;
+    height: fit-content !important;
+
+    &-video{
+      height: 734px !important;
+      @include tablet {
+        width: 100%;
+        max-height: 520px !important;
+      }
+
+      @include mobile {
+        width: 100%;
+        max-height: 430px !important;
+      }
+    }
+
+
     @include tablet{
         margin-top: 33px;
-        aspect-ratio: 360/355;
     }
 }

@@ -1,3 +1,35 @@
+.trigger--filter {
+  all: unset;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trigger--filter--hidden::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid #565d61;
+  border-right: 2px solid #565d61;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.trigger--filter--visible::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid #565d61;
+  border-right: 2px solid #565d61;
+  rotate: 224deg;
+}
+
+.content--filter--visible {
+  width: 200px;
+}
+
 .trigger--product__description-pdp {
   all: unset;
   width: 100%;
@@ -47,38 +79,6 @@
 .content--product__description-pdp :global(.vtex-store-components-3-x-productDescriptionText) {
   font-size: 14px;
   margin-top: 10px;
-}
-
-.trigger--filter {
-  all: unset;
-  position: absolute;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.trigger--filter--hidden::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-bottom: 2px solid #565d61;
-  border-right: 2px solid #565d61;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.trigger--filter--visible::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-bottom: 2px solid #565d61;
-  border-right: 2px solid #565d61;
-  rotate: 224deg;
-}
-
-.content--filter--visible {
-  width: 200px;
 }
 
 .trigger--footer__menu-trigger {
