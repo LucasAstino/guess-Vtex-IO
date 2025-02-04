@@ -5,6 +5,10 @@
     .heading--category__list-title {
       font-size: 64px;
       color: #655b43;
+      @media (max-width: 1400px) and (min-width: 1024px) {
+        margin-top: 0;
+      }
+
       @include tablet {
         font-size: 25px;
       }
@@ -24,7 +28,7 @@
         width: 150px;
         font-size: 13px;
         border: 0;
-        
+
         &::after {
           content: "";
           width: 51px;
