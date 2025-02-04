@@ -622,6 +622,11 @@
   font-size: 64px;
   color: #655b43;
 }
+@media (max-width: 1400px) {
+  .container--category__list-title .heading--category__list-title {
+    margin-top: 0;
+  }
+}
 @media (max-width: 1025px) {
   .container--category__list-title .heading--category__list-title {
     font-size: 25px;
@@ -1051,39 +1056,6 @@
   text-decoration: none;
 }
 
-.container--terms .heading-level-1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-.container--terms .heading-level-2 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--terms .heading-level-3 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-  text-transform: uppercase;
-}
-.container--terms .headingLevel4 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--terms .paragraph {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-  margin: 2rem 0;
-}
-
 .container--table__sizes-title {
   position: absolute;
   top: 30px;
@@ -1120,6 +1092,39 @@
   font-family: Century;
   font-size: 14px;
   line-height: 1.4285em;
+}
+
+.container--terms .heading-level-1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--terms .heading-level-2 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .heading-level-3 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  text-transform: uppercase;
+}
+.container--terms .headingLevel4 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .paragraph {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin: 2rem 0;
 }
 
 .container--livelo__fullBanner {
