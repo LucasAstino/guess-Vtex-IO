@@ -5,7 +5,7 @@
     .heading--category__list-title {
       font-size: 64px;
       color: #655b43;
-      @media (max-width: 1400px) {
+      @media (max-width: 1400px) and (min-width: 1024px) {
         margin-top: 0;
       }
 
