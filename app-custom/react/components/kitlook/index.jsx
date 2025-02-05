@@ -26,6 +26,7 @@ export const KitLookComponent = () => {
   const productContext = useProduct();
   const { handles } = useCssHandles(KITLOOK);
   const [hasItems, setHasItems] = useState(false);
+  const [dataQuery, setDataQuery] = useState(false);
 
   // Hook para monitorar tamanho da tela
   const [isMobile, setIsMobile] = useState(false);
@@ -43,14 +44,14 @@ export const KitLookComponent = () => {
     }
   }, [ids]);
 
-  
   const ids =
   productContext?.product?.properties[4]?.values[0]
   ?.split(";")
   .map((id) => id.trim()) || [];
-  
+
   console.log('contexto pdp =>',ids)
   console.log('contexto pdp =>',productContext)
+  console.log('dataQuery =>', dataQuery)
 
   const slickSettings = {
     dots: false,
@@ -62,18 +63,15 @@ export const KitLookComponent = () => {
     swipeToSlide: true,
   };
 
-  
-
   return (
     <div className={handles["kitLook__container"]}>
-      {hasItems && <p className={handles["kitLook__title"]}>Complete o look</p>}
+      {hasItems || dataQuery && <p className={handles["kitLook__title"]}>Complete o look</p>}
       <div className="slider-wrapper">
         {isMobile ? (
          <SliderLayout
          itemsPerPage={{
            phone: 2,
          }}
-         
          showNavigationArrows="always"
          showPaginationDots="never"
          centerMode="to-the-left"
@@ -88,8 +86,9 @@ export const KitLookComponent = () => {
                 skip: !id,
               });
 
+              setDataQuery(data)
               if (loading) return <p key={index}>Carregando...</p>;
-              if (error) return <p key={index}>Erro ao carregar dados do SKU</p>;
+              if (error) return <p key={index}></p>;
 
               const item = data?.product;
 
@@ -136,7 +135,7 @@ export const KitLookComponent = () => {
               });
 
               if (loading) return <p key={index}>Carregando...</p>;
-              if (error) return <p key={index}>Erro ao carregar dados do SKU</p>;
+              if (error) return <p key={index}></p>;
 
               const item = data?.product;
 
