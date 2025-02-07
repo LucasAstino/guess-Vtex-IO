@@ -201,7 +201,17 @@ export function PrivacyPolicyPart1() {
             }}
           >
             <strong>Troque Fácil na Plataforma Guess Brasil:{' '}</strong>
-            Para a troca e devolução de produtos adquiridos pelo site (https://guessbrasil.troquefacil.com.br/), o cliente deverá cadastrar o número do pedido da compra efetuada e o e-mail cadastrado no momento da compra para identificação do produto. Coletamos as seguintes informações do comprador da mercadoria a ser devolvida: nome completo, RG, e-mail, telefone para contato, dentre outras informações relacionadas à operação comercial como o local e data da compra, fotos da mercadoria supostamente defeituosa e foto da nota fiscal de compra. o cadastramento ocorrerá no site do parceiro, responsável pelo gerenciamento de trocas e devoluções de produtos. para entender como o parceiro utiliza as suas informações, veja o seu Termo de uso e Aviso de Privacidade disponível na página de cadastramento.
+            Para a troca e devolução de produtos adquiridos pelo site (
+              <a
+              href="https://guessbrasil.troquefacil.com.br/"
+              style={{
+                color: "#0563c1",
+                textDecoration: "underline",
+              }}
+              target="_blank"
+            >
+              https://guessbrasil.troquefacil.com.br/
+            </a>), o cliente deverá cadastrar o número do pedido da compra efetuada e o e-mail cadastrado no momento da compra para identificação do produto. Coletamos as seguintes informações do comprador da mercadoria a ser devolvida: nome completo, RG, e-mail, telefone para contato, dentre outras informações relacionadas à operação comercial como o local e data da compra, fotos da mercadoria supostamente defeituosa e foto da nota fiscal de compra. o cadastramento ocorrerá no site do parceiro, responsável pelo gerenciamento de trocas e devoluções de produtos. para entender como o parceiro utiliza as suas informações, veja o seu Termo de uso e Aviso de Privacidade disponível na página de cadastramento.
             <br /> <br /> Devolução de mercadorias em lojas físicas:
           </p>
           <p
