@@ -26,7 +26,6 @@ export const KitLookComponent = () => {
   const productContext = useProduct();
   const { handles } = useCssHandles(KITLOOK);
   const [hasItems, setHasItems] = useState(false);
-  const [dataQuery, setDataQuery] = useState(false);
 
   // Hook para monitorar tamanho da tela
   const [isMobile, setIsMobile] = useState(false);
@@ -49,7 +48,7 @@ export const KitLookComponent = () => {
   ?.split(";")
   .map((id) => id.trim()) || [];
 
-  console.log('contexto pdp =>',ids)
+  console.log('contexto ids =>',ids)
   console.log('contexto pdp =>',productContext)
   console.log('dataQuery =>', dataQuery)
 
@@ -65,7 +64,7 @@ export const KitLookComponent = () => {
 
   return (
     <div className={handles["kitLook__container"]}>
-      {hasItems || dataQuery && <p className={handles["kitLook__title"]}>Complete o look</p>}
+      {hasItems && <p className={handles["kitLook__title"]}>Complete o look</p>}
       <div className="slider-wrapper">
         {isMobile ? (
          <SliderLayout
@@ -86,7 +85,6 @@ export const KitLookComponent = () => {
                 skip: !id,
               });
 
-              setDataQuery(data)
               if (loading) return <p key={index}>Carregando...</p>;
               if (error) return <p key={index}></p>;
 
