@@ -49,8 +49,6 @@ export const KitLookComponent = () => {
   ?.split(";")
   .map((id) => id.trim()) || [];
   
-  console.log('contexto pdp =>',ids)
-  console.log('contexto pdp =>',productContext)
 
   const slickSettings = {
     dots: false,
