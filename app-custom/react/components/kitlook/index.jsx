@@ -44,13 +44,15 @@ export const KitLookComponent = () => {
   }, [ids]);
 
   const ids =
-  productContext?.product?.properties[4]?.values[0]
+  productContext?.product?.specificationGroups[0]?.name
   ?.split(";")
   .map((id) => id.trim()) || [];
 
   console.log('contexto ids =>',ids)
+  console.log('productContext =>',productContext)
+  console.log('productContext?.product =>',productContext?.product)
+  console.log('productContext?.product?.properties[4] =>',productContext?.product?.properties[4])
   console.log('contexto pdp =>',productContext)
-  console.log('dataQuery =>', dataQuery)
 
   const slickSettings = {
     dots: false,
