@@ -1,0 +1,20 @@
+.productHighlightWrapper {
+  font-size: 0;
+  padding: 5px 15px;
+
+  .productHighlightText[data-highlight-id="138"],
+  .productHighlightText[data-highlight-id="157"],
+  .productHighlightText[data-highlight-id="159"],
+  .productHighlightText[data-highlight-id="177"] {
+    &::after {
+      content: "Sale";
+      font-family: "Futura";
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 2%;
+      text-align: center;
+      color: #808080;
+    }
+  }
+}

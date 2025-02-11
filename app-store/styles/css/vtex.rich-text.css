@@ -665,6 +665,45 @@
   color: black;
 }
 
+.container--livelo__fullBanner {
+  justify-content: center;
+}
+.container--livelo__fullBanner .paragraph {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0;
+}
+.container--livelo__fullBanner .paragraph .link {
+  display: inline-block;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: black;
+}
+.container--livelo__fullBanner .heading {
+  border: none;
+  background: #ff0a8c;
+  color: #ffffff;
+  border-radius: 200px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  width: 178px;
+  text-align: center;
+  font-family: Futura;
+  margin: 10px 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .container--about-us-title {
   justify-content: center;
 }
@@ -728,23 +767,6 @@
   .container--about-us__last-paragraph .paragraph {
     margin: 1rem 0;
     text-align: justify;
-  }
-}
-
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  font-size: 40px;
-}
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
   }
 }
 
@@ -957,39 +979,6 @@
   margin-left: 10px;
 }
 
-.container--exchange_and_returns .heading {
-  font-family: Calibri;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4285em;
-}
-.container--exchange_and_returns .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-.container--exchange_and_returns .link {
-  color: black;
-  text-decoration: none;
-}
-.container--exchange_and_returns .paragraph {
-  font-family: Calibri;
-  font-size: 14px;
-}
-.container--exchange_and_returns .list {
-  list-style: none;
-}
-.container--exchange_and_returns .listItem {
-  font-weight: 400;
-  font-family: Calibri;
-}
-.container--exchange_and_returns .listItem::before {
-  content: "- ";
-  font-size: 20px;
-}
-
 .container--dealer .heading {
   font-family: Futura;
   font-style: normal;
@@ -1040,6 +1029,56 @@
   font-size: 14px;
 }
 
+.container--exchange_and_returns .heading {
+  font-family: Calibri;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4285em;
+}
+.container--exchange_and_returns .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--exchange_and_returns .link {
+  color: black;
+  text-decoration: none;
+}
+.container--exchange_and_returns .paragraph {
+  font-family: Calibri;
+  font-size: 14px;
+}
+.container--exchange_and_returns .list {
+  list-style: none;
+}
+.container--exchange_and_returns .listItem {
+  font-weight: 400;
+  font-family: Calibri;
+}
+.container--exchange_and_returns .listItem::before {
+  content: "- ";
+  font-size: 20px;
+}
+
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
 .container--faq .headingLevel1 {
   font-family: "Futura", sans-serif;
   font-weight: 300;
@@ -1054,6 +1093,39 @@
 .container--faq .link {
   color: black;
   text-decoration: none;
+}
+
+.container--terms .heading-level-1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.container--terms .heading-level-2 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .heading-level-3 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  text-transform: uppercase;
+}
+.container--terms .headingLevel4 {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--terms .paragraph {
+  font-family: Century;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 14px;
+  line-height: 1.4285em;
+  margin: 2rem 0;
 }
 
 .container--table__sizes-title {
@@ -1092,76 +1164,4 @@
   font-family: Century;
   font-size: 14px;
   line-height: 1.4285em;
-}
-
-.container--terms .heading-level-1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-.container--terms .heading-level-2 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--terms .heading-level-3 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-  text-transform: uppercase;
-}
-.container--terms .headingLevel4 {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--terms .paragraph {
-  font-family: Century;
-  color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 14px;
-  line-height: 1.4285em;
-  margin: 2rem 0;
-}
-
-.container--livelo__fullBanner {
-  justify-content: center;
-}
-.container--livelo__fullBanner .paragraph {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin: 0;
-}
-.container--livelo__fullBanner .paragraph .link {
-  display: inline-block;
-  margin-top: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.2em;
-  text-decoration-line: underline;
-  text-transform: uppercase;
-  color: black;
-}
-.container--livelo__fullBanner .heading {
-  border: none;
-  background: #ff0a8c;
-  color: #ffffff;
-  border-radius: 200px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  width: 178px;
-  text-align: center;
-  font-family: Futura;
-  margin: 10px 0;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }

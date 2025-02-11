@@ -1,4 +1,40 @@
 @charset "UTF-8";
+:global(.vtex-product-highlights-2-x-productHighlightWrapper) {
+  font-size: 0;
+  padding: 5px 15px;
+}
+:global(.vtex-product-highlights-2-x-productHighlightWrapper) :global(.vtex-product-highlights-2-x-productHighlightText)[data-highlight-id="138"]::after,
+:global(.vtex-product-highlights-2-x-productHighlightWrapper) :global(.vtex-product-highlights-2-x-productHighlightText)[data-highlight-id="157"]::after,
+:global(.vtex-product-highlights-2-x-productHighlightWrapper) :global(.vtex-product-highlights-2-x-productHighlightText)[data-highlight-id="159"]::after,
+:global(.vtex-product-highlights-2-x-productHighlightWrapper) :global(.vtex-product-highlights-2-x-productHighlightText)[data-highlight-id="177"]::after {
+  content: "Sale";
+  font-family: "Futura";
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: center;
+  color: #808080;
+}
+
+.productHighlightWrapper {
+  font-size: 0;
+  padding: 5px 15px;
+}
+.productHighlightWrapper .productHighlightText[data-highlight-id="138"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="157"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="159"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="177"]::after {
+  content: "Sale";
+  font-family: "Futura";
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: center;
+  color: #808080;
+}
+
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel] {
   background: #f3f3f3;
   color: #018002;
