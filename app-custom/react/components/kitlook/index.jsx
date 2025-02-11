@@ -37,20 +37,21 @@ export const KitLookComponent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  
+  const ids =
+  productContext?.product?.properties
+    ?.find((prop) => prop.name.toLowerCase() === "Kit-Look")
+    ?.values?.[0]
+    ?.split(";")
+    .map((id) => id.trim()) || [];
+
+
+
   useEffect(() => {
     if (ids.length > 0) {
       setHasItems(true);
     }
   }, [ids]);
-
-  
-  const ids =
-  productContext?.product?.properties[4]?.values[0]
-  ?.split(";")
-  .map((id) => id.trim()) || [];
-  
-  console.log('contexto pdp =>',ids)
-  console.log('contexto pdp =>',productContext)
 
   const slickSettings = {
     dots: false,
@@ -80,6 +81,7 @@ export const KitLookComponent = () => {
          centerModeSlidesGap={8}
          fullWidth
        >
+         {console.log(ids,'idsssss',ids.length)}
             {ids.map((id, index) => {
               const { data, loading, error } = useQuery(KitLook, {
                 variables: {
@@ -128,6 +130,7 @@ export const KitLookComponent = () => {
         ) : (
           <Slider {...slickSettings}>
             {ids.map((id, index) => {
+            console.log(ids,'idsssss',ids.length)
               const { data, loading, error } = useQuery(KitLook, {
                 variables: {
                   identifier: { field: "id", value: id },
