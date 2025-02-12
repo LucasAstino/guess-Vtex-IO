@@ -2,6 +2,9 @@
     "name": "guessbr-store",
     "version": "1.0.0",
     "scripts": {
-      "alink": "(cd app-custom && vtex link) && (cd app-store && vtex link) && (cd app-store && yarn gulp)"
+        "alink": "(cd app-custom && vtex link) && (cd app-store && vtex link) && (cd app-store && yarn gulp)"
+    },
+    "dependencies": {
+        "@builder.io/partytown": "^0.10.3"
     }
-  }
+}
