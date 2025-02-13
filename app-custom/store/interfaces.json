@@ -10,7 +10,7 @@
     "component": "PrivacyPolicy"
   },
   "backToTop": {
-    "component": "backToTop"
+    "component": "BackToTop"
   },
   "LoginHeader": {
     "component": "LoginHeader"

@@ -2,3 +2,7 @@
 # yarn lockfile v1
 
 
+"@builder.io/partytown@^0.10.3":
+  version "0.10.3"
+  resolved "https://registry.npmjs.org/@builder.io/partytown/-/partytown-0.10.3.tgz"
+  integrity sha512-N2SWA3c5vEad3rgdAFM3zMb6uc7aXqibkgAz4ijvYzycgQXJ4dE5oH6fGFMXSQWj6ayVlLT1/CmpflYUJHfmQg==
