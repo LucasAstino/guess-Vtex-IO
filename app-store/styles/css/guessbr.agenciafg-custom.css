@@ -117,10 +117,6 @@
     opacity: 0;
   }
 }
-.modal_overlay {
-  z-index: 9999 !important;
-}
-
 .customContainer--shelf {
   height: 100%;
 }
@@ -211,6 +207,10 @@
 }
 .similar__modal-addToCart--label {
   margin: 0;
+}
+
+.modal_overlay {
+  z-index: 9999 !important;
 }
 
 .video__player {
