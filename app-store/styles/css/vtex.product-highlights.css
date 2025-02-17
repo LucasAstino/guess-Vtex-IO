@@ -3,7 +3,8 @@
   font-size: 0;
   background: unset;
   padding: 0;
-  margin-top: 16px;
+  order: 1 !important;
+  width: fit-content !important;
 }
 .productHighlightWrapper .productHighlightText[data-highlight-id="138"],
 .productHighlightWrapper .productHighlightText[data-highlight-id="157"],
@@ -19,11 +20,11 @@
   align-items: center;
   text-transform: capitalize;
   border-radius: 10px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 20px;
+  height: 22px;
   margin: 0;
 }
 .productHighlightWrapper .productHighlightText[data-highlight-id="138"]::after,
@@ -32,7 +33,7 @@
 .productHighlightWrapper .productHighlightText[data-highlight-id="177"]::after {
   content: "Sale";
   font-family: "Futura";
-  font-weight: 650;
+  font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 2%;
@@ -40,6 +41,7 @@
   color: #808080;
 }
 .productHighlightWrapper .productHighlightText[data-highlight-id="211"] {
+  order: 1;
   background: #f2f2f2;
   color: #808080;
   font-family: "Futura";
@@ -50,17 +52,17 @@
   align-items: center;
   text-transform: capitalize;
   border-radius: 10px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 20px;
+  width: 130px;
+  height: 22px;
   margin: 0;
 }
 .productHighlightWrapper .productHighlightText[data-highlight-id="211"]::after {
   content: "Desconto Progressivo";
   font-family: "Futura";
-  font-weight: 650;
+  font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 2%;
@@ -68,13 +70,15 @@
   color: #808080;
 }
 
+.productHighlightWrapper--collection {
+  order: unset;
+}
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel] {
   background: #f3f3f3;
   color: #018002;
   font-size: 0px;
   font-style: normal;
   font-weight: 400;
-  margin-right: 15px;
   padding: 2px;
   display: flex;
   align-items: center;
@@ -84,7 +88,6 @@
   align-items: center;
   gap: 5px;
   width: 84px;
-  margin-top: 12px;
 }
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::before {
   content: "Sustentável";

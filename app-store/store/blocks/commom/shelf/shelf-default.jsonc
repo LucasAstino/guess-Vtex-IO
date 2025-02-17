@@ -7,7 +7,7 @@
     "children": [
       "stack-layout#shelf",
       "product-specification-badges",
-      "vtex.product-highlights@2.x:product-highlights#collection",
+      "flex-layout.row#flags-shelf",
       "product-summary-name#shelf",
       "flex-layout.row#selling-price-savings",
       "product-installments#summary"
