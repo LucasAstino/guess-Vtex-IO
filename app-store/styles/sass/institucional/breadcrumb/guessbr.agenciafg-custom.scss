@@ -1,0 +1,14 @@
+.breadcrumb__institucional {
+  margin: 27px 0;
+  &-wrapper {
+    color: #666666;
+    &--link {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  @include tablet{
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+}

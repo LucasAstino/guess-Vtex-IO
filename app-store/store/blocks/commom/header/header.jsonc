@@ -16,8 +16,8 @@
     "children": [
       "sticky-layout#desktop",
       "Helmet",
-      "PopupForm",
-      "backToTop"
+      "PopupForm"
+      // "backToTop"
     ]
   },
   "flex-layout.col#spacer": {

@@ -6,31 +6,52 @@
         },
         "children": [
              "flex-layout.col#cashback__HowItWorks-col--01",
-             "flex-layout.col#cashback__HowItWorks-col--02",
-             "flex-layout.col#cashback__HowItWorks-col--03"
+             "flex-layout.col#cashback__HowItWorks-col--02"
         ]
     },
     "flex-layout.col#cashback__HowItWorks-col--01": {
         "children": [
-            "rich-text#cashback__HowItWorks-title"
+            "rich-text#cashback__HowItWorks-title",
+            "flex-layout.row#cashback__HowItWorks-row--01",
+            "flex-layout.row#cashback__HowItWorks-row--03",
+           "flex-layout.row#cashback__HowItWorks-row--02"
         ]
     },
     "flex-layout.col#cashback__HowItWorks-col--02": {
         "children": [
-             "image#cashback__HowItWorks-01",
-             "rich-text#cashback__HowItWorks-paragraph-01",
-             "image#cashback__HowItWorks-02",
+            "rich-text#cashback__section-three-button-one",
+            "rich-text#cashback__section-three-button-two",
+            "rich-text#cashback__section-three-button-three"
+        ]
+    },
+    "flex-layout.row#cashback__HowItWorks-row--01": {
+        "props": {
+            "blockClass": "cashback__HowItWorks-row"
+        },
+        "children": [
+            "image#cashback__HowItWorks-01",
+             "rich-text#cashback__HowItWorks-paragraph-01"
+        ]
+    },
+    "flex-layout.row#cashback__HowItWorks-row--02": {
+        "props": {
+            "blockClass": "cashback__HowItWorks-row"
+        },
+        "children": [
+            "image#cashback__HowItWorks-02",
              "rich-text#cashback__HowItWorks-paragraph-02"
         ]
     },
-    "flex-layout.col#cashback__HowItWorks-col--03": {
+    "flex-layout.row#cashback__HowItWorks-row--03": {
+        "props": {
+            "blockClass": "cashback__HowItWorks-row"
+        },
         "children": [
-             "image#cashback__HowItWorks-03",
-             "rich-text#cashback__HowItWorks-paragraph-03",
-             "image#cashback__HowItWorks-04",
-            "rich-text#cashback__HowItWorks-paragraph-04"
+            "image#cashback__HowItWorks-03",
+             "rich-text#cashback__HowItWorks-paragraph-03"
         ]
     },
+
     "rich-text#cashback__HowItWorks-title": {
         "title": "titulo da segunda sessão",
         "props": {
@@ -42,21 +63,21 @@
         "title": "primeiro parágrafo",
         "props": {
             "blockClass":"cashback__HowItWorks-paragraph",
-            "text": "## Acumule créditos a cada compra\nA cada compra, 15% do valor (sem frete) é acumulado como bônus. Fique atento às regras"
+            "text": "## Acumule créditos a cada compra\nA cada compra, 30% do valor (sem frete) é acumulado como bônus. Fique atento às regras."
         }
     },
     "rich-text#cashback__HowItWorks-paragraph-02": {
         "title": "primeiro parágrafo",
         "props": {
             "blockClass":"cashback__HowItWorks-paragraph",
-            "text": "## Quanto desconto recebo?\n\nO desconto máximo equivale a 30% da compra. Ou seja, para utilizar seu bônus, sua compra deve custar 3 vezes o valor do cupom.\n\nEx: se você tem R$100 acumulado, deve fazer uma compra de, pelo menos, R$300. Caso sua compra não atinja o valor mínimo, o desconto não será aplicado no carrinho.\n\nA utilização do valor parcial do bônus é permitida somente nas lojas físicas. O uso parcial do bônus não é válido para compras online."
+            "text": "## Quanto desconto recebo?\n\nO **desconto máximo** equivale a **30% da compra realizada.** Mas você pode usar o bônus em suas compras com o desconto proporcional ao valor total do pedido. \n\n Ex: Se você tem R$100 acumulado, para utilizar os R$100, deve ser feita uma compra de no mínimo R$300. Caso sua compra seja de um valor inferior, ficará disponível o saldo proporcional como desconto para uso diretamente no carrinho de compras."
         }
     },
     "rich-text#cashback__HowItWorks-paragraph-03": {
         "title": "primeiro parágrafo",
         "props": {
             "blockClass":"cashback__HowItWorks-paragraph",
-            "text": "## Não deixe passar\nO crédito é gerado **3 dias após a entrega do pedido** e é válido por **90 dias para compras online** ou **30 dias** para compras nas **lojas físicas**. Fique atento para não perder seu desconto."
+            "text": "## Não deixe passar\nO crédito é gerado **5 dias após a entrega** do pedido e é válido por **90 dias para compras online** ou **30 dias para compras nas lojas físicas.** Fique atento para não perder seu desconto."
         }
     },
     "rich-text#cashback__HowItWorks-paragraph-04": {
@@ -92,6 +113,27 @@
         "src": "assets/icons/cashback/icon4.png",
         "blockClass":"cashback__HowItWorks"
         
+      }
+    },
+    "rich-text#cashback__section-three-button-one": {
+      "title": "Texto da imagem",
+      "props": {
+        "blockClass": "cashback__section-two--col-02",
+        "text": "Para usar, basta gerar o seu cupom:"
+      }
+    },
+    "rich-text#cashback__section-three-button-two": {
+      "title": "Texto da imagem",
+      "props": {
+        "blockClass": ["cashback__section-two-button","cashback__section-two-button-one"],
+           "text": "[Confira o regulamento](/cashback-regulamento)"
+      }
+    },
+    "rich-text#cashback__section-three-button-three": {
+      "title": "Texto da imagem",
+      "props": {
+        "blockClass":["cashback__section-two-button","cashback__section-two-button-two"],
+           "text": "[Consultar Saldo](https://www.crmbonus.com/consulta-saldo/MTI2NzU=)"
       }
     }
 

@@ -65,6 +65,9 @@
   "Topbar": {
     "component": "Topbar"
   },
+  "Breadcrumb": {
+    "component": "breadcrumb"
+  },
   "Container-lp": {
     "component": "Container-lp",
     "composition": "children"
