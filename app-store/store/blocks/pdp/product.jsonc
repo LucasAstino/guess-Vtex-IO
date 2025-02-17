@@ -67,7 +67,7 @@
       "stack-layout#product-main--mobile",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product__name-pdp",
-       "vtex.product-highlights@2.x:product-highlights#collection",
+       "flex-layout.row#flags-shelf",
       "flex-layout.row#flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
@@ -157,7 +157,7 @@
     },
     "children": [
       "flex-layout.row#product__name-pdp",
-      "vtex.product-highlights@2.x:product-highlights#collection",
+      "flex-layout.row#flags-shelf",
       "custom-flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
