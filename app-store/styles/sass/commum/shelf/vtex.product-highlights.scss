@@ -1,27 +1,98 @@
+@charset "UTF-8";
+.productHighlightWrapper {
+  font-size: 0;
+  background: unset;
+  padding: 0;
+  order: 1 !important;
+  width: fit-content !important;
+}
+.productHighlightWrapper .productHighlightText[data-highlight-id="138"],
+.productHighlightWrapper .productHighlightText[data-highlight-id="157"],
+.productHighlightWrapper .productHighlightText[data-highlight-id="159"],
+.productHighlightWrapper .productHighlightText[data-highlight-id="177"] {
+  background: #f2f2f2;
+  color: #808080;
+  font-family: "Futura";
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 22px;
+  margin: 0;
+}
+.productHighlightWrapper .productHighlightText[data-highlight-id="138"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="157"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="159"]::after,
+.productHighlightWrapper .productHighlightText[data-highlight-id="177"]::after {
+  content: "Sale";
+  font-family: "Futura";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: center;
+  color: #808080;
+}
+.productHighlightWrapper .productHighlightText[data-highlight-id="211"] {
+  order: 1;
+  background: #f2f2f2;
+  color: #808080;
+  font-family: "Futura";
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 22px;
+  margin: 0;
+}
+.productHighlightWrapper .productHighlightText[data-highlight-id="211"]::after {
+  content: "Desconto Progressivo";
+  font-family: "Futura";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-align: center;
+  color: #808080;
+}
+
 .productHighlightWrapper--collection {
   order: unset;
-  .productHighlightText[data-highlight-name="sustentavel"] {
-    background: #f3f3f3;
-    color: #018002;
-    font-size: 0px;
-    font-style: normal;
-    font-weight: 400;
-    padding: 2px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: 84px;
-
-    &::before{
-        content: "Sustentável";
-        font-size: 14px;
-    }
-    &::after{
-        content: url(assets/icons/shelf/icon-leaf.png);
-    }
-  }
+}
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel] {
+  background: #f3f3f3;
+  color: #018002;
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 84px;
+}
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::before {
+  content: "Sustentável";
+  font-size: 14px;
+}
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::after {
+  content: url(assets/icons/shelf/icon-leaf.png);
 }
