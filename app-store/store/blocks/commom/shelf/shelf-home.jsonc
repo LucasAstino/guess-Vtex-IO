@@ -7,14 +7,26 @@
       "children": [
         "stack-layout#shelf__home",
         "product-specification-badges",
-        "vtex.product-highlights@2.x:product-highlights#collection",
+        "flex-layout.row#flags-shelf",
         "product-summary-name#shelf__home",
         "flex-layout.row#selling-price-savings",
         "product-installments#summary"
         // "add-to-cart-button"
       ]
     },
-  
+
+    "flex-layout.row#flags-shelf" : {
+      "props": {
+        "blockClass": ["flags-shelf"],
+        "colSizing": "equal",
+        "colJustify": "flex-start",
+        "marginTop": 5
+      },
+      "children": [
+        "vtex.product-highlights@2.x:product-highlights#collection"
+      ]
+    },
+
     "stack-layout#shelf__home": {
       "title": "Layout empilhado da prateleira",
       "props": {
@@ -22,14 +34,14 @@
       },
       "children": ["Container-lp#shelf__home"]
     },
-  
+
     "Container-lp#shelf__home": {
       "props":{
         "blockClass":"shelf"
       },
       "children": [ "product-summary-image#shelf__home", "responsive-layout.desktop#fast-buy","responsive-layout.mobile#fast-buy"]
     },
-  
+
     "product-summary-name#shelf__home": {
       "props": {
         "blockClass": "shelf",
@@ -68,4 +80,3 @@
     }
 
   }
-  

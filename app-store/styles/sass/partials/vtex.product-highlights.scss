@@ -2,7 +2,8 @@
   font-size: 0;
   background: unset;
   padding: 0;
-  margin-top: 16px;
+  order: 1 !important;
+  width: fit-content !important;
 
   .productHighlightText[data-highlight-id="138"],
   .productHighlightText[data-highlight-id="157"],
@@ -18,17 +19,17 @@
     align-items: center;
     text-transform: capitalize;
     border-radius: 10px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 40px;
-    height: 20px;
+    height: 22px;
     margin: 0;
 
     &::after {
       content: "Sale";
       font-family: "Futura";
-      font-weight: 650;
+      font-weight: 500;
       font-size: 13px;
       line-height: 16px;
       letter-spacing: 2%;
@@ -38,6 +39,7 @@
   }
 
   .productHighlightText[data-highlight-id="211"] {
+    order: 1;
     background: #f2f2f2;
     color: #808080;
     font-family: "Futura";
@@ -48,17 +50,17 @@
     align-items: center;
     text-transform: capitalize;
     border-radius: 10px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 20px;
+    width: 130px;
+    height: 22px;
     margin: 0;
 
     &::after {
       content: "Desconto Progressivo";
       font-family: "Futura";
-      font-weight: 650;
+      font-weight: 500;
       font-size: 13px;
       line-height: 16px;
       letter-spacing: 2%;
