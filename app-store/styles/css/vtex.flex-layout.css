@@ -131,28 +131,6 @@
   }
 }
 
-.flexRow .stretchChildrenWidth {
-  display: contents;
-}
-
-:global(.vtex-store-components-3-x-container) {
-  padding: 0;
-}
-
-.flexRow--not-found {
-  padding: 0 20px;
-  margin: 40px 0;
-}
-.flexRow--not-found .flexRowContent .flexCol--not-found {
-  max-width: 1300px;
-  margin: auto;
-}
-@media (max-width: 1025px) {
-  .flexRow--not-found--links .flexRowContent {
-    flex-direction: column;
-  }
-}
-
 .flexRow--product-main {
   max-width: 1800px;
   padding: 0 20px;
@@ -702,6 +680,46 @@
   gap: 30px;
 }
 
+:global(.vtex-store-components-3-x-imageElement--livelo__fullBanner-desk) {
+  display: block;
+  margin: auto;
+}
+
+:global(.vtex-store-components-3-x-imageElementLink) {
+  width: fit-content !important;
+}
+
+.flexRow--livelo__fullBanner-desk .flexRowContent {
+  justify-content: center;
+  position: relative;
+  max-width: 1366px;
+  margin: auto;
+}
+.flexRow--livelo__fullBanner-desk .flexRowContent .flexCol--livelo__fullBanner {
+  position: absolute;
+  max-width: 100%;
+  width: auto;
+  right: 3%;
+  top: 16%;
+}
+.flexRow--livelo__fullBanner-desk .flexRowContent .flexCol--livelo__fullBanner .flexColChild {
+  display: contents;
+}
+.flexRow--livelo__category {
+  margin: 40px 0;
+}
+.flexRow--livelo__category .flexRowContent--livelo__category {
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 1025px) {
+  .flexRow--livelo__category .flexRowContent--livelo__category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
+}
+
 .flexRow--about-us__container .flexRowContent--about-us__container {
   display: block;
 }
@@ -805,6 +823,7 @@
 @media (max-width: 1025px) {
   .flexRow--cashback__section-two {
     margin-top: 20px;
+    margin-bottom: 0px;
   }
 }
 .flexRow--cashback__regulation .flexRowContent--cashback__regulation {
@@ -943,45 +962,5 @@
 @media (max-width: 768px) {
   .flexRow--table__sizes-masculine--tables .flexRowContent {
     flex-direction: column;
-  }
-}
-
-:global(.vtex-store-components-3-x-imageElement--livelo__fullBanner-desk) {
-  display: block;
-  margin: auto;
-}
-
-:global(.vtex-store-components-3-x-imageElementLink) {
-  width: fit-content !important;
-}
-
-.flexRow--livelo__fullBanner-desk .flexRowContent {
-  justify-content: center;
-  position: relative;
-  max-width: 1366px;
-  margin: auto;
-}
-.flexRow--livelo__fullBanner-desk .flexRowContent .flexCol--livelo__fullBanner {
-  position: absolute;
-  max-width: 100%;
-  width: auto;
-  right: 3%;
-  top: 16%;
-}
-.flexRow--livelo__fullBanner-desk .flexRowContent .flexCol--livelo__fullBanner .flexColChild {
-  display: contents;
-}
-.flexRow--livelo__category {
-  margin: 40px 0;
-}
-.flexRow--livelo__category .flexRowContent--livelo__category {
-  justify-content: center;
-  gap: 20px;
-}
-@media (max-width: 1025px) {
-  .flexRow--livelo__category .flexRowContent--livelo__category {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 10px;
   }
 }

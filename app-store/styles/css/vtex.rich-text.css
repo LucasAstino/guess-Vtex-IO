@@ -665,83 +665,6 @@
   color: black;
 }
 
-.container--content__seo {
-  max-width: 1800px;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 40px;
-}
-
-.container--seo__content {
-  justify-content: center;
-  margin-bottom: 40px;
-  padding: 0 30px;
-}
-@media (max-width: 1025px) {
-  .container--seo__content .wrapper--seo__content .heading--seo__content {
-    font-size: 24px;
-  }
-}
-.container--seo__content .link {
-  color: black;
-}
-
-.container--fast-buy .wrapper {
-  width: 100%;
-}
-.container--fast-buy .paragraph {
-  margin: 0;
-  width: 100%;
-  height: 30px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding-inline-start: 5px;
-  font-size: 14px;
-  position: relative;
-}
-@media (max-width: 1025px) {
-  .container--fast-buy .paragraph {
-    width: 55px;
-    height: 30px;
-    padding-inline-start: 8px;
-    font-size: 12px;
-  }
-}
-.container--fast-buy .paragraph::after {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-}
-@media (max-width: 1025px) {
-  .container--fast-buy .paragraph::after {
-    width: 8px;
-    height: 1px;
-  }
-}
-.container--fast-buy .paragraph::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  rotate: 90deg;
-}
-@media (max-width: 1025px) {
-  .container--fast-buy .paragraph::before {
-    width: 8px;
-    height: 1px;
-  }
-}
-
 .container--about-us-title {
   justify-content: center;
 }
@@ -870,9 +793,7 @@
 }
 .container--cashback__section-two--col-02 .paragraph {
   font-size: 16px;
-}
-.container--cashback__HowItWorks-paragraph {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .container--cashback__HowItWorks-paragraph .heading {
   font-family: Futura;
@@ -898,11 +819,6 @@
   color: #3f3f40;
 }
 @media (max-width: 768px) {
-  .container--cashback__HowItWorks-paragraph {
-    margin-bottom: 0;
-  }
-}
-@media (max-width: 768px) {
   .container--cashback__section-two-button .wrapper--cashback__section-two-button {
     width: 100%;
   }
@@ -917,7 +833,7 @@
   color: black;
   text-decoration: none;
   width: 330px;
-  margin: 10px 0;
+  margin: 5px 0;
   letter-spacing: 2px;
   font-size: 15px;
   padding: 1em 2em;
@@ -1050,6 +966,23 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
 .container--dealer .heading {
   font-family: Futura;
   font-style: normal;
@@ -1098,23 +1031,6 @@
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
-}
-
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
-  font-weight: 300;
-  color: #000;
-  font-size: 40px;
-}
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
-  }
 }
 
 .container--exchange_and_returns .heading {

@@ -58,11 +58,11 @@
     }
     .paragraph {
       font-size: 16px;
+      margin-bottom: 10px;
     }
   }
 
   &--cashback__HowItWorks-paragraph {
-    margin-bottom: 40px;
     .heading {
       font-family: Futura;
       font-size: 16px;
@@ -83,9 +83,6 @@
         color: #3f3f40;
       }
     }
-    @include mobile {
-      margin-bottom: 0;
-    }
   }
 
   &--cashback__section-two-button {
@@ -104,7 +101,7 @@
         color: black;
         text-decoration: none;
         width: 330px;
-        margin: 10px 0;
+        margin: 5px 0;
         letter-spacing: 2px;
         font-size: 15px;
         padding: 1em 2em;

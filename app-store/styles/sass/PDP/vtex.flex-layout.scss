@@ -7,14 +7,14 @@
       padding: 0;
     }
     .flexRowContent--flags-shelf {
+      row-gap: 8px;
+      column-gap: 16px;
       @media (max-width: 768px) {
         padding-left: 15px;
         flex-wrap: wrap;
         justify-content: flex-start;
         display: flex;
       }
-      row-gap: 8px;
-      column-gap: 16px;
 
       .stretchChildrenWidth {
         row-gap: 8px;
