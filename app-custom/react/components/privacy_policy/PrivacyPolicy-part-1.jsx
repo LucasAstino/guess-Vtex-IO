@@ -210,7 +210,7 @@ export function PrivacyPolicyPart1() {
               }}
               target="_blank"
             >
-              https://guessbrasil.troquefacil.com.br/
+              https://guessbr.troquefacil.com.br/
             </a>), o cliente deverá cadastrar o número do pedido da compra efetuada e o e-mail cadastrado no momento da compra para identificação do produto. Coletamos as seguintes informações do comprador da mercadoria a ser devolvida: nome completo, RG, e-mail, telefone para contato, dentre outras informações relacionadas à operação comercial como o local e data da compra, fotos da mercadoria supostamente defeituosa e foto da nota fiscal de compra. o cadastramento ocorrerá no site do parceiro, responsável pelo gerenciamento de trocas e devoluções de produtos. para entender como o parceiro utiliza as suas informações, veja o seu Termo de uso e Aviso de Privacidade disponível na página de cadastramento.
             <br /> <br /> Devolução de mercadorias em lojas físicas:
           </p>
@@ -1695,8 +1695,7 @@ export function PrivacyPolicyPart1() {
             <br /> <br /> Para qualquer dúvida, solicitação ou reclamação referente ao tratamento de dados pessoais, favor entrar em contato com o nosso Encarregado de Dados Pessoais:
             <br /> <br />
             <strong
-              style={{
-                color: "#0563c1",
+              style={{                
                 fontWeight: "bold",
               }}
             >
@@ -1725,14 +1724,14 @@ export function PrivacyPolicyPart1() {
               }}
             >
               ){' '}
-            </span>
-            <span
-              style={{
-                color: "#0563c1",
-              }}
-            >
-              - contato:
-            </span>
+            </span> <br />
+            <br />
+            Responsável: Rafael Susskind  <br />
+            <br />
+            Responsável substituto: Renata Adeli Franhan Parizotto <br />
+            <br />
+            <span>            
+              contato: </span>
             <a
               href="mailto:dpo@guessbrasil.com.br"
               style={{
