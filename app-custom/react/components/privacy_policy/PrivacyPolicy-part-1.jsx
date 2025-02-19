@@ -203,7 +203,7 @@ export function PrivacyPolicyPart1() {
             <strong>Troque Fácil na Plataforma Guess Brasil:{' '}</strong>
             Para a troca e devolução de produtos adquiridos pelo site (
               <a
-              href="https://guessbrasil.troquefacil.com.br/"
+              href="https://guessbr.troquefacil.com.br/"
               style={{
                 color: "#0563c1",
                 textDecoration: "underline",
