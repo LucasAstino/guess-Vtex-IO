@@ -1,6 +1,5 @@
 {
-    /*
-    "store.custom#LPnewaa": {
+    "store.custom#LPnew-v1": {
       "children": ["responsive-layout.desktop#lp-new-desktop","responsive-layout.mobile#lp-new-mobile"]
     },
     "responsive-layout.desktop#lp-new-desktop": {
@@ -328,5 +327,5 @@
         "height": "550"
       }
     }
-      */
+      
 }

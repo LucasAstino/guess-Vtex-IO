@@ -73,7 +73,7 @@
   
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left) {
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left--v2) {
   position: absolute;
   bottom: 30px;
   margin: 0 20px;  
@@ -176,67 +176,137 @@
   }
 }
 
-.flexRowContent--lp__banner{
+.flexRowContent--lp__banner--v2{
   .flexCol--banner-text{
     position: relative;
   } 
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text) {
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
   position: absolute;
   
 }
 
-.flexColChild--banner-text{
+.flexColChild--banner-text--v2{
   :global(.vtex-store-components-3-x-imageElement--lp__left-banner-duplo-mob) {
       width: 100%;
       height: auto;
   }
 }  
 
-.flexColChild--banner-text {
+.flexColChild--banner-text--v2 {
   position: relative;
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob) {
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2) {
   position: absolute;
   bottom: 30px;  
     
 }
 
-.flexColChild--banner-text{
+.flexColChild--banner-text--v2{
   :global(.vtex-store-components-3-x-imageElement--lp__rigth-banner-duplo-mob) {
       width: 100%;
       height: auto;
   }
 }  
 
-.flexRowContent--lp__banner-duplo-v2-mob {
+.flexRowContent--lp__banner-duplo-v2-mob--v2 {
   flex-direction: row;
   display: flex;
   line-height: 0;
 }
 
-.flexRowContent--lp__banner-duplo-v3-mob {
+.flexRowContent--lp__banner-duplo-v3-mob--v2 {
   flex-direction: row;
   display: flex;
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob){
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2){
   position: absolute;
   bottom: 30px;
   margin: 0 20px;
 }
 
-.flexColChild--lp__banner-final {
+.flexColChild--lp__banner-final--v2 {
   position: relative;
 }
 
-:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text) {
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
     justify-items: center;
     position: absolute;
     bottom: 50px;
     margin: 0 20px;
     width: 100%;
 
+}
+
+.flexRowContent{
+  &--lp__banner-duplo--v2{
+    gap: 10px;
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-final--v2{
+    position: relative;
+  }
+
+  &--lp__banner-trio--v2{
+    gap: 10px;
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-topo--v2{
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-wrapper-mob--v2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    :global(.vtex-store-components-3-x-imageElement--lp__banner-wrapper--v2){
+      height: 100%;
+      display: block; 
+      width: -webkit-fill-available;
+    }
+
+  }
+
+  .flexColChild--lp__banner-wrapper-two--v2{
+    display: contents;
+  }
+
+  .flexCol{
+    &--lp__banner-text--v2{
+      position: relative;
+      width: fit-content;
+    }
+
+    &--lp__banner-duplo-rigth--v2{
+      width: fit-content;
+      .flexColChild{
+        width: fit-content;
+      }
+    }
+    &--lp__banner-duplo-left--v2{
+      width: fit-content;
+      .flexColChild{
+        width: fit-content;
+      }
+    }
+  }
+
+}
+
+.flexColChild--lp__banner-text--v2{
+  width: fit-content;
 }

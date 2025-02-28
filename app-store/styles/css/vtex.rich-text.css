@@ -242,6 +242,85 @@
   margin-left: 7px;
   filter: var(--invert-filter);
 }
+.container--lp__banner-text--v2 {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+}
+.container--lp__banner-text--v2 .paragraph {
+  font-size: 26px;
+}
+@media (max-width: 768px) {
+  .container--lp__banner-text--v2 .paragraph {
+    font-size: 18px;
+  }
+}
+.container--lp__banner-text--v2 .paragraph .link {
+  color: black;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+.container--lp__banner-text--v2 .paragraph .link::after {
+  content: "";
+  font-size: 22px;
+  font-family: Orpheus;
+  color: #000;
+  letter-spacing: 0.05em;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 55px;
+  height: 10px;
+  background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.111/icons/header/big-arrow___e810883….png);
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .container--lp__banner-text--v2 {
+    left: 20px;
+  }
+}
+.container--lp__banner-final--v2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  justify-content: center;
+}
+.container--lp__banner-final--v2 .paragraph {
+  font-size: 26px;
+}
+.container--lp__banner-final--v2 .paragraph .link {
+  color: black;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  width: fit-content;
+}
+.container--lp__banner-final--v2 .paragraph .link::after {
+  content: "";
+  font-size: 22px;
+  font-family: Orpheus;
+  color: #000;
+  letter-spacing: 0.05em;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 55px;
+  height: 10px;
+  background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.111/icons/header/big-arrow___e810883….png);
+  background-repeat: no-repeat;
+}
+.container--lp__banner-wrapper--v2 {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+.container--lp__banner-wrapper--v2 .paragraph .link {
+  color: black;
+  text-decoration: none;
+}
 
 .container--promotion__delivery {
   justify-content: center;
