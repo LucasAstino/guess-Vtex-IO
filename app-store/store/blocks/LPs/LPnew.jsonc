@@ -1,0 +1,332 @@
+{
+    /*
+    "store.custom#LPnewaa": {
+      "children": ["responsive-layout.desktop#lp-new-desktop","responsive-layout.mobile#lp-new-mobile"]
+    },
+    "responsive-layout.desktop#lp-new-desktop": {
+        "children": [
+            "flex-layout.row#lp__banner-topo",
+            "flex-layout.row#lp__banner-duplo-v2",
+            "flex-layout.row#lp__banner-triplo",
+            "flex-layout.row#lp__banner-final",
+            "flex-layout.row#seo__content"
+        ]
+    },
+    "responsive-layout.mobile#lp-new-mobile": {
+        "children": [
+            "flex-layout.row#lp__banner-topo-mob",
+            "flex-layout.row#lp__banner-duplo-v2",
+            "flex-layout.row#lp__banner-duplo-v2-mob",
+            "flex-layout.row#lp__banner-duplo-v3-mob",
+            "flex-layout.row#seo__content"
+        ]
+    },
+    "flex-layout.row#lp__conteiner": {
+      "title": "container",
+      "props": {
+        "blockClass": "lp__conteiner"
+      },
+      "children": [
+        "flex-layout.row#lp__banner-topo",
+        "flex-layout.row#lp__banner-duplo-v2",
+        "flex-layout.row#lp__banner-triplo",
+        "flex-layout.row#lp__banner-final",
+         "flex-layout.row#seo__content"
+      ]
+    },
+    "flex-layout.row#lp__banner-topo": {
+      "title": "Banner topo",
+      "props": {
+        "blockClass": "lp__banner-topo",
+        "width": "1920",
+        "height": "250"
+      },
+      "children": ["image#lp__banner-topo"]
+    },
+    "image#lp__banner-topo": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__banner-topo",
+        "width": "1920",
+        "height": "250"
+      }
+    },
+
+    "flex-layout.row#lp__banner-topo-mob": {
+      "title": "Banner topo",
+      "props": {
+        "blockClass": "lp__banner-topo-mobile",
+        "width": "848",
+        "height": "340"
+      },
+      "children": ["image#lp__banner-topo-mob"]
+    },
+    "image#lp__banner-topo-mob": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__banner-topo-mobile",
+        "width": "848",
+        "height": "340"
+      }
+    },
+
+    "flex-layout.row#lp__banner-duplo-v2": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v2"
+        },
+        "children": ["flex-layout.col#lp__banner-duplo-left","flex-layout.col#lp__banner-duplo-rigth"]
+    },
+    "flex-layout.col#lp__banner-duplo-left": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-left"
+        },
+        "children": ["image#lp__left-banner-duplo","rich-text#lp__banner-duplo-left"]
+    },
+    "rich-text#lp__banner-duplo-left": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-text-left"
+    }
+    },
+    "image#lp__left-banner-duplo": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__left-banner-duplo",
+        "width": "950",
+        "height": "634"
+      }
+    },
+    "flex-layout.col#lp__banner-duplo-rigth": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-rigth"
+        },
+        "children": ["image#lp__rigth-banner-duplo","rich-text#lp__banner-duplo-rigth"]
+    },
+    "rich-text#lp__banner-duplo-rigth": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-text-rigth"
+    }
+    },
+    "image#lp__rigth-banner-duplo": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__rigth-banner-duplo",
+        "width": "950",
+        "height": "634"
+      }
+    },
+
+    "flex-layout.row#lp__banner-triplo": {
+        "title": "Banner Triplo",
+        "props": {
+          "blockClass": "lp__banner-triplo"
+        },
+        "children": ["flex-layout.col#lp__banner-triplo-um","flex-layout.col#lp__banner-triplo-dois","flex-layout.col#lp__banner-triplo-tres"]
+    },
+    "flex-layout.col#lp__banner-triplo-um": {
+        "title": "Banner Triplo",
+        "props": {
+          "blockClass": "lp__banner-triplo-um"
+        },
+        "children": ["image#lp__banner-triplo-um","rich-text#lp__banner-triplo-um"]
+    },
+    "rich-text#lp__banner-triplo-um": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__text-banner-triplo-um"
+    }
+    },
+    "image#lp__banner-triplo-um": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__banner-triplo-um",
+        "width": "630",
+        "height": "660"
+      }
+    },
+    "flex-layout.col#lp__banner-triplo-dois": {
+        "title": "Banner Triplo",
+        "props": {
+          "blockClass": "lp__banner-triplo-dois"
+        },
+        "children": ["image#lp__banner-triplo-dois","rich-text#lp__banner-triplo-dois"]
+    },
+    "rich-text#lp__banner-triplo-dois": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__text-banner-triplo-dois"
+    }
+    },
+    "image#lp__banner-triplo-dois": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__banner-triplo-dois",
+        "width": "630",
+        "height": "660"
+      }
+    },
+    "flex-layout.col#lp__banner-triplo-tres": {
+        "title": "Banner Triplo",
+        "props": {
+          "blockClass": "lp__banner-triplo-tres"
+        },
+        "children": ["image#lp__banner-triplo-tres","rich-text#lp__banner-triplo-tres"]
+    },
+    "rich-text#lp__banner-triplo-tres": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__text-banner-triplo-tres"
+    }
+    },
+    "image#lp__banner-triplo-tres": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__banner-triplo-tres",
+        "width": "630",
+        "height": "660"
+      }
+    },
+    "flex-layout.row#lp__banner-final": {
+        "title": "Banner simples",
+        "props": {
+          "blockClass": "lp__banner-final"
+        },
+        "children": ["flex-layout.col#lp__banner-final"]
+    },
+    "flex-layout.col#lp__banner-final": {
+        "title": "Banner simples texto",
+        "props": {
+          "blockClass": "lp__banner-final"
+        },
+        "children": ["image#lp__banner-simples","rich-text#lp__banner-simples-text"]
+    },
+    "rich-text#lp__banner-simples-text": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da moda masculina em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-simples-text"
+    }
+    },
+    "image#lp__banner-simples": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "image#lp__banner-simples",
+        "width": "1920",
+        "height": "400"
+      }
+    },
+
+    "flex-layout.row#lp__banner-duplo-v2-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v2-mob"
+        },
+        "children": ["flex-layout.col#lp__banner-duplo-left-mob","flex-layout.col#lp__banner-duplo-rigth"]
+    },
+    "flex-layout.col#lp__banner-duplo-left-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v2-mob"
+        },
+        "children": ["image#lp__left-banner-duplo-mob","rich-text#lp__banner-duplo-left-mob"]
+    },
+    "rich-text#lp__banner-duplo-left-mob": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-left-mob"
+    }
+    },
+    "image#lp__left-banner-duplo-mob": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__left-banner-duplo",
+        "width": "424",
+        "height": "550"
+      }
+    },
+    "flex-layout.col#lp__banner-duplo-rigth-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v2-mob"
+        },
+        "children": ["image#lp__rigth-banner-duplo-mob","rich-text#lp__banner-duplo-rigth-mob"]
+    },
+    "rich-text#lp__banner-duplo-rigth-mob": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-rigth-mob"
+    }
+    },
+    "image#lp__rigth-banner-duplo-mob": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__rigth-banner-duplo-mob",
+        "width": "424",
+        "height": "550"
+      }
+    },
+
+    "flex-layout.row#lp__banner-duplo-v3-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v3-mob"
+        },
+        "children": ["flex-layout.col#lp__banner-duplo-left-dois-mob","flex-layout.col#lp__banner-duplo-rigth-dois-mob"]
+    },
+    "flex-layout.col#lp__banner-duplo-left-dois-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v3-mob"
+        },
+        "children": ["image#lp__left-banner-dois-duplo-mob","rich-text#lp__banner-duplo-left-dois-mob"]
+    },
+    "rich-text#lp__banner-duplo-left-dois-mob": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-left-mob"
+    }
+    },
+    "image#lp__left-banner-dois-duplo-mob": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__left-banner-duplo",
+        "width": "424",
+        "height": "550"
+      }
+    },
+    "flex-layout.col#lp__banner-duplo-rigth-dois-mob": {
+        "title": "Banner duplo",
+        "props": {
+          "blockClass": "lp__banner-duplo-v3-mob"
+        },
+        "children": ["image#lp__rigth-banner-dois-duplo-mob","rich-text#lp__banner-duplo-rigth-dois-mob"]
+    },
+    "rich-text#lp__banner-duplo-rigth-dois-mob": {
+    "title": "texto do banner",
+    "props": {
+      "text": "# O melhor da<br>moda masculina<br>em *sale*\n[confira](/sale/masculino)",
+      "blockClass": "lp__banner-duplo-rigth-dois-mob"
+    }
+    },
+    "image#lp__rigth-banner-dois-duplo-mob": {
+      "props": {
+        "src": "assets/images/LP/banner-topo-1.webp",
+        "blockClass": "lp__rigth-banner-duplo-mob",
+        "width": "424",
+        "height": "550"
+      }
+    }
+      */
+}
