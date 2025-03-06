@@ -46,10 +46,7 @@
   },
   "store.custom#contact-us": {
     "path": "/fale-conosco"
-  },
-  "store.custom#LPnew-v1": {
-    "path": "/lp-new-v1"
-  },
+  },  
   "store.custom#LPnew-v2": {
     "path": "/lp-new"
   }
