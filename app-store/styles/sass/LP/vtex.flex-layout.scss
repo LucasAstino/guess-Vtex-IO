@@ -54,11 +54,11 @@
               }
           }
     }
-  }  
+  }
 }
 
 .flexRowContent--lp__banner-duplo-v2 {
- 
+
 
   :global(.vtex-store-components-3-x-imageElement) {
     width: 950px;
@@ -69,20 +69,20 @@
 
 .flexColChild--lp__banner-duplo-v2 {
   width: 950px;
-  height: 634px !important;  
-  
+  height: 634px !important;
+
 }
 
 :global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left--v2) {
   position: absolute;
   bottom: 30px;
-  margin: 0 20px;  
+  margin: 0 20px;
 }
 
 :global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-rigth) {
   position: absolute;
   bottom: 30px;
-  margin: 0 20px; 
+  margin: 0 20px;
 }
 
 .flexColChild--lp__banner-duplo-left {
@@ -106,7 +106,7 @@
     bottom: 30px;
     margin: 0 20px;
 
-   
+
   }
 
 }
@@ -124,7 +124,7 @@
     bottom: 30px;
     margin: 0 20px;
 
-   
+
   }
 }
 
@@ -141,15 +141,15 @@
     bottom: 30px;
     margin: 0 20px;
 
-   
+
   }
 }
 
-.flexRow--lp__banner-final {   
+.flexRow--lp__banner-final {
   :global(.vtex-store-components-3-x-imageElement) {
     width: 100%;
     height: 400px;
-    
+
   }
 }
 
@@ -168,23 +168,23 @@
   }
 }
 
-.flexRow--lp__banner-topo-mobile {   
+.flexRow--lp__banner-topo-mobile {
   :global(.vtex-store-components-3-x-imageElement) {
     width: 100%;
     height: 340px;
-    
+
   }
 }
 
 .flexRowContent--lp__banner--v2{
   .flexCol--banner-text{
     position: relative;
-  } 
+  }
 }
 
 :global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
   position: absolute;
-  
+
 }
 
 .flexColChild--banner-text--v2{
@@ -192,7 +192,7 @@
       width: 100%;
       height: auto;
   }
-}  
+}
 
 .flexColChild--banner-text--v2 {
   position: relative;
@@ -200,8 +200,8 @@
 
 :global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2) {
   position: absolute;
-  bottom: 30px;  
-    
+  bottom: 30px;
+
 }
 
 .flexColChild--banner-text--v2{
@@ -209,7 +209,7 @@
       width: 100%;
       height: auto;
   }
-}  
+}
 
 .flexRowContent--lp__banner-duplo-v2-mob--v2 {
   flex-direction: row;
@@ -275,8 +275,8 @@
 
     :global(.vtex-store-components-3-x-imageElement--lp__banner-wrapper--v2){
       height: 100%;
-      display: block; 
-      width: -webkit-fill-available;
+      display: block;
+      width: 100%;
     }
 
   }
