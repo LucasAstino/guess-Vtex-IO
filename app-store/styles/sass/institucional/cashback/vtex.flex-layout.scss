@@ -7,73 +7,59 @@
     }
   }
   &--cashback__section-one {
+    background-color: black;
+    height: 250px;
+    max-width: 1366px;
+    display: flex;
+    align-items: center;
     .flexRowContent--cashback__section-one {
       @include mobile {
         flex-direction: column;
       }
     }
-    .flexCol--cashback__section-one-left {
-      max-height: 491px;
-      position: relative;
-      background-color: black;
-      :global(.vtex-store-components-3-x-imageElement--cashback__section-one) {
-        width: inherit;
-        filter: grayscale(40%) brightness(50%);
-        @include mobile {
-          width: 100%;
-          display: block;
-          margin: auto;
-        }
+    @include tablet{
+      height: 180px;
+    }
+  }
+
+  &--cashback__HowItWorks-row{
+    .flexRowContent{
+      gap: 30px;
+      display: flex;
+      @include mobile{
+        gap: 16px;
       }
     }
-
-    .flexCol--cashback__section-one-right {
-      background-color: black;
-      height: auto;
-      .flexColChild--cashback__section-one-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    :global(.vtex-store-components-3-x-imageElement){
+      width: 32px;
+      height: 32px;
+      margin-block-start: 0.83em;
+      @include tablet{
+        width: 24px;
+        height: 24px;
       }
     }
   }
 
   &--cashback__section-two {
-    margin: 80px auto 0;
-    max-width: 1086px;
+    margin: 80px auto 100px;
+    max-width: 1200px;
+    .flexRowContent--cashback__section-two{
+      align-items: center;
+      gap: 100px;
+    }
     .flexCol {
       width: auto;
       margin: 0 30px;
     }
-  }
-
-  &--cashback__section-three {
-    margin-bottom: 40px;
-    .flexRowContent {
-      @include mobile {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-    .flexCol--cashback__section-three-right {
-      align-items: center;
-      justify-content: center;
-      height: auto;
-      .flexColChild {
-        height: auto !important;
-      }
-      @include mobile {
-        margin-bottom: 40px;
-      }
-    }
-    :global(.vtex-store-components-3-x-imageElement) {
-      display: block;
-      margin: auto;
+    @include tablet{
+      margin-top: 20px;
+      margin-bottom: 0px;
     }
   }
 
   &--cashback__regulation {
-    .flexRowContent {
+    .flexRowContent--cashback__regulation {
       max-width: 1366px;
       margin: auto;
       flex-direction: column;
@@ -86,19 +72,24 @@
       }
 
       .flexCol--cashback__regulation {
-        max-width: 842px;
+        max-width: 1200px;
         margin: 0 auto;
         margin-top: 80px;
         @include mobile{
           width: 90%;
-          margin-top: 60px;
+          margin-top: 10px;
         }
 
         :global(.vtex-store-components-3-x-imageElement){
           display: block;
-          margin: auto;
         }
       }
+    }
+  }
+
+  &--cashback__regulation-button{
+    .flexRowContent{
+      gap: 15px;
     }
   }
 }

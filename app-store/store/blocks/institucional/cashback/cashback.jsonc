@@ -1,17 +1,29 @@
 {
-    "store.custom#cashback": {
-        "blocks": ["flex-layout.row#cashback__container"]
+  "store.custom#cashback": {
+    "blocks": ["flex-layout.row#cashback__container"]
+  },
+  "flex-layout.row#cashback__container": {
+    "title": "Conteúdo da pagina",
+    "props": {
+      "blockClass": "cashback__container"
     },
-    "flex-layout.row#cashback__container": {
-        "title": "Conteúdo da pagina",
-        "props": {
-            "blockClass": "cashback__container"
-        },
-        "children": [
-             "flex-layout.row#cashback__section-one",
-             "flex-layout.row#cashback__section-two",
-             "flex-layout.row#cashback__section-three"
-        ]
-    }
-
+    "children": [
+      "responsive-layout.desktop#cashback__container",
+      "responsive-layout.mobile#cashback__container"
+    ]
+  },
+  "responsive-layout.desktop#cashback__container": {
+    "children": [
+      "Breadcrumb",
+      "flex-layout.row#cashback__section-one",
+      "flex-layout.row#cashback__section-two"
+    ]
+  },
+  "responsive-layout.mobile#cashback__container": {
+    "children": [
+      "flex-layout.row#cashback__section-one",
+      "Breadcrumb",
+      "flex-layout.row#cashback__section-two"
+    ]
+  }
 }

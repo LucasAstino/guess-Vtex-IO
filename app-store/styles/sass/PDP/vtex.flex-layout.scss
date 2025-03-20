@@ -6,6 +6,27 @@
     @include mobile{
       padding: 0;
     }
+    .flexRowContent--flags-shelf {
+      row-gap: 8px;
+      column-gap: 16px;
+      @media (max-width: 768px) {
+        padding-left: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        display: flex;
+      }
+
+      .stretchChildrenWidth {
+        row-gap: 8px;
+        column-gap: 16px;
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          display: flex;
+        }
+      }
+    }
+
     .flexRowContent--product-main {
       justify-content: space-between;
     }

@@ -198,8 +198,9 @@ $(document).ready(function () {
   // sellerCode.init()
 
   vtexjs.checkout.getOrderForm().done(function (orderForm) {
-    cashbackValue = orderForm.totalizers[0].value * 0.30;
-    cashbackValue = cashbackValue / 100;
+    console.log(orderForm);
+    cashbackValue = orderForm.value * 0.30;
+    cashbackValue = cashbackValue / 100;  
 
     let items = orderForm.items;
     items.forEach((i) => {

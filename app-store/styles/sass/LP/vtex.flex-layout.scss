@@ -56,3 +56,257 @@
     }
   }
 }
+
+.flexRowContent--lp__banner-duplo-v2 {
+
+
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 950px;
+    height: 634px;
+    position: relative;
+  }
+}
+
+.flexColChild--lp__banner-duplo-v2 {
+  width: 950px;
+  height: 634px !important;
+
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left--v2) {
+  position: absolute;
+  bottom: 30px;
+  margin: 0 20px;
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-rigth) {
+  position: absolute;
+  bottom: 30px;
+  margin: 0 20px;
+}
+
+.flexColChild--lp__banner-duplo-left {
+  position: relative;
+}
+
+.flexColChild--lp__banner-duplo-rigth {
+  position: relative;
+}
+
+.flexColChild--lp__banner-triplo-um {
+  position: relative;
+
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 630px;
+    height: 660px;
+    position: relative;
+  }
+  :global(.vtex-rich-text-0-x-container--lp__text-banner-triplo-um) {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 20px;
+
+
+  }
+
+}
+
+.flexColChild--lp__banner-triplo-dois {
+  position: relative;
+
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 630px;
+    height: 660px;
+  }
+
+  :global(.vtex-rich-text-0-x-container--lp__text-banner-triplo-dois) {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 20px;
+
+
+  }
+}
+
+.flexColChild--lp__banner-triplo-tres {
+  position: relative;
+
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 630px;
+    height: 660px;
+  }
+
+  :global(.vtex-rich-text-0-x-container--lp__text-banner-triplo-tres) {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 20px;
+
+
+  }
+}
+
+.flexRow--lp__banner-final {
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 100%;
+    height: 400px;
+
+  }
+}
+
+.flexColChild--lp__banner-final {
+  position: relative;
+  :global(.vtex-store-components-3-x-imageElement){
+    width: 100%;
+    height: 400px;
+  }
+
+  :global(.vtex-rich-text-0-x-container--lp__banner-simples-text) {
+    position: absolute;
+    bottom: 30px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.flexRow--lp__banner-topo-mobile {
+  :global(.vtex-store-components-3-x-imageElement) {
+    width: 100%;
+    height: 340px;
+
+  }
+}
+
+.flexRowContent--lp__banner--v2{
+  .flexCol--banner-text{
+    position: relative;
+  }
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
+  position: absolute;
+
+}
+
+.flexColChild--banner-text--v2{
+  :global(.vtex-store-components-3-x-imageElement--lp__left-banner-duplo-mob) {
+      width: 100%;
+      height: auto;
+  }
+}
+
+.flexColChild--banner-text--v2 {
+  position: relative;
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2) {
+  position: absolute;
+  bottom: 30px;
+
+}
+
+.flexColChild--banner-text--v2{
+  :global(.vtex-store-components-3-x-imageElement--lp__rigth-banner-duplo-mob) {
+      width: 100%;
+      height: auto;
+  }
+}
+
+.flexRowContent--lp__banner-duplo-v2-mob--v2 {
+  flex-direction: row;
+  display: flex;
+  line-height: 0;
+}
+
+.flexRowContent--lp__banner-duplo-v3-mob--v2 {
+  flex-direction: row;
+  display: flex;
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-duplo-text-left-mob--v2){
+  position: absolute;
+  bottom: 30px;
+  margin: 0 20px;
+}
+
+.flexColChild--lp__banner-final--v2 {
+  position: relative;
+}
+
+:global(.vtex-rich-text-0-x-wrapper--lp__banner-final-text--v2) {
+    justify-items: center;
+    position: absolute;
+    bottom: 50px;
+    margin: 0 20px;
+    width: 100%;
+
+}
+
+.flexRowContent{
+  &--lp__banner-duplo--v2{
+    gap: 10px;
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-final--v2{
+    position: relative;
+  }
+
+  &--lp__banner-trio--v2{
+    gap: 10px;
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-topo--v2{
+    margin-bottom: 10px;
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+
+  &--lp__banner-wrapper-mob--v2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    :global(.vtex-store-components-3-x-imageElement--lp__banner-wrapper--v2){
+      height: 100%;
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  .flexColChild--lp__banner-wrapper-two--v2{
+    display: contents;
+  }
+
+  .flexCol{
+    &--lp__banner-text--v2{
+      position: relative;
+      width: fit-content;
+    }
+
+    &--lp__banner-duplo-rigth--v2{
+      width: fit-content;
+      .flexColChild{
+        width: fit-content;
+      }
+    }
+    &--lp__banner-duplo-left--v2{
+      width: fit-content;
+      .flexColChild{
+        width: fit-content;
+      }
+    }
+  }
+
+}
+
+.flexColChild--lp__banner-text--v2{
+  width: fit-content;
+}

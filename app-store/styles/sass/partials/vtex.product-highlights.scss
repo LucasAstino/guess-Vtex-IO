@@ -1,0 +1,71 @@
+.productHighlightWrapper {
+  font-size: 0;
+  background: unset;
+  padding: 0;
+  order: 1 !important;
+  width: fit-content !important;
+
+  .productHighlightText[data-highlight-id="138"],
+  .productHighlightText[data-highlight-id="157"],
+  .productHighlightText[data-highlight-id="159"],
+  .productHighlightText[data-highlight-id="177"] {
+    background: #f2f2f2;
+    color: #808080;
+    font-family: "Futura";
+    font-size: 0px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 22px;
+    margin: 0;
+
+    &::after {
+      content: "Sale";
+      font-family: "Futura";
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 2%;
+      text-align: center;
+      color: #808080;
+    }
+  }
+
+  .productHighlightText[data-highlight-id="211"] {
+    order: 1;
+    background: #f2f2f2;
+    color: #808080;
+    font-family: "Futura";
+    font-size: 0px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 22px;
+    margin: 0;
+
+    &::after {
+      content: "Desconto Progressivo";
+      font-family: "Futura";
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 2%;
+      text-align: center;
+      color: #808080;
+    }
+  }
+}

@@ -12,3 +12,18 @@
     }
   }
 }
+
+.flexRowContent{
+  &--flags-shelf {
+    .stretchChildrenWidth {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 16px;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        row-gap: 8px;
+      }
+    }
+  }
+}

@@ -180,7 +180,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
   return (
     <ProductListContext.Provider value={availableProducts}>
       <div className={handles["visited-products-slider"]}>
-        {console.log(availableProducts, "nnnnnnnnnnn")}
         {availableProducts.length > 0 ? (
           <>
             <h2 className={handles["title__viewed-product"]}>
@@ -203,7 +202,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
                 fullWidth
               >
                 {availableProducts.map((product) => {
-                  console.log(product, "prod");
                   const maxInstallment =
                     product.items[0].sellers[0].commertialOffer.Installments[0]
                       .NumberOfInstallments;
@@ -213,7 +211,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
                   const maxInstallmentValue =
                     product.items[0].sellers[0].commertialOffer.Installments[0]
                       .Value;
-                  console.log("valueeee", maxInstallmentValue);
                   const price =
                     product.items[0].sellers[0].commertialOffer.Price.toLocaleString(
                       "pt-BR",
@@ -234,7 +231,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
                       key={product.productId}
                       className={handles["product__viewed-item"]}
                     >
-                      {console.log(product, "viewed")}
                       <a
                         className={handles["product__viewed-link"]}
                         href={`/${product.linkText}/p`}
@@ -287,10 +283,8 @@ export const VisitedProductsSlider: FC<Props> = () => {
                           </span>
                         )}
                       </p>
-                      {console.log(product)}
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
-                          {console.log(maxInstallment)}
                           ou {count}x sem juros de R${" "}
                           {maxInstallmentValue.toFixed(2).replace(".", ",")} no
                           cartão de crédito
@@ -355,7 +349,6 @@ export const VisitedProductsSlider: FC<Props> = () => {
 
                       {maxInstallment && (
                         <p className={handles["product__viewed-installments"]}>
-                          {console.log(maxInstallment)}
                           ou {count}x sem juros de R${" "}
                           {maxInstallmentValue.toFixed(2).replace(".", ",")} no
                           cartão de crédito

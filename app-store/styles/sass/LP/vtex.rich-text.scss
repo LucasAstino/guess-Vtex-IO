@@ -124,9 +124,9 @@
       margin: 0;
       width: 100% !important;
     }
-    .wrapper{
-        width: 100%;
-        padding: 20px;
+    .wrapper {
+      width: 100%;
+      padding: 20px;
     }
     .heading {
       font-weight: 400;
@@ -134,7 +134,7 @@
       font-size: 48px;
       font-family: "Orpheus";
       color: var(--custom-text-color) !important;
-      @include tablet{
+      @include tablet {
         text-align: center;
         margin-top: 50px;
         font-size: 32px;
@@ -150,16 +150,97 @@
         text-decoration: none;
         font-weight: 600;
         text-transform: uppercase;
-        @include tablet{
-            margin-top: 30px;
-            font-size: 14px;
-            text-align: end;
-          }
+        @include tablet {
+          margin-top: 30px;
+          font-size: 14px;
+          text-align: end;
+        }
         &::after {
           content: url(assets/images/LP/arrow.svg);
           margin-left: 7px;
           filter: var(--invert-filter);
         }
+      }
+    }
+  }
+
+  &--lp__banner-text--v2 {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    .paragraph {
+      font-size: 26px;
+      @include mobile{
+        font-size: 18px;
+      }
+      .link {
+        color: black;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+        &::after {
+          content: "";
+          font-size: 22px;
+          font-family: Orpheus;
+          color: #000;
+          letter-spacing: 0.05em;
+          margin-top: 5px;
+          margin-left: 10px;
+          display: inline-block;
+          width: 55px;
+          height: 10px;
+          background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.111/icons/header/big-arrow___e810883….png);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    @include mobile{
+      left: 20px;
+    }
+  }
+
+  &--lp__banner-final--v2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    justify-content: center;
+    .paragraph {
+      font-size: 26px;
+      .link {
+        color: black;
+        text-decoration: none;
+        margin: auto;
+        margin-top: 20px;
+        display: block;
+        width: fit-content;
+        &::after {
+          content: "";
+          font-size: 22px;
+          font-family: Orpheus;
+          color: #000;
+          letter-spacing: 0.05em;
+          margin-top: 5px;
+          margin-left: 10px;
+          display: inline-block;
+          width: 55px;
+          height: 10px;
+          background-image: url(https://guessbr.vtexassets.com/assets/vtex/assets-builder/guessbr.fg-store/1.0.111/icons/header/big-arrow___e810883….png);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &--lp__banner-wrapper--v2{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+
+    .paragraph{
+      .link{
+        color: black;
+        text-decoration: none;
       }
     }
   }

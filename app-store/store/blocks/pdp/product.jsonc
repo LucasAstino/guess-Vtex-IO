@@ -40,7 +40,7 @@
     "children": [
       "image#topBanner__PDP-mobile"
     ]
-  },  
+  },
 
   "flex-layout.row#product-breadcrumb": {
     "props": {
@@ -67,6 +67,7 @@
       "stack-layout#product-main--mobile",
       "flex-layout.row#product-breadcrumb",
       "flex-layout.row#product__name-pdp",
+       "flex-layout.row#flags-shelf",
       "flex-layout.row#flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",
@@ -156,6 +157,7 @@
     },
     "children": [
       "flex-layout.row#product__name-pdp",
+      "flex-layout.row#flags-shelf",
       "custom-flag-black-friday",
       "flex-layout.row#product__review",
       "product-list-price#product__price-pdp",

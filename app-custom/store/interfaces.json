@@ -10,7 +10,7 @@
     "component": "PrivacyPolicy"
   },
   "backToTop": {
-    "component": "backToTop"
+    "component": "BackToTop"
   },
   "LoginHeader": {
     "component": "LoginHeader"
@@ -64,6 +64,9 @@
   },
   "Topbar": {
     "component": "Topbar"
+  },
+  "Breadcrumb": {
+    "component": "breadcrumb"
   },
   "Container-lp": {
     "component": "Container-lp",
