@@ -3,8 +3,13 @@
   color: var(--custom-text-color) !important;
 }
 .customContainer--lp__first-banner {
-  width: 39.2% !important;
-  height: 840px;
+  height: 585px;
+  margin-left: -1px;
+}
+@media (max-width: 768px) {
+  .customContainer--lp__first-banner {
+    margin-top: -5px;
+  }
 }
 @media (max-width: 1025px) {
   .customContainer--lp__first-banner {
@@ -13,15 +18,12 @@
   }
 }
 .customContainer--lp__secund-banner {
+  max-width: 345px;
   background: #dcbbba;
-  height: 590px;
+  height: 575px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
-  padding-right: 220px;
-  margin-right: -335px;
-  margin-bottom: 60px;
 }
 @media (max-width: 1025px) {
   .customContainer--lp__secund-banner {
@@ -31,14 +33,24 @@
     height: auto;
   }
 }
+@media (max-width: 768px) {
+  .customContainer--lp__secund-banner {
+    max-width: 95%;
+  }
+}
 .customContainer--lp__three-banner {
-  height: 560px;
+  height: 585px;
   margin-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 @media (max-width: 1025px) {
   .customContainer--lp__three-banner {
     height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .customContainer--lp__three-banner {
+    margin-bottom: 40px;
   }
 }
 

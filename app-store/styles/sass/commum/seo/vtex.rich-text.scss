@@ -11,6 +11,15 @@
     justify-content: center;
     margin-bottom: 40px;
     padding: 0 30px;
+    .heading-level-2 {
+        font-size: 18px;
+        font-family: 'Futura';
+        margin: 25px 0;
+
+        .strong--seo__content {
+            font-weight: bold;
+        }
+    }
     .wrapper--seo__content{
         .heading--seo__content{
             @include tablet{

@@ -23,35 +23,30 @@
 
   &--lp__secund-banner {
     .flexRowContent {
-      display: flex;
+      display: flex      ;
       justify-content: center;
-      margin-top: 60px;
       align-items: center;
+      margin: 60px auto 0;
       @include tablet{
         gap: 10px;
         flex-direction: column-reverse;
+      }
+      @include mobile{
+        gap: 0;
+        :global(.vtex-store-components-3-x-imageElement--lp__secund-banner) {
+          width: 95%;
+        }
       }
     }
   }
 
   &--lp__three-banner {
     .flexRowContent {
-        margin-top: 100px;
         align-items: center;
         justify-content: space-between;
         @include tablet{
             margin: 0;
             flex-direction: column;
-          }
-        :global(.vtex-store-components-3-x-imageElement--lp__three-banner) {
-            height: fit-content;
-            margin-top: -40px;
-            margin-left: 10%;
-            z-index: 1;
-            @include tablet{
-                margin:0;
-                width: 100%;
-              }
           }
     }
   }

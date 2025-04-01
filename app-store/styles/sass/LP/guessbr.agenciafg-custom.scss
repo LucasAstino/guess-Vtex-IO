@@ -1,37 +1,43 @@
 .customContainer {
   color: var(--custom-text-color) !important;
   &--lp__first-banner {
-    width: 39.2% !important;
-    height: 840px;
+    height: 585px;
+    margin-left: -1px;
+    @include mobile{
+        margin-top: -5px;
+      }
     @include tablet{
         width: 100% !important;
         height: auto;
       }
   }
   &--lp__secund-banner{
+    max-width: 345px;
     background: #dcbbba;
-    height: 590px;
+    height: 575px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
-    padding-right: 220px;
-    margin-right: -335px;
-    margin-bottom: 60px;
     @include tablet{
         padding: 0;
         margin: 0;
         width: 100% !important;
         height: auto;
       }
+    @include mobile{
+        max-width: 95%;
+      }
   }
 
   &--lp__three-banner{
-    height: 560px;
+    height: 585px;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     @include tablet{
         height: auto;
+    }
+    @include mobile{
+      margin-bottom: 40px;
     }
   }
 }
