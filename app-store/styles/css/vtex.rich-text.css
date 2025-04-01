@@ -1,4 +1,70 @@
 @charset "UTF-8";
+.container--filter .paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #565d61;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.container--home_title {
+  display: flex;
+  justify-content: center;
+  color: #655B43;
+}
+.container--home_title .heading--home_title {
+  font-size: 64px;
+  color: #655b43;
+  font-weight: 400;
+  margin-block-start: 100px;
+}
+@media (max-width: 1025px) {
+  .container--home_title .heading--home_title {
+    margin-block-start: 32px;
+    font-size: 25px;
+  }
+}
+.container--h1__home {
+  position: absolute;
+  z-index: -999;
+}
+.container--slider__home-title {
+  justify-content: center;
+}
+.container--slider__home-title .paragraph {
+  margin: 0;
+  color: white;
+  font-family: Orpheus;
+  font-size: 80px;
+}
+@media (max-width: 1025px) {
+  .container--slider__home-title .paragraph {
+    font-size: 44px;
+  }
+}
+.container--slider__home-button {
+  justify-content: center;
+  width: fit-content !important;
+}
+.container--slider__home-button .paragraph {
+  background-color: white;
+  padding: 17px 115px;
+  border-radius: 48px;
+  font-family: open sans;
+  font-size: 18px;
+}
+@media (max-width: 1025px) {
+  .container--slider__home-button .paragraph {
+    padding: 17px 32px;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .container--lp__first-banner {
   height: 100%;
 }
@@ -256,6 +322,21 @@
   text-decoration: none;
 }
 
+.wrapper--title-h2 {
+  width: 100%;
+  text-align: center;
+}
+.wrapper--title-h2 .heading--title-h2 {
+  font-size: 42px;
+  color: #000000;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .wrapper--title-h2 .heading--title-h2 {
+    font-size: 24px;
+  }
+}
+
 .container--promotion__delivery {
   justify-content: center;
   border: 1px solid black;
@@ -446,72 +527,6 @@
   }
 }
 
-.container--filter .paragraph {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  color: #565d61;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.container--home_title {
-  display: flex;
-  justify-content: center;
-  color: #655B43;
-}
-.container--home_title .heading--home_title {
-  font-size: 64px;
-  color: #655b43;
-  font-weight: 400;
-  margin-block-start: 100px;
-}
-@media (max-width: 1025px) {
-  .container--home_title .heading--home_title {
-    margin-block-start: 32px;
-    font-size: 25px;
-  }
-}
-.container--h1__home {
-  position: absolute;
-  z-index: -999;
-}
-.container--slider__home-title {
-  justify-content: center;
-}
-.container--slider__home-title .paragraph {
-  margin: 0;
-  color: white;
-  font-family: Orpheus;
-  font-size: 80px;
-}
-@media (max-width: 1025px) {
-  .container--slider__home-title .paragraph {
-    font-size: 44px;
-  }
-}
-.container--slider__home-button {
-  justify-content: center;
-  width: fit-content !important;
-}
-.container--slider__home-button .paragraph {
-  background-color: white;
-  padding: 17px 115px;
-  border-radius: 48px;
-  font-family: open sans;
-  font-size: 18px;
-}
-@media (max-width: 1025px) {
-  .container--slider__home-button .paragraph {
-    padding: 17px 32px;
-    height: 40px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .container--not-found--text .paragraph {
   font-size: 16px;
   font-family: Century;
@@ -551,45 +566,6 @@
 .container--not-found--titleShelf .paragraph {
   font-size: 40px;
   font-weight: 300;
-}
-
-.container--livelo__fullBanner {
-  justify-content: center;
-}
-.container--livelo__fullBanner .paragraph {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin: 0;
-}
-.container--livelo__fullBanner .paragraph .link {
-  display: inline-block;
-  margin-top: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.2em;
-  text-decoration-line: underline;
-  text-transform: uppercase;
-  color: black;
-}
-.container--livelo__fullBanner .heading {
-  border: none;
-  background: #ff0a8c;
-  color: #ffffff;
-  border-radius: 200px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  width: 178px;
-  text-align: center;
-  font-family: Futura;
-  margin: 10px 0;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 .container--newsletter__title .paragraph {
@@ -1269,4 +1245,43 @@
   font-size: 14px;
   line-height: 1.4285em;
   margin: 2rem 0;
+}
+
+.container--livelo__fullBanner {
+  justify-content: center;
+}
+.container--livelo__fullBanner .paragraph {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0;
+}
+.container--livelo__fullBanner .paragraph .link {
+  display: inline-block;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: black;
+}
+.container--livelo__fullBanner .heading {
+  border: none;
+  background: #ff0a8c;
+  color: #ffffff;
+  border-radius: 200px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  width: 178px;
+  text-align: center;
+  font-family: Futura;
+  margin: 10px 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
