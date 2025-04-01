@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.container {
+  display: contents;
+}
+
 .carouselGaleryThumbs {
   display: block;
   padding: 0 15px;
@@ -108,10 +112,6 @@
 
 .productImage--product-image-grid {
   overflow: hidden;
-}
-
-.container {
-  display: contents;
 }
 
 .logoLink--logo__desktop {
