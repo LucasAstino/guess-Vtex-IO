@@ -4,6 +4,7 @@
 }
 .customContainer--lp__first-banner {
   height: 585px;
+  margin-left: -1px;
 }
 @media (max-width: 768px) {
   .customContainer--lp__first-banner {

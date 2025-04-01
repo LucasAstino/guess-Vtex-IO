@@ -2,6 +2,7 @@
   color: var(--custom-text-color) !important;
   &--lp__first-banner {
     height: 585px;
+    margin-left: -1px;
     @include mobile{
         margin-top: -5px;
       }

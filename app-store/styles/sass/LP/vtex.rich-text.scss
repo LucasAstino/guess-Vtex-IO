@@ -11,7 +11,7 @@
       .heading {
         font-family: Orpheus;
         text-transform: unset;
-        font-size: 54px;
+        font-size: 3.375rem;
         word-break: break-word;
         max-width: 540px;
         text-align: center;
@@ -22,7 +22,7 @@
           width: 100%;
           display: block;
           padding: 20px 20px 0 20px;
-          font-size: 40px;
+          font-size: 2.5rem;
           text-align: start;
         }
         @include mobile {
@@ -45,7 +45,7 @@
           color: var(--custom-text-color) !important;
           font-family: "Century";
           text-decoration: none;
-          font-size: 16px;
+          font-size: 1rem;
           text-transform: uppercase;
           letter-spacing: 0.2em;
           margin: 0;
@@ -55,13 +55,12 @@
           @include tablet {
             text-align: end;
             padding-right: 40px;
-            font-size: 14px;
+            font-size: 0.875rem;
           }
           @include mobile {
             text-align: center;
             padding-right: 0;
             margin: 15px auto;
-            font-size: 14px;
             width: 53%;
           }
           &::after {
@@ -82,7 +81,7 @@
     .paragraph {
       font-family: Orpheus;
       text-transform: unset;
-      font-size: 54px;
+      font-size: 3.375rem;
       word-break: break-word;
       max-width: 540px;
       color: var(--custom-text-color) !important;
@@ -98,9 +97,10 @@
       width: 100%;
     }
     .heading {
+      width: 90%;
       font-weight: 400;
       text-align: end;
-      font-size: 48px;
+      font-size: 3rem;
       font-family: "Orpheus";
       color: var(--custom-text-color) !important;
       @include tablet {
@@ -108,20 +108,20 @@
         display: block;
         padding: 20px;
         text-align: center;
-        font-size: 40px;
+        font-size: 2.5rem;
       }
       @include mobile {
         width: 79%;
         padding: 20px 0;
         text-align: center;
-        font-size: 34px;
+        font-size: 2.125rem;
         margin: 10px auto 0;
         font-family: 'Orpheus';
       }
       .link {
         font-family: "Century";
         display: block;
-        font-size: 16px;
+        font-size: 1rem;
         letter-spacing: 0.2em;
         margin-top: 55px;
         color: var(--custom-text-color) !important;
@@ -129,7 +129,7 @@
         font-weight: 500;
         text-transform: uppercase;
         @include tablet {
-          font-size: 14px;
+          font-size: 0.875rem;
           text-align: center;
         }
         @include mobile {
@@ -155,13 +155,13 @@
     .heading {
       font-weight: 400;
       text-align: center;
-      font-size: 48px;
+      font-size: 3rem;
       font-family: "Orpheus";
       color: var(--custom-text-color) !important;
       @include tablet {
         text-align: center;
         margin-top: 50px;
-        font-size: 32px;
+        font-size: 2rem;
       }
       @include mobile {
         margin: 10px 0 0;
@@ -170,7 +170,7 @@
         font-family: 'Century';
         width: 20%;
         display: grid;
-        font-size: 16px;
+        font-size: 1rem;
         letter-spacing: 0.2em;
         margin: 55px auto 0;
         color: var(--custom-text-color) !important;
@@ -183,13 +183,14 @@
         }
         @include tablet {
           margin-top: 30px;
-          font-size: 14px;
+          font-size: 0.875rem;
           text-align: end;
         }
         @include mobile {
           width: 100%;
-          margin: 40px 0 15px;
+          margin: 40px auto 15px;
           display: block;
+          text-align: center;
         }
         &::after {
           content: url(assets/images/LP/arrow.svg);
@@ -205,7 +206,7 @@
     bottom: 10px;
     left: 40px;
     .paragraph {
-      font-size: 26px;
+      font-size: 1.625rem;
       @include mobile{
         font-size: 18px;
       }
@@ -216,7 +217,7 @@
         display: inline-block;
         &::after {
           content: "";
-          font-size: 22px;
+          font-size: 1.375rem;
           font-family: Orpheus;
           color: #000;
           letter-spacing: 0.05em;
@@ -242,7 +243,7 @@
     translate: -50% -50%;
     justify-content: center;
     .paragraph {
-      font-size: 26px;
+      font-size: 1.625rem;
       .link {
         color: black;
         text-decoration: none;
@@ -252,7 +253,7 @@
         width: fit-content;
         &::after {
           content: "";
-          font-size: 22px;
+          font-size: 1.375rem;
           font-family: Orpheus;
           color: #000;
           letter-spacing: 0.05em;
@@ -287,12 +288,12 @@
   text-align: center;
 
   .heading--title-h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
     color: #000000;
     font-weight: 400;
 
     @media (max-width: 767px) {
-      font-size: 24px;
+      font-size: 1.5rem;
     }   
 
   }
