@@ -49,5 +49,8 @@
   },  
   "store.custom#LPnew-v2": {
     "path": "/lp-new"
+  },
+  "store.custom#LP-shades-of-the-season": {
+    "path": "/shades-of-the-season"
   }
 }
