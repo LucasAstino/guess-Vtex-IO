@@ -1119,6 +1119,23 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .container--contact-us {
+    justify-content: center;
+  }
+}
+.container--contact-us .paragraph {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #000;
+  font-size: 40px;
+}
+@media (max-width: 1025px) {
+  .container--contact-us .paragraph {
+    font-size: 30px;
+  }
+}
+
 .container--dealer .heading {
   font-family: Futura;
   font-style: normal;
@@ -1169,21 +1186,20 @@
   font-size: 14px;
 }
 
-@media (max-width: 1025px) {
-  .container--contact-us {
-    justify-content: center;
-  }
-}
-.container--contact-us .paragraph {
-  text-transform: uppercase;
+.container--faq .headingLevel1 {
+  font-family: "Futura", sans-serif;
   font-weight: 300;
-  color: #000;
-  font-size: 40px;
+  text-transform: uppercase;
+  font-size: 22px;
 }
-@media (max-width: 1025px) {
-  .container--contact-us .paragraph {
-    font-size: 30px;
-  }
+.container--faq .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--faq .link {
+  color: black;
+  text-decoration: none;
 }
 
 .container--exchange_and_returns .heading {
@@ -1217,22 +1233,6 @@
 .container--exchange_and_returns .listItem::before {
   content: "- ";
   font-size: 20px;
-}
-
-.container--faq .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 22px;
-}
-.container--faq .paragraph {
-  font-family: Century;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--faq .link {
-  color: black;
-  text-decoration: none;
 }
 
 .container--table__sizes-title {

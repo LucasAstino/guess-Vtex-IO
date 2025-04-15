@@ -15,7 +15,8 @@
   font-family: Century;
   width: fit-content !important;
   margin: 0;
-  @include tablet{
+
+  @include tablet {
     font-size: 16px;
   }
 }
@@ -29,10 +30,12 @@
   color: #808080;
   text-transform: none;
   padding: 0;
+
   &::before {
     content: "(";
     font-weight: 500;
   }
+
   .totalProductsMessage {
     font-size: 0;
   }
@@ -50,6 +53,7 @@
   // grid-template-columns: repeat(5, 1fr);
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   margin-bottom: 40px;
+
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
@@ -58,6 +62,7 @@
 
   &:global(.vtex__gallery--grid-4) {
     grid-template-columns: repeat(4, 1fr);
+
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
       margin: auto;
@@ -69,11 +74,54 @@
     flex-basis: 0 !important;
     flex-shrink: 1;
     max-width: 350px !important;
+
     :global(.vtex-stack-layout-0-x-stackContainer--shelf) {
       overflow: hidden;
     }
+
     :global(.vtex-product-summary-2-x-image) {
       object-fit: cover !important;
+    }
+  }
+}
+
+.gallery--grid-banners-laterais {
+  padding: 0;
+  gap: 10px;
+
+  @include mobile {
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .galleryItem--grid-banners-laterais {
+    padding: 0;
+    max-width: 24% !important;
+
+    @include mobile {
+      padding: 0;
+      max-width: 42% !important;
+
+      :global(.vtex-product-summary-2-x-nameContainer--shelf) {
+        padding: 0;
+      }
+    }
+
+    :global(.vtex-product-summary-2-x-container) {
+      max-width: 100% !important;
+      border-radius: 0;
+
+      :global(.vtex-product-summary-2-x-element) {
+        padding: 0;
+
+        @include mobile {
+          :global(.vtex-flex-layout-0-x-flexRowContent--flags-shelf) {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -81,6 +129,7 @@
 .filterPopupButton {
   @include tablet {
     padding: 0;
+
     &::before {
       content: "Filtros";
       font-family: Futura;
@@ -93,6 +142,7 @@
       text-transform: uppercase;
       margin-right: 7px;
     }
+
     &::after {
       content: "";
       display: block;
@@ -104,9 +154,11 @@
       transform: rotate(45deg);
       margin-top: -3px;
     }
+
     .filterPopupTitle {
       display: none;
     }
+
     .filterPopupArrowIcon {
       display: none;
     }
@@ -123,6 +175,7 @@
 
 .filters--layout {
   margin-top: 20px;
+
   @include tablet {
     margin-top: 0px;
   }
@@ -152,6 +205,7 @@
       top: 50%;
       rotate: 90deg;
     }
+
     &::after {
       content: "";
       display: block;
@@ -173,6 +227,7 @@
   .filter__container--category-4 {
     .filterTitleSpan {
       font-size: 0;
+
       &::before {
         content: "Categoria";
         font-size: 14px;
@@ -207,6 +262,7 @@
     :global(.vtex-slider__right-value) {
       font-size: 10px;
     }
+
     :global(.vtex-slider__dash) {
       display: none;
     }
@@ -221,6 +277,7 @@
 .accordionFilterContainer--category-4 {
   .accordionFilterItemTitle {
     font-size: 0 !important;
+
     &::before {
       content: "Categoria";
       font-size: 14px;
@@ -231,6 +288,7 @@
 .accordionFilter {
   @include tablet {
     height: fit-content;
+
     .filterAccordionBreadcrumbs {
       @include tablet {
         justify-content: space-between;
@@ -243,6 +301,7 @@
           cursor: pointer;
         }
       }
+
       // margin-bottom: 30px;
       .filterBreadcrumbsText {
         font-family: Futura;
@@ -273,8 +332,10 @@
 
     .accordionFilterContainer {
       padding: 0;
+
       .accordionFilterItem {
         padding: 0;
+
         .accordionFilterContent {
           padding: 0;
           margin: 11px 20px 0;
@@ -283,6 +344,7 @@
           border-bottom: 1px solid #b5b5b5;
           justify-content: space-between;
           display: flex;
+
           .accordionFilterItemTitle {
             font-family: Futura;
             font-style: normal;
@@ -293,8 +355,10 @@
             color: #000000;
             text-transform: uppercase;
           }
+
           .accordionFilterItemIcon {
             position: relative;
+
             &::before {
               content: "";
               display: block;
@@ -306,6 +370,7 @@
               top: 50%;
               rotate: 90deg;
             }
+
             &::after {
               content: "";
               display: block;
@@ -316,6 +381,7 @@
               right: 10px;
               top: 50%;
             }
+
             .caretIcon {
               display: none;
             }
@@ -348,14 +414,18 @@
     margin-bottom: auto;
     position: static;
     height: fit-content;
+
     .filterClearButtonWrapper {
       padding: 0;
       width: 213px;
+
       :global(.vtex-button) {
         border: 1px solid black;
       }
+
       :global(.vtex-button__label) {
         font-size: 0;
+
         &::before {
           content: "Limpar todos os filtros";
           white-space: nowrap;
@@ -363,21 +433,26 @@
         }
       }
     }
+
     .filterApplyButtonWrapper {
       padding: 0;
       width: 213px;
+
       :global(.vtex-button) {
         border: 1px solid black;
         background-color: #000000;
         color: white;
       }
+
       :global(.vtex-button__label) {
         font-size: 0;
+
         &::before {
           content: url(assets/icons/commum/filter.svg);
           margin-top: 6px;
           margin-right: 8px;
         }
+
         &::after {
           content: "Aplicar Filtros";
           white-space: nowrap;
@@ -387,6 +462,3 @@
     }
   }
 }
-
-
-
