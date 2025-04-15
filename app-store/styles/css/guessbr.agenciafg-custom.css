@@ -84,6 +84,42 @@
   }
 }
 
+.video__player {
+  margin-top: 78px;
+  height: fit-content !important;
+}
+@media (max-width: 1400px) {
+  .video__player {
+    aspect-ratio: 16/9;
+    margin-top: 0;
+  }
+}
+.video__player-video {
+  height: 734px !important;
+}
+@media (max-width: 1400px) {
+  .video__player-video {
+    aspect-ratio: 14/9;
+  }
+}
+@media (max-width: 1025px) {
+  .video__player-video {
+    width: 100%;
+    max-height: 520px !important;
+  }
+}
+@media (max-width: 768px) {
+  .video__player-video {
+    width: 100%;
+    max-height: 430px !important;
+  }
+}
+@media (max-width: 1025px) {
+  .video__player {
+    margin-top: 33px;
+  }
+}
+
 .backToTop {
   width: 60px;
   height: 60px;
@@ -169,7 +205,7 @@
   position: absolute;
   right: -10px;
   background: #f9f9f9;
-  width: 25vw;
+  width: 18.3vw;
   padding: 20px;
   translate: -100%;
   border-radius: 8px;
@@ -190,8 +226,8 @@
 .modal-content .modal-content--wrapper .modal-content--button {
   all: unset;
   position: absolute;
-  right: 15px;
-  top: 5px;
+  right: 10px;
+  top: -2px;
   font-size: 35px;
   font-weight: 300;
   rotate: 45deg;
@@ -230,42 +266,6 @@
 }
 .similar__modal-addToCart--label {
   margin: 0;
-}
-
-.video__player {
-  margin-top: 78px;
-  height: fit-content !important;
-}
-@media (max-width: 1400px) {
-  .video__player {
-    aspect-ratio: 16/9;
-    margin-top: 0;
-  }
-}
-.video__player-video {
-  height: 734px !important;
-}
-@media (max-width: 1400px) {
-  .video__player-video {
-    aspect-ratio: 14/9;
-  }
-}
-@media (max-width: 1025px) {
-  .video__player-video {
-    width: 100%;
-    max-height: 520px !important;
-  }
-}
-@media (max-width: 768px) {
-  .video__player-video {
-    width: 100%;
-    max-height: 430px !important;
-  }
-}
-@media (max-width: 1025px) {
-  .video__player {
-    margin-top: 33px;
-  }
 }
 
 .breadcrumb__institucional {
@@ -408,6 +408,7 @@
 .similar__products-variants--sku-title .similar__products-variants-wrapper {
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 }
