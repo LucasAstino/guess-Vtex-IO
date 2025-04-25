@@ -80,6 +80,48 @@
   object-fit: cover !important;
 }
 
+.container--layout--lp__banners_laterais-result .buttonShowMore--layout {
+  margin-top: 60px;
+}
+
+.gallery--grid-banners-laterais {
+  padding: 0;
+  gap: 60px 10px;
+}
+@media (max-width: 768px) {
+  .gallery--grid-banners-laterais {
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+  }
+}
+.gallery--grid-banners-laterais .galleryItem--grid-banners-laterais {
+  padding: 0;
+  max-width: 24% !important;
+}
+@media (max-width: 768px) {
+  .gallery--grid-banners-laterais .galleryItem--grid-banners-laterais {
+    padding: 0;
+    max-width: 42% !important;
+  }
+  .gallery--grid-banners-laterais .galleryItem--grid-banners-laterais :global(.vtex-product-summary-2-x-nameContainer--shelf) {
+    padding: 0;
+  }
+}
+.gallery--grid-banners-laterais .galleryItem--grid-banners-laterais :global(.vtex-product-summary-2-x-container) {
+  max-width: 100% !important;
+  border-radius: 0;
+}
+.gallery--grid-banners-laterais .galleryItem--grid-banners-laterais :global(.vtex-product-summary-2-x-container) :global(.vtex-product-summary-2-x-element) {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .gallery--grid-banners-laterais .galleryItem--grid-banners-laterais :global(.vtex-product-summary-2-x-container) :global(.vtex-product-summary-2-x-element) :global(.vtex-flex-layout-0-x-flexRowContent--flags-shelf) {
+    margin: 0;
+  }
+}
+
 @media (max-width: 1025px) {
   .filterPopupButton {
     padding: 0;

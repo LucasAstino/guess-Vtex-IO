@@ -84,6 +84,10 @@
     "component": "guideSize",
     "composition": "children"
   },
+  "galleryWithBanners": {
+    "component": "galleryWithBanners",
+    "composition": "children"
+  },
   "PopupForm": {
     "component": "PopupForm"
   },

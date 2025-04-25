@@ -1,0 +1,178 @@
+{
+    "store.custom#LP-banners-laterais": {
+        "children": [
+            "responsive-layout.desktop#lp-banners-laterais--desktop",
+            "responsive-layout.mobile#lp-banners-laterais--mobile"
+        ]
+    },
+    // DESKTOP
+    "responsive-layout.desktop#lp-banners-laterais--desktop": {
+        "title": "Bloco desktop",
+        "children": [
+            "flex-layout.row#lp-banners-laterais__banner-topo--v2",
+            "flex-layout.row#lp-banners-laterais__bredcrumb",
+            "search-result-layout.customQuery#lp-banners-laterais"
+        ]
+    },
+    // MOBILE
+    "responsive-layout.mobile#lp-banners-laterais--mobile": {
+        "title": "Bloco mobile",
+        "children": [
+            "flex-layout.row#lp-banners-laterais__banner-topo--v2",
+            "flex-layout.row#lp-banners-laterais__bredcrumb",
+            "search-result-layout.customQuery#lp-banners-laterais"
+        ]
+    },
+    // BANNER TOPO
+    "flex-layout.row#lp-banners-laterais__banner-topo--v2": {
+        "title": "Banner topo",
+        "props": {
+            "blockClass": "lp__banners_laterais-topo--v2"
+        },
+        "children": [
+            "image#lp-banners-laterais__banner-topo"
+        ]
+    },
+    "image#lp-banners-laterais__banner-topo": {
+        "title": "Banner topo",
+        "props": {
+            "src": "assets/images/LP/banner-topo-1.webp.jpg",
+            "blockClass": "lp__banners_laterais--banner-top"
+        }
+    },
+    // Breadcrumb
+    "flex-layout.row#lp-banners-laterais__bredcrumb": {
+        "title": "breadcrumb-lp",
+        "props": {
+            "blockClass": "lp__banners_laterais-breadcrumb"
+        },
+        "children": [
+            "Breadcrumb"
+        ]
+    },
+    // VITRINE
+    "search-result-layout.customQuery#lp-banners-laterais": {
+        "blocks": [
+            "search-result-layout.desktop#lp-banners-laterais",
+            "search-result-layout.mobile#lp-banners-laterais",
+            "search-not-found-layout"
+        ],
+        "props": {
+            "blockClass": "lp__banners_laterais-result",
+            "querySchema": {
+                "orderByField": "OrderByReleaseDateDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 32,
+                "skusFilter": "ALL",
+                "simulationBehavior": "skip",
+                "mapField": "productClusterIds",
+                "queryField": "232" //SETAR ID DA COLECTION NO SITE EDITOR
+            }
+        }
+    },
+    "search-result-layout.desktop#lp-banners-laterais": {
+        "title": "Listagem Desktop",
+        "children": [
+            "galleryWithBanners",
+            "toggle-layout#search__result-desktop",
+            "flex-layout.row#result-lp-banners-laterais"
+        ],
+        "props": {
+            "preventRouteChange": true
+        }
+    },
+    "galleryWithBanners": {
+        "props": {
+            "images": [
+                {
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ac5b3828-6668-4229-bec2-9be44f385a0c___4ad696184a512e3e492f3d1a943cb8e8.jpg",
+                    "link": "/colecao-1",
+                    "enabled": true
+                },
+                {
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d7ff5c6-1453-422c-bac1-b2d2f8de9551___d1c4b8819e9302df992c1d1a6be997f3.jpg",
+                    "link": "/colecao-2",
+                    "enabled": true
+                },
+                {
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/3a2c4b0d-f0a5-413f-bc9e-e0653abf2fda___65f3e3ecf26a27bfda04e9a73a258b03.jpg",
+                    "link": "/colecao-3",
+                    "enabled": true
+                },
+                {
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/87232c54-cebe-44b5-89cc-9ef940dd6e89___109c70af8a1be9fcc798693f29723d7c.jpg",
+                    "link": "/colecao-4",
+                    "enabled": true
+                }
+            ]
+        }
+    },
+    "flex-layout.row#result-lp-banners-laterais": {
+        "children": [
+            "flex-layout.col#filter",
+            "flex-layout.col#content-lp-banners-laterais"
+        ],
+        "props": {
+            "preventHorizontalStretch": true,
+            "fullWidth": true,
+            "blockClass": "result"
+        }
+    },
+    "flex-layout.col#content-lp-banners-laterais": {
+        "children": [
+            "flex-layout.row#searchinfo",
+            "flex-layout.row#products-lp-banners-laterais",
+            "search-fetch-more",
+            "flex-layout.row#seo__content"
+        ],
+        "props": {
+            "width": "grow",
+            "preventVerticalStretch": true,
+            "blockClass": "content"
+        }
+    },
+    "flex-layout.row#products-lp-banners-laterais": {
+        "children": [
+            "search-content#lp-banners-laterais"
+        ]
+    },
+    "search-content#lp-banners-laterais": {
+        "blocks": [
+            "gallery#lp-banners-laterais",
+            "not-found"
+        ]
+    },
+    "gallery#lp-banners-laterais": {
+        "props": {
+            "layouts": [
+                {
+                    "name": "grid-banners-laterais",
+                    "component": "GridSummary",
+                    "itemsPerRow": {
+                        "desktop": 4,
+                        "tablet": 3,
+                        "phone": 2
+                    }
+                }
+            ],
+            "GridSummary": "product-summary.shelf#default"
+        }
+    },
+    "search-result-layout.mobile#lp-banners-laterais": {
+        "title": "Listagem Mobile",
+        "children": [
+            "galleryWithBanners",
+            "toggle-layout#search__result-mobile",
+            "ConditionBlock",
+            "flex-layout.row#productCountMobile",
+            "flex-layout.row#searchinfomobile",
+            "flex-layout.row#searchbread",
+            "flex-layout.row#products-lp-banners-laterais",
+            "search-fetch-more",
+            "flex-layout.row#seo__content"
+        ],
+        "props": {
+            "pagination": "show-more"
+        }
+    }
+}
