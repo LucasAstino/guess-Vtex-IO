@@ -1,12 +1,12 @@
 {
     "store.custom#LP-shades-of-the-season": {
         "children": [
+            "commumScript",
             "responsive-layout.desktop#lp-shadon-of-season--desktop",
             "responsive-layout.tablet#lp-shadon-of-season--tablet",
-            "responsive-layout.mobile#lp-shadon-of-season--mobile"            
+            "responsive-layout.mobile#lp-shadon-of-season--mobile"
         ]
     },
-
     // Desktop
     "responsive-layout.desktop#lp-shadon-of-season--desktop": {
         "title": "Bloco desktop",
@@ -26,7 +26,6 @@
             "flex-layout.row#seo__content"
         ]
     },
-    
     // MOBILE
     "responsive-layout.mobile#lp-shadon-of-season--mobile": {
         "title": "Bloco mobile",
@@ -46,23 +45,20 @@
             "flex-layout.row#seo__content"
         ]
     },
-
     // TABLET   
     "responsive-layout.tablet#lp-shadon-of-season--tablet": {
-        "children": [
-           
-        ]
+        "children": []
     },
-
     // BANNER TOPO
     "flex-layout.row#lp__banner-topo--v2": {
         "title": "Banner topo",
         "props": {
             "blockClass": "lp__banner-topo--v2"
         },
-        "children": ["image#lp__banner-topo"]
+        "children": [
+            "image#lp__banner-topo"
+        ]
     },
-
     "image#lp__banner-topo": {
         "title": "Banner topo",
         "props": {
@@ -70,29 +66,25 @@
             "blockClass": "full"
         }
     },
-
-
-// Breadcrumb
+    // Breadcrumb
     "flex-layout.row#bredcrumb-lp": {
-            "title": "breadcrumb-lp",
-            "props": {
-                "blockClass": "breadcrumb-lp"
-            },
-            "children": [
-                "Breadcrumb"
-            ]
+        "title": "breadcrumb-lp",
+        "props": {
+            "blockClass": "breadcrumb-lp"
         },
-
-// TITLE
+        "children": [
+            "Breadcrumb"
+        ]
+    },
+    // TITLE
     "rich-text#h2__title": {
-        "title": "Titulo",        
+        "title": "Titulo",
         "props": {
             "text": "## Soft Embrace - Plush, cozy essentials that effortlessly blend warmth & luxury",
             "blockClass": "title-h2"
         }
-    },    
-
-// BANNERS CATEGORY 
+    },
+    // BANNERS CATEGORY 
     "flex-layout.row#categoryLP": {
         "title": "Banners Categorias",
         "props": {
@@ -103,293 +95,326 @@
             "colGap": 6,
             "marginBottom": 6,
             "marginTop": 6,
-            "horizontalAlign":"center"
+            "horizontalAlign": "center"
         },
         "children": [
-            "image#banner-01",
-            "image#banner-02",
-            "image#banner-03",
+            "link#banner-01",
+            "link#banner-02",
+            "link#banner-03",
+            "link#banner-04"
+        ]
+    },
+    "link#banner-01": {
+        "props": {
+            "href": "#banner-01",
+            "blockClass": "category-banner"
+        },
+        "children": [
+            "image#banner-01"
+        ]
+    },
+    "link#banner-02": {
+        "props": {
+            "href": "#banner-02",
+            "blockClass": "category-banner"
+        },
+        "children": [
+            "image#banner-02"
+        ]
+    },
+    "link#banner-03": {
+        "props": {
+            "href": "#banner-03",
+            "blockClass": "category-banner"
+        },
+        "children": [
+            "image#banner-03"
+        ]
+    },
+    "link#banner-04": {
+        "props": {
+            "href": "#banner-04",
+            "blockClass": "category-banner"
+        },
+        "children": [
             "image#banner-04"
         ]
     },
-
     "image#banner-01": {
         "title": "imagem 01",
         "props": {
-            "src": "",
-            "link": {
-                "url": "",
-                "attributeTitle": "",
-                "newTab": false
-            },
+            "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/9af9b079-e0c6-4d58-9121-968f2b8e5344___013214fe17dee1a574abbfeb92c2f861.jpg",
             "experimentalSetExplicitDimensions": true,
             "width": "348",
             "height": "116"
-
         }
     },
-
     "image#banner-02": {
         "title": "imagem 02",
         "props": {
-            "src": "",
-            "link": {
-                "url": "",
-                "attributeTitle": "",
-                "newTab": false
-            },
+            "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ac4f05b3-3385-4a24-ac5d-36afab82ca86___7a8e021cd76a584d8b19f7cb467d8e4d.jpg",
             "experimentalSetExplicitDimensions": true,
             "width": "348",
             "height": "116"
-
         }
     },
-
     "image#banner-03": {
         "title": "imagem 03",
         "props": {
-            "src": "",
-            "link": {
-                "url": "",
-                "attributeTitle": "",
-                "newTab": false
-            },
+            "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/20c11cd7-de28-4dbb-a4b0-3060a44ada76___cb2811cac470d338f681887b7ab0347b.jpg",
             "experimentalSetExplicitDimensions": true,
             "width": "348",
             "height": "116"
-
         }
     },
-
     "image#banner-04": {
         "title": "imagem 04",
         "props": {
-            "src": "",
-            "link": {
-                "url": "",
-                "attributeTitle": "",
-                "newTab": false
-            },
+            "src": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/6f27de85-8700-4277-b1b6-c0facf8662ef___e4de0e17aef48bf9a75e5c8c887ce4ee.jpg",
             "experimentalSetExplicitDimensions": true,
             "width": "348",
             "height": "116"
-
         }
     },
-
-// PRATELEIRA 
+    // PRATELEIRA 
     "flex-layout.row#grid_product-LP": {
         "title": "Bloco 1",
         "props": {
-        "blockClass": ["grid_product-home","LP"],
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-01",
+            "colGap": 10
         },
-        "children": [        
-           "image#grid_product-LP",
+        "children": [
+            "image#grid_product-LP",
             "flex-layout.col#grid_product--LP"
         ]
     },
     "flex-layout.row#grid_product-LP-v2": {
         "title": "Bloco 2",
         "props": {
-        "blockClass": ["grid_product-home","LP","v2"],
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP",
+                "v2"
+            ],
+            "htmlId": "banner-02",
+            "colGap": 10
         },
-        "children": [        
+        "children": [
             "flex-layout.col#grid_product--LP",
-            "image#grid_product-LP" 
-            
+            "image#grid_product-LP"
         ]
     },
     "flex-layout.row#grid_product-LP-v3": {
         "title": "Bloco 3",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-03",
+            "colGap": 10
         },
-        "children": [        
-            
+        "children": [
             "image#grid_product-LP",
             "flex-layout.col#grid_product--LP"
-            
         ]
     },
-
     "flex-layout.row#grid_product-LP-v4": {
         "title": "Bloco 4",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-04",
+            "colGap": 10
         },
-        "children": [        
+        "children": [
             "flex-layout.col#grid_product--LP",
             "image#grid_product-LP"
-            
-            
         ]
     },
-
     "flex-layout.row#grid_product-LP-mobile": {
         "title": "Bloco 1 mobile",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-01",
+            "colGap": 10
         },
-        "children": [                               
+        "children": [
             "image#grid_product-LP--mobile",
-            "flex-layout.col#grid_product--LP"             
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product-LP-mobile-v2": {
         "title": "Bloco 2 mobile",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-02",
+            "colGap": 10
         },
-        "children": [                               
+        "children": [
             "image#grid_product-LP--mobile",
-            "flex-layout.col#grid_product--LP"             
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product-LP-mobile-v3": {
         "title": "Bloco 3 mobile",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-03",
+            "colGap": 10
         },
-        "children": [                               
+        "children": [
             "image#grid_product-LP--mobile",
-            "flex-layout.col#grid_product--LP"             
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product-LP-mobile-v4": {
         "title": "Bloco 4 mobile",
         "props": {
-        "blockClass": ["grid_product-home","LP"], 
-        "colGap": 10
+            "blockClass": [
+                "grid_product-home",
+                "LP"
+            ],
+            "htmlId": "banner-04",            
+            "colGap": 10
         },
-        "children": [                               
+        "children": [
             "image#grid_product-LP--mobile",
-            "flex-layout.col#grid_product--LP"             
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product--LP_mobile": {
         "title": "Lista produto mobile 1",
         "props": {
             "blockClass": "product-mobile",
             "colGap": 10
         },
-        "children": [            
-             "flex-layout.col#grid_product--LP"
+        "children": [
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product--LP_mobile-v2": {
         "title": "Lista produto mobile 2",
         "props": {
             "blockClass": "product-mobile",
             "colGap": 10
         },
-        "children": [            
-             "flex-layout.col#grid_product--LP"
+        "children": [
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product--LP_mobile-v3": {
         "title": "Lista produto mobile 3",
         "props": {
             "blockClass": "product-mobile",
             "colGap": 10
         },
-        "children": [            
-             "flex-layout.col#grid_product--LP"
+        "children": [
+            "flex-layout.col#grid_product--LP"
         ]
     },
-
     "flex-layout.row#grid_product--LP_mobile-v4": {
         "title": "Lista produto mobile 4",
         "props": {
             "blockClass": "product-mobile",
             "colGap": 10
         },
-        "children": [            
-             "flex-layout.col#grid_product--LP"
+        "children": [
+            "flex-layout.col#grid_product--LP"
         ]
     },
-    "responsive-layout.desktop#grid_product-LP--img": {        
-        "children": ["image#grid_product-LP"]
+    "responsive-layout.desktop#grid_product-LP--img": {
+        "children": [
+            "image#grid_product-LP"
+        ]
     },
     "responsive-layout.mobile#grid_product-LP--img": {
-        "children": ["image#grid_product-LP--mobile"]
+        "children": [
+            "image#grid_product-LP--mobile"
+        ]
     },
     "image#grid_product-LP": {
         "props": {
-        "src": "assets/images/home/grid-product.jpg"
+            "src": "assets/images/home/grid-product.jpg"
         }
     },
     "image#grid_product-LP--mobile": {
         "props": {
-        "src": "assets/images/home/gridMobile.png"
+            "src": "assets/images/home/gridMobile.png"
         }
     },
     "flex-layout.col#grid_product--LP": {
         "title": "Lista de produtos",
         "props": {
-        "blockClass": ["grid_product","grid_product-LP--mobile"]
+            "blockClass": [
+                "grid_product",
+                "grid_product-LP--mobile"
+            ]
         },
         "children": [
             "list-context.product-list#grid_product-LP"
         ]
     },
-    
     "list-context.product-list#grid_product-LP": {
         "title": "Produtos lista",
-        "blocks": ["product-summary.shelf#default"],
-        "children": ["list-context-renderer#wrapped"],
+        "blocks": [
+            "product-summary.shelf#default"
+        ],
+        "children": [
+            "list-context-renderer#wrapped"
+        ],
         "props": {
-        "orderBy": "OrderByTopSaleDESC",
-        "maxItems": 4,
-        "hideUnavailableItems": true
+            "orderBy": "OrderByTopSaleDESC",
+            "maxItems": 4,
+            "hideUnavailableItems": true
         }
-    },    
-
+    },
     "list-context-renderer#wrapped": {
         "props": {
-        "listElement": "ul",
-        "itemElement": "li"
+            "listElement": "ul",
+            "itemElement": "li"
         }
     },
     "slider-layout#grid_product-LP": {
         "props": {
-        "itemsPerPage": {
-            "desktop": 4,
-            "tablet": 2,
-            "phone": 4
-        },
-
-        "showPaginationDots": "never",
-        "infinite": true,
-        "fullWidth": false,
-        "blockClass": "shelf"
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 2,
+                "phone": 4
+            },
+            "showPaginationDots": "never",
+            "infinite": true,
+            "fullWidth": false,
+            "blockClass": "shelf"
         }
     },
     //"list-context.product-list#grid_product-LP-mobile": {
-        //"blocks": ["product-summary.shelf#home"],
-        //"children": ["slider-layout#grid_product-LP"],
-        //"props": {
-        //"orderBy": "OrderByTopSaleDESC",
-        //"hideUnavailableItems": true
-        //}
+    //"blocks": ["product-summary.shelf#home"],
+    //"children": ["slider-layout#grid_product-LP"],
+    //"props": {
+    //"orderBy": "OrderByTopSaleDESC",
+    //"hideUnavailableItems": true
+    //}
     //},
-
-// SLIDER    
+    // SLIDER    
     "flex-layout.row#shelf__LP": {
         "props": {
-        "blockClass": "first__shelf"
+            "blockClass": "first__shelf"
         },
         "children": [
             "list-context.product-list#shelf__LP"
@@ -398,59 +423,55 @@
     "flex-layout.row#shelf__LP-1": {
         "title": "Slider bloco 1 desktop",
         "props": {
-        "blockClass": "first__shelf"
+            "blockClass": "first__shelf"
         },
         "children": [
             "list-context.product-list#shelf__LP"
         ]
     },
-
     "flex-layout.row#shelf__LP-2": {
         "title": "Slider bloco 2 desktop",
         "props": {
-        "blockClass": "first__shelf"
+            "blockClass": "first__shelf"
         },
         "children": [
             "list-context.product-list#shelf__LP"
         ]
     },
-
     "flex-layout.row#shelf__LP-3": {
         "title": "Slider bloco 3 desktop",
         "props": {
-        "blockClass": "first__shelf"
+            "blockClass": "first__shelf"
         },
         "children": [
             "list-context.product-list#shelf__LP"
         ]
     },
-
     "flex-layout.row#shelf__LP-4": {
         "title": "Slider bloco 4 desktop",
         "props": {
-        "blockClass": "first__shelf"
+            "blockClass": "first__shelf"
         },
         "children": [
             "list-context.product-list#shelf__LP"
         ]
     },
-
     "slider-layout#first-products-LP": {
         "props": {
-        "itemsPerPage": {
-            "desktop": 4,
-            "tablet": 3,
-            "phone": 2
-        },
-        "showPaginationDots": "never",
-        "infinite": true,
-        "fullWidth": false,
-        "blockClass": "shelf",
-        "centerMode": {
-            "desktop": "disabled",
-            "phone": "to-the-left"
-        },
-        "centerModeSlidesGap": 8
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 3,
+                "phone": 2
+            },
+            "showPaginationDots": "never",
+            "infinite": true,
+            "fullWidth": false,
+            "blockClass": "shelf",
+            "centerMode": {
+                "desktop": "disabled",
+                "phone": "to-the-left"
+            },
+            "centerModeSlidesGap": 8
         }
     },
     "list-context.product-list#shelf__LP": {
@@ -462,12 +483,7 @@
         ],
         "props": {
             "orderBy": "OrderByTopSaleDESC",
-        "hideUnavailableItems": true
+            "hideUnavailableItems": true
         }
     }
-    
 }
-
-
-
-

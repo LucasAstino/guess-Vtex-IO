@@ -10,6 +10,15 @@ export const CommumScript = () => {
   ].includes(route.routeId);
 
   useEffect(() => {
+    const htmlElement = document.documentElement;
+    
+    // Verificando se estamos na página /shades-of-the-season
+    if (page === "store.custom#LP-shades-of-the-season") {
+      htmlElement.style.scrollBehavior = "smooth";
+    } else {
+      htmlElement.style.scrollBehavior = "auto"; // Resetando o comportamento para as demais páginas
+    }
+
     if (page.includes("store.home")) {
     }
 
