@@ -1186,22 +1186,6 @@
   font-size: 14px;
 }
 
-.container--faq .headingLevel1 {
-  font-family: "Futura", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 22px;
-}
-.container--faq .paragraph {
-  font-family: Century;
-  font-size: 14px;
-  line-height: 1.4285em;
-}
-.container--faq .link {
-  color: black;
-  text-decoration: none;
-}
-
 .container--exchange_and_returns .heading {
   font-family: Calibri;
   color: rgba(0, 0, 0, 0.87) !important;
@@ -1233,6 +1217,22 @@
 .container--exchange_and_returns .listItem::before {
   content: "- ";
   font-size: 20px;
+}
+
+.container--faq .headingLevel1 {
+  font-family: "Futura", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.container--faq .paragraph {
+  font-family: Century;
+  font-size: 14px;
+  line-height: 1.4285em;
+}
+.container--faq .link {
+  color: black;
+  text-decoration: none;
 }
 
 .container--table__sizes-title {

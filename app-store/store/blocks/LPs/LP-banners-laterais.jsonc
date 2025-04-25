@@ -85,16 +85,24 @@
         "props": {
             "images": [
                 {
-                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ac5b3828-6668-4229-bec2-9be44f385a0c___4ad696184a512e3e492f3d1a943cb8e8.jpg"
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/ac5b3828-6668-4229-bec2-9be44f385a0c___4ad696184a512e3e492f3d1a943cb8e8.jpg",
+                    "link": "/colecao-1",
+                    "enabled": true
                 },
                 {
-                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d7ff5c6-1453-422c-bac1-b2d2f8de9551___d1c4b8819e9302df992c1d1a6be997f3.jpg"
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/1d7ff5c6-1453-422c-bac1-b2d2f8de9551___d1c4b8819e9302df992c1d1a6be997f3.jpg",
+                    "link": "/colecao-2",
+                    "enabled": true
                 },
                 {
-                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/3a2c4b0d-f0a5-413f-bc9e-e0653abf2fda___65f3e3ecf26a27bfda04e9a73a258b03.jpg"
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/3a2c4b0d-f0a5-413f-bc9e-e0653abf2fda___65f3e3ecf26a27bfda04e9a73a258b03.jpg",
+                    "link": "/colecao-3",
+                    "enabled": true
                 },
                 {
-                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/87232c54-cebe-44b5-89cc-9ef940dd6e89___109c70af8a1be9fcc798693f29723d7c.jpg"
+                    "imageUrl": "https://guessbr.vtexassets.com/assets/vtex.file-manager-graphql/images/87232c54-cebe-44b5-89cc-9ef940dd6e89___109c70af8a1be9fcc798693f29723d7c.jpg",
+                    "link": "/colecao-4",
+                    "enabled": true
                 }
             ]
         }

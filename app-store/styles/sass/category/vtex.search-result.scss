@@ -85,9 +85,15 @@
   }
 }
 
+.container--layout--lp__banners_laterais-result {
+  .buttonShowMore--layout{
+    margin-top: 60px;
+  }
+}
+
 .gallery--grid-banners-laterais {
   padding: 0;
-  gap: 10px;
+  gap: 60px 10px;
 
   @include mobile {
     padding: 0;
