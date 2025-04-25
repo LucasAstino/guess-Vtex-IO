@@ -9,6 +9,7 @@
     .flexRowContent--flags-shelf {
       row-gap: 8px;
       column-gap: 16px;
+      margin-top: 0.5rem;
       @media (max-width: 768px) {
         padding-left: 15px;
         flex-wrap: wrap;

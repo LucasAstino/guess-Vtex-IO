@@ -174,3 +174,26 @@
 .productHighlightWrapper--collection .productHighlightText[data-highlight-name=sustentavel]::after {
   content: url(assets/icons/shelf/icon-leaf.png);
 }
+
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name=Valentines] {
+  background: #FFEBF0;
+  color: #A20028;
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 4px;
+  display: block;
+  min-width: 89px;
+  min-height: 21px;
+  letter-spacing: 0.6px;
+}
+.productHighlightWrapper--collection .productHighlightText[data-highlight-name=Valentines]::before {
+  content: "#MyValentine";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  min-width: 89px;
+  min-height: 21px;
+}
