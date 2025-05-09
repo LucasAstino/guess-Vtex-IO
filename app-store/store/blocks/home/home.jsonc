@@ -15,7 +15,8 @@
       "flex-layout.row#grid_product-home",
       "rich-text#last__shelf-title",
       "flex-layout.row#secund__shelf",
-      "flex-layout.row#last__shelf"
+      "flex-layout.row#last__shelf",
+      "PopupForm"
     ]
   }
 }
