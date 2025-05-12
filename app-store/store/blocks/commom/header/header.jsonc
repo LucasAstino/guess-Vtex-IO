@@ -15,8 +15,8 @@
     "title": "header desktop",
     "children": [
       "sticky-layout#desktop",
-      "Helmet",
-      "PopupForm"
+      "Helmet"
+      // "PopupForm"
       // "backToTop"
     ]
   },
@@ -30,8 +30,8 @@
     "children": [
       "Topbar",
       "sticky-layout#mobile",
-      "Helmet",
-      "PopupForm"
+      "Helmet"
+      // "PopupForm"
     ]
   }
 }

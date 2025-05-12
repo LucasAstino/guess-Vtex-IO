@@ -11,10 +11,15 @@ const PopupForm = () => {
 
   // Exibe o modal após scroll de 300px
   useEffect(() => {
+    const hasShownPopup = localStorage.getItem("popupShown");
+
+    if (hasShownPopup) return;
+
     const handleScroll = () => {
       const scrollThreshold = 300;
       if (window.scrollY > scrollThreshold) {
         setShowModal(true);
+        localStorage.setItem("popupShown", "true");
         window.removeEventListener("scroll", handleScroll);
       }
     };
@@ -25,6 +30,7 @@ const PopupForm = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   const closeModal = () => {
     setShowModal(false);
@@ -78,9 +84,8 @@ const PopupForm = () => {
           aria-modal="true"
         >
           <div
-            className={`${styles.modal_container} ${
-              success ? styles.modal_container_bgWhite : ""
-            }`}
+            className={`${styles.modal_container} ${success ? styles.modal_container_bgWhite : ""
+              }`}
           >
             {!success && (
               <div className={styles.modal__right}>
